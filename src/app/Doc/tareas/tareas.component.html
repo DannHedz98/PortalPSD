@@ -1,0 +1,330 @@
+<app-navbar></app-navbar>
+<app-menu-documentacion></app-menu-documentacion>
+<section class="Contenido">
+    <app-nav-doc></app-nav-doc>
+    <div [ngSwitch]="pageId">
+
+        <!------------------------------------------- PAGINA: INDEX ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'index'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>BMC ITSM - M&oacute;dulo de Tareas</h1> <!-- Encabezado -->
+                        <p>El m&oacute;dulo de tareas permite realizar actividades aisladas y asignarlas a terceros sin
+                            perder la responsabilidad del incidente, cambio u orden de trabajo.
+                        </p>
+                        <p>Como se ha visto en otros m&oacute;dulos, por ejemplo en incidentes, la creaci&oacute;n de la
+                            tarea sirve para asignar una actividad a un tercero, ya sea del mismo grupo o a otro grupo
+                            de soporte para apoyo en la soluci&oacute;n del incidente. En cambios sucede algo similar.
+                            Aqu&iacute; la tarea sirve para dividir las actividades a una sola y asignarla, por medio de
+                            la tarea, a varios ingenieros del mismo o de diferentes grupos de soporte. En &oacute;rdenes
+                            de trabajo, las tareas sirven de apoyo a la orden de trabajo, y de la misma forma como a
+                            incidentes o a cambios, se pueden asignar a uno mismo, a otro ingeniero que inclusive
+                            est&eacute; en otro grupo de soporte. </p>
+                        <p>Por lo anterior, el m&oacute;dulo de tareas es muy importante para la gesti&oacute;n y
+                            operaci&oacute;n de los procesos del modelo est&aacute;ndar y de Remedy ITSM.</p>
+                    </header> <!-- Termina el texto principal -->
+                    <div> <!-- Secci&oacute;n 1 -->
+                        <h2>Ciclo de vida de las Tareas
+                        </h2>
+                        <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                            <p>
+                                Las tareas tienen un ciclo de vida que se basa espec&iacute;ficamente en sus estados.
+                                Los estados de la tarea son:
+                            </p>
+                            <p><strong>Estados de la tarea</strong></p>
+                            <p>La tarea tiene un ciclo de vida que comienza con el estado &quot;Por fases&quot; y
+                                termina con el estado &quot;Cerrado&quot;. La siguiente tabla describe los estados del
+                                incidente.</p>
+                            <table cellpadding="3" cellspacing="0" class="tabla">
+                                <thead>
+                                    <tr class="TableSubHeadingColor header" >
+                                        <td>Estado</td>
+                                        <td>Descripci&oacute;n</td>
+                                        <td>Requerimiento</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Por Fases</span></code></td>
+                                        <td>Este estado indica que el registro padre est&aacute; generando las tareas
+                                            pero estas no est&aacute;n listas para ser usadas.</td>
+                                        <td>Requiere que se llenen los campos de contacto, t&iacute;tulo de la tarea,
+                                            tipo de tarea, categor&iacute;as de operaci&oacute;n y de producto.
+                                            Dependiendo de las categor&iacute;as puede o no haber asignaci&oacute;n
+                                            autom&aacute;tica de la tarea. En este estado, todav&iacute;a es posible
+                                            modificar las tareas. Esta informaci&oacute;n la genera la persona que crea
+                                            las tareas.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Asignado</span></code></td>
+                                        <td>Este estado indica que la tarea est&aacute; lista y se ha asignado al grupo,
+                                            o inclusive al ingeniero que va a resolver la tarea. En cambios, este estado
+                                            indica tambi&eacute;n que el cambio ya ha pasado sus fases de
+                                            aprobaci&oacute;n y planeaci&oacute;n y est&aacute; listo para comenzar.
+                                        </td>
+                                        <td>Requiere tener las fechas de planeaci&oacute;n de la tarea ya ajustadas.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Pendiente</span></code></td>
+                                        <td>Este estado indica que la tarea est&aacute; en espera de ser asignada. A
+                                            diferencia de otros registros como Incidente, este estado indica que la
+                                            tarea est&aacute; esperando a que sea asignada. El campo &quot;Motivo del
+                                            Estado&quot; da m&aacute;s informaci&oacute;n al respecto. </td>
+                                        <td>Requiere asignaci&oacute;n. </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Trabajo en curso</span></code></td>
+                                        <td>Este estado indica que la tarea ha comenzado y se est&aacute;n realizando
+                                            los trabajos de la misma. </td>
+                                        <td>Es muy importante indicar el momento del comienzo de las tareas con este
+                                            estado, de forma que las m&eacute;tricas indiquen con mayor precisi&oacute;n
+                                            sobre el tiempo invertido en los trabajos realizados. Para otros registros,
+                                            como Cambios, este estado indica que la tarea est&aacute; en progreso.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Esperando</span></code></td>
+                                        <td>Este estado indica que la tarea est&aacute; esperando a la
+                                            finalizaci&oacute;n de otra tarea. Cuando la tarea est&aacute; en un
+                                            contexto de secuencia se utiliza este estado.</td>
+                                        <td>Ninguno. Solo se espera a la terminaci&oacute;n de otras tareas. </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Cerrado</span></code></td>
+                                        <td>
+                                            <p>Este estado indica que los trabajos de la tarea han concluido. La tarea
+                                                no puede modificarse despu&eacute;s de este estado.</p>
+                                            <p>Se debe llenar el campo &quot;Motivo de Estado&quot;. Para este campo
+                                                existen tres opciones:</p>
+                                            <p>- Satisfactorio</p>
+                                            <p>- Fallido</p>
+                                            <p>- Cancelado</p>
+                                        </td>
+                                        <td>
+                                            <p>En los casos en los que una tarea es creada desde un Incidente, hay que
+                                                llenar los campos &quot;Soluci&oacute;n&quot; y &quot;Causa&quot;. </p>
+                                            <p>Llenar los campos de Fechas reales (Inicio y Finalizaci&oacute;n) si no
+                                                se pas&oacute; por el estado &quot;Trabajo en curso&quot;.</p>
+                                            <p>Llenar el campo de &quot;Motivo de Estado&quot;.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Omitido</span></code></td>
+                                        <td>Este estado indica que una de las tareas en secuencia ha sido cancelada
+                                            (Estado &quot;Cerrado&quot; y Motivo de estado&quot;), y por lo tanto, el
+                                            resto de tareas en la secuencia quedan &quot;Omitidas&quot;</td>
+                                        <td>No hay requisitos.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> <!-- Termina el contenido de la secci&oacute;n -->
+                    </div> <!-- Secci&oacute;n 1 -->
+                    <div> <!-- Secci&oacute;n 2 -->
+                        <h2>Gu&iacute;a de uso para tareas
+                        </h2>
+                        <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                            <p>En esta secci&oacute;n se listan las operaciones m&aacute;s comunes para las tareas</p>
+                            <table cellpadding="3" cellspacing="0" >
+                                <thead>
+                                    <tr class="TableSubHeadingColor header">
+                                        <td>&nbsp;</td>
+                                        <td width="300" align="center">Tareas</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Creaci&oacute;n</span></code></td>
+                                        <td align="center"><a routerLink="/doc/Tareas/CrearTarea">Creaci&oacute;n de una tarea</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Atenci&oacute;n</span></code></td>
+                                        <td colspan="3" align="center"><a routerLink="/doc/Tareas/AtenderTarea">Tomar una tarea</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Documentaci&oacute;n</span></code></td>
+                                        <td colspan="3" align="center"><a routerLink="/doc/Tareas/DocumentarTarea">Documentar una
+                                                tarea</a></td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Cierre</span></code></td>
+                                        <td align="center"><a routerLink="/doc/Tareas/CerrarTarea">Cerrar una tarea</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> <!-- Termina el contenido de la secci&oacute;n -->
+                    </div> <!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'AtenderTarea'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>BMC ITSM - M&oacute;dulo de Tareas</h1> <!-- Encabezado -->
+                        <p><strong>Atenci&oacute;n de las Tareas</strong></p>
+                        <p>Una vez que las tareas son creadas y asignadas, es necesario tomar atenci&oacute;n de ellas.
+                            Esto significa, cambiar el estado a &quot;Trabajo en curso&quot;. Internamente, Remedy llena
+                            los campos de Fechas reales en el momento en que se cambia de estado. Si no se usa el estado
+                            &quot;Trabajo en curso&quot; entonces las fechas reales deben ingresarse manualmente.</p>
+                        <p>Utilice los siguientes pasos para atender la tarea:</p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <ol>
+                                        <li>Ingrese a una tarea asignada a su grupo de soporte</li>
+                                        <li>Revise la informaci&oacute;n de la tarea</li>
+                                        <li>Abra el men&uacute; del campo &quot;Estado&quot; y seleccione el valor
+                                            &quot;Asignado&quot;</li>
+                                        <li>Seleccione el apartado &quot;Asignaci&oacute;n&quot;</li>
+                                        <li>Documente el campo &quot;Usuario asignado+&quot; con su nombre</li>
+                                        <li>Oprima el bot&oacute;n &quot;Guardar&quot;</li>
+                                        <li>Abra el men&uacute; del campo Estado y seleccione el valor &quot;Trabajo en
+                                            curso&quot;</li>
+                                        <li>Oprima el bot&oacute;n &quot;Guardar&quot;</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Tareas/atendertarea.mp4" width="600" autoplay controls
+                                        loop></video></td>
+                            </tr>
+                        </table>
+                    </header> 
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'CerrarTarea'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>BMC ITSM - M&oacute;dulo de Tareas</h1> <!-- Encabezado -->
+                        <p><strong>Cierre de las Tareas</strong></p>
+                        <p>Al terminar la actividad encomendada en la tarea, hay que <a
+                            routerLink="/doc/Tareas/DocumentarTarea">documentar</a> la tarea y cerrarla indicando el motivo del
+                            cierre de la tarea.</p>
+                        <p>Utilice los siguientes pasos para cerrar la tarea:</p>
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top"><strong>Cerrar tarea</strong>
+                                    <ol>
+                                        <li>Ingrese a su tarea asignada en estado &quot;Trabajo en curso&quot;</li>
+                                        <li>Seleccione el apartado &quot;Categorizaci&oacute;n&quot;</li>
+                                        <li>Documente el campo &quot;Soluci&oacute;n&quot; con la soluci&oacute;n de la
+                                            tarea (Si la tarea proviene de un Incidente, si no, no hay que llenar este
+                                            campo)</li>
+                                        <li>Abra el men&uacute; del campo Estado y seleccione el valor
+                                            &quot;Cerrado&quot;</li>
+                                        <li>Abra el men&uacute; del campo Motivo del estado y seleccione el valor
+                                            correspondiente</li>
+                                        <li>Oprima el bot&oacute;n Guardar</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Tareas/cerrartarea.mp4" width="600" autoplay controls
+                                        loop></video></td>
+                            </tr>
+                        </table>
+                    </header> <!-- Termina el texto principal -->
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'CrearTarea'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+
+                        <h1>BMC ITSM - M&oacute;dulo de Tareas</h1> <!-- Encabezado -->
+
+                        <p><strong>Creaci&oacute;n de Tareas</strong></p>
+
+                        <p>
+                            Las tareas son registros que dependen de un registro padre, ya que implican una sola
+                            actividad relacionada a una serie de actividades. Por ejemplo, en un incidente, se genera
+                            una tarea para el apoyo en la recuperaci&oacute;n del servicio afectado. En un cambio existe
+                            una serie de tareas encomendadas a diferentes grupos de trabajo. Dichas tareas pueden
+                            efectuarse en secuencia o en paralelo, dependiendo de la naturaleza del cambio.
+                        </p>
+                        <p>Por lo tanto, no es posible crear una tarea directamente sin el registro padre. Esta se debe
+                            generar desde el registro padre (incidente, cambio u orden de trabajo).</p>
+                        <p>Las siguientes ligas indican como crear una tarea desde el registro padre correspondiente:
+                        </p>
+                        <ul>
+                            <li><a routerLink="/doc/Incidentes/CrearTarea">Generar tarea desde un incidente tipo alarma</a>
+                            </li>
+                            <li><a routerLink="/doc/Incidentes/CrearTareaCPD">Generar tarea desde un incidente tipo queja
+                                    de Cliente (CPD)</a></li>
+                            <li><a routerLink="/doc/Incidentes/CrearTareaTI">Generar tarea desde un incidente de TI</a>
+                            </li>
+                            <li><a routerLink="/doc/OrdenesTrabajo/CrearTareaWO">Generar tarea desde una orden de
+                                    trabajo</a></li>
+                        </ul>
+                    </header> <!-- Termina el texto principal -->
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'DocumentarTarea'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>BMC ITSM - M&oacute;dulo de Tareas</h1> <!-- Encabezado -->
+                        <p><strong>Documentaci&oacute;n de las Tareas</strong></p>
+                        <p>En todo momento se requiere documentar la tarea. Esto sirve como bit&aacute;cora, como
+                            historial o como medio de comunicaci&oacute;n entre asignados.</p>
+                        <p>Utilice los siguientes pasos para documentar la tarea:</p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <ol>
+                                        <li>Ingrese a su tarea asignada en estado &quot;Trabajo en curso&quot;</li>
+                                        <li>Seleccione el apartado &quot;Informaci&oacute;n de Trabajo&quot;</li>
+                                        <li>Documente el tipo de informaci&oacute;n de trabajo</li>
+                                        <p><strong>Tipo de informaci&oacute;n de trabajo</strong>: Permite categorizar
+                                            la informaci&oacute;n de trabajo que se est&aacute; agregando, por defecto
+                                            este campo tiene el valor &quot;Informaci&oacute;n General&quot;</p>
+                                        <li>En el campo &quot;Resumen&quot; documente el detalle de la
+                                            informaci&oacute;n</li>
+                                        <li>En el campo de adjuntos podr&aacute; ingresar hasta 3 archivos</li>
+                                        <li>Seleccione el valor requerido en el &quot;Bloqueado&quot; y &quot;Acceso a
+                                            Vista&quot;</li>
+                                        <p><strong>Bloqueado</strong>: Indica si es posible modificar la
+                                            informaci&oacute;n de trabajo que se est&aacute; agregando una vez que se
+                                            haya guardado, el valor por defecto es &quot;No&quot;<br>
+                                            <strong>Acceso a vista</strong>: Especifica qui&eacute;n puede visualizar la
+                                            informaci&oacute;n de trabajo que se est&aacute; agregando, Interno
+                                            (personal de soporte) o P&uacute;blico (cliente), el valor por defecto es
+                                            Interno
+                                        </p>
+                                        <li>Hacer clic en el bot&oacute;n &quot;Guardar&quot; para agregar la
+                                            informaci&oacute;n de trabajo.</li>
+                                        <li>Visualizar el registro de la informaci&oacute;n de trabajo en la tabla
+                                            &quot;Historial de Informaci&oacute;n de trabajo&quot;</li>
+                                        <li>Seleccionar el registro de la informaci&oacute;n en la tabla y oprima el
+                                            bot&oacute;n &quot;Ver&quot; para visualizar la informaci&oacute;n de
+                                            trabajo y/o para modificar la informaci&oacute;n en caso de que no haya sido
+                                            bloqueado</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Tareas/documentartarea.mp4" width="600" autoplay controls
+                                        loop></video></td>
+                            </tr>
+                        </table>
+                    </header> <!-- Termina el texto principal -->
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchDefault>
+            <h2>Página no encontrada</h2>
+        </ng-container>
+    </div>
+</section>

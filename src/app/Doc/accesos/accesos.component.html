@@ -1,0 +1,454 @@
+<app-navbar></app-navbar>
+<app-menu-documentacion></app-menu-documentacion>
+<section class="Contenido">
+    <app-nav-doc></app-nav-doc>
+    <div [ngSwitch]="pageId">
+
+        <!------------------------------------------- PAGINA: SOLICITAR ADM ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'SolicitarAcceso'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h1>BMC ITSM - Service Request Management - Solicitud de accesos</h1> <!-- Encabezado -->
+
+                        <p><strong>Solicitud de accesos</strong></p>
+                        <P>Este apartado permite conocer como realizar la solicitud para el alta de accesos en la
+                            paltaforma Helix.</P>
+                        <p>Anteriormente se generaban las solicitudes por medio de SRM (Service Request Management),
+                            esta funcionalidad fue migrada a <a
+                                href="https://remedycloudamx-rsso.onbmc.com/rsso/start">Digital Work Place</a></p>
+                        <p>DWP es un portal para usuarios que contiene un listado de servicios otorgados por la empresa.
+                            Este listado de servicios est&aacute; orientado a cualquier tipo de usuarios, pero
+                            principalmente a usuarios finales. </p>
+                        <p>Para crear una solicitud de accesos siga estos pasos:</p>
+
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top">
+                                    <p><strong>Instrucciones:</strong></p>
+                                    <ol>
+                                        <li>Ingresar a la pantalla principal de <a
+                                                href="https://remedycloudamx-rsso.onbmc.com/rsso/start">
+                                                Remedy Helix SaaS</a>, si no lo ha hecho aun, conocer su usuario
+                                            <a routerLink="/doc/Generales/Acceso">aquí</a>. Al abrir la pagina,
+                                            dirigirse a la opcion
+                                            Catálogo y buscar el servicio <b>Solicitud ADM</b>.
+                                        </li>
+                                        <li>
+                                            Al entrar en el servicio, hacer clic en el boton "Pedir ahora" lo que
+                                            redirigira a un formulario para
+                                            solicitar el servicio.
+                                        </li>
+                                        <li>
+                                            Los datos del usuario requeridos para solicitar el servicio son:
+                                            <ul>
+                                                <li><b>Tipo de Solicitud: </b>Alta</li>
+                                                <li><b>Empresa del Usuario: </b>Seleccionar empresa</li>
+                                                <li><b>Celular (Opcional): </b>Ingresar Celular</li>
+                                                <li><b>Numero de Empleado: </b>Al ingresar el numero se actualizara el
+                                                    formulario con los datos correspondientes al empleado tomados desde
+                                                    Nomina.
+                                                    <ul>
+                                                        <li>Apellido Paterno</li>
+                                                        <li>Apellido Materno</li>
+                                                        <li>Nombre(s)</li>
+                                                        <li>Email</li>
+                                                        <li>Departamento</li>
+                                                        <li>Vigencia</li>
+                                                        <li>Region</li>
+                                                        <li>Usuario Universal</li>
+                                                        <li>Puesto</li>
+                                                        <li>Direccion</li>
+                                                        <li>Subdireccion</li>
+                                                        <li>Gerencia</li>
+                                                        <li>Jefe Inmediato</li>
+                                                        <li>Correo Jefe Inmediato</li>
+                                                        <li>Empresa</li>
+                                                        <li>TelJefeInmediado</li>
+                                                        <li>Pais</li>
+                                                    </ul>
+                                                </li>
+                                                <li><b>Extension: </b>Ingresar extension.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Al terminar el llenado de los datos, hacer clic en el boton "Siguiente", lo
+                                            cual habilitara los datos de los sistemas a
+                                            los que se solicita el acceso. Hacer clic en Agregar respuesta para llenar
+                                            el formulario correspondiente:
+                                            <ul>
+                                                <li><b>Empresa: </b>Seleccionar empresa</li>
+                                                <li><b>Sistema: </b>Seleccionar sistema</li>
+                                                <li><b>Nodo: </b>Seleccionar Nodo</li>
+                                                <li><b>Region: </b>Seleccionar region</li>
+                                                <li><b>Perfil: </b>Seleccionar perfil</li>
+                                                <li><b>Justificacion: </b>Añadir descripcion breve de por que el usuario
+                                                    requiere acceso al sistema.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Al terminar el llenado de los datos, hacer clic en el boton "Siguiente", lo
+                                            cual habilitara la seccion de Archivos. Adjuntar el archivo PDF para la
+                                            solicitud correspondiente.
+                                        </li>
+                                        <li>
+                                            Al completar el llenado de la informacion hacer clic en el boton "Enviar
+                                            Peticion". Inmediatamente se generara un folio de peticion de servicio para
+                                            realizar el alta.
+                                        </li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Accesos/Alta ADM - BMC.mp4" width="600" autoplay controls
+                                        loop></video></td>
+                            </tr>
+                            s
+                        </table>
+                        <!-- <p><strong>Temas relacionados:</strong></p>
+                        <ul>s
+                            <li><a href="renovacionvigencia.html">Renovaci&oacute;n de vigencia</a></li>
+                            <li><a href="creacioncorFO.html">Perfil BO</a></li>
+                            <li><a href="creacioncorBO.html">Perfil FO</a></li>
+
+                        </ul> -->
+                    </header> <!-- Termina el texto principal --><!-- Secci&oacute;n 1 --><!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+        </ng-container>
+
+        <!------------------------------------------- PAGINA: SEGUIMIENTO ADM ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'SeguimientoADM'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h1>BMC ITSM - Service Request Management - Solicitud de accesos</h1> <!-- Encabezado -->
+
+                        <p><strong>Seguimiento de solicitud de accesos</strong></p>
+                        <p>Cuando se crea una solicitud desde <a href="https://remedycloudamx-rsso.onbmc.com/rsso/start"
+                                target="_blank">Digital Work Place</a> se puede dar seguimiento para
+                            conocer el estado y avance.</p>
+                        <p>Para dar seguimiento a una solicitud realizada en DWP siga estos pasos:</p>
+
+                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top">
+                                    <p><strong>Instrucciones:</strong></p>
+                                    <ol>
+                                        <li>Ingresar a la pantalla principal de <a
+                                                href="https://remedycloudamx-rsso.onbmc.com/rsso/start">
+                                                Remedy Helix SaaS</a>, si no lo ha hecho aun, conocer su usuario
+                                            <a routerLink="/doc/Generales/Acceso">aquí</a>. Al abrir la pagina,
+                                            dirigirse a la opcion <b>Mi actividad</b> y buscar en la seccion <b>Eventos
+                                                pasados</b> el servicio "Solicitud ADM" con el ID de peticion que
+                                            coincida con el alta.
+                                        </li>
+                                        <li>
+                                            Al abrir la peticion, debe mostrarse en estado "Finalizado", de ser asi, en
+                                            la seccion de <b>Comentarios</b> se mostrara un resumen con la liga hacia el
+                                            formulario "<a
+                                                href="https://remedycloudamx.onbmc.com/arsys/forms/onbmc-s/ADMSolicitudCompleta">ADMSolicitudCompleta</a>"
+                                            y el ID para buscar el seguimiento en Remedy Helix SaaS.
+                                            <p><b>Nota: Para ingresar al formulario se solicitaran las credenciales para
+                                                    acceder a Remedy Helix SaaS.</b></p>
+                                        </li>
+                                        <li>
+                                            Al entrar al formulario, ingresar el ID obtenido anteriormente en el campo
+                                            "ID Solicitud General".
+                                        </li>
+                                        <li>
+                                            Podras tener un status mas completo de la solicitud en las pestañas
+                                            inferiores:
+                                            <ul>
+                                                <li><b>Autorizaciones: </b>Verificarr si ambos autorizadores aprobaron
+                                                    la solicitud.</li>
+                                                <li><b>Orden de Trabajo: </b>Verificar el estado de la Orden de trabajo
+                                                    que solicito el acceso.</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Accesos/Seguimiento ADM - BMC.mp4" width="600" autoplay
+                                        controls loop></video></td>
+                            </tr>
+                        </table>
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'AprobarADM'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h1>BMC ITSM - Service Request Management - Solicitud de accesos</h1> <!-- Encabezado -->
+
+                        <p><strong>Aprobación de solicitud de accesos</strong></p>
+                        <p>Para aprobar una solicitud de accesos generada en <a
+                                href="https://remedycloudamx-rsso.onbmc.com/rsso/start" target="_blank">Digital Work
+                                Place</a> se puede hacer desde el mismo sitio,
+                            siempre y cuando se tenga el rango necesario para realizar aprobaciones a peticiones
+                            especificas.</p>
+                        <p>Para realizar aprobacion a una solicitud realizada en DWP siga estos pasos:</p>
+
+                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top">
+                                    <p><strong>Instrucciones:</strong></p>
+                                    <ol>
+                                        <li>Ingresar a la pantalla principal de <a
+                                                href="https://remedycloudamx-rsso.onbmc.com/rsso/start">
+                                                Remedy Helix SaaS</a>, si no lo ha hecho aun, conocer su usuario
+                                            <a routerLink="/doc/Generales/Acceso">aquí</a>. Al abrir la pagina,
+                                            dirigirse a la opcion <b>Mi actividad</b> y buscar en la seccion <b>Eventos
+                                                activos</b>
+                                            La solicitud del usuario que requiere el acceso.
+                                            <p><b>Nota: En caso de que el usuario solicitara mas de un acceso,
+                                                    distinguirlo por medio del ID.</b></p>
+                                        </li>
+                                        <li>
+                                            Una vez identificada la peticion para aprobar, hacer clic en "Aprobar" o
+                                            "Rechazar" segun sea el caso.
+                                            Esto avanzara la peticion en espera de la respuesta de un segundo
+                                            autorizador para que el acceso sea aprobado en su totalidad.
+                                        </li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Accesos/Aprobación ADM - BMC.mp4" width="600" autoplay
+                                        controls loop></video></td>
+                            </tr>
+                        </table>
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'RenovacionADM'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h1>BMC ITSM - Service Request Management - Solicitud de accesos</h1> <!-- Encabezado -->
+
+                        <p><strong>Renovación de vigencias</strong></p>
+                        <p>Para la mayoría de las solicitudes de acceso se solicita una vigencia, de manera que los
+                            accesos no sean de tiempo ilimitado. Antes de que la vigencia llegue a su límite, Remedy
+                            enviará notificaciones vía correo electrónico al solicitante para recordarle sobre renovar
+                            su solicitud. Pasado el tiempo de la vigencia, Remedy enviará otro mensaje indicando que la
+                            vigencia ha concluido. Si la renovación es omitida se gestiona la baja del acceso.</p>
+                        <p><b>Nota:</b> en algunos casos como en Remedy, la baja no significa el borrado de la cuenta,
+                            si no su inhabilitación.</p>
+                        <p>Para cada caso (renovación o baja) se genera una orden de trabajo para gestionar la acción
+                            correspondiente (renovación o baja).</p>
+
+
+                        <p>Para dar seguimiento a una solicitud realizada en <a
+                                href="https://remedycloudamx-rsso.onbmc.com/rsso/start">
+                                DWP</a> siga estos pasos:</p>
+
+                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top">
+                                    <p><strong>Instrucciones:</strong></p>
+                                    <ol>
+                                        <li>Ingresar a la pantalla principal de <a
+                                                href="https://remedycloudamx-rsso.onbmc.com/rsso/start">
+                                                Remedy Helix SaaS</a>, si no lo ha hecho aun, conocer su usuario
+                                            <a routerLink="/doc/Generales/Acceso">aquí</a>. Al abrir la pagina,
+                                            dirigirse al icono <b>Remedy Tradicional</b> lo que conducira a la pagina
+                                            principal de Remedy Helix SaaS.
+                                        </li>
+                                        <li>
+                                            En el menu lateral que se muestra acontinuacion, dirigirse a <i>Acessos
+                                                directos -> ADM Consola Renovación</i>.
+                                        </li>
+                                        <li>
+                                            Se abrira un listado de solicitudes disponibles para solicitar su
+                                            renovacion. Localizar por medio de Request ID o por medio de fecha de
+                                            vigencia, la solicitud que se necesita renovar.
+                                        </li>
+                                        <li>
+                                            Al localizar la peticion a renovar, marcarla y hacer clic en el boton
+                                            "Renovar Solicitud".
+                                        </li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Accesos/Aprobación ADM - BMC.mp4" width="600" autoplay
+                                        controls loop></video></td>
+                            </tr>
+                        </table>
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'CancelarADM'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h1>BMC ITSM - Service Request Management - Solicitud de accesos</h1> <!-- Encabezado -->
+
+                        <p><strong>Cancelacion de Accesos</strong></p>
+                        <p>Si el acceso fue solicitado a algun sistema erroneo o hay alguna razon para que la solicitud
+                            no se complete, la peticion puede ser cancelada siempre y cuando aun no haya sido atendida
+                            por los autorizadores.</p>
+
+                        <p>Para dar seguimiento a una solicitud realizada en <a
+                                href="https://remedycloudamx-rsso.onbmc.com/rsso/start">
+                                DWP</a> siga estos pasos:</p>
+
+                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top">
+                                    <p><strong>Instrucciones:</strong></p>
+                                    <ol>
+                                        <li>Ingresar a la pantalla principal de <a
+                                                href="https://remedycloudamx-rsso.onbmc.com/rsso/start">
+                                                Remedy Helix SaaS</a>, si no lo ha hecho aun, conocer su usuario
+                                            <a routerLink="/doc/Generales/Acceso">aquí</a>. Al abrir la pagina,
+                                            dirigirse a la opcion <b>Mi actividad</b> y buscar en la seccion <b>Eventos
+                                                activos</b>
+                                            La solicitud del usuario que requiere el acceso.
+                                            <p><b>Nota: En caso de que el usuario solicitara mas de un acceso,
+                                                    distinguirlo por medio del ID.</b></p>
+                                        </li>
+                                        <li>
+                                            Una vez identificada la peticion, hacer clic en "Cancelar", para que ya no sea considerada por los autorizadores.
+                                        </li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Accesos/Cancelación ADM - BMC.mp4" width="600" autoplay
+                                        controls loop></video></td>
+                            </tr>
+                        </table>
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'CreacionCorFO'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+
+                        <h1>BMC ITSM - Service Request Management - Solicitud de accesos</h1> <!-- Encabezado -->
+
+                        <p><strong>Solicitud de accesos COR</strong></p>
+                        <p>Para crear una solicitud de rol unificado para COR - FO (Front Office) siga estos pasos:</p>
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top">
+                                    <p><strong>Instrucciones:</strong></p>
+                                    <ol>
+                                        <li>Ingresar a la consola de solicitudes &quot;<b>Aplicaciones</b> &rarr;
+                                            &quot;<b>Gesti&oacute;n de Petici&oacute;n de Servicios&quot;</b> &gt;
+                                            &quot;<b>Nueva petici&oacute;n&quot;.</b></li>
+                                        <li>Seleccionar el bot&oacute;n &quot;<b>Examinar</b>&quot;.</li>
+                                        <li>Seleccionar la categor&iacute;a &quot;<b>Gesti&oacute;n de
+                                                Accesos</b>&quot;.</li>
+                                        <li>Seleccionar el servicio &quot;<b>Perfil Unificado COR</b>&quot;.</li>
+                                        <li>Presionar &quot;<b>Pedir Ahora</b>&quot;.</li>
+                                        <li>Selecionar &quot;<b>Rol</b>&quot; con el valor correspondiente
+                                            <b>(FO_COR)</b>.
+                                        </li>
+                                        <li>Seleccionar &quot;<b>Alta</b>&quot; en el campo &quot;<b>Tipo de
+                                                Solicitud</b>&quot;</li>
+                                        <li>Llenar el campo &quot;<b>N&uacute;mero de empleado</b>&quot; y dar Enter.
+                                        </li>
+                                        <li>Escribir una justificaci&oacute;n en el campo
+                                            &quot;<b>Justificaci&oacute;n</b>&quot;.</li>
+                                        <li>Agregar el archivo adjunto dando clic en el icono verde con un m&aacute;s.
+                                        </li>
+                                        <li>Dar clic en &quot;<b>Seleccionar archivo</b>&quot;</li>
+                                        <li>Seleccionar el &quot;<b>Archivo</b>&quot;</li>
+                                        <li>Dar clic en &quot;<b>Aceptar</b>&quot;</li>
+                                        <li>Oprimir el bot&oacute;n &quot;<b>Enviar</b>&quot;.</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="/Accesos/creacioncorFO.mp4" width="600" autoplay></video>
+                                </td>
+                            </tr>
+                            <tr>
+                        </table>
+                        <!--<strong>Temas relacionados:</strong>
+                         <ul>
+                            <li><a href="solicitaracceso.html">Solicitar acceso</a></li>
+                            <li><a href="renovacionvigencia.html">Renovaci&oacute;n de vigencia</a></li>
+                            <li><a href="creacioncorFO.html">Perfil FO</a></li>
+                        </ul> -->
+
+                    </header> <!-- Termina el texto principal --><!-- Secci&oacute;n 1 --><!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'CreacionCorBO'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+
+                        <h1>BMC ITSM - Service Request Management - Solicitud de accesos</h1> <!-- Encabezado -->
+
+                        <p><strong>Solicitud de accesos COR</strong></p>
+                        <p>Para crear una solicitud de rol unificado para COR - BO (Back Office) siga estos pasos:</p>
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top">
+                                    <p><strong>Instrucciones:</strong></p>
+                                    <ol>
+                                        <li>Ingresar a la consola de solicitudes &quot;<b>Aplicaciones</b> &rarr;
+                                            &quot;<b>Gesti&oacute;n de Petici&oacute;n de Servicios&quot;</b> &gt;
+                                            &quot;<b>Nueva petici&oacute;n&quot;.</b></li>
+                                        <li>Seleccionar el bot&oacute;n &quot;<b>Examinar</b>&quot;.</li>
+                                        <li>Seleccionar la categor&iacute;a &quot;<b>Gesti&oacute;n de
+                                                Accesos</b>&quot;.</li>
+                                        <li>Seleccionar el servicio &quot;<b>Perfil Unificado COR</b>&quot;.</li>
+                                        <li>Presionar &quot;<b>Pedir Ahora</b>&quot;.</li>
+                                        <li>Selecionar &quot;<b>Rol</b>&quot; con el valor correspondiente
+                                            <b>(BO_COR)</b>.
+                                        </li>
+                                        <li>Seleccionar &quot;<b>Alta</b>&quot; en el campo &quot;<b>Tipo de
+                                                Solicitud</b>&quot;</li>
+                                        <li>Llenar el campo &quot;<b>N&uacute;mero de empleado</b>&quot; y dar Enter.
+                                        </li>
+                                        <li>Escribir una justificaci&oacute;n en el campo
+                                            &quot;<b>Justificaci&oacute;n</b>&quot;.</li>
+                                        <li>Agregar el archivo adjunto dando clic en el icono verde con un m&aacute;s.
+                                        </li>
+                                        <li>Dar clic en &quot;<b>Seleccionar archivo</b>&quot;</li>
+                                        <li>Seleccionar el &quot;<b>Archivo</b>&quot;</li>
+                                        <li>Dar clic en &quot;<b>Aceptar</b>&quot;</li>
+                                        <li>Oprimir el bot&oacute;n &quot;<b>Enviar</b>&quot;.</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="/Accesos/creacioncorBO.mp4" width="600" autoplay></video>
+                                </td>
+                            </tr>
+                            <tr>
+                        </table>
+                        <!--<strong>Temas relacionados:</strong>
+                         <ul>
+                            <li><a href="solicitaracceso.html">Solicitar acceso</a></li>
+                            <li><a href="renovacionvigencia.html">Renovaci&oacute;n de vigencia</a></li>
+                            <li><a href="creacioncorBO.html">Perfil BO</a></li>
+                        </ul> -->
+
+                    </header> <!-- Termina el texto principal --><!-- Secci&oacute;n 1 --><!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+
+        </ng-container>
+
+
+        <ng-container *ngSwitchDefault>
+            <h2>Página no encontrada</h2>
+        </ng-container>
+    </div>
+</section>

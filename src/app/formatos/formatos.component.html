@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<app-menu-formatos></app-menu-formatos>
+
+<head>
+    <meta charset="UTF-8">
+  </head>
+<body>
+    <section class="Contenido">
+        <h3>{{ content.title }}</h3>
+        <hr>
+        <p>{{ content.text }}</p>
+        <h4>{{content.text2}}</h4>
+        <ul>
+            <li *ngFor="let link of content.links">
+                <a [href]="link.url" rel="noopener noreferrer">{{ link.label }}</a>
+                <label for="">{{link.lista}}</label>
+            </li>
+        </ul>
+    </section>
+</body>

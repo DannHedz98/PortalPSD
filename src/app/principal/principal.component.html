@@ -1,0 +1,34 @@
+<!-- PAGINA PRINCIPAL QUE MUESTRA LAS OPCIONES DE LA PAGINA, UNICAMENTE CUANDO SE INICIA SESION CON USUARIO VALIDO -->
+
+<body>
+    <app-navbar></app-navbar>
+    <section>
+        <div>
+            <h1 class="titulo" routerLink="/principal">Portal Digitalizacion de Servicios</h1>
+        </div>
+        <h3>BIENVENIDO</h3>
+        <div class="container">
+            <a class="box" routerLink="/doc/index">
+                <img src="img/documentacion.png" alt="Documentación">
+                <p>DOCUMENTACIÓN</p>
+            </a>
+            <a class="box" routerLink="/formatos">
+                <img src="img/Formatos.png" alt="Formatos">
+                <p>FORMATOS</p>
+            </a>
+            <a class="box" routerLink="/enlaces">
+                <img src="img/Enlaces.png" alt="Enlaces">
+                <p>ENLACES</p>
+            </a>
+            <a class="box" routerLink="/busquedas" *ngIf="mostrarBusquedas">
+                <img src="img/Busquedas.png" alt="Búsquedas">
+                <p>BÚSQUEDAS</p>
+            </a>
+            <a class="box" routerLink="/rc" *ngIf="mostrarBusquedas">
+                <img src="img/app.png" alt="Búsquedas">
+                <p>REMEDY CONTROL</p>
+            </a>
+        </div>
+    </section>
+    <app-footer></app-footer>
+</body>

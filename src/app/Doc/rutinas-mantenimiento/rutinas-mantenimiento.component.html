@@ -1,0 +1,294 @@
+<app-navbar></app-navbar>
+<app-menu-documentacion></app-menu-documentacion>
+<section class="Contenido">
+    <app-nav-doc></app-nav-doc>
+    <div [ngSwitch]="pageId">
+
+        <!------------------------------------------- PAGINA: SOLICITUD RUTINA ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'SolicitudRutina'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h2>BMC ITSM - Gesti&oacute;n de Solicitudes - Rutinas de Mantenimiento</h2> <!-- Encabezado -->
+                        <p><strong>Rutinas de Mantenimiento</strong></p>
+                        <p>Este apartado permite conocer como realizar los procesos preventivos en el <em>Modelo
+                                Est&aacute;ndar</em> y en Remedy en la Nube.</p>
+                    </header> <!-- Termina el texto principal -->
+                    <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                        <p>Para generar una solicitud de Rutina de Mantenimiento siga estos pasos:</p>
+                        <table>
+                            <tr>
+                                <td>
+                                    <strong>Alta de rutina:</strong>
+                                    <ol>
+                                        <li>Ingresar a la consola de <a
+                                                href="https://remedycloudamx-dwp.onbmc.com/dwp/app/#/catalog">
+                                                Digital Workplace</a>, si no lo ha hecho aun, conocer su usuario
+                                            <a routerLink="/doc/Generales/Acceso">aquí</a>. Al abrir la pagina,
+                                            escribir en el buscador "Servicios en la nube" y seleccionar el primer
+                                            servicio que aparece en la lista.
+                                        </li>
+                                        <li>
+                                            Al entrar en el servicio (<a
+                                                routerLink="/doc/RutinasMantenimiento/FormatoRutina">Despues de
+                                                descargar el formato correspondiente</a>),
+                                            hacer clic en el boton "Pedir ahora" lo que redirigira a un formulario para
+                                            solicitar el servicio.
+                                        </li>
+                                        <li>
+                                            Los datos requeridos para solicitar el servicio son:
+                                            <ul>
+                                                <li><b>TIPO DE REPORTE: </b>SOLICITUD DE SERVICIO</li>
+                                                <li><b>SERVICIO: </b>REMEDY</li>
+                                                <li><b>DETALLE: </b>ALTA DE RM</li>
+                                                <li><b>DESCRIPCION: </b>Añadir una descripcion para el alta de la rutina
+                                                </li>
+                                                <li><b>Attachments: </b>Agregar el archivo CargaRM.xlsx</li>
+                                                <li><b>Attachments (Opcional): </b>Si la rutina requiere de un manual de
+                                                    instrucciones para ser ejecutada, puede ser agregado despues del
+                                                    formato de CargaRM (xlsx, xls, doc, docx, txt, pptx, jpg, png)</li>
+                                            </ul>
+                                            Cuando todos los datos sean cargados, hacer clic en "Enviar petición"
+                                        </li>
+                                        <li>
+                                            Cuando la peticion sea enviada, el proceso comenzara las validaciones de los
+                                            datos en el archivo CargaRM.xslx y generara una Work Order
+                                            en donde se documentaran los resultados. Esto puede tener 3 posibles
+                                            finales:
+                                            <ul>
+                                                <li><b>Cerrado Con exito: </b>Todos los registros validados en el
+                                                    archivo de carga fueron correctos y generaron la rutina
+                                                    correctamente.</li>
+                                                <li><b>Cerrado Sin exito: </b>Almenos 1 de los registros tuvieron
+                                                    errores al ser validados. El resumen de los errores se vera en la
+                                                    seccion "Comentarios".</li>
+                                                <li><b>Cancelado: </b>Todos los registros tuvieron errores, por lo que
+                                                    no fue insertado ninguno. El resumen de los errores se vera en la
+                                                    seccion "Comentarios".</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="RutinasMantenimiento/RM - Solicitud de AltaRutina.mp4"
+                                        width="600" autoplay controls loop></video>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+
+        <!------------------------------------------- PAGINA: CAMBIO O BAJA DE RUTINA ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'FormatoRutina'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h2>BMC ITSM - Gesti&oacute;n de Solicitudes - Rutinas de Mantenimiento</h2> <!-- Encabezado -->
+                        <p><strong>Rutinas de Mantenimiento</strong></p>
+                        <p>Este apartado permite conocer como realizar los procesos preventivos en el <em>Modelo
+                                Est&aacute;ndar</em> y en Remedy en la Nube.</p>
+                    </header> <!-- Termina el texto principal -->
+                    <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                        <p>Para realizar el llenado del formato para solicitar el alta de rutinas:</p>
+                        <table>
+                            <tr>
+                                <td valign="top" id="Formato">
+                                    <ol>
+                                        <li>Ingresar a la consola de <a
+                                                href="https://remedycloudamx-dwp.onbmc.com/dwp/app/#/catalog">
+                                                Digital Workplace</a>, si no lo ha hecho aun, conocer su usuario <a
+                                                routerLink="/doc/Generales/Acceso">aquí</a>. Al abrir la pagina,
+                                            escribir en el buscador "Servicios en la nube" y seleccionar el primer
+                                            servicio que aparece en la lista.
+                                        </li>
+                                        <li>
+                                            En la secccion <b>Recursos</b> se encuentra el enlace para la descarga del
+                                            formato "CargaRM.xlsx"
+                                            el cual es necesario para solicitar el alta de las rutinas de mantenimiento.
+                                            <ul>
+                                                <li><i><b>IMPORTANTE:</b> Al descargar el archivo, es necesario que el
+                                                        nombre sea exactamente "CargaRM.xlsx", ya que
+                                                        de ser diferente, el archivo no podra ser util para generar
+                                                        altas de rutinas.
+                                                    </i></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Una vez descargado el archivo, es necesario que la informacion incluida sea
+                                            correcta para que las validaciones
+                                            del proceso sean aceptadas.
+                                            <ul>
+                                                <li><b>Company: </b>Nombre de compañia valida en Remedy.</li>
+                                                <li><b>TipoRutina: </b>CALENDARIZADA, DIARIA, MENSUAL, LABORAL, SEMANAL.
+                                                </li>
+                                                <li><b>Frecuencia (opcional): </b>Dependiendo del tipo de rutina.</li>
+                                                <li><b>Duracion: </b>Duracion de la WO que se generara apartir de la
+                                                    rutina.</li>
+                                                <li><b>FechaCreacion: </b>Fecha en la que se generara la primer WO, debe
+                                                    ser mayor a la fecha actual.</li>
+                                                <li><b>FechaInicio: </b>Fecha de inicio de la WO, debe ser mayor a la de
+                                                    creacion.</li>
+                                                <li><b>CI: </b>Sitio afectado por la rutina.</li>
+                                                <li><b>Region: </b>Region del sitio.</li>
+                                                <li><b>GrupoSoporte: </b>Grupo de soporte relacionado.</li>
+                                                <li><b>ResponsableRutina: </b>Persona a la que se le asignara la rutina.
+                                                </li>
+                                                <li><b>InstruccionesRutina: </b>instrucciones que el responsable de la
+                                                    rutina debe seguir para darle cierre.</li>
+                                                <li><b>NombreArchivo (opcional): </b>Nombre del manual de instrucciones
+                                                    en el caso de que exista.</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="RutinasMantenimiento/RM - Descarga de Formato.mp4"
+                                        width="600" autoplay controls loop></video>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+
+        <!------------------------------------------- PAGINA: CAMBIO O BAJA DE RUTINA ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'CambioBajaRutina'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h2>BMC ITSM - Gesti&oacute;n de Solicitudes - Rutinas de Mantenimiento</h2> <!-- Encabezado -->
+                        <p><strong>Rutinas de Mantenimiento</strong></p>
+                        <p>Este apartado permite conocer como realizar los procesos preventivos en el <em>Modelo
+                                Est&aacute;ndar</em> y en Remedy en la Nube.</p>
+                    </header> <!-- Termina el texto principal -->
+                    <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                        <p>Para generar una solicitud de cambio o baja en Rutina de Mantenimiento: </p>
+                        <table>
+                            <tr>
+                                <td valign="top" id="Formato">
+
+                                    <strong>Cambio de rutina:</strong>
+                                    <ol>
+                                        <li>Ingresar a la consola de <a
+                                                href="https://remedycloudamx-dwp.onbmc.com/dwp/app/#/catalog">
+                                                Digital Workplace</a>, si no lo ha hecho aun, conocer su usuario
+                                            <a routerLink="/doc/Generales/Acceso">aquí</a>. Al abrir la pagina,
+                                            escribir en el buscador "Servicios en la nube" y seleccionar el primer
+                                            servicio que aparece en la lista.
+                                        </li>
+                                        <li>
+                                            Al entrar en el servicio es necesario contar con el formato de alta de rutina con el nombre exacto
+                                            de la rutina qu se requiere modificar.
+                                            hacer clic en el boton "Pedir ahora" lo que redirigira a un formulario para
+                                            solicitar el servicio.
+                                        </li>
+                                        <li>
+                                            Los datos requeridos para solicitar el servicio son:
+                                            <ul>
+                                                <li><b>TIPO DE REPORTE: </b>SOLICITUD DE SERVICIO</li>
+                                                <li><b>SERVICIO: </b>REMEDY</li>
+                                                <li><b>DETALLE: </b>CAMBIO DE RM</li>
+                                                <li><b>DESCRIPCION: </b>Especificar cual es el tipo de cambio que requiere la rutina o si es necesario darla de baja.
+                                                </li>
+                                                <li><b>Attachments: </b>Agregar el archivo CargaRM.xlsx</li>
+                                                <li><b>Attachments (Opcional): </b>Si la rutina requiere de un cambio de manual de
+                                                    instrucciones, puede ser agregado despues del
+                                                    formato de CargaRM (xlsx, xls, doc, docx, txt, pptx, jpg, png)</li>
+                                            </ul>
+                                            Cuando todos los datos sean cargados, hacer clic en "Enviar petición"
+                                        </li>
+                                        <li>
+                                            Cuando la peticion sea enviada, se generara una Work Order con todas las especificaciones dadas en la 
+                                            peticion para que alguien mas atienda el cambio manualmente y de el cierre correspondiente.
+                                        </li>
+                                    </ol>
+
+
+                                </td>
+                                <td valign="top"><video src="RutinasMantenimiento/RM - Solicitud de CambioRutina.mp4"
+                                        width="600" autoplay controls loop></video>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+
+        <!------------------------------------------- PAGINA: ATENCION WO RUTINA ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'AtencionWORutina'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h2>BMC ITSM - Gesti&oacute;n de Solicitudes - Rutinas de Mantenimiento</h2> <!-- Encabezado -->
+                        <p><strong>Rutinas de Mantenimiento</strong></p>
+                        <p>Este apartado permite conocer como realizar los procesos preventivos en el <em>Modelo
+                                Est&aacute;ndar</em> y en Remedy en la Nube.</p>
+                    </header> <!-- Termina el texto principal -->
+                    <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                        <p>Para atender una Orden de trabajo generada apartir de servicio de alta o cambio: </p>
+                        <table>
+                            <tr>
+                                <td valign="top" id="Formato">
+
+ <ol>
+                                        <li>Ingresar al sistema <a
+                                                href="https://remedycloudamx-rsso.onbmc.com/rsso/start">
+                                                Smart IT</a>, si no lo ha hecho aun, conocer su usuario <a
+                                                href="/doc/Generales/Acceso">aquí</a>.
+                                        </li>
+                                        <li>Dirigirse a: "<b>BMC Helix ITSM</b>, en la parte superior izquierda hacer clic en <i>Tickets asignados a mi grupo</i>
+                                            y sustituir por la opcion <i>Tickets sin asignar a mi grupo</i></li>
+                                        <li>Se desplegara una lista con las Ordnes de trabajo que coincidan con el grupo de soporte y no tengan un usuario asignado para su atencion.
+                                        </li>
+                                    </ol>
+                                    <strong>Atencion y seguimiento:</strong>
+                                    <ol>
+                                        <li>Para asignar una Work order de cambio a un usuario especifico, se observa que el Resumen es:
+                                             CLOUD:REMEDY_CAMBIO DE RM. Al abrir el ticket se encuentra una vista previa.</li>
+                                        <li>En el apartado de <i>Asignado a</i> se daran dos opciones, <i>Asignarme a mi</i> para tomar la Work Order o <i>editar</i> para tener 
+                                        la posibilidad de asignar la Work Order a un usuario distinto</li>
+                                        <li>Para dar seguimiento a la WO, seleccionar el campo <b>Estado</b> y cambiarlo a En Curso y hacer click en "Guardar"</li>
+                                        <li>Para proceder con la atencion de la WO, sera necesario descargar el archivo de CargaRM para conocer el registro de AMX:DefinicionRutinas que se modificara,
+                                            ademas de tener en cuenta la Descripcion del ticket que dara mas detalles de cual sera la modificacion.
+                                        </li>
+                                        <li>
+                                            Al tener los datos completos, se procedera a realizar los cambios en el formulario AMX:DefinicionRutinas
+                                        </li>
+                                        <li>
+                                            Una vez realizado el cambio, la Work Order debera ser documentada po mredio de Notas para notificar al solicitante
+                                            si el cambio fue realizado con exito.
+                                        </li>
+                                        <li>
+                                            Como paso opcional, si existen documentos o adjuntos que puedan mejorar la explicacion del cambio. Helix permite hasta 3 archivos de no mas de 5MB.
+                                        </li>
+                                        <li>Por ultimo, si el cambio pudo ser efectuado con exito, el campo <b>Estado</b> debe ser cambiado a Terminado con el movio de estado "Con exito"</li>
+                                    </ol>
+
+
+
+                                </td>
+                                <td valign="top"><video src="RutinasMantenimiento/RM - Atención WO.mp4"
+                                        width="600" autoplay controls loop></video>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchDefault>
+            <h3>Página no encontrada</h3>
+        </ng-container>
+    </div>
+</section>

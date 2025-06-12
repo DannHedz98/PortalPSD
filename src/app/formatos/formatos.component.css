@@ -1,0 +1,23 @@
+.Contenido{
+    margin-left: 240px;
+    padding-left: 30px;
+    padding-top: 15px;
+}
+
+.Contenido hr{
+    margin-right: 30px;
+}
+
+.Contenido a{
+    color: #020025;
+    font-size: 16px;
+}
+
+.Contenido h4{
+    white-space: pre-line;
+}
+body {
+    font-family: Arial, sans-serif;
+    /* text-align: center; */
+    background-color: #f8f8f8;
+}

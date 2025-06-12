@@ -1,0 +1,266 @@
+<app-navbar></app-navbar>
+<app-menu-documentacion></app-menu-documentacion>
+<section class="Contenido">
+    <app-nav-doc></app-nav-doc>
+    <div [ngSwitch]="pageId">
+
+        <!------------------------------------------- PAGINA: INDEX ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'index'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <h1>BMC ITSM - Work Order Management - Gesti&oacute;n de &Oacute;rdenes de Trabajo</h1>
+                        <p>
+                            BMC Service Request Management (SRM) incluye una funcionalidad para atender las solicitudes
+                            llamadas &quot;&Oacute;rdenes de trabajo&quot;.
+                        </p>
+                        <p>Las &oacute;rdenes de trabajo permiten completar las solicitudes de los usuarios asignando la
+                            orden de trabajo a un grupo especializado. Una solicitud puede tener una o varias
+                            &oacute;rdenes de trabajo y cada una de llas es completada de forma independiente.
+                        </p>
+                    </header> 
+                    <div> 
+                        <h2>Ciclo de vida de las &oacute;rdenes de trabajo
+                        </h2>
+                        <div class="sectionWrapper">
+                            <p>
+                                Las &oacute;rdenes de trabajo tienen un ciclo de vida que contiene los siguientes
+                                estados:
+                            </p>
+                            <table cellpadding="3" cellspacing="0" class="tabla">
+                                <thead>
+                                    <tr class="TableSubHeadingColor header">
+                                        <td>Estado</td>
+                                        <td>Descripci&oacute;n</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Asignada</span></code></td>
+                                        <td>Es el estado inicial. Si la orden de trabajo es creada manualmente puede ser
+                                            un borrador de esta misma hasta que la orden de trabajo comience.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Pendiente</span></code></td>
+                                        <td>Lo siguiente puede aplicar:
+                                            <ul>
+                                                <li>El asignado a la orden de trabajo requiere informaci&oacute;n
+                                                    adicional.</li>
+                                                <li>Ha ocurrido un error por alguna raz&oacute;n, por ejemplo: datos
+                                                    incorrectos. </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Esperando aprobaci&oacute;n</span></code></td>
+                                        <td>La orden de trabajo est&aacute; pendiente por aprobaci&oacute;n.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">En planeaci&oacute;n</span></code></td>
+                                        <td>La orden de trabajo est&aacute; lista para implementarse pero el trabajo no
+                                            ha comenzado.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">En progreso</span></code></td>
+                                        <td>Los trabajos de la orden de trabajo han comenzado.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Completado</span></code></td>
+                                        <td>Cuando la &uacute;ltima tarea de la orden de trabajo se ha cerrado, el
+                                            estado de la orden de trabajo se ajusta en &quot;Completado&quot;.<br>Notas:
+                                            <ul>
+                                                <li>Si el estado de todas las tareas es &quot;Cerrado&quot; con
+                                                    raz&oacute; de &quot;Exitoso&quot;, la orden de trabajo queda en
+                                                    estado &quot;Completado&quot; con raz&oacute;n de
+                                                    &quot;Exitoso&quot;.</li>
+                                                <li>Si el estado de alguna de las tareas no es &quot;Cerrado&quot; con
+                                                    raz&oacute;n de &quot;Exitoso&quot;, la orden de trabajo queda en
+                                                    estado &quot;Completado&quot; con raz&oacute;n de &quot;Exitoso con
+                                                    problemas&quot;</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Rechazada</span></code></td>
+                                        <td>Si es necesaria una autorizaci&oacute;n para la orden de trabajo, este
+                                            estado
+                                            indica que esta es rechazada.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Cancelada</span></code></td>
+                                        <td>La solicitud asociada a esta orden de trabajo fue cancelada.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Cerrada</span></code></td>
+                                        <td>Las siguientes descripciones pueden aplicar:<ul>
+                                                <li>Cerrado sin problemas</li>
+                                                <li>Cerrado pero con algunos problemas</li>
+                                                <li>Cerrado por el sistema (el sistema cierra autom&aacute;ticamente las
+                                                    &oacute;rdenes de trabajo despu&eacute;s de unos dias de estar en
+                                                    estado &quot;Completada&quot;).</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> 
+                    </div> 
+                    <div> 
+                        <h2>Gu&iacute;a de uso para &oacute;rdenes de trabajo</h2>
+                        <div class="sectionWrapper"> 
+                            <table class="tabla">
+                                <tr>
+                                    <td valign="top">
+                                        <ol>
+                                            <li>Ingrese a Remedy</li>
+                                            <li>Seleccione de la pesta&ntilde;a de <strong>Aplicaciones &gt;
+                                                    Gesti&oacute;n de Solicitudes de Servicio &gt; Consola de
+                                                    &oacute;rdenes de trabajo</strong></li>
+                                            <li>Seleccione la orden de trabajo que est&aacute; asignada a su grupo</li>
+                                            <li>Comience revisando las notas de trabajo</li>
+                                            <li>Revise el grupo al que se ha asignado la orden de trabajo</li>
+                                            <li>Utilice el bot&oacute;n &quot;Asignarme a m&iacute; mismo&quot; y
+                                                presione &quot;Guardar&quot;</li>
+                                            <li>Agregue notas de trabajo y presione &quot;Agregar&quot;</li>
+                                            <li>Al terminar los trabajos de la orden de trabajo cambie el estado a
+                                                <strong>Terminado</strong>
+                                            </li>
+                                            <li>Seleccione el motivo del estado
+                                                <ul>
+                                                    <li>Con &eacute;xito</li>
+                                                    <li>&Eacute;xito con problemas</li>
+                                                </ul>
+                                            </li>
+                                            <li>Presione &quot;Guardar&quot;</li>
+                                        </ol>
+                                    </td>
+                                    <td valign="top"><video src="/Ordenesdetrabajo/reqti2.mp4" width="600" autoplay controls loop></video>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </ng-container>
+
+
+        <ng-container *ngSwitchCase="'CrearTareaWO'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>BMC ITSM - Service Request Management - Gesti&oacute;n de &Oacute;rdenes de Trabajo</h1>
+                        <!-- Encabezado -->
+                        <p><strong>Crear tarea(s)</strong></p>
+                        <p>
+                            En el m&oacute;dulo de &oacute;rdenes de trabajo existe la posibilidad de asignar
+                            actividades aisladas relacionadas a la atenci&oacute;n de la orden de trabajo. </p>
+                        <p>El asignado a la tarea solo mantiene la responsabilidad de la tarea, mientras el asignado a
+                            la orden de trabajo mantiene la responsabilidad de la orden de trabajo. </p>
+                        <p>Para crear una tarea siga estos pasos. Repita la operaci&oacute;n si desea crear m&aacute;s
+                            tareas. </p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Instrucciones:</strong>
+                                    <ol>
+                                        <li>Dentro del folio de orden de trabajo asignado en estado en curso</li>
+                                        <li>Ingrese al apartado <strong>Tareas</strong></li>
+                                        <li>En el campo Tipo de petici&oacute;n seleccione el valor <strong>Ad
+                                                hoc</strong> y oprima el bot&oacute;n <strong>Relacionar</strong></li>
+                                        <li>Visualizar la pantalla de la nueva tarea con la siguiente informaci&oacute;n
+                                            mapeada de la orden de trabajo:</li>
+                                        <table border="1" cellspacing="0" cellpadding="0" class="tabla">
+                                            <tr class="header">
+                                                <td width="221" valign="top">
+                                                    <p align="center"><strong>INCIDENTE</strong></p>
+                                                </td>
+                                                <td width="221" valign="top">
+                                                    <p align="center"><strong>TAREA</strong></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="221" valign="top">
+                                                    <p>Resumen</p>
+                                                </td>
+                                                <td width="221" valign="top">
+                                                    <p>Nombre / Resumen</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="221" valign="top">
+                                                    <p>Solicitante de la orden de trabajo</p>
+                                                </td>
+                                                <td width="221" valign="top">
+                                                    <p>Informaci&oacute;n de Solicitado para</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="221" valign="top">
+                                                    <p>Ubicaci&oacute;n del solicitante</p>
+                                                </td>
+                                                <td width="221" valign="top">
+                                                    <p>Ubicaci&oacute;n de la tarea</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <li>Documente las actividades a realizar en el campo <strong>Resumen</strong>
+                                            y/o <strong>Notas</strong></li>
+                                        <li>Documente el campo <strong>Tipo de Tarea</strong> con el valor <strong>Orden
+                                                de Trabajo</strong></li>
+                                        <li>Seleccionar el apartado Asignaci&oacute;n/Fechas</li>
+                                        <li>En Asignaci&oacute;n de tareas documente los campos Empresa asignada,
+                                            Organizaci&oacute;n asignada y Grupo asignado. </li>
+                                        <li>En Fechas/hora documente la Fecha programada de inicio y la Fecha programada
+                                            de finalizaci&oacute;n. </li>
+                                        <li>Oprima el bot&oacute;n Guardar</li>
+                                        <li>En el apartado de Tareas dentro de la orden de trabajo visualizar&aacute; el
+                                            registro de la tarea creada</li>
+                                        <li>Generar todas las tareas que sean necesarias</li>
+                                        <li>*Opcional. Modificar secuencia de las tareas</li>
+                                        <li>Dentro de la barra de estados en el recuadro Resoluci&oacute;n y
+                                            Recuperaci&oacute;n oprima el &iacute;cono <img width="18" height="14"
+                                                src="Ordenesdetrabajo/cerraralarma_clip_image002.png"></li>
+                                        <li>Seleccione el valor Pendiente y un motivo de estado de los enlistados.</li>
+                                        <li>El incidente queda a la espera de que se ejecuten las tareas relacionadas al
+                                            mismo.</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Ordenesdetrabajo/creartareawo.mp4" width="600" autoplay controls
+                                        loop></video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <p><strong>*Secuencia de tareas</strong><br>
+                                        Cuando se han generado todas las tareas asociadas a la orden de trabajo puede
+                                        modificar el n&uacute;mero de secuencia de las mismas, es decir, el orden en el
+                                        que se ejecutar&aacute;n. Una secuencia menor implica que se ejecutar&aacute;
+                                        primero esa tarea. </p>
+                                    <p>En caso de requerir que todas las tareas se ejecuten al mismo tiempo
+                                        deber&aacute; asignarles el mismo n&uacute;mero de secuencia. <br>
+                                        Para modificar la secuencia de una tarea, &eacute;sta debe tener el estado
+                                        &quot;Por Fases&quot;</p>
+                                    <ol>
+                                        <li>Seleccione el registro de la tarea en la tabla Tareas y Grupos de Tareas
+                                            dentro del incidente.</li>
+                                        <li>Oprima las flechas que se encuentran en la parte inferior derecha del
+                                            apartado tareas para modificar la secuencia.</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Ordenesdetrabajo/creartareasecuencia.mp4" width="600" autoplay controls
+                                        loop></video></td>
+                            </tr>
+                        </table>
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchDefault>
+            <h2>Página no encontrada</h2>
+        </ng-container>
+    </div>
+</section>

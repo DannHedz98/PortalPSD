@@ -1,0 +1,132 @@
+.sidebar {
+  width: 240px;
+  height: 90vh;
+  background-color: #020025;
+  color: white;
+  padding: 10px;
+  padding-bottom: 50px;
+  position: absolute;
+  top: 5 vh;
+  left: 0;
+  text-align: left;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+}
+
+/* Estilos del título */
+.sidebar h1 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilos de la lista principal */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos de los elementos del menú */
+.sidebar li {
+  border-top: 1px solid #777;
+  /* Línea divisoria */
+}
+
+/* Quita el borde superior del primer elemento */
+.sidebar li:first-child {
+  border-top: none;
+}
+
+/* Estilos de los enlaces */
+.sidebar a {
+  color: #00e1ff;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+/* Submenús ocultos por defecto */
+.sidebar ul ul {
+  display: none;
+}
+
+
+/* Mostrar el submenú cuando está activo */
+.sidebar ul li ul {
+  display: block;
+}
+
+/* Estilos de los subelementos */
+.sidebar ul ul li {
+  padding: 3px 0;
+  border-top: none;
+}
+
+/* Estilo de los enlaces del submenú */
+.sidebar ul ul li a {
+  font-size: 13px;
+  color: #ddd;
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+/* Estilo para la flecha */
+span {
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+span.open {
+  transform: rotate(90deg);
+}
+
+/* Asegura que los submenús sí cambien de color al hacer hover */
+.sidebar ul ul li:hover {
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+/* Etilo cuando un submenú está abierto */
+ .sidebar ul ul li.active {
+  background-color: #a2caea;
+  color: #020025;
+  font-weight: bold;
+  border-radius: 10px;
+} 
+
+.sidebar ul ul li.active a{
+  color: #020025;
+  font-weight: bold;
+}
+
+.sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 280px;
+  left: 0px;
+  width: 130px;
+  height: 30px;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  background-color: #020025;
+  color: white;
+  border: 1px solid #00e1ff;
+  border-radius: 0 0 10px 10PX;
+  font-size: 15px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: left 0.3s ease-in-out;
+}
+
+.toggle-btn.shifted {
+  left: 240px; 
+}

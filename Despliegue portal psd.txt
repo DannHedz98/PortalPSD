@@ -1,0 +1,21 @@
+Compilacion
+
+
+generar la carpeta desplegable del proyecto con el comando * ng build --configuration production *
+
+*IMPORTANTE: Unicamente la primera vez, despues de eso el comando para ejecutar los despleguables es ng build *
+
+Dentro de la carpeta dist se generara la carpeta PortalPSD y ahi las carpetas browser y server. La unica carpeta que se tiene que subir al servidor es la carpeta browser, renombrada a PortalPSD en la siguiente direccion del servidor Smart IT
+/opt/bmc/Smart_IT/Smart_IT/smartit
+
+Para evitar mudar todos los archivos multimedia, en el caso de que ya se encuentren ahi, unicamente reemplazar los archivos html, js y css. O en el caso de haber includo mas multimedia, solo copiarla a la carpeta que corresponda.
+
+Si al aplicacion es desplegada en servidores de RC, se debe modificar el archivo index.hmtl, agregando "/PortalPSD/" al inicio de todos los href y src
+Si al aplicacion es desplegada en servidores de Smart IT, se debe modificar el archivo index.hmtl, agregando "/smartit/PortalPSD/" al inicio de todos los href y src
+
+
+si se despliega en el servidor de Remedy Control, la ruta para la descarga de los Formatos debe ser:  /PortalPSD/Formatos/Manuales/Manual_para_adjuntar_archivos_a_incidentes.pdf
+Para hacer pruebas locales, la ruta debe omitir la carpeta de despliegue y unicamente especificar la carpeta en la que se encuentran:
+/Formatos/Manuales/Manual_para_adjuntar_archivos_a_incidentes.pdf
+De lo contrario si es SmartIT las rutas deben ser: /smartit/PortalPSD/Formatos/Manuales/Manual_para_adjuntar_archivos_a_incidentes.pdf
+

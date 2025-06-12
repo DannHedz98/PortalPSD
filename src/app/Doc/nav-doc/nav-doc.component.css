@@ -1,0 +1,19 @@
+.Menu{
+    background-color: #020025;
+    border-radius: 3px;
+    align-items: center;
+    /* margin-bottom: 10px; */
+}
+
+.enlace{
+    color: white;
+}
+
+.content{
+    display: flex;              
+    justify-content: center;      
+    align-items: center;       
+    list-style: none;       
+    padding: 0;               
+    margin: 0;  
+}

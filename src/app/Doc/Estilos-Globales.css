@@ -1,0 +1,34 @@
+.Contenido{
+    padding-left: 60px;
+    padding-right: 50px;
+    padding-top: 15px;
+    height: 85vh;       
+    overflow-y: auto; 
+}
+
+.tabla{
+    width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+}
+
+.tabla2{
+        border-collapse: collapse;
+        margin-bottom: 20px;
+}
+
+.celdas tr, td{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+.header{
+    background-color: #050046;
+    color: white;
+}
+
+.summary{
+    padding: 15px 20px 20px 20px;
+    background-color: rgb(241, 245, 255);
+}

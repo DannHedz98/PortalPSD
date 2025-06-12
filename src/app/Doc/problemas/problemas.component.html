@@ -1,0 +1,824 @@
+<app-navbar></app-navbar>
+<app-menu-documentacion></app-menu-documentacion>
+<section class="Contenido">
+    <app-nav-doc></app-nav-doc>
+    <div [ngSwitch]="pageId">
+
+        <!------------------------------------------- PAGINA: INDEX ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'index'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <h1>BMC ITSM - Problem Management - Gesti&oacute;n de Problemas</h1> <!-- Encabezado -->
+
+                        <p>
+                            La gesti&oacute;n de problemas es un proceso enfocado en la b&uacute;squeda de la causa
+                            ra&iacute;z de una falla, cuando la causa es desconocida y no existe soluci&oacute;n
+                            documentada para resolverla.
+                            La gesti&oacute;n de problemas est&aacute; relacionado a la gesti&oacute;n de incidentes
+                            (Alarmas, CPD&#39;s y de TI), ya que este le permite saber de forma reactiva si hay
+                            emergencias de las cuales deban investigarse su causa ra&iacute;z, o de forma proactiva
+                            realizando un an&aacute;lisis de la recurrencia (an&aacute;lisis estad&iacute;stico).
+                        </p>
+
+                    </header> <!-- Termina el texto principal -->
+                    <div> <!-- Secci&oacute;n 1 -->
+                        <h2>Ciclo de vida de los problemas</h2>
+                        <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                            <p>
+                                Los problemas tienen un ciclo de vida que contiene las siguientes fases:
+                            </p>
+                            <li> <strong>An&aacute;lisis de causa ra&iacute;z</strong> </li>
+                            <li> <strong>Validaci&oacute;n de soluci&oacute;n</strong> </li>
+                            <li> <strong>Cierre del problema</strong> </li>
+                            <p>El registro de problemas est&aacute; definido como una investigaci&oacute;n para
+                                localizar la causa ra&iacute;z de una falla, de modo que &eacute;sta no se presente
+                                nuevamente en la operaci&oacute;n normal de un servicio. El registro para llevar a cabo
+                                esta investigaci&oacute;n es una "Investigaci&oacute;n de problema". Durante la
+                                investigaci&oacute;n, este registro debe actualizarse para documentar el trabajo
+                                realizado, de modo que sirva como referencia para otros trabajos de
+                                investigaci&oacute;n.
+                            <table id="table-1" class="tabla2">
+                                <tbody>
+                                    <tr>
+                                        <td> <img src="Problemas/fasesproblem.png" width="500"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            Un an&aacute;lisis de causa ra&iacute;z puede dar origen a uno o varios registros de error
+                            conocido. Estos registros contienen informaci&oacute;n que proviene de la
+                            investigaci&oacute;n del problema, acerca de los errores que se presentan en la falla. Un
+                            error conocido puede contener la causa ra&iacute;z de la falla y originar una solicitud de
+                            cambio para validarla.<br>
+
+                            <br>Cuando la investigaci&oacute;n termina, pueden ocurrir dos cosas:<br>
+                            <br><strong>a. No localizar la causa ra&iacute;z de la falla.</strong> Aqu&iacute; no
+                            necesariamente se debe a falta de informaci&oacute;n o falta de pericia t&eacute;cnica para
+                            localizar la ra&iacute;z de la falla. Obviamente durante la investigaci&oacute;n se tomaron
+                            los recursos necesarios para localizarla. Pero tambi&eacute;n existen razones de negocio que
+                            no permiten localizar la falla, o que no permiten repararla. Por ejemplo: la falla se
+                            presenta en un software al que ya no se le da mantenimiento, y el costo para reparar la
+                            falla es m&aacute;s grande que la evaluaci&oacute;n y compra de un nuevo software.
+                            De cualquier forma, habr&aacute; una soluci&oacute;n temporal (workaround) que pueda
+                            implementarse cuando se presente la falla. El registro de investigaci&oacute;n de problema
+                            queda en estado pendiente para revisi&oacute;n en caso de que en el futuro pueda encontrarse
+                            la causa ra&iacute;z. <br>
+                            <br><strong>b. Localizar la causa ra&iacute;z.</strong> Cuando se localiza la causa
+                            ra&iacute;z se genera una propuesta de soluci&oacute;n que incluye la generaci&oacute;n de
+                            una solicitud de cambio (de acuerdo al documento de casos de uso de cambios) y su
+                            ejecuci&oacute;n. El cambio debe garantizar que la soluci&oacute;n propuesta es efectiva y
+                            que la falla ya no se presentar&aacute; m&aacute;s. Si la soluci&oacute;n propuesta es
+                            v&aacute;lida, entonces se generar&aacute; un art&iacute;culo de conocimiento (un
+                            instructivo) de tipo "Error Conocido" para el caso en que se presente la falla nuevamente.
+                            <p><strong>Estados del problema</strong></p>
+                            <p>El problema tiene un ciclo de vida que comienza con el estado &quot;Borrador&quot; y
+                                termina con el estado "Cerrado". La siguiente tabla describe los estados del problema.
+                            </p>
+                            <table cellpadding="3" cellspacing="0" class="tabla">
+                                <thead>
+                                    <tr class="TableSubHeadingColor header">
+                                        <td>Estado</td>
+                                        <td>Descripci&oacute;n</td>
+                                        <td>Requerimiento</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Borrador</span></code></td>
+                                        <td>Indica que el problema est&aacute; siendo creado. Al guardar, en este
+                                            estado, permite seguir modificando el registro antes de ser asignado al
+                                            Coordinador de Problemas.</td>
+                                        <td>Requiere que se llenen los campos de coordinador de problemas, controlador
+                                            de investigaci&oacute;n, resumen, prioridad.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">En revisi&oacute;n</span></code></td>
+                                        <td>Indica que el problema est&aacute; asignado a un Coordinador de Problemas.
+                                            La asignaci&oacute;n permite que un coordinador de problemas valide el
+                                            registro y permita establecer si la investigaci&oacute;n debe proseguir y
+                                            poder asignar a un grupo especialista.</td>
+                                        <td>Se requiere llenar el campo Grupo Asignado.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Asignado</span></code></td>
+                                        <td>Indica que el problema est&aacute; asignado. La asignaci&oacute;n ocurre
+                                            solo a nivel grupo, y el asignado debe tomar este problema para resolverlo.
+                                            <strong>Nota:</strong> Salvo algunas excepciones, el coordinador del grupo
+                                            de soporte podr&aacute; asignar al usuario que atender&aacute; el ticket.
+                                        </td>
+                                        <td>No tiene requerimientos espec&iacute;ficos.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Bajo Investigaci&oacute;n</span></code></td>
+                                        <td>Indica que el problema est&aacute; siendo atendido y ya se est&aacute;
+                                            trabajando en el.</td>
+                                        <td>Requiere llenar notas de trabajo.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Pendiente</span></code></td>
+                                        <td>Indica que el problema est&aacute; en espera de un tercero.</td>
+                                        <td>Requiere llenar el campo "Motivo del Estado".</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Terminado</span></code></td>
+                                        <td>Indica que el asignado ha finalizado la investigaci&oacute;n del problema y
+                                            puede generar un error conocido o soluci&oacute;n.</td>
+                                        <td>Requiere llenar el campo motivo de estado y se genera un registro de Error
+                                            Conocido o Soluci&oacute;n.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Rechazado</span></code></td>
+                                        <td>Indica que el problema ha sido rechazado por el coordinador de problema.
+                                        </td>
+                                        <td>Requiere llenar el campo "Motivo de Estado".</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Cerrado</span></code></td>
+                                        <td>Indica que el problema ha sido cerrado. Los problemas en este estado no se
+                                            pueden modificar.</td>
+                                        <td>Requiere llenar el campo motivo de estado; Remedy puede cambiar
+                                            autom&aacute;ticamente a este estado (previamente en Resuelto).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Cancelado</span></code></td>
+                                        <td>Indica que el problema ha sido cancelado. Los problemas pueden cancelarse, y
+                                            al igual que el estado "Cerrado", estos problemas no pueden modificarse.
+                                        </td>
+                                        <td>Requiere notas de trabajo y "Motivo del Estado".</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p><strong>Temas relacionados:</strong></p>
+                            <li><a routerLink="/doc/Problemas/CreacionProblema">Creaci&oacute;n de un Problema</a></li>
+                            <li><a routerLink="/doc/Problemas/AtencionProblema">Atenci&oacute;n de un Problema</a></li>
+                            <li><a routerLink="/doc/Problemas/CierreProblema">Cierre de un Problema</a></li>
+                        </div> <!-- Termina el contenido de la secci&oacute;n -->
+                    </div> <!-- Secci&oacute;n 1 -->
+                </div> <!-- Secci&oacute;n 2 -->
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'AtencionProblema'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>BMC ITSM - Problem Management - Gesti&oacute;n de Problemas</h1> <!-- Encabezado -->
+                        <p><strong>Seguimiento de Problemas</strong></p>
+                        <p>
+                            Despu&eacute;s de crear y asignar el registro de Investigaci&oacute;n de Problema se tiene
+                            que analizar la causa ra&iacute;z para determinar el origen del problema. Si el problema ha
+                            generado varios incidentes primero se tiene que buscar una soluci&oacute;n temporal para
+                            restaurar los servicios afectados lo antes posible y documentarla en Detalles de trabajo,
+                            para tenerla disponible en caso de presentarse otro incidente causado por un problema
+                            similar.
+                            <br><br>Una vez aplicada la soluci&oacute;n temporal, el especialista inicia la
+                            investigaci&oacute;n de la causa ra&iacute;z del problema, una vez encontrada se detalla en
+                            el registro para buscar la soluci&oacute;n definitiva.<br>
+                            <br>Despu&eacute;s de determinar la causa ra&iacute;z, seguir los pasos:
+                            <li>Registrar la causa ra&iacute;z en el formulario de Investigaci&oacute;n de Problema.
+                                (esto se realiza en la pesta&ntilde;a de Detalles de Trabajo).</li>
+                            <li>Si el origen de la causa ra&iacute;z proviene de un CI, este debe relacionarse con el
+                                registro de Investigaci&oacute;n de Problema.</li>
+                            <li> En el campo Soluci&oacute;n Provisional valorar si es necesario documentar una "mejor"
+                                soluci&oacute;n y describir c&oacute;mo se implementar&iacute;a. (esto se realiza en el
+                                campo Soluci&oacute;n provisional.)</li>
+                            <br>Si el especialista puede implementar la soluci&oacute;n, la aplica y la documenta en el
+                            registro de Investigaci&oacute;n de Problema, si es necesario un proceso de Gesti&oacute;n
+                            de Cambio se genera para dar seguimiento y ejecuci&oacute;n de cada una de las actividades
+                            necesarias.
+                        </p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Abrir un problema para seguimiento:</strong>
+                                    <ol>
+                                        <li>En la Consola de Gesti&oacute;n de Problemas del men&uacute; Mostrar
+                                            seleccionar uno de los filtros:
+                                            <br> - Todo
+                                            <br> - Enviado por m&iacute;
+                                            <br> - Asignado a m&iacute;
+                                            <br> - Asignado a mis grupos seleccionados.
+                                            <br> - Asignado a todos mis grupos.
+                                        </li>
+                                        <li>En el campo Filtrar por debe estar seleccionado Todos los tipos > Todos los
+                                            errores conocidos abiertos, problemas y soluciones activas.</li>
+                                        <li>Para ver el detalle seleccionar el registro de Investigaci&oacute;n de
+                                            Problema (en estado <strong>En revisi&oacute;n</strong>)de la tabla de
+                                            Problemas y dar clic en Ver.</li>
+                                        <li>Despu&eacute;s de validar que la informaci&oacute;n del Problema sea
+                                            correcta, asignar el grupo encargado de resolver el problema desde del campo
+                                            <strong>Grupo Asignado</strong>, filtr&aacute;ndolo por "Empresa de soporte"
+                                            y "Organizaci&oacute;n de soporte".
+                                        </li>
+                                        <li>Seleccionar el <strong>Usuario asignado</strong> si aplica.</li>
+                                        <li>Cambiar el estado del Problema a <strong>Asignado</strong>.</li>
+                                        <li>Dar clic en <strong>Guardar</strong>.</li>
+                                    </ol>
+                                    <strong>Documentar la causa ra&iacute;z y la soluci&oacute;n.</strong>
+                                    <ol>
+                                        <li>Abrir el registro de Investigaci&oacute;n de Problemas.</li>
+                                        <li>Dar clic en <strong>Siguiente fase</strong> e iniciar el proceso de
+                                            investigaci&oacute;n de causa ra&iacute;z.</li>
+                                        <li>Documentar el seguimiento de la investigaci&oacute;n de problema en la
+                                            pesta&ntilde;a <strong>Detalles de trabajo</strong>. Ver c&oacute;mo <a
+                                                routerLink="/doc/Problemas/DocumentarProblema">aqu&iacute;</a>.</li>
+                                        <li>En caso de requerir una petici&oacute;n de cambio para el seguimiento de las
+                                            actividades, &eacute;sta se realizar&aacute; desde el <strong>Error
+                                                Conocido</strong> o la <strong>Base de Datos de Soluciones</strong>
+                                            generada al Terminar la Investigaci&oacute;n del Problema. Donde el
+                                            coordinador del problema (Jefe corporativo OyM) ser&aacute; responsable de
+                                            la planeaci&oacute;n y coordinaci&oacute;n del cambio.</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Problemas/PBM Seguimiento.mp4" width="600" autoplay
+                                        controls loop controls>atender</video></td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/Problemas/index">Ciclo de vida</a></li>
+                            <li><a routerLink="/doc/Problemas/CreacionProblema">Creaci&oacute;n de un Problema</a></li>
+                            <li><a routerLink="/doc/Problemas/DocumentarProblema">Documentaci&oacute;n de un
+                                    Problema</a></li>
+                            <li><a routerLink="/doc/Problemas/CierreProblema">Cierre de un Problema</a></li>
+                        </ul>
+                    </header> <!-- Termina el texto principal --><!-- Secci&oacute;n 1 --><!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'CierreProblema'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>BMC ITSM - Problem Management - Gesti&oacute;n de Problemas</h1> <!-- Encabezado -->
+                        <p><strong>Resoluci&oacute;n del Problema</strong></p>
+                        <p>
+                            Despu&eacute;s de verificar la soluci&oacute;n, el problema se puede resolver y cerrar.
+                        </p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Instrucciones:</strong>
+                                    <ol>
+                                        <li>Abrir el registro de Investigaci&oacute;n de Problemas.</li>
+                                        <li>Documentar el campo <strong>Soluci&oacute;n Provisional</strong> si se
+                                            crear&aacute; un "Error conocido". De lo contrario documentar el campo
+                                            <strong>Soluci&oacute;n</strong> si se crear&aacute; una "Base de Datos de
+                                            Soluciones".
+                                        </li>
+                                        <li>Dar clic en el bot&oacute;n <strong>Siguiente fase</strong>.</li>
+                                        <li>Seleccionar el Motivo del estado; <strong>Error Conocido o Base de Datos
+                                                Soluciones</strong> seg&uacute;n aplique .</li>
+                                        <li>Dar clic en <strong>Guardar</strong>.</li>
+                                    </ol>
+                                    <ol>
+                                        <p><strong>Cierre del Problema:</strong>
+                                            <br>Despu&eacute;s del debido seguimiento al Error Conocido (PKE) o Base de
+                                            Datos de Soluciones (SDB), descrito m&aacute;s adelante.
+                                        </p>
+                                        <li>Abrir el registro de Investigaci&oacute;n de Problema.</li>
+                                        <li>Verificar que los detalles de la soluci&oacute;n est&aacute;n documentados
+                                            correctamente.</li>
+                                        <li><strong>Opcional.</strong> Si es necesario se debe documentar la
+                                            validaci&oacute;n con una nota en la pesta&ntilde;a de <strong>Detalles de
+                                                trabajo</strong>. Ver c&oacute;mo <a
+                                                routerLink="/doc/Problemas/DocumentarProblema">aqu&iacute;</a>.</li>
+                                        <li>Dar clic en <strong>siguiente fase</strong> y dar clic en
+                                            <strong>Guardar</strong>.
+                                        </li>
+                                        <li>El problema se guardar&aacute; en estado <strong>Cerrado</strong>.</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Problemas/cierreProblema1.mp4" width="600" autoplay
+                                        controls loop>atender</video></td>
+                            </tr>
+                        </table>
+                        <p> <strong>Error Conocido</strong></p>
+                        Para generar un Error Conocido ser&aacute; necesario seguir los pasos que se describen en la
+                        siguiente tabla:
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Instrucciones:</strong>
+                                    <ol>
+                                        <li>Abrir el registro de Investigaci&oacute;n de Problema.</li>
+                                        <li>Dar clic en el bot&oacute;n <strong>Siguiente fase</strong>.</li>
+                                        <li>Seleccionar el Motivo del estado: <strong>"Error Conocido"</strong>.</li>
+                                        <li>Clic en Guardar.</li>
+                                        <li>La forma Error Conocido se abre y se crea una relaci&oacute;n entre el error
+                                            conocido y la investigaci&oacute;n problema. El cual hereda la siguiente
+                                            informaci&oacute;n del problema (PBI):
+                                        <li type="disc">Grupo coordinador.</li>
+                                        <li type="disc">Coordinador de problemas.</li>
+                                        <li type="disc">Ubicaci&oacute;n de error conocido.</li>
+                                        <li type="disc">Resumen.</li>
+                                        <li type="disc">Notas.</li>
+                                        <li type="disc">Fecha deseada.</li>
+                                        <li type="disc">Impacto.</li>
+                                        <li type="disc">Urgencia.</li>
+                                        <li type="disc">Prioridad.</li>
+                                        <li type="disc">Grupo asignado.</li>
+                                        <li type="disc">Usuario asignado.</li>
+                                        <li type="disc">Categor&iacute;as de operaci&oacute;n y de producto.</li>
+                                        <li type="disc">Soluci&oacute;n y Soluci&oacute;n provisional.</li>
+                                        <li>Seleccionar en el campo <strong>Acceso a vista</strong> el valor
+                                            <strong>"P&uacute;blico"</strong> y en el campo <strong>"Se puede
+                                                buscar"</strong> con el valor <strong>"Yes"</strong>.
+                                        </li>
+                                        <li>Agregar informaci&oacute;n de trabajo.</li>
+                                        <li>Una vez documentada la soluci&oacute;n cambiar el Estado del PKE a
+                                            <strong>Planificado para correcci&oacute;n</strong> y dar clic en
+                                            <strong>Guardar</strong>.
+                                        </li>
+                                        <p><strong>Atenci&oacute;n: </strong>En caso de determinar que es requerido un
+                                            cambio (RFC) seguir los siguientes pasos, de lo contrario continuar en el
+                                            paso #27:
+                                            <br>
+                                            <br>-->Recordar que el usuario deber&aacute; tener el rol de coordinador de
+                                            cambios para que pueda generar el registro del cambio.
+                                        </p>
+                                        <li>Crear el registro de Cambio. En la secci&oacute;n de <strong>Acci&oacute;n
+                                                R&aacute;pida</strong> dar clic en la flecha de la opci&oacute;n
+                                            <strong>Crear solicitud rel.</strong> y seleccionar <strong>Cambio en la
+                                                infraestructura</strong>.
+                                        </li>
+                                        <li>Capturar el campo <strong>Clase</strong> con el valor "Est&aacute;ndar".
+                                        </li>
+                                        <li>En el campo <strong>Grupo de gestores</strong> seleccionar el grupo
+                                            correspondiente</li>
+                                        <li>Dentro del cambio, en la pesta&ntilde;a de
+                                            <strong>Categorizaci&oacute;n</strong> seleccionar nuevos valores para los
+                                            campos correspondientes a la Categor&iacute;a operacional y de producto.
+                                        </li>
+                                        <li>Seleccionar la pesta&ntilde;a <strong>Relaciones</strong> para asociar
+                                            CI&acute;s al problema. Seleccionar <strong>"Elemento de
+                                                Configuraci&oacute;n"</strong> en el campo <strong>Buscar</strong> y en
+                                            el campo anexo ingresar el nombre del CI y presionar el bot&oacute;n de
+                                            b&uacute;squeda. Seleccionar el CI, en el campo <strong>tipo de
+                                                relaci&oacute;n</strong> seleccionar <strong>"Relacionar con"</strong> y
+                                            presionar <strong>Relacionar</strong>. Dar clic en <strong>Aceptar</strong>
+                                            en la ventana de confirmaci&oacute;n. </li>
+                                        <li>Dar clic en <strong>Guardar</strong>.</li>
+                                        <p>El cambio debe seguir el proceso de <strong>Intervenciones en la Red de Voz y
+                                                Datos</strong> de acuerdo a lo definido en el <strong>Modelo
+                                                Est&aacute;ndar</strong> hasta llegar a la fase de Cerrado con estado
+                                            <strong>Cerrado</strong>.
+                                        </p>
+                                        <li>Una vez aplicada la soluci&oacute;n cambiar el estado del PKE a
+                                            <strong>Cerrado</strong> y dar clic en <strong>Guardar</strong>.
+                                        </li>
+                                        <li>Regresar al problema dando doble clic en el registro de la relaci&oacute;n
+                                            del PKE con el Problema (PBI) en la pesta&ntilde;a de
+                                            <strong>Relaciones</strong>.
+                                        </li>
+                                        <li>En el PBI, agregar informaci&oacute;n de trabajo (opcional). Ver c&oacute;mo
+                                            <a routerLink="/doc/Problemas/DocumentarProblema">aqu&iacute;</a>. Dar clic
+                                            en
+                                            <strong>Siguiente fase</strong> y dar clic en <strong>Guardar</strong>.
+                                        </li>
+                                        <li>El problema se habr&aacute; guardado en estado <strong>Cerrado</strong>.
+                                        </li>
+                                        <br>
+                                        <br>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Problemas/ErrorConocido.mp4" width="600" autoplay controls
+                                        loop>atender</video></td>
+                            </tr>
+                        </table>
+                        <p> <strong> Soluci&oacute;n</strong></p>
+                        Despu&eacute;s de determinar la causa ra&iacute;z de un problema, puede crear una entrada de
+                        soluci&oacute;n. Por lo general, es posible crear una entrada de soluci&oacute;n si se determina
+                        que la cuesti&oacute;n en contra del CI investigado no es un defecto (es decir, el CI
+                        est&aacute; funcionando como se dise&ntilde;&oacute;). En este escenario, una solicitud de
+                        cambio no tiene que ser creada para la correcci&oacute;n de la CI en cuesti&oacute;n.
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Instrucciones:</strong>
+                                    <ol>
+                                        <li>Abrir el registro de Investigaci&oacute;n de Problema.</li>
+                                        <li>Dar clic en el bot&oacute;n <strong>Siguiente fase</strong>.</li>
+                                        <li>Seleccionar el Motivo del estado: <strong>"Base de Datos de
+                                                Soluciones"</strong>.</li>
+                                        <li>Clic en <strong>Guardar</strong>.</li>
+                                        <li>La forma de base de datos Soluci&oacute;n se abre y se crea una
+                                            relaci&oacute;n entre ella y la investigaci&oacute;n problema. La cual
+                                            hereda la siguiente informaci&oacute;n del problema (PBI):
+                                        <li type="disc">Resumen.</li>
+                                        <li type="disc">Notas.</li>
+                                        <li type="disc">Extracto.</li>
+                                        <li type="disc">Soluci&oacute;n.</li>
+                                        <li type="disc">Empresa.</li>
+                                        <li type="disc">Categor&iacute;as de operaci&oacute;n y de producto.</li>
+                                        <li>Los campos que se llenan autom&aacute;ticamente son: <strong>Estado</strong>
+                                            con el valor <strong>"Incativo"</strong>, <strong>Acceso a vista</strong>
+                                            con el valor <strong>"P&uacute;blico"</strong> y <strong>Se puede
+                                                buscar</strong> con el valor <strong>"Yes"</strong>.</li>
+                                        <li>Despu&eacute;s de llenar los campos requeridos (consultar tabla m&aacute;s
+                                            abajo) dar clic en <strong>Guardar</strong></li>
+                                        <li>Agregar informaci&oacute;n de trabajo. En la pesta&ntilde;a de
+                                            <strong>Informaci&oacute;n de trabajo</strong> documentar el campo
+                                            <strong>Notas</strong>, ingresar resumen del problema en el campo
+                                            <strong>Resumen</strong>, seleccionar el <strong>Tipo de Informaci&oacute;n
+                                                de Trabajo</strong>, agregar adjuntos dando dar clic en el bot&oacute;n
+                                            <strong>Add</strong> para buscar un archivo y seleccionarlo (se pueden
+                                            adjuntar 3 por registro), en el campo <strong>Bloqueado</strong> seleccionar
+                                            <strong>"Yes"</strong> y en el campo <strong>Acceso a vista</strong>
+                                            seleccionar <strong>"P&uacute;blico</strong>, dar clic en el bot&oacute;n
+                                            <strong>Agregar al historial de informaci&oacute;n de trabajo</strong>.
+                                        </li>
+                                        <li>En la pesta&ntilde;a de <strong>Detalles</strong> documentar el campo
+                                            <strong>Soluci&oacute;n</strong>.
+                                        </li>
+                                        <li>Dar clic en <strong>Guardar</strong>.</li>
+                                        <p><strong>Atenci&oacute;n: </strong>En caso de determinar que es requerido un
+                                            cambio (RFC) seguir los siguientes pasos, de lo contrario continuar en el
+                                            paso #22:
+                                            <br>
+                                            <br>-->Recordar que el usuario deber&aacute; tener el rol de coordinador de
+                                            cambios para que pueda generar el registro del cambio.
+                                        </p>
+                                        <li>Crear el registro de Cambio. En la secci&oacute;n de <strong>Acci&oacute;n
+                                                R&aacute;pida</strong> dar clic en la flecha de la opci&oacute;n
+                                            <strong>Crear solicitud rel.</strong> y seleccionar <strong>Cambio en la
+                                                infraestructura</strong>.
+                                        </li>
+                                        <li>Dentro del cambio, en la pesta&ntilde;a de
+                                            <strong>Categorizaci&oacute;n</strong> seleccionar nuevos valores para los
+                                            campos correspondientes a la Categor&iacute;a operacional y de producto.
+                                        </li>
+                                        <li>Capturar el campo <strong>Clase</strong>.</li>
+                                        <li>Seleccionar la pesta&ntilde;a <strong>Relaciones</strong> para asociar
+                                            CI&acute;s al problema. Seleccionar <strong>"Elemento de
+                                                Configuraci&oacute;n"</strong> en el campo <strong>Buscar</strong> y en
+                                            el campo anexo ingresar el nombre del CI y presionar el bot&oacute;n de
+                                            b&uacute;squeda. Seleccionar el CI, en el campo <strong>tipo de
+                                                relaci&oacute;n</strong> seleccionar <strong>"Relacionar con"</strong> y
+                                            presionar <strong>Relacionar</strong>. Dar clic en <strong>Aceptar</strong>
+                                            en la ventana de confirmaci&oacute;n. </li>
+                                        <li>En el campo <strong>Grupo de gestores</strong> seleccionar el grupo
+                                            correspondiente y, dar clic en <strong>Guardar</strong>.</li>
+                                        <p>El cambio debe seguir el proceso de <strong>Intervenciones en la Red de Voz y
+                                                Datos</strong> de acuerdo a lo definido en el <strong>Modelo
+                                                Est&aacute;ndar</strong> hasta llegar a la fase de Cerrado con estado
+                                            <strong>Cerrado</strong>.
+                                        </p>
+                                        <li>Una vez analizada la soluci&oacute;n cambiar el estado de la SDB a
+                                            <strong>Activo</strong> y dar clic en <strong>Guardar</strong>.
+                                        </li>
+                                        <li>Regresar al problema dando doble clic en el registro de la relaci&oacute;n
+                                            de la SDB con el Problema (PBI) en la pesta&ntilde;a de
+                                            <strong>Relaciones</strong>.
+                                        </li>
+                                        <li>En el PBI, agregar informaci&oacute;n de trabajo (opcional). Ver c&oacute;mo
+                                            <a routerLink="/doc/Problemas/DocumentarProblema">aqu&iacute;</a>. Dar clic
+                                            en
+                                            <strong>Siguiente fase</strong> y dar clic en <strong>Guardar</strong>.
+                                        </li>
+                                        <li>El problema se habr&aacute; guardado en estado <strong>Cerrado</strong>.
+                                        </li>
+                                        <br>
+                                        <br>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Problemas/SDB.mp4" width="600" autoplay controls
+                                        loop>atender</video>
+                                </td>
+                            </tr>
+                        </table>
+                        En la siguiente tabla se muestran la descripci&oacute;n de los campos contenidos en el la base
+                        de datos de soluciones, que pueden ser usados para crear un registro.
+                        <table class="tabla2">
+                            <tr class="header">
+                                <td><strong>Campo</strong></td>
+                                <td><strong>Descripci&oacute;n</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Organizaci&oacute;n de Soporte</td>
+                                <td>La organizaci&oacute;n de Soporte a la que se le asign&oacute; la
+                                    investigaci&oacute;n de problemas</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Grupo de Soporte
+                                </td>
+                                <td>El grupo de Soporte al que se le asign&oacute; la investigaci&oacute;n de problemas
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Empresa de Soporte</td>
+                                <td>La Empresa a la que se le asign&oacute; la investigaci&oacute;n de problemas</td>
+                            </tr>
+                            <tr>
+                                <td>Ubicaci&oacute;n - Empresa</td>
+                                <td>Seleccione la empresa del cliente. Si la soluci&oacute;n aplica para todos los
+                                    clientes seleccionar el valor <strong>- Global-</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Organizaci&oacute;n - Empresa</td>
+                                <td>Selecciones la empresa del cliente. Si la soluci&oacute;n aplica para todos los
+                                    clientes seleccionar el valor <strong>- Global -</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Vista Acceso</td>
+                                <td>Seleccione una de las siguientes opciones:
+                                    <br><strong>Interno</strong> - Los usuarios dentro de su organizaci&oacute;n pueden
+                                    ver la entrada.
+                                    <br><strong>Publico</strong> - Todo el mundo con acceso a problemas puede ver la
+                                    entrada, incluidos los usuarios de la consola Solicitante
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Remitente</td>
+                                <td>Registre el nombre de la persona que crea la entrada de base de datos de soluciones
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Soluci&oacute;n</td>
+                                <td>Una descripci&oacute;n detallada de la soluci&oacute;n</td>
+                            </tr>
+                            <tr>
+                                <td>Resumen</td>
+                                <td>Un breve resumen de la soluci&oacute;n</td>
+                            </tr>
+                            <tr>
+                                <td>Extracto</td>
+                                <td>Una breve descripci&oacute;n de la causa ra&iacute;z y de la soluci&oacute;n.</td>
+                            </tr>
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/Problemas/index">Ciclo de vida</a></li>
+                            <li><a routerLink="/doc/Problemas/CreacionProblema">Creaci&oacute;n de un Problema</a></li>
+                            <li><a routerLink="/doc/Problemas/AtencionProblema">Atenci&oacute;n de un Problema</a></li>
+                            <li><a routerLink="/doc/Problemas/DocumentarProblema">Documentaci&oacute;n de un
+                                    Problema</a>
+                            </li>
+                        </ul>
+                    </header> <!-- Termina el texto principal --><!-- Secci&oacute;n 1 --><!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'CreacionProblema'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>BMC ITSM - Problem Management - Gesti&oacute;n de Problemas</h1> <!-- Encabezado -->
+                        <p><strong>Creaci&oacute;n de problemas</strong></p>
+                        <p>
+                            El primer paso en el ciclo de vida de un problema es la revisi&oacute;n de incidentes,
+                            peri&oacute;dicamente se debe realizar &eacute;ste an&aacute;lisis para identificar
+                            problemas potenciales, la idea es buscar soluciones de ra&iacute;z a incidentes reportados
+                            recurrentemente.
+                            <br>Dentro de la revisi&oacute;n de incidentes se recomienda generar un resumen que nos
+                            ayude a identificar los problemas que ser&aacute;n investigados, incluyendo incidentes con
+                            algunas caracter&iacute;sticas:<br>
+                            <li> Relacionados a servicios de infraestructura o servicios de negocio.</li>
+                            <li> Su nivel de Impacto sea 2-Significativo/Amplio o mayor.</li>
+                            <li> Que haya sido resuelto en los &uacute;ltimos 4 meses</li>
+                            <li> Que no est&eacute; relacionado a un registro de <strong>Investigaci&oacute;n de
+                                    Problema</strong> que ya haya sido resuelto.
+                                <br><br>Despu&eacute;s de identificar un problema, creamos un nuevo registro de
+                                <strong>Investigaci&oacute;n de Problema</strong> y lo ligamos al incidente generado por
+                                &eacute;ste problema (Si el problema se genera desde el incidente, la relaci&oacute;n se
+                                crea autom&aacute;ticamente, conoci&eacute;ndose como Problema de Emergencia).
+                                <br>El registro de <strong>Investigaci&oacute;n de Problema</strong> se crear&aacute;
+                                desde la aplicaci&oacute;n de Incident Management para asegurar que la
+                                informaci&oacute;n del incidente se copiar&aacute; autom&aacute;ticamente al problema.
+                        </p>
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Creaci&oacute;n de problema:</strong>
+                                    <ol>
+                                        <li>Ingresar al sistema Remedy, si no lo ha hecho todav&iacute;a. Ver
+                                            c&oacute;mo <a routerLink="/doc/Generales/Acceso">aqu&iacute;</a>.</li>
+                                        <li>Seleccionar Aplicaciones > Gesti&oacute;n de Problemas > Nuevo Problema
+                                        </li>
+                                        <li>Seleccionar en los campos <strong>Grupo Coordinador</strong> y
+                                            <strong>Coordinador del problema</strong> el grupo al que pertenece el jefe
+                                            del usuario del corporativo que esta registrando el problema
+                                        </li>
+                                        <li>Llenar el campo <strong>Resumen*</strong> con el est&aacute;ndar
+                                            "PLATAFORMA/ SERVICIO: FALLA" y el campo <strong>Notas</strong> con una
+                                            descripci&oacute;n del problema.</li>
+                                        <li>En el campo <strong>Controlador de investigaci&oacute;n</strong> seleccionar
+                                            el valor <strong>"incidentes no rutinarios"</strong>.</li>
+                                        <li>Seleccionar la <strong>fecha deseada</strong> recordando que &eacute;sta
+                                            debe especificarse 2 semanas posteriores a la fecha de creaci&oacute;n</li>
+                                        <li>En el campo <strong>Impacto*</strong> seleccionar
+                                            <strong>"3-Moderado/Limitado"</strong> y en el campo
+                                            <strong>Urgencia</strong> seleccionar el valor <strong>"3-Medio"</strong>.
+                                        </li>
+                                        <li>Seleccionar la pesta&ntilde;a <strong>Categorizaci&oacute;n</strong> y en
+                                            los campos de <strong>Categor&iacute;a de producto</strong> y
+                                            <strong>Categor&iacute;a operacional</strong> seleccionar las
+                                            categor&iacute;as adecuadas al problema.
+                                        </li>
+                                        <li>Seleccionar la pesta&ntilde;a <strong>Relaciones</strong> para asociar
+                                            CI&acute;s al problema. Seleccionar <strong>"Elemento de
+                                                Configuraci&oacute;n"</strong> en el campo <strong>Buscar</strong> y en
+                                            el campo anexo ingresar el nombre del CI y presionar el bot&oacute;n de
+                                            b&uacute;squeda. Seleccionar el CI, en el campo <strong>tipo de
+                                                relaci&oacute;n</strong> seleccionar <strong>"Relacionar con"</strong> y
+                                            presionar <strong>Relacionar</strong>. Dar clic en <strong>Aceptar</strong>
+                                            en la ventana de confirmaci&oacute;n. </li>
+                                        <li>En la pesta&ntilde;a <strong>Relaciones</strong> se deben agregar los
+                                            incidentes relacionados al problema. Seleccionar
+                                            <strong>"Incidencia"</strong> en el campo <strong>Buscar</strong> y
+                                            presionar el bot&oacute;n de b&uacute;squeda. Presionar <strong>"Usar
+                                                b&uacute;squeda avanzada"</strong> y utilizar los criterios disponibles
+                                            para buscar el incidente. Seleccionar todos los incidentes mostrados y
+                                            seleccionar en el campo <strong>Relaci&oacute;n</strong> el valor
+                                            <strong>"Relacionado con"</strong> y presionar <strong>Relacionar</strong>.
+                                            Dar clic en <strong>Aceptar</strong> en la ventana de confirmaci&oacute;n.
+                                        </li>
+                                        <li>Documentar m&aacute;s informaci&oacute;n del problema en <strong>Detalles de
+                                                trabajo</strong>. Ver c&oacute;mo <a
+                                                routerLink="/doc/Problemas/DocumentarProblema">aqu&iacute;</a>.</li>
+                                        <li>Una vez que se agreg&oacute; toda la informaci&oacute;n al problema dar clic
+                                            en <strong>Guardar</strong>.</li>
+                                        <li>Despu&eacute;s de validar la informaci&oacute;n dar clic en
+                                            <strong>Siguiente fase</strong>.
+                                        </li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Problemas/cierreProblema1.mp4" width="600" autoplay
+                                        controls loop controls>atender</video></td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <strong>Creaci&oacute;n de problema de Emergencia:</strong>
+                                    <ol>
+                                        <li>Ingresar al sistema Remedy, si no lo ha hecho todav&iacute;a. Ver
+                                            c&oacute;mo <a routerLink="/doc/Generales/Acceso">aqu&iacute;</a>.</li>
+                                        <li>Ingresar a la consola incidentes y generar una b&uacute;squeda con las
+                                            siguientes condiciones: <br>
+                                            - T&iacute;tulo del incidente (Alarma, CPD y de TI)
+                                            <br>- Recurrencia de los incidentes en un periodo determinado.
+                                            <br>- CI relacionado al incidente (donde aplique).
+                                            <br>- Categor&iacute;a de Operaci&oacute;n (donde aplique).
+                                        </li>
+                                        <p></p>Despu&eacute;s de realizar el an&aacute;lisis estad&iacute;stico, usando
+                                        los criterios recomendados, el Coordinador de Problemas genera un registro de
+                                        problema relacionado a cualquier incidente del universo acotado a la
+                                        b&uacute;squeda generada.
+                                        <br>
+                                        <br>
+                                        <li>Abrir el registro de uno de los incidentes.</li>
+                                        <li>Crear el registro de Investigaci&oacute;n de Problema. En la secci&oacute;n
+                                            de <strong>Acci&oacute;n R&aacute;pida</strong> dar clic en la flecha de la
+                                            opci&oacute;n <strong>Crear solicitud rel.</strong> y seleccionar
+                                            <strong>Investigaci&oacute;n de Problemas</strong>.
+                                        </li>
+                                        <li>Seleccionar en los campos <strong>Grupo Coordinador</strong> y
+                                            <strong>Coordinador del problema</strong> el grupo al que pertenece el jefe
+                                            del usuario del corporativo que esta registrando el problema (en caso de no
+                                            llenarse autom&aacute;ticamente).
+                                        </li>
+                                        <li>En el campo <strong>Controlador de investigaci&oacute;n</strong> seleccionar
+                                            el valor <strong>"incidencias de alto impacto"</strong>.</li>
+                                        <li>Seleccionar la <strong>fecha deseada</strong> recordando que &eacute;sta
+                                            debe especificarse 2 semanas posteriores a la fecha de creaci&oacute;n</li>
+                                        <li>En el campo <strong>Impacto*</strong> seleccionar
+                                            <strong>"1-Extenso/Generalizado"</strong> y en el campo
+                                            <strong>Urgencia</strong> seleccionar el valor <strong>"1-Critica"</strong>.
+                                        </li>
+                                        <li>Seleccionar la pesta&ntilde;a <strong>Relaciones</strong> para asociar
+                                            CI&acute;s al problema. Seleccionar <strong>"Elemento de
+                                                Configuraci&oacute;n"</strong> en el campo <strong>Buscar</strong> y en
+                                            el campo anexo ingresar el nombre del CI y presionar el bot&oacute;n de
+                                            b&uacute;squeda. Seleccionar el CI, en el campo <strong>tipo de
+                                                relaci&oacute;n</strong> seleccionar <strong>"Relacionar con"</strong> y
+                                            presionar <strong>Relacionar</strong>. Dar clic en <strong>Aceptar</strong>
+                                            en la ventana de confirmaci&oacute;n. </li>
+                                        <li>Documentar m&aacute;s informaci&oacute;n del problema en <strong>Detalles de
+                                                trabajo</strong>. Ver c&oacute;mo <a
+                                                routerLink="/doc/Problemas/DocumentarProblema">aqu&iacute;</a>.</li>
+                                        <li>Una vez que se agreg&oacute; toda la informaci&oacute;n al problema dar clic
+                                            en <strong>Guardar</strong>.</li>
+                                        <li>Despu&eacute;s de validar la informaci&oacute;n dar clic en
+                                            <strong>Siguiente fase</strong>.
+                                        </li>
+                                    </ol>
+                                </td><br>
+                                <br>
+                                <br>
+                                <br>
+                                <td valign="top"><video src="Problemas/crearProblemaEmerg.mp4" width="600" autoplay
+                                        controls loop>atender</video></td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/Problemas/index">Ciclo de vida</a></li>
+                            <li><a routerLink="/doc/Problemas/CierreProblema">Cierre de un Problema</a></li>
+                            <li><a routerLink="/doc/Problemas/AtencionProblema">Atenci&oacute;n de un Problema</a></li>
+                            <li><a routerLink="/doc/Problemas/DocumentarProblema">Documentaci&oacute;n de un
+                                    Problema</a></li>
+                        </ul>
+                    </header> <!-- Termina el texto principal --><!-- Secci&oacute;n 1 --><!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'DocumentarProblema'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>BMC ITSM - Problem Management - Gesti&oacute;n de Problemas</h1> <!-- Encabezado -->
+                        <p><strong>Documentar problema</strong></p>
+                        <p>
+                            En cualquier momento se deben documentar las actualizaciones de la investigación de
+                            problemas realizada. Esta parte es fundamental para guardar registro de lo que se ha hecho
+                            para cumplir lo siguiente:
+                        </p>
+                        <ul>
+                            <li>Auditor&iacute;as del trabajo realizado por los agentes asignados al incidente.</li>
+                            <li>Fuente de conocimiento para otros incidentes relacionados.</li>
+                        </ul>
+                        <p>
+                            En Remedy ITSM, el medio para documentar un problema, es a trav&eacute;s de notas de
+                            trabajo. Observar los siguientes pasos para documentar el problema:
+                        </p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Agregar informaci&oacute;n de trabajo:</strong>
+                                    <ol>
+                                        <li>Ingresar al sistema Remedy, si no lo ha hecho todav&iacute;a. Ver
+                                            c&oacute;mo <a routerLink="/doc/Generales/Acceso">aqu&iacute;</a>.</li>
+                                        <li>Ingresar a la consola de aspectos generales o a la consola de problemas y
+                                            localizar el problema asignado. Ver c&oacute;mo <a
+                                                routerLink="/doc/Generales/Consolas">aqu&iacute;</a>.</li>
+                                        <li>Hacer clic en la pesta&ntilde;a &quot;Detalles de trabajo&quot;.</li>
+                                        <li>Bajar a la secci&oacute;n <strong>Agregar informaci&oacute;n de
+                                                trabajo</strong>.</li>
+                                        <li>En el campo Notas agregar texto descriptivo acerca de la informaci&oacute;n
+                                            de trabajo.</li>
+                                        <li>En el campo Adjunto, hacer clic en el &iacute;cono <img
+                                                src="Incidentes/carpeta.png" width="15"><strong>Examinar
+                                                adjunto</strong>
+                                        <li>Hacer clic en el bot&oacute;n <strong>Browse</strong> y elegir el archivo
+                                            que se adjuntar&aacute;</li>
+                                        <li>Una vez que se ha seleccionado el archivo deseado, hacer clic en el
+                                            bot&oacute;n <strong>Aceptar</strong> para adjuntar el archivo al incidente.
+                                        </li>
+                                        <ul>
+                                            <li>Para remover el archivo adjunto, hacer clic en el &iacute;cono Eliminar
+                                                adjunto.</li>
+                                            <li>Para visualizar el archivo adjunto, hacer clic en el &iacute;cono Ver
+                                                archivo adjunto.</li>
+                                        </ul>
+                                        <li>Hacer clic en la liga <strong>M&aacute;s detalles:</strong></li>
+                                        <ul>
+                                            <li>Adjunto #2: Permite agregar un segundo archivo al incidente.</li>
+                                            <li>Adjunto #3: Permite agregar un tercer archivo al incidente.</li>
+                                            <li>Tipo de informaci&oacute;n de trabajo: Permite categorizar la
+                                                informaci&oacute;n de trabajo que se est&aacute; agregando, por defecto
+                                                este campo tiene el valor Informaci&oacute;n General.</li>
+                                            <li>Bloqueado: Indica si es posible modificar la informaci&oacute;n de
+                                                trabajo que se est&aacute; agregando una vez que se haya guardado,
+                                                seleccionar el valor S&iacute;.</li>
+                                            <li>Acceso a vista: Especifica qui&eacute;n puede visualizar la
+                                                informaci&oacute;n de trabajo que se est&aacute; agregando, Interno
+                                                (personal de soporte) o P&uacute;blico (cliente), seleccionar el valor
+                                                P&uacute;blico.</li>
+                                        </ul>
+                                        <li>Hacer clic en el bot&oacute;n <strong>Guardar</strong> para agregar la
+                                            informaci&oacute;n de trabajo.</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Incidentes/documentarPorblema.mp4" width="600" autoplay
+                                        controls loop></video></td>
+                            </tr>
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/Problemas/index">Ciclo de vida</a></li>
+                            <li><a routerLink="/doc/Problemas/CreacionProblema">Creaci&oacute;n de problema</a></li>
+                            <li><a routerLink="/doc/Problemas/AtencionProblema">Atenci&oacute;n de un Problema</a></li>
+                            <li><a routerLink="/doc/Problemas/CierreProblema">Cierre de un Problema</a></li>
+                        </ul>
+                    </header> <!-- Termina el texto principal --><!-- Secci&oacute;n 1 --><!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchDefault>
+            <h2>Página no encontrada</h2>
+        </ng-container>
+    </div>
+</section>

@@ -1,0 +1,39 @@
+<!-- MENÚ DESPLEGABLE QUE SE MOSTRARÁ EN LAS OPCIONES DE DOCUMENTACIÓN -->
+<button 
+(click)="toggleSidebar()"
+ class="toggle-btn"
+ [class.shifted]="!sidebarCollapsed">
+    NAVEGACION
+</button>
+
+<nav class="sidebar" [class.collapsed]="sidebarCollapsed">
+  <h1>DOCUMENTACIÓN</h1>
+  <ul>
+      <li *ngFor="let item of menuItems; let i = index"
+      [class.active]="openSubmenuIndex === i">
+          <a [routerLink]="'/doc/' + item.url" (click)="toggleSubmenu(i, $event)">
+              {{ item.name }}
+          </a>
+          <ul>
+              <li *ngFor="let subItem of item.subItems; let j = index"
+                [class.active]="openSubSubmenus[i] && openSubSubmenus[i].includes(j)">
+                  <a (click)="toggleSubSubmenu(i, j, $event)">
+                      <span [class.open]="openSubSubmenus[i] && openSubSubmenus[i].includes(j)">
+                        &#9654;
+                      </span> 
+                      <span>{{ subItem.name }}</span>
+                  </a>
+                  <ul *ngIf="openSubSubmenus[i]?.includes(j)">
+                      <li *ngFor="let subSubItem of subItem.subItems">
+                          <a [routerLink]="'/doc/' + subSubItem.url">
+                              > {{ subSubItem.name }}
+                          </a>
+                      </li>
+                  </ul>
+              </li>
+          </ul>
+      </li>
+  </ul>
+</nav>
+
+  

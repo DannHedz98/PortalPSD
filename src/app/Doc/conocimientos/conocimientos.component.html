@@ -1,0 +1,463 @@
+<app-navbar></app-navbar>
+<app-menu-documentacion></app-menu-documentacion>
+<section class="Contenido">
+    <app-nav-doc></app-nav-doc>
+    <div [ngSwitch]="pageId">
+
+        <!------------------------------------------- PAGINA: INDEX ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'index'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>BMC ITSM - Gesti&oacute;n de Conocimientos</h1> <!-- Encabezado -->
+                        <p>El m&oacute;dulo de conocimientos es un repositorio que mantiene informaci&oacute;n valiosa
+                            acerca de las soluciones, referencias o instructivos para resolver incidentes
+                            principalmente. Normalmente este repositorio se actualiza mediante el proceso de problemas,
+                            donde se hacen investigaciones de causa ra&iacute;z y se agrega informaci&oacute;n nueva o
+                            complementaria que ayude a la mesa de servicio y a los grupos de soporte de primer nivel a
+                            resolver incidentes y restaurar servicios con mayor rapidez. </p>
+                        <p>El conocimiento est&aacute; basado en art&iacute;culos. Estos art&iacute;culos son
+                            gestionados y tienen un ciclo de vida. Esto permite a usuarios autorizados a crear
+                            art&iacute;culos de conocimiento y administrar el ciclo de vida de los art&iacute;culos en
+                            una secuencia de fases (Borrador, En Revisi&oacute;n, Publicado y Retirado, por ejemplo).
+                        </p>
+                    </header> <!-- Termina el texto principal -->
+                    <div> <!-- Secci&oacute;n 1 -->
+                        <h2>Ciclo de vida de los art&iacute;culos</h2>
+                        <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                            <p><strong>Fases del art&iacute;culo</strong></p>
+                            <p>En este tipo de registros existe el concepto del &quot;Autor&quot; que es el usuario que
+                                crea el art&iacute;culo de conocimiento. El autor puede asignar el art&iacute;culo de
+                                conocimiento a otro usuario (el asignado), quien realizar&aacute; las modificaciones o
+                                agregar&aacute; informaci&oacute;n adicional al art&iacute;culo. Incluso promover el
+                                art&iacute;culo. Sin embargo, aunque el art&iacute;culo est&eacute; asignado a otro
+                                usuario, el autor no pierde la autor&iacute;a del art&iacute;culo.
+                            </p>
+                            <table cellpadding="3" cellspacing="0" class="tabla">
+                                <thead>
+                                    <tr class="TableSubHeadingColor header">
+                                        <td>Estado</td>
+                                        <td>Descripci&oacute;n</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">En Progreso</span></code></td>
+                                        <td>Este estado indica que el art&iacute;culo est&aacute; siendo creado. El
+                                            art&iacute;culo solo es visible por el autor hasta que sea promovido al
+                                            estado &quot;Borrador&quot;. Durante este estado, el autor puede modificar
+                                            el art&iacute;culo hasta promoverlo. </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Borrador</span></code></td>
+                                        <td>Este estado indica que el art&iacute;culo ha sido promovido por el autor,
+                                            quien ya ha generado material que deba ser incluido en el art&iacute;culo.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">En Revisi&oacute;n</span></code></td>
+                                        <td>Este estado indica que el autor ha promovido el art&iacute;culo a
+                                            revisi&oacute;n y espera una autorizaci&oacute;n para publicar el
+                                            art&iacute;culo. En el caso del modelo est&aacute;ndar, no se utiliza este
+                                            estado, ya que no hay definidas autorizaciones. Lo que se hace es que el
+                                            art&iacute;culo se asigna al jefe del autor, quien finalmente promueve este
+                                            a su estado de &quot;Publicado&quot;.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Publicado</span></code></td>
+                                        <td>Este estado indica que el art&iacute;culo ya fue promovido a su
+                                            publicaci&oacute;n y es visible para todos los usuarios con privilegios para
+                                            la base de conocimiento (normalmente los usuarios que atienden incidentes
+                                            tienen acceso a la base de conocimientos).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Cerrado</span></code></td>
+                                        <td>Este estado indica que el art&iacute;culo ha sido retirado y ya no es
+                                            visible a los usuarios. Solamente los usuarios con privilegios pueden
+                                            &quot;ver&quot; articulos cerrados. </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> <!-- Termina el contenido de la secci&oacute;n -->
+                    </div> <!-- Secci&oacute;n 1 -->
+                    <div> <!-- Secci&oacute;n 2 -->
+                        <h2>Solicitudes de actualizaci&oacute;n</h2>
+                        <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                            <p>Durante el ciclo de vida de los art&iacute;culos es posible recibir comentarios de los
+                                usuarios que consultan estos art&iacute;culos, de manera que puedan retroalimentar el
+                                contenido del art&iacute;culo. Las solicitudes de actualizaci&oacute;n son una
+                                herramienta que permite recibir comentarios y actualizar el contenido de forma ordenada.
+                            </p>
+                            <strong>Versiones</strong>
+                            <p>
+                                Cuando un art&iacute;culo ya est&aacute; en estado &quot;Publicado&quot; y requiere
+                                modificaci&oacute;n, es necesario crear una nueva &quot;versi&oacute;n&quot;. Al hacer
+                                esto, las versiones anteriores ya no son visibles a los usuarios, solo es visible la
+                                &uacute;ltima versi&oacute;n publicada.
+                            </p>
+                        </div>
+                    </div> <!-- Secci&oacute;n 2 -->
+                    <div> <!-- Secci&oacute;n 3 -->
+                        <h2>Gu&iacute;a de uso para art&iacute;culos de conocimiento</h2>
+                        <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                            <p>En esta secci&oacute;n se listan las operaciones m&aacute;s comunes para las tareas</p>
+                            <table cellpadding="3" cellspacing="0" class="tabla2">
+                                <thead>
+                                    <tr class="TableSubHeadingColor header">
+                                        <td>&nbsp;</td>
+                                        <td width="300" align="center">Art&iacute;culos de conocimiento</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Creaci&oacute;n</span></code></td>
+                                        <td align="center"><a routerLink="/doc/Conocimientos/CrearConocimiento">Crear un
+                                                art&iacute;culo de
+                                                conocimiento</a></td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Publicaci&oacute;n</span></code></td>
+                                        <td colspan="3" align="center"><a
+                                                routerLink="/doc/Conocimientos/PublicarConocimiento">Publicar un
+                                                articulo de conocimiento</a></td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Solicitud de Modificaci&oacute;n</span></code>
+                                        </td>
+                                        <td colspan="3" align="center"><a
+                                                routerLink="/doc/Conocimientos/SolicitarConocimiento">Solicitar
+                                                modificaci&oacute;n de un art&iacute;culo de conocimiento</a></td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Modificaci&oacute;n</span></code></td>
+                                        <td align="center"><a
+                                                routerLink="/doc/Conocimientos/ModificarConocimiento">Modificaci&oacute;n
+                                                de
+                                                un art&iacute;culo de conocimiento</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> <!-- Termina el contenido de la secci&oacute;n -->
+                    </div> <!-- Secci&oacute;n 3 -->
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'CrearConocimiento'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>BMC ITSM - Gesti&oacute;n de Conocimientos</h1> <!-- Encabezado -->
+                        <p><strong>Creaci&oacute;n de art&iacute;culo de conocimiento</strong></p>
+                        <p>
+                            En este apartado conocer&aacute; como crear un art&iacute;culo de conocimiento.</p>
+                        <p>Para crearlo siga estos pasos:</p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <ol>
+                                        <li>En el men&uacute; &quot;Aplicaciones&quot; de lado izquierdo, seleccionar
+                                            &quot;Gesti&oacute;n de Conocimientos&quot; &gt; &quot;Art&iacute;culo
+                                            Nuevo&quot;</li>
+                                        <li>Seleccionar la plantilla de &quot;C&oacute;mo&quot; y presione
+                                            &quot;Crear&quot;</li>
+                                        <li>Seleccionar &quot;Visibilidad de art&iacute;culo&quot; del men&uacute;
+                                            &quot;Funciones&quot;</li>
+                                        <li>Seleccionar la empresa &quot;TELCEL&quot; y seleccione el grupo
+                                            &quot;Telcel&quot;. Dar clic en &quot;Guardar&quot;</li>
+                                        <li>Llenar el campo &quot;T&iacute;tulo*&quot;</li>
+                                        <li>Llenar los campos &quot;Causa Probable&quot; y &quot;Descripci&oacute;n del
+                                            problema&quot; en la parte de &quot;IDENTIFICA&quot;. </li>
+                                        <li>Navegar hacia abajo y llenar los campos que correspondan en la parte
+                                            &quot;SOLUCIONA&quot;</li>
+                                        <li>En la pesta&ntilde;a &quot;Detalles&quot;, seleccionar &quot;TELCEL&quot; en
+                                            el campo &quot;Empresa*+&quot;</li>
+                                        <li>Colocar palabras clave que sirvan para la b&uacute;squeda simple en el campo
+                                            &quot;Palabras clave&quot;</li>
+                                        <li>Seleccionar el valor de &quot;ALM&quot; en el campo &quot;Tipo&quot;</li>
+                                        <li>Seleccionar el grupo asignado al que pertenece el usuario en el campo
+                                            &quot;Grupo asignado*+&quot;</li>
+                                        <li>Seleccionar al jefe del usuario en el campo &quot;Usuario asignado+&quot;
+                                        </li>
+                                        <li>Seleccionar &quot;Nivel 1 de producto&quot; = HARDWARE, &quot;Nivel 2 de
+                                            producto&quot; = TELECOMUNICACIONES, &quot;Nivel 3 de producto&quot; = NODO
+                                            B en la pesta&ntilde;a Categorizaciones</li>
+                                        <li>Repita el paso D4-13 pero en la pesta&ntilde;a &quot;Categorizaciones de
+                                            Resoluci&oacute;n&quot;</li>
+                                        <li>Seleccionar &quot;Borrador&quot; del campo &quot;Estado*&quot; o de la barra
+                                            de estado (Color verde)</li>
+                                        <li>Presionar &quot;Guardar&quot; (hasta la parte de abajo)</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Conocimientos/crearconocimiento.mp4" width="600" autoplay
+                                        controls loop></video></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" valign="top">
+                                    <p><strong>Nota:</strong></p>
+                                    <p>Los grupos de visibilidad sirven para controlar el acceso a los art&iacute;culos
+                                        de conocimiento. Existen dos grupos por defecto:</p>
+                                    <ul>
+                                        <li>ALL: que permite el acceso a todos los usuarios de la
+                                            compa&ntilde;&iacute;a. Este grupo particularmente sirve para cualquier
+                                            compa&ntilde;&iacute;a, pero no significa que un art&iacute;culo sea visible
+                                            para todas las compa&ntilde;&iacute;as.</li>
+                                        <li>TELCEL: que permite el acceso a todos los usuarios de TELCEL.</li>
+                                    </ul>
+                                    <p>Solo el administrador puede crear grupos de visibilidad. Si requiere un grupo de
+                                        visibilidad contacte al administrador.</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/Conocimientos/PublicarConocimiento">Publicaci&oacute;n de
+                                    art&iacute;culo de conocimiento</a></li>
+                            <li><a routerLink="/doc/Conocimientos/SolicitarConocimiento">Solicitud de
+                                    modificaci&oacute;n al art&iacute;culo de conocimiento</a></li>
+                            <li><a routerLink="/doc/Conocimientos/ModificarConocimiento">Modificaci&oacute;n del
+                                    art&iacute;culo de conocimiento</a></li>
+                        </ul>
+                    </header> <!-- Termina el texto principal --><!-- Secci&oacute;n 1 --><!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'ModificarConocimiento'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>BMC ITSM - Gesti&oacute;n de Conocimientos</h1> <!-- Encabezado -->
+                        <p><strong>Modificaci&oacute;n de un art&iacute;culo de conocimiento</strong></p>
+                        <p>
+                            Solo se modifican art&iacute;culos de conocimiento que est&aacute;n en estado
+                            &quot;Publicado&quot;. En otros estados (excepto: &quot;En Revisi&oacute;n&quot; o
+                            &quot;Cerrado&quot;) se puede modificar el art&iacute;culo en cualquier momento.</p>
+                        <p>Al modificar el art&iacute;culo en estado &quot;Publicado&quot; se reinicia el proceso de
+                            publicaci&oacute;n pero en una nueva versi&oacute;n del art&iacute;culo.
+                        </p>
+                        <p>Para crear una nueva versi&oacute;n del art&iacute;culo de conocimiento siga estos pasos:</p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <ol>
+                                        <li>Seleccione &quot;Consola de Gesti&oacute;n de Conocimientos&quot; de la
+                                            barra de aplicaciones (a la izquierda) en &quot;Gesti&oacute;n de
+                                            Conocimiento&quot;</li>
+                                        <li>Seleccionar el art&iacute;culo de conocimiento que tiene la opci&oacute;n Si
+                                            en la columna &quot;Peticiones de actualizaci&oacute;n&quot; y presione en
+                                            bot&oacute;n &quot;Ver&quot; &oacute; d&eacute; doble clic</li>
+                                        <li>Seleccionar la pesta&ntilde;a &quot;Detalles&quot;</li>
+                                        <li>Seleccionar la pesta&ntilde;a &quot;Peticiones de actualizaci&oacute;n&quot;
+                                            y observar de la lista de peticiones de actualizaci&oacute;n, las que son
+                                            nuevas (observar columna &quot;<em>Estado</em>&quot;)</li>
+                                        <li>Seleccionar la petici&oacute;n de actualizaci&oacute;n <em>Nueva</em> y
+                                            presione el bot&oacute;n &quot;Ver&quot;. Observar el registro donde viene
+                                            el detalle de la actualizaci&oacute;n solicitada. </li>
+                                        <li>Seleccionar &quot;En curso&quot; en el campo &quot;Estado*&quot;. Agregar
+                                            comentarios en el campo &quot;Nuevo Comentario&quot; y presionar
+                                            &quot;Agregar comentario&gt;&quot; y presionar &quot;Guardar&quot;</li>
+                                        <li>Presionar el bot&oacute;n &quot;Nueva versi&oacute;n&quot;</li>
+                                        <li>Presionar &quot;Si&quot;</li>
+                                        <li>Realizar modificaciones sobre los campos requeridos del art&iacute;culo. Al
+                                            terminar, presionar el bot&oacute;n &quot;Vista Previa&quot; en la parte
+                                            inferior.</li>
+                                        <li>Presionar &quot;Cerrar&quot;</li>
+                                        <li>Seleccionar la pesta&ntilde;a &quot;Detalles&quot;, y luego la
+                                            pesta&ntilde;a &quot;Peticiones de actualizaci&oacute;n&quot;. Seleccione
+                                            nuevamente la solicitud de petici&oacute;n de modificaci&oacute;n y presione
+                                            &quot;Ver&quot;.</li>
+                                        <li>Modificar el campo &quot;Estado*&quot; a &quot;Terminado&quot;. Agregar un
+                                            comentario en el campo &quot;Nuevo comentario&quot; y presionar el
+                                            bot&oacute;n &quot;Agregar comentario&gt;&quot;. Presionar
+                                            &quot;Guardar&quot;.</li>
+                                        <li>Seleccionamos la opci&oacute;n &quot;Publicar Autorizaci&oacute;n&quot; del
+                                            campo &quot;Estado*&quot; y presionamos el bot&oacute;n &quot;Guardar&quot;
+                                        </li>
+                                        <li>Seleccionar &quot;Consola de Gesti&oacute;n de Conocimientos&quot; de la
+                                            barra de BREADCRUMB</li>
+                                        <li>Presione el bot&oacute;n de &quot;actualizar&quot; (Flechas azules
+                                            encontradas) en la parte superior derecha</li>
+                                    </ol>
+                                    <p>&nbsp;</p>
+                                </td>
+                                <td valign="top"><video src="Conocimientos/modificarconocimiento.mp4" width="600"
+                                        autoplay controls loop></video></td>
+                            </tr>
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/Conocimientos/CrearConocimiento">Crear un art&iacute;culo de
+                                    conocimiento</a></li>
+                            <li><a routerLink="/doc/Conocimientos/PublicarConocimiento">Publicar art&iacute;culo de
+                                    conocimiento</a></li>
+                            <li><a routerLink="/doc/Conocimientos/SolicitarConocimiento">Solicitar modificaci&oacute;n
+                                    del art&iacute;culo
+                                    de conocimiento</a></li>
+                        </ul>
+                    </header> <!-- Termina el texto principal --><!-- Secci&oacute;n 1 --><!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'PublicarConocimiento'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>BMC ITSM - Gesti&oacute;n de Conocimientos</h1> <!-- Encabezado -->
+                        <p><strong>Publicaci&oacute;n de art&iacute;culo de conocimiento</strong></p>
+                        <p>
+                            Una vez que se han realizado las revisiones al art&iacute;culo de conocimiento, este se
+                            puede promover a publicaci&oacute;n. Para hacer esto, es necesario que el art&iacute;culo de
+                            conocimiento est&eacute; en estado &quot;Borrador&quot;</p>
+                        <p>Para publicar un art&iacute;culo de conocimiento, este debe estar en estado
+                            &quot;Borrador&quot; o e estado &quot;En Revisi&oacute;n&quot;</p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <ol>
+                                        <li>Seleccione &quot;Consola de Gesti&oacute;n de Conocimientos&quot; de la
+                                            barra de aplicaciones (a la izquierda) en &quot;Gesti&oacute;n de
+                                            Conocimiento&quot;</li>
+                                        <li>Seleccione &quot;Asignado a m&iacute;&quot; del men&uacute;
+                                            &quot;Mostrar&quot; (parte superior). Y seleccione &quot;Busquedas definidas
+                                            &gt; Por estado &gt; Todo&quot; en el men&uacute; &quot;Filtrar por&quot;
+                                        </li>
+                                        <li>Seleccione el art&iacute;culo de conocimiento asignado y presione en
+                                            bot&oacute;n &quot;Ver&quot; &oacute; d&eacute; doble clic</li>
+                                        <li>Revisar el art&iacute;culo. Seleccione &quot;Publicar
+                                            autorizaci&oacute;n&quot; del campo &quot;Estado&quot;. Presionar el
+                                            bot&oacute;n &quot;Guardar&quot;</li>
+                                        <li>Presionar &quot;Consola de conocimientos&quot; en la barra de BREADCRUMBS
+                                        </li>
+                                        <li>Presionar el bot&oacute;n &quot;Refrescar&quot; (simbolo de flechas
+                                            encontradas) </li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Conocimientos/publicarconocimiento.mp4" width="600"
+                                        autoplay controls loop></video></td>
+                            </tr>
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/Conocimientos/CrearConocimiento">Crear un art&iacute;culo de
+                                    conocimiento</a></li>
+                            <li><a routerLink="/doc/Conocimientos/SolicitarConocimiento">Solicitud de
+                                    modificaci&oacute;n al art&iacute;culo de conocimiento</a></li>
+                            <li><a routerLink="/doc/Conocimientos/ModificarConocimiento">Modificaci&oacute;n del
+                                    art&iacute;culo de conocimiento</a></li>
+                        </ul>
+                    </header> <!-- Termina el texto principal --><!-- Secci&oacute;n 1 --><!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'SolicitarConocimiento'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>BMC ITSM - Gesti&oacute;n de Conocimientos</h1> <!-- Encabezado -->
+                        <p><strong>Solicitud de modificaci&oacute;n de un art&iacute;culo de conocimiento</strong></p>
+                        <p>
+                            Cada art&iacute;culo de conocimiento est&aacute; propenso a sufrir modificaciones debido a
+                            que la informaci&oacute;n cambia y debe actualizarse. O inclusive si el escrito no tiene
+                            claridad y requiere modificarse.</p>
+                        <p>Cuando un art&iacute;culo de conocimiento requiere modificaci&oacute;n se emplea una
+                            &quot;Petici&oacute;n de modificaci&oacute;n&quot;. Cualquier usuario con los permisos
+                            necesarios puede solicitar una modificaic&oacute;n al art&iacute;culo.
+                        </p>
+                        <p>Para solicitar una modificaci&oacute;n al art&iacute;culo de conocimiento siga estos pasos:
+                        </p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <ol>
+                                        <li>Seleccione &quot;Consola de Gesti&oacute;n de Conocimientos&quot; de la
+                                            barra de aplicaciones (a la izquierda) en &quot;Gesti&oacute;n de
+                                            Conocimiento&quot;</li>
+                                        <li>Seleccionar de la lista el art&iacute;culo de conocimiento al que se desea
+                                            solicitar modificaci&oacute;n. En la parte inferior de la consola en la
+                                            secci&oacute;n &quot;Detalles y peticiones de actualizaci&oacute;n&quot;
+                                            presionar &quot;Crear&quot;</li>
+                                        <li>Seleccionar &quot;Actualizaci&oacute;n T&eacute;cnica&quot; del campo
+                                            &quot;Actualizaci&oacute;n de tipo de solicitud&quot;. Colocar <em>Favor de
+                                                corregir la parte de Acciones Front Office</em> en el campo
+                                            &quot;Resumen*&quot;. Ingrese un texto en el campo &quot;Detalles de la
+                                            solicitud*&quot;. Presione el bot&oacute;n &quot;Guardar&quot;</li>
+                                    </ol>
+                                    <p>&nbsp;</p>
+                                </td>
+                                <td valign="top"><video src="Conocimientos/solicitarconocimiento.mp4" width="600"
+                                        autoplay controls loop></video></td>
+                            </tr>
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/Conocimientos/CrearConocimiento">Crear un art&iacute;culo de
+                                    conocimiento</a></li>
+                            <li><a routerLink="/doc/Conocimientos/PublicarConocimiento">Publicar art&iacute;culo de
+                                    conocimiento</a></li>
+                            <li><a routerLink="/doc/Conocimientos/ModificarConocimiento">Modificaci&oacute;n del
+                                    art&iacute;culo de conocimiento</a></li>
+                        </ul>
+                    </header> <!-- Termina el texto principal --><!-- Secci&oacute;n 1 --><!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'ValorarConocimiento'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>BMC ITSM - Gesti&oacute;n de Conocimientos</h1> <!-- Encabezado -->
+                        <p><strong>Valorar art&iacute;culo de conocimiento</strong></p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <ol>
+                                        <li>Revisar la informaci&oacute;n del instructivo</li>
+                                        <li>Una vez que se haya revisado la informaci&oacute;n del archivo adjunto, se
+                                            procede a su valoraci&oacute;n haciendo clic en el bot&oacute;n
+                                            <strong>Valoraci&oacute;n</strong> que se encuentra en la parte inferior del
+                                            instructivo.</li>
+                                        <li>Seleccionar un valor del campo <strong>Evaluaci&oacute;n</strong>, este
+                                            valor representar&aacute; la percepci&oacute;n que se tiene acerca de la
+                                            calidad del instructivo.</li>
+                                        <li>Opcional. En el campo <strong>Detalles de valoraci&oacute;n</strong>,
+                                            ingresar alg&uacute;n comentario extra a la valoraci&oacute;n seleccionada.
+                                        </li>
+                                        <li>Hacer clic en el bot&oacute;n <strong>Guardar</strong>.</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Conocimientos/c_Valoracion_	Km.mp4" width="600" autoplay
+                                        controls loop></video></td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/Conocimientos/PublicarConocimiento">Publicaci&oacute;n de
+                                    art&iacute;culo de conocimiento</a></li>
+                            <li><a routerLink="/doc/Conocimientos/SolicitarConocimiento">Solicitud de
+                                    modificaci&oacute;n al art&iacute;culo de conocimiento</a></li>
+                            <li><a routerLink="/doc/Conocimientos/ModificarConocimiento">Modificaci&oacute;n del
+                                    art&iacute;culo de conocimiento</a></li>
+                        </ul>
+                    </header> <!-- Termina el texto principal --><!-- Secci&oacute;n 1 --><!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchDefault>
+            <h2>Página no encontrada</h2>
+        </ng-container>
+    </div>
+</section>

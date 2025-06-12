@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<app-menu-enlaces></app-menu-enlaces>
+
+<body>
+    <section class="Contenido">
+        <h3>{{ content.title }}</h3>
+        <hr>
+        <p>{{ content.text }}</p>
+        <h4>{{content.text2}}</h4>
+        <ul>
+            <li *ngFor="let link of content.links">
+                <a [href]="link.url" target="_blank"rel="noopener noreferrer">{{ link.label }}</a>
+                <!-- <a [routerLink]="link.url">{{ link.label }}</a>              SOLO SI SON URLS DENTRO DE LA APP          -->
+            </li>
+        </ul>
+    </section>
+</body>

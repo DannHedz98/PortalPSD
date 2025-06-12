@@ -1,0 +1,42 @@
+.formulario{
+    width: 95%;margin: 0 auto; text-align: center; padding-top: 1vi;
+}
+
+.navbar{
+    align-items: center;
+}
+
+.navbar div{
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pestañas{
+    margin:0;padding-top: 1vi; background-color: #020025;
+}
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+.busqueda{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+}
+
+.pestaña{
+    cursor: pointer;
+    color:#00e1ff;
+}
+
+.pestaña:hover{
+    color:#FFF;
+}
+
+.resultados{
+    background-color: #9df4ff;
+    /* background-color: #aefdb2; */
+}

@@ -1,0 +1,110 @@
+.sidebar {
+  width: 240px;
+  height: 90vh;
+  background-color: #020025;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  /* Menú fijo */
+  top: 5 vh;
+  left: 0;
+  text-align: left;
+  overflow-y: auto;
+  /* Permite desplazamiento si el contenido es muy grande */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  /* Sombra lateral */
+}
+
+/* Estilos del título */
+.sidebar h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Estilos de la lista principal */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos de los elementos del menú */
+.sidebar li {
+
+  border-top: 1px solid #777;
+  /* Línea divisoria */
+}
+
+/* Quita el borde superior del primer elemento */
+.sidebar li:first-child {
+  border-top: none;
+}
+
+/* Estilos de los enlaces */
+.sidebar a {
+  color: #00e1ff;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+  padding-left: 5px;
+  cursor: pointer;
+  /* Alineación a la izquierda de los elementos */
+}
+
+/* Submenús ocultos por defecto */
+.sidebar ul ul {
+  display: none;
+  /* padding-left: 3px; */
+}
+
+
+/* Mostrar el submenú cuando está activo */
+.sidebar ul li ul {
+  display: block;
+}
+
+/* Estilos de los subelementos */
+.sidebar ul ul li {
+  padding: 3px 0;
+  border-top: none;
+}
+
+/* Estilo de los enlaces del submenú */
+.sidebar ul ul li a {
+  font-size: 13px;
+  color: #ddd;
+  padding-left: 5px;
+  cursor: pointer;
+  /* Alineación a la izquierda de los subelementos */
+}
+
+/* Estilo para la flecha */
+span {
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+  /* Animación suave para la rotación */
+}
+
+span.open {
+  transform: rotate(90deg);
+}
+
+/* Asegura que los submenús sí cambien de color al hacer hover */
+.sidebar ul ul li:hover {
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+/* Estilo cuando un submenú está abierto */
+.sidebar ul li.active {
+  background-color: #a2caea;
+  color: #020025;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.sidebar ul ul li.active a{
+  color: #020025;
+  font-weight: bold;
+}

@@ -1,0 +1,1171 @@
+<app-navbar></app-navbar>
+<app-menu-documentacion></app-menu-documentacion>
+<section class="Contenido">
+    <app-nav-doc></app-nav-doc>
+    <div [ngSwitch]="pageId">
+        <ng-container *ngSwitchCase="'index'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <h2>MODELO ESTÁNDAR</h2>
+                    <strong>Definición</strong>
+                    <p>
+                        El Modelo Estándar es el conjunto de prácticas (procesos), tecnología y reportes que le dan
+                        forma a la Gestión de la Operación de la Red Celular de Telcel de una manera homologada e
+                        integrada, que puede ser entregada y adoptada por otras operaciones, con mínimas adecuaciones
+                        para alinearse a las necesidades particulares de las operaciones locales.
+                    </p>
+
+                    <p>Los componentes generales del Modelo Estándar son los siguientes:</p>
+                    <ul>
+                        <li><strong>Prácticas</strong>: Procesos de gestión de la red, tales como el proceso correctivo,
+                            proceso preventivo, etc.</li>
+                        <li><strong>Tecnología</strong>: Aplicaciones (plataforma de gestión de servicios (ITSM),
+                            sistemas de monitoreo), interfaces con sistemas de terceros (integraciones con herramientas
+                            de monitoreo, integraciones con fuentes de datos).</li>
+                        <li><strong>Métricas</strong>: Reportes de operación y gestión de los procesos de gestión de la
+                            red ya mencionados.</li>
+                    </ul>
+                    <strong>Alcance</strong>
+                    <p>
+                        Como ya se ha mencionado, el modelo estándar tiene componentes que en conjunto y relacionados
+                        entre sí, le dan forma. Los siguientes son los componentes del Modelo Estándar en esta primera
+                        versión, lo cual no significa que permanecerán inmutables, pues el Modelo puede extenderse
+                        cuanto sea necesario, pero siguiendo un proceso controlado para asegurar su estandarización en
+                        el transcurso del tiempo.
+                    </p>
+                    <p>Los componentes particulares del Modelo Estándar son los siguientes:</p>
+                    <p>Procesos de Gestión de la Operación de la Red Celular:</p>
+                    <ol>
+                        <li><a routerLink="/doc/ModeloEstandar/PCorrectivo">Proceso “Corregir Problemas en la Red”</a></li>
+                        <li><a routerLink="/doc/ModeloEstandar/PPreventivo">Proceso “Hacer Mantenimiento Preventivo”</a></li>
+                        <li><a routerLink="/doc/ModeloEstandar/PIntervenciones">Procedimiento “Intervenciones en la Red de Voz y
+                                Datos”</a> (Este procedimiento está relacionado al Proceso de “Corregir Problemas en la
+                            Red”)</li>
+                        <li><a routerLink="/doc/ModeloEstandar/PAccesos">Proceso “Gestionar Accesos en las plataformas de OyM”</a>
+                            (Para el Modelo Estándar, este proceso se restringe a los accesos a Remedy)</li>
+                        <li><a routerLink="/doc/ModeloEstandar/PEmergencias">Proceso “Atender Emergencias en la Red”</a></li>
+                        <li><a routerLink="/doc/ModeloEstandar/PEstadistico">Proceso “Mejorar la Red con Análisis Estadístico”</a>
+                            (Para el Modelo Estándar, este proceso se restringe a la generación de los reportes que
+                            forman parte del Modelo mismo)</li>
+                        <li><a routerLink="/doc/ModeloEstandar/PRecibir">Proceso “Recibir e Integrar la Infraestructura de la Red”</a>
+                        </li>
+                    </ol>
+                    <div> <!-- Sección 1 -->
+                        <h2><a name="paginainicio">Datos Maestros</a></h2>
+                        <div class="sectionWrapper">
+                            <p>Los Datos Maestros de ITSM son un conjunto de datos usados a través de varios módulos,
+                                aplicaciones y procesos en la plataforma de BMC, aunque principalmente en ITSM.</p>
+                            <p>Los datos considerados como Maestros en el Modelo Estándar son:</p>
+                            <ul>
+                                <li>Empresa</li>
+                                <li>Organización</li>
+                                <li>Ubicación</li>
+                                <li>Personas</li>
+                                <li>Grupos de Soporte</li>
+                                <li>Categoría Operacional</li>
+                                <li>Catálogo de Producto</li>
+                            </ul>
+
+                            <p>Los principales usos de los Datos Maestros en el Modelo Estándar son:</p>
+                            <ul>
+                                <li>Asignación automática: Dirigir automáticamente Incidentes, Cambios, Solicitudes,
+                                    etc., al grupo de soporte adecuado con base en la combinación correspondiente de
+                                    Datos Maestros.</li>
+                                <li>Reportes: Medir el trabajo hecho en los diferentes procesos para tomar decisiones
+                                    operativas o de gestión.</li>
+                                <li>Selección de Niveles de Servicio: Identificar y elegir un nivel de servicio
+                                    específico con base en la combinación correspondiente de Datos Maestros.</li>
+                                <li>Identificación de Conocimiento: Identificar de manera más ágil el conocimiento
+                                    disponible en la KDB con base en la combinación correspondiente de Datos Maestros.
+                                </li>
+                                <li>Selección de aprobación: Identificar automáticamente la cadena de mando adecuada
+                                    para la solicitud de aprobaciones de cambios o solicitudes con base en la
+                                    correspondiente combinación de Datos Maestros.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </ng-container>
+
+
+        <ng-container *ngSwitchCase="'PAccesos'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h2>Remedy en la Nube - Modelo Est&aacute;ndar - Proceso de Accesos</h2> <!-- Encabezado -->
+                    </header>
+                    <div> <!-- Secci&oacute;n 1 -->
+                        <h2><a name="">Proceso de Accesos</a>
+                        </h2>
+                        <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                            <p>A continuaci&oacute;n se muestra un diagrama funcional de alto nivel de los componentes
+                                tecnol&oacute;gicos y la relaci&oacute;n entre ellos que habilitan al proceso y
+                                posteriormente se describe el contexto del proceso con base en la tecnolog&iacute;a
+                                habilitadora mostrada.</p>
+                            <table cellpadding="3" cellspacing="0" class="tabla">
+                                <tr>
+                                    <td valign="top">
+                                        <p>Este proceso tiene 3 entradas que lo activan:</p>
+                                        <ol>
+                                            <li>Solicitudes de acceso de usuarios de Remedy que acceden a SRM (Service
+                                                Request Management) a realizar su solicitud de acceso</li>
+                                            <li>Solicitudes de acceso de usuarios que no tienen acceso a Remedy y
+                                                realizan su solicitud desde el portal de accesos de OyM</li>
+                                            <li>Revisiones peri&oacute;dicas de las vigencias de los accesos existentes
+                                            </li>
+                                        </ol>
+                                    </td>
+                                    <td valign="top">
+                                        <img src="Modeloestandar/procesoaccesos.png" width="500"
+                                            alt="Proceso de Accesos">
+                                    </td>
+                                </tr>
+                            </table>
+                            <p><strong>Remedy Control:</strong> Es una herramienta usada como orquestador y
+                                calendarizador de acciones en Remedy, con acceso a todos sus m&oacute;dulos y capaz de
+                                extraer e ingresar informaci&oacute;n a Remedy, as&iacute; como ejecutar acciones
+                                autom&aacute;ticas en &eacute;l. </p>
+                            <p><strong>M&oacute;dulo de Niveles de Servicio:</strong> Este m&oacute;dulo es el encargado
+                                de medir el cumplimiento de los niveles de servicio comprometidos por los procesos.
+                                Espec&iacute;ficamente para este proceso, este m&oacute;dulo es el encargado de medir el
+                                tiempo de soluci&oacute;n de las solicitudes as&iacute; como su cumplimiento y con base
+                                en ello, es capaz de ejecutar acciones o notificaciones preventivas o reactivas.</p>
+                            <p><strong>M&oacute;dulo de SRM: </strong>M&oacute;dulo usado para gestionar las solicitudes
+                                y &oacute;rdenes de trabajo para controlar el trabajo de las solicitudes de acceso.
+                                As&iacute; mismo, de este m&oacute;dulo se usa el portal de autoservicio para el
+                                registro de las solicitudes y el seguimiento de las mismas. </p>
+                            <p><strong>Portal de O y M:</strong> Portal institucional usado para solicitar accesos a
+                                sistemas cuando no se cuenta con acceso al portal de autoservicio de Remedy.</p>
+                            <p><strong>IDM:</strong> Sistema de gesti&oacute;n de identidades mediante el cual se
+                                ejecutan acciones autom&aacute;ticas de creaci&oacute;n, modificaci&oacute;n y baja de
+                                accesos y cuentas en diversos sistemas.</p>
+                            <p><strong>Datos Maestros:</strong> Es la columna vertebral del modelo est&aacute;ndar. Son
+                                un conjunto de datos usados a trav&eacute;s de varios m&oacute;dulos, aplicaciones y
+                                procesos en la plataforma de BMC, aunque principalmente en Remedy. En general, la
+                                estructura y contenido de estos datos es transversal a todo Remedy. Estos datos se usan
+                                en Remedy para:</p>
+                            <ul>
+                                <li>Segregar datos entre operaciones (Empresa), para identificar a clientes y
+                                    proveedores dentro de la estructura de soporte (Empresa).</li>
+                                <li>Identificar a la propia estructura de soporte (Organizaci&oacute;n), para asignar
+                                    trabajo y controlar la asignaci&oacute;n del mismo (grupos de soporte), para
+                                    identificar a las personas que asumen los diferentes roles dentro de la estructura
+                                    de soporte (personas).</li>
+                                <li>Categorizar las solicituides de acceso o el trabajo hecho y con base en ello
+                                    ejecutar acciones o generar reportes (categor&iacute;a operacional) y para
+                                    categorizar sistemas a los que se desea tener acceso, as&iacute; mismo con base en
+                                    ello ejecutar acciones o generar reportes (cat&aacute;logo de producto).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h2><a name="configinicio">Proceso de Accesos en Remedy en la Nube</a>
+                        </h2>
+                        <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                            <p>La secci&oacute;n anterior describe a grandes rasgos lo que significa el proceso de
+                                accesos. En esta secci&oacute;n hablaremos de c&oacute;mo Remedy ITSM apoya al Proceso
+                                de Accesos.
+                            </p>
+                            <p>
+                                La siguiente tabla tiene los procedimientos que apoyan al proceso de accesos:
+                            </p>
+                            <ul>
+                                <li><a href="../../Accesos/solicitaracceso.html">Solicitud de accesos por sistema</a>
+                                </li>
+                                <li><a href="../../Accesos/creacionrol.html">Solicitud de accesos por rol</a></li>
+                                <li><a href="../../Accesos/creacioncor.html">Solicitud de accesos para FO</a></li>
+                                <li><a href="../../Accesos/creacioncor.html">Solicitud de accesos para BO</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+
+
+        <ng-container *ngSwitchCase="'PCorrectivo'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h2>Remedy en la Nube - Modelo Est&aacute;ndar - Proceso Correctivo</h2> <!-- Encabezado -->
+                    </header>
+                    <div> <!-- Secci&oacute;n 1 -->
+                        <h2><a name="">Proceso Correctivo</a>
+                        </h2>
+                        <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                            <p>A continuaci&oacute;n se muestra un diagrama funcional de alto nivel de los componentes
+                                tecnol&oacute;gicos y la relaci&oacute;n entre ellos que habilitan al proceso y
+                                posteriormente se describe el contexto del proceso con base en la tecnolog&iacute;a
+                                habilitadora mostrada.</p>
+                            <table cellpadding="3" cellspacing="0" class="tabla">
+                                <tr>
+                                    <td>
+                                        Este proceso tiene 4 entradas principales que lo activan:
+                                        <ol>
+                                            <li>Quejas de usuarios finales hechas a trav&eacute;s de las diferentes
+                                                entidades de atenci&oacute;n y/o servicio a clientes tales como CACs
+                                                (Centros de atenci&oacute;n a clientes) o las mesas de servicio de
+                                                miniswitch y telef&oacute;nico. Estos incidentes son registrados
+                                                manualmente por el personal de las entidades mencionadas, directamente
+                                                en la consola del m&oacute;dulo de Incidentes de Remedy o por
+                                                alg&uacute;n sistema de TI integrado.</li>
+                                            <li>Incidentes identificados a partir de alarmas enviadas por los sistema de
+                                                gesti&oacute;n de monitoreo y los sistemas expertos relacionados. Estos
+                                                incidentes son registrados autom&aacute;ticamente en el m&oacute;dulo de
+                                                Incidentes v&iacute;a Remedy Control, el mecanismo est&aacute;ndar de
+                                                integraci&oacute;n con Remedy para el Modelo Est&aacute;ndar. De igual
+                                                manera el analista de front office del COR; puede generar manualmente el
+                                                incidente.</li>
+                                            <li>Incidentes relacionados con sistemas o servicios de TI, incluidos los
+                                                mismos sistemas de monitoreo. Estos incidentes pueden ser generados de
+                                                manera m&oacute;vil v&iacute;a DWP, que es el m&oacute;dulo de Remedy
+                                                dirigido a usuarios finales cuya principal caracter&iacute;stica es la
+                                                movilidad y la socializaci&oacute;n con la estructura de soporte, o
+                                                directamente en la consola del m&oacute;dulo de Incidentes de Remedy.
+                                            </li>
+                                            <li>Incidentes relacionados con telefon&iacute;a (PBX), los cuales son
+                                                registrados v&iacute;a un portal de solicitud de servicios disponible
+                                                para los usuarios finales. El portal mencionado es parte del
+                                                m&oacute;dulo de gesti&oacute;n de solicitudes (SRM) de Remedy.</li>
+                                        </ol>
+                                    </td>
+                                    <td>
+                                        <img src="Modeloestandar/procesocorrectivo.png" width="500">
+                                    </td>
+                                </tr>
+                            </table>
+                            <p>
+                                <strong>M&oacute;dulo de Incidentes:</strong> Este m&oacute;dulo es el coraz&oacute;n
+                                tecnol&oacute;gico que habilita al proceso ya que es aqu&iacute; en donde se registran
+                                todos los incidentes que ser&aacute;n gestionados por el proceso, tanto los generados
+                                manualmente por el personal correspondiente, como los generados por Remedy Control o a
+                                trav&eacute;s de las solicitudes hechas v&iacute;a el portal de SRM. Adem&aacute;s, los
+                                incidentes gestionados en este m&oacute;dulo, lo podr&aacute;n ser tambi&eacute;n de
+                                manera m&oacute;vil, accediendo v&iacute;a el componente llamado Smart IT en los
+                                dispositivos m&oacute;viles soportados.
+                            </p>
+                            <p>
+                                <strong>DWP:</strong> Este m&oacute;dulo es el componente m&oacute;vil orientado a los
+                                usuarios finales y mediante &eacute;l es posible registrar incidentes que ser&aacute;n
+                                gestionados por el proceso, as&iacute; como aprobar cualquiera de las solicitudes de
+                                aprobaci&oacute;n contenidas en la consola de aprobaci&oacute;n de Remedy.
+                            </p>
+                            <p>
+                                <strong>TeMIP:</strong> Este es conocido como el &ldquo;Gestor de Gestores&ldquo;� usado
+                                para consolidar las alarmas generadas por dispositivos u otros gestores, y que en
+                                conjunto con sistemas expertos filtrar las alarmas CRITICAS (afectaci&oacute;n de
+                                servicio ) y las alarmas categor&iacute;a 1+0.
+                            </p>
+                            <p>
+                                <strong>Remedy Control:</strong> Es una herramienta que sirve como un Gateway para
+                                integrar sistemas (gestores de monitoreo, sistemas de TI) con Remedy, proporcionando los
+                                recursos necesarios para establecer un medio de comunicaci&oacute;n entre el gestor y
+                                Remedy. Este sistema recibe datos e instrucciones de los gestores (o sistemas expertos)
+                                y con base en ello, ejecuta acciones que eventualmente toman forma en Remedy como
+                                incidentes, tareas, cambios, asignaciones autom&aacute;ticas, b&uacute;squeda de
+                                conocimiento, etc.
+                            </p>
+                            <p>
+                                <strong>M&oacute;dulo de Gesti&oacute;n de Conocimientos:</strong> Este m&oacute;dulo
+                                hospeda los instructivos que son usados principalmente por los ingenieros de FO para
+                                intentar resolver incidentes generados por alarmas. As&iacute; mismo, el m&oacute;dulo
+                                es usado para gestionar el ciclo de vida del conocimiento disponible y para evaluar la
+                                utilidad del mismo por los usuarios.
+                            </p>
+                            <p>
+                                <strong>CMDB: </strong>Es una base de datos que contiene la informaci&oacute;n relevante
+                                de los sitios en donde se ubica la base instalada de nodos de la red. Todos los
+                                componentes contenidos en esa base de datos son conocidos como elementos de
+                                configuraci&oacute;n (CI por sus siglas en ingl&eacute;s) y adem&aacute;s existe la
+                                relaci&oacute;n entre los dispositivos de red y los sitios en donde se encuentran. Los
+                                CIs afectados por fallas se relacionan con los registros de Incidentes correspondientes
+                                y as&iacute; mismo con los registros de Cambios cuando hay una intervenci&oacute;n en la
+                                red o con los registros de problemas.
+                            </p>
+                            <p>
+                                <strong>M&oacute;dulo de Niveles de Servicio:</strong> Este m&oacute;dulo es el
+                                encargado de medir el cumplimiento de los niveles de servicio comprometidos por los
+                                procesos. Espec&iacute;ficamente para este proceso, este m&oacute;dulo es el encargado
+                                de medir el tiempo de soluci&oacute;n de los incidentes as&iacute; como su cumplimiento
+                                y con base en ello, es capaz de ejecutar acciones o notificaciones preventivas o
+                                reactivas.
+                            </p>
+                            <p>
+                                <strong>Gestor de Tareas:</strong> Las tareas son registros aut&oacute;nomos que
+                                normalmente est&aacute;n relacionados con una entidad superior, como un Incidente, y
+                                sirve fundamentalmente para asignar trabajo que debe seguirse y medirse de manera
+                                particular pero con relaci&oacute;n al Incidente. En este proceso, se generan tareas
+                                asociadas a los Incidentes cuando se asigna trabajo a ingenieros en campo o a
+                                proveedores. El componente llamado Smart IT proporciona acceso a las tareas desde
+                                dispositivos m&oacute;viles y el componente llamado MDM (Mobile Device Management, por
+                                sus siglas en ingl&eacute;s), proporciona la capacidad de identificar la
+                                ubicaci&oacute;n geogr&aacute;fica del ingeniero de campo en el momento de ejecutar la
+                                tarea asignada.
+                            </p>
+                            <p>
+                                <strong>Portal de Gesti&oacute;n de Solicitudes (SRM): </strong>Este m&oacute;dulo
+                                proporciona un portal de acceso a los usuarios finales para que soliciten una variedad
+                                de servicios disponibles, algunos de ellos podr&aacute;n ser conducidos al m&oacute;dulo
+                                de incidentes por tratarse de fallas, pero algunos otros ser&aacute;n conducidos por el
+                                propio m&oacute;dulo de gesti&oacute;n de solicitudes, el cual cuenta con la capacidad
+                                de crear flujos de trabajo para dirigir la ejecuci&oacute;n de solicitudes usando un
+                                componente llamado ORDEN DE TRABAJO, que se diferencia de los incidentes al no tratarse
+                                de fallas. Estas &oacute;rdenes de trabajo a su vez pueden tener asociadas tareas para
+                                asignar trabajo espec&iacute;fico a un grupo de trabajo que debe medirse y seguirse de
+                                manera particular.
+                            </p>
+                            <p>
+                                <strong>Datos Maestros: </strong>Es la columna vertebral del modelo est&aacute;ndar. Son
+                                un conjunto de datos usados a trav&eacute;s de varios m&oacute;dulos, aplicaciones y
+                                procesos en la plataforma de BMC, aunque principalmente en Remedy. En general, la
+                                estructura y contenido de estos datos es transversal a todo Remedy. Estos datos se usan
+                                en Remedy para:
+                            </p>
+                            <ul>
+                                <li>Segregar datos entre operaciones (Empresa), para identificar a clientes y
+                                    proveedores dentro de la estructura de soporte (Empresa).</li>
+                                <li>Identificar a la propia estructura de soporte (Organizaci&oacute;n), para asignar
+                                    trabajo y controlar la asignaci&oacute;n del mismo (grupos de soporte), para
+                                    identificar a las personas que asumen los diferentes roles dentro de la estructura
+                                    de soporte (personas).</li>
+                                <li>Categorizar los incidentes o el trabajo hecho y con base en ello ejecutar acciones o
+                                    generar reportes (categor&iacute;a operacional) y para categorizar servicios,
+                                    sitios, dispositivos, etc, as&iacute; mismo con base en ello ejecutar acciones o
+                                    generar reportes (cat&aacute;logo de producto).</li>
+                            </ul>
+
+                        </div> <!-- Termina el contenido de la secci&oacute;n -->
+                    </div> <!-- Secci&oacute;n 1 -->
+                    <div> <!-- Secci&oacute;n 2 -->
+                        <h2><a name="configinicio">Proceso Correctivo en Remedy en la Nube</a>
+                        </h2>
+                        <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                            <p>La secci&oacute;n anterior describe a grandes rasgos lo que significa el proceso
+                                correctivo. En esta secci&oacute;n hablaremos de c&oacute;mo Remedy ITSM apoya al
+                                Proceso Correctivo.
+                            </p>
+                            <p>
+                                La siguiente tabla tiene los procedimientos que apoyan al proceso correctivo:
+                            </p>
+                            <table cellpadding="3" cellspacing="0" class="tabla">
+                                <thead>
+                                    <tr class="TableSubHeadingColor" class="header">
+                                        <td>Incidentes</td>
+                                        <td align="center">Alarmas</td>
+                                        <td align="center">CPD</td>
+                                        <td align="center">Incidentes de TI</td>
+                                    </tr>
+                                <tbody>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Creaci&oacute;n</span></code></td>
+                                        <td align="center">Las alarmas son generadas autom&aacute;ticamente por los
+                                            gestores.</td>
+                                        <td align="center"><a routerLink="/doc/Incidentes/CrearCPD">Creaci&oacute;n de
+                                                CPD</a></td>
+                                        <td align="center"><a routerLink="/doc/Incidentes/CrearTI">Creaci&oacute;n de
+                                                Incidente de TI</a></td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Niveles de Servicio</span></code></td>
+                                        <td colspan="3" align="center"><a routerLink="/doc/Incidentes/SLA">Revisar
+                                                estado de los SLA's</a></td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Atenci&oacute;n</span></code></td>
+                                        <td colspan="3" align="center"><a routerLink="/doc/Incidentes/Atencion">Tomar un
+                                                incidente</a></td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Documentaci&oacute;n</span></code></td>
+                                        <td colspan="3" align="center"><a
+                                            routerLink="/doc/Incidentes/DocumentarTI">Documentar un incidente</a>
+                                        </td>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Escalaci&oacute;n</span></code></td>
+                                        <td colspan="3" align="center"><a routerLink="/doc/Incidentes/EscalarTI">Escalar
+                                                un incidente</a></td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Cierre</span></code></td>
+                                        <td align="center"><a routerLink="/doc/Incidentes/CerrarAlarma">Cerrar una
+                                                alarma</a></td>
+                                        <td align="center"><a routerLink="/doc/Incidentes/CerrarCPD">Cerrar un CPD</a>
+                                        </td>
+                                        <td align="center"><a routerLink="/doc/Incidentes/CerrarTI">Cerrar un incidente
+                                                de TI</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table cellpadding="3" cellspacing="0" class="tabla">
+                                <thead>
+                                    <tr class="TableSubHeadingColor" class="header">
+                                        <td>Conocimientos</td>
+                                        <td align="center">&nbsp;</td>
+                                    </tr>
+                                <tbody>
+                                    <tr class="TableRowColor">
+                                        <td rowspan="4"><code><span class="code_name">B&uacute;squeda</span></code></td>
+                                    <tr class="TableRowColor">
+                                        <td align="center"><a
+                                            routerLink="/doc/Incidentes/AtencionAlarma">B&uacute;squeda desde
+                                                Alarmas</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"><a routerLink="/doc/Incidentes/BuscarKm">B&uacute;squeda
+                                                desde CPD's</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"><a routerLink="/doc/Incidentes/BuscarKm">B&uacute;squeda
+                                                desde Incidentes</a></td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Evaluaci&oacute;n</span></code></td>
+                                        <td colspan="3" align="center"><a
+                                                href="../../Conocimientos/valorarconocimiento.html">Evaluaci&oacute;n
+                                                del art&iacute;culo</a></td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Creaci&oacute;n</span></code></td>
+                                        <td colspan="3" align="center"><a
+                                                href="../../Conocimientos/crearconocimiento.html">Creaci&oacute;n del
+                                                art&iacute;culo</a></td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Revisi&oacute;n y Publicaci&oacute;n</span></code>
+                                        </td>
+                                        <td colspan="3" align="center"><a
+                                                href="../../Conocimientos/publicarconocimiento.html">Revisi&oacute;n y
+                                                Publicaci&oacute;n del art&iacute;culo</a></td>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Modificaci&oacute;n</span></code></td>
+                                        <td colspan="3" align="center"><a
+                                                href="../../Conocimientos/modificarconocimiento.html">Solicitud de
+                                                modificaci&oacute;n del art&iacute;culo</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table cellpadding="3" cellspacing="0" class="tabla">
+                                <thead>
+                                    <tr class="TableSubHeadingColor" class="header">
+                                        <td>Problemas</td>
+                                        <td align="center">&nbsp;</td>
+                                    </tr>
+                                <tbody>
+                                    <tr class="TableRowColor">
+                                        <td rowspan="4"><code><span class="code_name">Creaci&oacute;n</span></code></td>
+                                    <tr class="TableRowColor">
+                                        <td align="center"><a
+                                                href="../../Problemas/creacionproblema.html">Creaci&oacute;n de un
+                                                problema</a></td>
+                                    </tr>
+                                    <tr>
+                                    </tr>
+                                    <tr>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Atenci&oacute;n</span></code></td>
+                                        <td colspan="3" align="center"><a
+                                                href="../../Problemas/atencionproblema.html">Atenci&oacute;n de un
+                                                problema</a></td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Cierre</span></code></td>
+                                        <td colspan="3" align="center"><a
+                                                href="../../Problemas/cierreproblema.html">Cierre de un problema</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+
+
+        <ng-container *ngSwitchCase="'PEmergencias'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h2>Remedy en la Nube - Modelo Est&aacute;ndar - Proceso de Emergencias</h2> <!-- Encabezado -->
+                    </header>
+                    <div> <!-- Secci&oacute;n 1 -->
+                        <h2><a name="">Proceso de Emergencias</a>
+                        </h2>
+                        <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                            <p>A continuaci&oacute;n se muestra un diagrama funcional de alto nivel de los componentes
+                                tecnol&oacute;gicos y la relaci&oacute;n entre ellos que habilitan al proceso y
+                                posteriormente se describe el contexto del proceso con base en la tecnolog&iacute;a
+                                habilitadora mostrada.</p>
+                            <table cellpadding="3" cellspacing="0">
+                                <tr>
+                                    <td valign="top">
+                                        <p>Este proceso tiene 3 entradas que lo activan:</p>
+                                        <ul>
+                                            <li>Incidentes registrados por los gestores que cumplan con los siguientes
+                                                criterios:</li>
+                                            <ul>
+                                                <li>Escalaci&oacute;n administrativa</li>
+                                                <li>P&eacute;rdida de ingresos</li>
+                                                <li>Problemas con facturaci&oacute;n</li>
+                                                <li>Problemas de aprovisionamiento de alg&uacute;n elemento de la red
+                                                </li>
+                                                <li>Corte de fibra sin redundancia</li>
+                                                <li>Ca&iacute;da de elementos de red que brinden servicios masivos</li>
+                                                <li>P&eacute;rdida de hasta el 30% de un servicio, medido por
+                                                    herramientas de monitoreo</li>
+                                            </ul>
+                                            <li>Reporte Masivo de Usuarios (10 o m&aacute;s CPDs sobre el mismo
+                                                servicio, 10 o m&aacute;s sitios celulares afectados, 10 o m&aacute;s
+                                                sucursales o cajeros afectados, etc.) o Incidentes CPD (recurrencia de
+                                                incidentes en un tiempo determinado)</li>
+                                            <li>Interrupci&oacute;n del Proceso Correctivo por fallas en plataformas de
+                                                soporte de la operaci&oacute;n a Incidentes de TI (prioridad
+                                                Cr&iacute;tica)</li>
+                                        </ul>
+                                    </td>
+                                    <td valign="top">
+                                        <img src="Modeloestandar/emergencias.png" width="500">
+                                    </td>
+                                </tr>
+                            </table>
+                            <ul>
+                                <li><strong>M&oacute;dulo de Incidentes:</strong> Este m&oacute;dulo es el
+                                    coraz&oacute;n tecnol&oacute;gico que habilita al proceso ya que es aqu&iacute; en
+                                    donde se registran todos los incidentes que ser&aacute;n gestionados por el proceso,
+                                    tanto los generados manualmente por el personal correspondiente, como los generados
+                                    por Remedy Control o a trav&eacute;s de las solicitudes hechas v&iacute;a el portal
+                                    de SRM. Adem&aacute;s, los incidentes gestionados en este m&oacute;dulo, lo
+                                    podr&aacute;n ser tambi&eacute;n de manera m&oacute;vil, accediendo v&iacute;a el
+                                    componente llamado Smart IT en los dispositivos m&oacute;viles soportados.</li>
+                                <li><strong>M&oacute;dulo de Niveles de Servicio:</strong> Este m&oacute;dulo es el
+                                    encargado de medir el cumplimiento de los niveles de servicio comprometidos por los
+                                    procesos. Espec&iacute;ficamente para este proceso, este m&oacute;dulo es el
+                                    encargado de medir el tiempo de soluci&oacute;n de los incidentes as&iacute; como su
+                                    cumplimiento y con base en ello, es capaz de ejecutar acciones o notificaciones
+                                    preventivas o reactivas.</li>
+                                <li><strong>M&oacute;dulo de Cambios: </strong>Este m&oacute;dulo es usado para
+                                    gestionar el ciclo de vida de lso cambios de emergencia que se deriven de un
+                                    Incidente identificado como emergencia.</li>
+                                <li><strong>M&oacute;dulo de Problemas:</strong> Este m&oacute;dulo es usado para
+                                    gestionar las investigaciones de causa ra&iacute;z y la definici&oacute;n de
+                                    soluciones permanentes que deriven de un Incidente identificado como emergencia.
+                                </li>
+                                <li><strong>Datos Maestros:</strong> Es la columna vertebral del modelo est&aacute;ndar.
+                                    Son un conjunto de datos usados a trav&eacute;s de varios m&oacute;dulos,
+                                    aplicaciones y procesos en la plataforma de BMC, aunque principalmente en Remedy. En
+                                    general, la estructura y contenido de estos datos es transversal a todo Remedy.
+                                    Estos datos se usan en Remedy para:</li>
+                                <ul>
+                                    <li>Segregar datos entre operaciones (Empresa), para identificar a clientes y
+                                        proveedores dentro de la estructura de soporte (Empresa),</li>
+                                    <li>Identificar a la propia estructura de soporte (Organizaci&oacute;n), para
+                                        asignar trabajo y controlar la asignaci&oacute;n del mismo (grupos de soporte),
+                                        para identificar a las personas que asumen los diferentes roles dentro de la
+                                        estructura de soporte (personas), </li>
+                                    <li>Categorizar los incidentes identificados como emergencias o el trabajo hecho y
+                                        con base en ello ejecutar acciones o generar reportes (categor&iacute;a
+                                        operacional) y para categorizar servicios, sitios, dispositivos, etc, as&iacute;
+                                        mismo con base en ello ejecutar acciones o generar reportes (cat&aacute;logo de
+                                        producto).</li>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!-- Termina el contenido de la secci&oacute;n -->
+                    </div> <!-- Secci&oacute;n 1 -->
+                    <div> <!-- Secci&oacute;n 2 -->
+                        <h2><a name="configinicio">Proceso de Emergencias en Remedy en la Nube</a>
+                        </h2>
+                        <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                            <p>La secci&oacute;n anterior describe a grandes rasgos lo que significa el proceso de
+                                emergencias. En esta secci&oacute;n hablaremos de c&oacute;mo Remedy ITSM apoya al
+                                Proceso de Emergencias.
+                            </p>
+                            <p>
+                                Para el proceso de emergencias, una vez que se ha declarado la emergencia, esta se
+                                documenta y Remedy Control levanta una bandera en el incidente de alarma, para poder
+                                indentificar f&aacute;cilmente que la alarma ha disparado una emergencia.
+                            </p>
+                            <p>
+                                Posteriormente, cuando se decide generar un cambio para corregir la falla, es necesario
+                                crear una solicitud de cambio en Remedy de clase &quot;Emergencia&quot;. Para realizar
+                                esto, es necesario relacionar el cambio al incidente (o desde el incidente generar el
+                                cambio relacionado).
+                            </p>
+                            <p>
+                                Una vez que se ha solventado la emergencia, se puede generar una investigaci&oacute;n
+                                del problema (registro de problema) para localizar la causa ra&iacute;z. Esto puede
+                                generar registros de &quot;Error conocido&quot; y/o creaci&oacute;n o
+                                actualizaci&oacute;n de art&iacute;culos de conocimiento.
+                            </p>
+                            <ul>
+                                <li><a href="../../Cambios/crearcambioemergencia.html">Solicitud de cambios de
+                                        emergencia</a></li>
+                                <li><a href="../../Conocimientos/crearconocimiento.html">Creaci&oacute;n de
+                                        art&iacute;culo de conocimiento</a></li>
+                                <li><a href="../../Conocimientos/modificarconocimiento.html">Actualizaci&oacute;n de
+                                        art&iacute;culo de conocimiento</a></li>
+                            </ul>
+                        </div> <!-- Termina el contenido de la secci&oacute;n -->
+                    </div> <!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+        </ng-container>
+
+
+        <ng-container *ngSwitchCase="'PEstadistico'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h2>Remedy en la Nube - Modelo Est&aacute;ndar - Proceso Estad&iacute;stico</h2>
+                        <!-- Encabezado -->
+                    </header>
+                    <div> <!-- Secci&oacute;n 1 -->
+                        <h2><a name="">Proceso Estad&iacute;stico</a>
+                        </h2>
+                        <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                            <p>El proceso estad&iacute;stico permite monitorear la salud y el desempe&ntilde;o de los
+                                procesos, sistemas y de las personas. Las estad&iacute;sticas que se generan apoyan la
+                                toma de decisiones y la mejora cont&iacute;nua.</p>
+                            <p>Para el proyecto Remedy en la nube las estad&iacute;sticas son generadas con dos
+                                herramientas:
+                            </p>
+                            <table>
+                                <tr>
+                                    <td width="400" valign="top"><strong>BMC Analytics for BSM.</strong> Analytics
+                                        utiliza una herramienta l&iacute;der en el mercado para el an&aacute;lisis
+                                        estad&iacute;stico llamada <em>SAP Business Objects</em> y <em>SAP Business
+                                            Intelligence</em>. Analytics genera un set de objetos y crea un universo en
+                                        SAP BO de forma que la consulta de las m&eacute;tricas sea m&aacute;s sencilla.
+                                        Adem&aacute;s, Analytics integra un set de reportes que permiten realizar
+                                        an&aacute;lisis hist&oacute;rico de forma inmediata.</td>
+                                    <td valign="top" align="center"><img src="Modeloestandar/reporte.png"
+                                            width="300" alt="reporte">&nbsp;<img
+                                            src="Modeloestandar/reporte1.png" width="300" alt="reporte1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top"><strong>Dashboards for BSM.</strong> Dashboards permite ver
+                                        m&eacute;tricas con informaci&oacute;n en l&iacute;nea a trav&eacute;s de
+                                        p&aacute;neles de informaci&oacute;n que son customizables y que permiten tener
+                                        una vista inmediata de la salud de los procesos que se ejecutan en Remedy en la
+                                        nube.</td>
+                                    <td valign="top" align="center"><img
+                                            src="Modeloestandar/dashboards.png" width="300"
+                                            alt="dashboards">&nbsp;<img
+                                            src="Modeloestandar/dashboards1.png" width="300"
+                                            alt="dashboards1"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- Termina el contenido de la secci&oacute;n -->
+                    </div> <!-- Secci&oacute;n 1 -->
+                </div>
+            </div>
+        </ng-container>
+
+
+        <ng-container *ngSwitchCase="'PIntervenciones'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+
+                        <h2>Remedy en la Nube - Modelo Est&aacute;ndar - Proceso Intervenciones en la Red</h2>
+                        <!-- Encabezado -->
+
+                        <p>A continuaci&oacute;n se muestra un diagrama funcional de alto nivel de los componentes
+                            tecnol&oacute;gicos y la relaci&oacute;n entre ellos que habilitan al proceso y
+                            posteriormente
+                            se describe el contexto del proceso con base en la tecnolog&iacute;a habilitadora mostrada.
+                        </p>
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top">Este proceso tiene 2 entradas que lo activan:
+                                    <ol>
+                                        <li>Solicitudes de cambios provenientes de diversos solicitantes y que por su
+                                            naturaleza pueden ser Ordinarios (Est&aacute;ndares) y Planeados (Normales).
+                                        </li>
+                                        <li>Incidentes que para su recuperaci&oacute;n requieren una modificaci&oacute;n
+                                            contralada por el proceso de gesti&oacute;n de cambios. Estos cambios, por
+                                            su
+                                            naturaleza, son cambios de emergencia.</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><img src="Modeloestandar/intervenciones.png"
+                                        width="500" alt="Intervenciones">
+                                </td>
+                            </tr>
+                        </table>
+                        <ul>
+                            <li><strong>M&oacute;dulo de Cambios:</strong> Este m&oacute;dulo es el coraz&oacute;n
+                                tecnol&oacute;gico que habilita al proceso ya que es aqu&iacute; en donde se registran
+                                todos
+                                los cambios que ser&aacute;n gestionados por el proceso. Adicionalmente, existe un
+                                componente tecnol&oacute;gico que es <strong>DWP, </strong>mediante el cual se
+                                tendr&aacute;
+                                acceso a la consola de aprobaciones de cambios desde dispositivos m&oacute;viles.</li>
+                            <li><strong>Remedy Control:</strong> Es una herramienta que sirve como un Gateway para
+                                integrar
+                                sistemas (gestores de monitoreo, sistemas de TI, etc.) con Remedy, proporcionando los
+                                recursos necesarios para establecer un medio de comunicaci&oacute;n entre el gestor y
+                                Remedy. Este sistema, para el caso de la gesti&oacute;n de cambios, contiene un par de
+                                desarrollos/integraciones que son usadas para ciertos cambios masivos.</li>
+                            <li><strong>CROTALO:</strong> Es un desarrollo/integraci&oacute;n usada para crear cambios
+                                de
+                                manera masiva bajo ciertos criterios. Este desarrollo/integraci&oacute;n es llevada a
+                                cabo
+                                mediante Remedy Control.</li>
+                            <li><strong>MASIVOS:</strong> Es un desarrollo/integraci&oacute;n usada para crear cambios
+                                de
+                                manera masiva bajo ciertos criterios. Este desarrollo/integraci&oacute;n es llevada a
+                                cabo
+                                mediante Remedy Control. </li>
+                            <li><strong>CMDB:</strong> Es una base de datos que contiene la informaci&oacute;n relevante
+                                de
+                                los sitios en donde se ubica la base instalada de nodos de la red. Todos los componentes
+                                contenidos en esa base de datos son conocidos como elementos de configuraci&oacute;n (CI
+                                por
+                                sus siglas en ingl&eacute;s) y adem&aacute;s existe la relaci&oacute;n entre los
+                                dispositivos de red y los sitios en donde se encuentran. Los CIs afectados por cambios
+                                se
+                                relacionan con los registros de Cambios correspondientes cuando hay una
+                                intervenci&oacute;n
+                                en la red. </li>
+                            <li><strong>M&oacute;dulo de Niveles de Servicio:</strong> Este m&oacute;dulo es el
+                                encargado de
+                                medir el cumplimiento de los niveles de servicio comprometidos por los procesos.
+                                Espec&iacute;ficamente para este proceso, este m&oacute;dulo es el encargado de medir el
+                                tiempo de ejecuci&oacute;n de los cambios as&iacute; como su cumplimiento y con base en
+                                ello, es capaz de ejecutar acciones o notificaciones preventivas o reactivas.</li>
+                            <li><strong>Tareas: </strong>Este es un sub m&oacute;dulo que es usado para asignar trabajo
+                                a
+                                grupos de soporte o personas espec&iacute;ficas que requiere ser llevado a cabo ya sea
+                                en
+                                paralelo por diferentes grupos o personas, o con un orden y dependencias
+                                espec&iacute;ficas.
+                                Las tareas se relacionan directamente a los registros de cambios. Adicionalmente, existe
+                                un
+                                componente tecnol&oacute;gico llamado llamado <strong>MDM</strong><strong> (Mobile
+                                    Device
+                                    Management, por sus siglas en ingl&eacute;s),</strong> que proporciona la capacidad
+                                de
+                                identificar la ubicaci&oacute;n geogr&aacute;fica del ingeniero de campo en el momento
+                                de
+                                ejecutar la tarea asignada.  </li>
+                            <li><strong>Datos Maestros:</strong> Es la columna vertebral del modelo est&aacute;ndar. Son
+                                un
+                                conjunto de datos usados a trav&eacute;s de varios m&oacute;dulos, aplicaciones y
+                                procesos
+                                en la plataforma de BMC, aunque principalmente en Remedy. En general, la estructura y
+                                contenido de estos datos es transversal a todo Remedy. Estos datos se usan en Remedy
+                                para:
+                            </li>
+                            <ul>
+                                <li>Segregar datos entre operaciones (Empresa), para identificar a clientes y
+                                    proveedores
+                                    dentro de la estructura de soporte (Empresa),</li>
+                                <li>Identificar a la propia estructura de soporte (Organizaci&oacute;n), para asignar
+                                    trabajo y controlar la asignaci&oacute;n del mismo (grupos de soporte), para
+                                    identificar
+                                    a las personas que asumen los diferentes roles dentro de la estructura de soporte
+                                    (personas), </li>
+                                <li>Categorizar los cambios o el trabajo hecho y con base en ello ejecutar acciones o
+                                    generar reportes (categor&iacute;a operacional) y para categorizar servicios,
+                                    sitios,
+                                    dispositivos, etc, as&iacute; mismo con base en ello ejecutar acciones o generar
+                                    reportes (cat&aacute;logo de producto).</li>
+                            </ul>
+                        </ul>
+                    </header>
+                    <div> <!-- Secci&oacute;n 1 -->
+                        <!------------------------------------------------------------------------------------------PROCESO DE INTERVENCIONES DE RED---------------------->
+                        <h2><a name="">Proceso Intervenciones en la Red</a>
+                        </h2>
+                        <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                            Anteriormente los cambios se generaban en un formulario llamado &quot;CR&quot;. Ahora en
+                            ITSM se
+                            generan usando un formulario llamado &quot;Cambio de infraestructura&quot; en tres clases
+                            diferentes:
+                            <ul>
+                                <li><strong>Cambios Est&aacute;ndar.</strong> Estos cambios, antes llamados
+                                    &quot;Ordinarios&quot; no tienen un impacto directo en los servicios y normalente se
+                                    generan sin autorizaciones.</li>
+                                <li><strong>Cambios Normales.</strong> Estos cambios, antes llamados
+                                    &quot;Planeados&quot;,
+                                    debido a que impactan directamente a los servicios, requieren de mayor
+                                    planeaci&oacute;n
+                                    y autorizaciones de los responsables y en ocasiones de usuarios.</li>
+                                <li><strong>Cambios de Emergencia.</strong> Estos cambios normalmente est&aacute;n
+                                    relacionados a una falla mayor o de alto impacto y son generados como consecuencia
+                                    de la
+                                    misma.</li>
+                            </ul>
+
+                            <p> El proceso de intervenciones en la red se apoya en Remedy en la nube con los siguientes
+                                procedimientos:</p>
+                            <table cellpadding="3" cellspacing="0">
+                                <thead>
+                                    <tr class="TableSubHeadingColor" class="header">
+                                        <td>Cambios</td>
+                                        <td>Est&aacute;ndar</td>
+                                        <td>Normales</td>
+                                        <td>Emergencia</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableRowColor">
+                                        <td rowspan="2"><code><span class="code_name">Creaci&oacute;n</span></code></td>
+                                        <td><a href="../../Cambios/crearcambioestandar.html">Creaci&oacute;n de un
+                                                cambio
+                                                est&aacute;ndar</a></td>
+                                        <td><a href="../../Cambios/crearcambionormal.html">Creaci&oacute;n de un cambio
+                                                normal</a><br><a
+                                                href="../../Cambios/crearcambionormal.html">Creaci&oacute;n
+                                                de un cambio normal m&uacute;ltiple</a></td>
+                                        <td align="center"><a
+                                                href="../../Cambios/crearcambioemergencia.html">Creaci&oacute;n de un
+                                                cambio
+                                                de emergencia a partir de una alarma</a></td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td colspan="3" align="center"><a href="../../Cambios/enviarcambio.html">Enviar
+                                                cambio
+                                                al proceso de aprobaci&oacute;n</a></td>
+                                    </tr>
+
+                                    <!-- //AAAAAqui -->
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Aprobaci&oacute;n</span></code></td>
+                                        <td align="center" colspan="3"> <a
+                                                href="../../Cambios/aprobarcambio.html">Aprobaci&oacute;n de un cambio
+                                            </a>
+                                        </td>
+
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Atenci&oacute;n</span></code></td>
+                                        <td align="center" colspan="3">
+                                            <a href="../../Cambios/atendercambio.html">Atenci&oacute;n de un cambio</a>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Cierre</span></code></td>
+                                        <td align="center" colspan="3"><a href="../../Cambios/cerrarcambio.html">Cierre
+                                                de
+                                                un cambio</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!------------------------------------------------------------------------------------------REGLAS PARA CRQ---------------------->
+
+                        <h2><a name="">Reglas generales de CRQs</a>
+                        </h2>
+                        <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                            Durante el ciclo de vida de un CRQ se deben seguir ciertas reglas y procedimientos para que
+                            este
+                            pueda ser aprobado, atendido y cerrado de la mejor manera.
+                            <ul>
+                                <li><strong>Todos los CRQs</strong> se crean en <b>Borrador</b> a fin de que se pueda
+                                    modificar o agregar alguna informacion antes de identificar
+                                    el proceso de aprobaciones.</li>
+                                <li><strong>Todos los CRQs</strong> deben tener al menos un <b>CI relacionado</b>
+                                    (sitio).</li>
+                                <li><strong>Todos los CRQs</strong> llevan al menos la primera aprobación por el jefe
+                                    del usuario solicitante
+                                    (Coordinador).</li>
+                                <li>Los <b>CRQs Normales</b>, llevan una <b>segunda aprobación</b>, por las personas que
+                                    tienen el rol de
+                                    aprobador de cambios en el grupo al que se envía (Grupo Gestión).</li>
+                                <li>Los <b>CRQs Normales</b> que no tengan la <b>primer aprobación antes 24 horas</b> de
+                                    su fecha y hora de inicio
+                                    son cancelados de manera automática a petición de GSOC.</li>
+                                <li>La segunda aprobación de <b>CRQs de Emergencia</b> es por los Gerentes de GSOC
+                                    (Carlos Beltrán y
+                                    Juvenal Salas).</li>
+                                <li> Todos los <b>CRQ Normalesy de Emergencia</b> en los siguientes estados: Borrador,
+                                    Programado,
+                                    Programado para Aprobación, Petición de Cambio, Planificación en Curso, Programado
+                                    para
+                                    Revisión y Pendientes, cuya fecha programada de inicio haya caducado serán
+                                    cancelados.</li>
+                                <li> Si existe un CRQ liberado y se pretende crear un nuevo que esté en <b>Colisión</b>,
+                                    el sistema ya no lo
+                                    permitirá continuar en su proceso, aplicando el mensaje (Ya existe un CRQ liberado
+                                    previo, favor de
+                                    validar los factores de colisión). Aplica para <b>cualquier tipo de CRQ.</b></li>
+                                <li> <b>Cualquier CRQ Rechazado</b>, debe pasarse a <b>Cancelado</b> de forma manual
+                                    para que en los
+                                    siguientes CRQs no existan colisiones.</li>
+                            </ul>
+                        </div>
+                        <!------------------------------------------------------------------------------------------PROCESO DE INTERVENCIONES DE RED---------------------->
+                        Como parte del proceso existen las <a
+                            routerLink="/doc/Generales/ConsolaAprobaciones">autorizaciones</a>.
+                    </div>
+                    <!-- Termina el contenido de la secci&oacute;n -->
+                </div> <!-- Secci&oacute;n 1 -->
+            </div>
+        </ng-container>
+
+
+        <ng-container *ngSwitchCase="'PPreventivo'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+
+                        <h2>Remedy en la Nube - Modelo Est&aacute;ndar - Proceso Preventivo</h2> <!-- Encabezado -->
+
+                        <p>A continuaci&oacute;n se muestra un diagrama funcional de alto nivel de los componentes
+                            tecnol&oacute;gicos y la relaci&oacute;n entre ellos que habilitan al proceso y
+                            posteriormente se describe el contexto del proceso con base en la tecnolog&iacute;a
+                            habilitadora mostrada.</p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <p>Este proceso tiene 2 entradas que lo activan:</p>
+                                    <ol>
+                                        <li>Solicitud de alta, baja o cambio de rutinas de mantenimiento para ser
+                                            ejecutadas en una fecha y hora programada.</li>
+                                        <li>Rutina programada para ser ejecutada en una fecha y hora espec&iacute;fica.
+                                        </li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><img src="Modeloestandar/procesopreventivo.png" width="500" alt="Intervenciones">
+                                </td>
+                            </tr>
+                        </table>
+                        <ul>
+                            <li><strong>M&oacute;dulo de Gesti&oacute;n de Solicitudes:</strong> Este m&oacute;dulo es
+                                el encargado de ser la entrada para las solicitudes de rutinas de mantenimiento. A
+                                trav&eacute;s de su portal se registran las solicitudes de alta, baja o cambio, se
+                                generan las solicitudes correspondientes para ser aprobadas y a partir de ellas, se
+                                generan las &oacute;rdenes de trabajo para crear y programar las rutinas.</li>
+                            <li><strong>&Oacute;rdenes de Trabajo:</strong> Este componente est&aacute; fuertemente
+                                relacionado con el M&oacute;dulo de Gesti&oacute;n de Solicitudes, pues normalmente una
+                                solicitud va acompa&ntilde;ada de una orden de trabajo, aunque para este proceso,
+                                s&oacute;lo cuando se solicite la creaci&oacute;n y programaci&oacute;n de una rutina de
+                                mantenimiento la orden de trabajo correspondiente estar&aacute; relacionada con una
+                                solicitud, pues cuando se ejecute la rutina programada, se crear&aacute;n &oacute;rdenes
+                                de trabajo aut&oacute;nomas, sin una solicitud relacionada, para ejecutar la rutina como
+                                tal.</li>
+                            <li><strong>Remedy Control:</strong> Para este proceso, Remedy Control act&uacute;a como un
+                                orquestador y un &ldquo;scheduler&rdquo; de rutinas de mantenimiento, usando una base de
+                                datos interna para hospedar la informaci&oacute;n de las rutinas de mantenimiento
+                                solicitadas y con base en ellas, de manera anticipada, crear &oacute;rdenes de trabajo
+                                para que esas rutinas sean ejecutadas en tiempo y forma.</li>
+                            <li><strong>CMDB:</strong> Es una base de datos que contiene la informaci&oacute;n relevante
+                                de los sitios en donde se ubica la base instalada de nodos de la red. Todos los
+                                componentes contenidos en esa base de datos son conocidos como elementos de
+                                configuraci&oacute;n (CI por sus siglas en ingl&eacute;s) y adem&aacute;s existe la
+                                relaci&oacute;n entre los dispositivos de red y los sitios en donde se encuentran. </li>
+                            <li><strong>M&oacute;dulo de Niveles de Servicio:</strong> Este m&oacute;dulo es el
+                                encargado de medir el cumplimiento de los niveles de servicio comprometidos por los
+                                procesos. Espec&iacute;ficamente para este proceso, este m&oacute;dulo es el encargado
+                                de medir el tiempo de ejecuci&oacute;n de las rutinas de mantenimiento as&iacute; como
+                                su cumplimiento y con base en ello, es capaz de ejecutar acciones o notificaciones
+                                preventivas o reactivas.</li>
+                            <li><strong>Datos Maestros:</strong> Es la columna vertebral del modelo est&aacute;ndar. Son
+                                un conjunto de datos usados a trav&eacute;s de varios m&oacute;dulos, aplicaciones y
+                                procesos en la plataforma de BMC, aunque principalmente en Remedy. En general, la
+                                estructura y contenido de estos datos es transversal a todo Remedy. Estos datos se usan
+                                en Remedy para:</li>
+                            <ul>
+                                <li>Segregar datos entre operaciones (Empresa), para identificar a clientes y
+                                    proveedores dentro de la estructura de soporte (Empresa),</li>
+                                <li>Identificar a la propia estructura de soporte (Organizaci&oacute;n), para asignar
+                                    trabajo y controlar la asignaci&oacute;n del mismo (grupos de soporte), para
+                                    identificar a las personas que asumen los diferentes roles dentro de la estructura
+                                    de soporte (personas), </li>
+                                <li>Categorizar los las solicitudes o el trabajo hecho y con base en ello ejecutar
+                                    acciones o generar reportes (categor&iacute;a operacional) y para categorizar
+                                    servicios, sitios, dispositivos, etc, as&iacute; mismo con base en ello ejecutar
+                                    acciones o generar reportes (cat&aacute;logo de producto).</li>
+                            </ul>
+                        </ul>
+                    </header>
+                    <div> <!-- Secci&oacute;n 1 -->
+                        <h2><a name="">Proceso Preventivo</a>
+                        </h2>
+                        <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                            <ul>
+                                <li><a href="../../RutinasMantenimiento/index.html">Solicitud de Rutina</a></li>
+                                <li><a href="../../RutinasMantenimiento/index.html#Cambio">Cambio o baja de Rutina</a>
+                                </li>
+                                <li><a href="../../RutinasMantenimiento/index.html#Ejecucion">Atenci&oacute;n y
+                                        ejecuci&oacute;n de la Rutina</a></li>
+                                <li><a href="../../RutinasMantenimiento/index.html#Inicio">Inicio Sesi&oacute;n
+                                        Calendario RM</a></li>
+                                <li><a href="../../RutinasMantenimiento/index.html#Consulta">Consulta de Rutinas de
+                                        Mantenimiento Calendario RM</a></li>
+                                <li><a href="../../RutinasMantenimiento/index.html#Modificacion">Modificaci&oacute;n de
+                                        Rutinas de Mantenimiento Calendario RM</a></li>
+                            </ul>
+                        </div>
+                        <!-- Termina el contenido de la secci&oacute;n -->
+                    </div> <!-- Secci&oacute;n 1 -->
+                </div>
+            </div>
+        </ng-container>
+
+
+        <ng-container *ngSwitchCase="'PRecibir'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h2>Remedy en la Nube - Modelo Est&aacute;ndar - Proceso Recibir Infraestructura de la Red</h2>
+                        <!-- Encabezado -->
+                        <p>En Telcel, el Proceso de <strong>Recibir e Integrar la Infraestructura de la Red</strong>
+                            gestiona la recepci&oacute;n de elementos de configuraci&oacute;n (Sitios, Nodos, Centrales,
+                            Radiobases, Servidores, Switches, Routers, etc.) y se habilita en la aplicaci&oacute;n
+                            llamada SITE-EP que corre en la plataforma de Remedy. </p>
+                        <p>En Telcel generalmente existen dos grandes clasificaciones:</p>
+                        <ul>
+                            <li>Infraestructura de Telecomunicaciones</li>
+                            <li>Infraestructura de TI.</li>
+                        
+                        </ul>
+                        
+                        <p>Para el caso de elementos de telecomunicaciones, estos son todos aquellos elementos que
+                            pertenecen a la red y que participan directamente en la entrega del servicio de Voz y Datos.
+                        </p>
+                        <p>Para el caso de los elementos de TI corresponden a aquellos elementos que pertenecen y
+                            participan en las plataformas o sistemas de c&oacute;mputo que soportan a la Red y a los
+                            servicios internos de Telcel.</p>
+                        <p>A continuaci&oacute;n se muestra un diagrama funcional de alto nivel de los componentes
+                            tecnol&oacute;gicos y la relaci&oacute;n entre ellos que habilitan al proceso y
+                            posteriormente se describe el contexto del proceso con base en la tecnolog&iacute;a
+                            habilitadora mostrada.</p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <p>Existen cuatro entradas en el proceso que lo activan: </p>
+                                    <ol>
+                                        <li>A trav&eacute;s de la carga autom&aacute;tica de archivos en formato .csv
+                                            provenientes del &aacute;rea de Ingenier&iacute;a</li>
+                                        <li>Carga manual realizada por el grupo de soporte <strong>BACK OFFICE
+                                                PREPAGO</strong> a trav&eacute;s de una solicitud de cambio de clase
+                                            est&aacute;ndar, que generan las &aacute;reas de recepci&oacute;n de OYM,
+                                            Ingenier&iacute;a e Implantaci&oacute;n.</li>
+                                        <li>Modificaciones a la informaci&oacute;n de los elementos de
+                                            configuraci&oacute;n (CI)</li>
+                                        <li>Puesta en Operaci&oacute;n de nodos de la red de voz y datos</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><img src="Modeloestandar/procesorecibir.png" width="500" alt="Intervenciones">
+                                </td>
+                            </tr>
+                        </table>
+                        <ul>
+                            <li><strong>M&oacute;dulo de Cambios:</strong> Mediante este m&oacute;dulo se
+                                solicitar&iacute;an modificaciones a la CMDB para actualizar la informaci&oacute;n de la
+                                Infraestructura recibida e integrada a la red.</li>
+                            <li><strong>Remedy Control:</strong> Es una herramienta que sirve como un orquestador y
+                                calendarizador de acciones autom&aacute;ticas en Remedy y para este proceso, ser&aacute;
+                                usado para hacer cargas masivas de CIs de manera automatizada.</li>
+                            <li><strong>CMDB:</strong> Es una base de datos que contiene la informaci&oacute;n relevante
+                                de los sitios en donde se ubica la base instalada de nodos de la red. Todos los
+                                componentes contenidos en esa base de datos son conocidos como elementos de
+                                configuraci&oacute;n (CI por sus siglas en ingl&eacute;s) y adem&aacute;s existe la
+                                relaci&oacute;n entre los dispositivos de red y los sitios en donde se encuentran. </li>
+                            <li><strong>Site EP</strong> La gesti&oacute;n del ciclo de vida de un CI, seguir&aacute;
+                                llev&aacute;ndose en el Site-EP. El formulario de Site-EP permanece y se usan los
+                                formularios de la CMDB para almacenar los CI&rsquo;s sin afectar su funcionalidad. </li>
+                            <li><strong>Datos Maestros:</strong> Es la columna vertebral del modelo est&aacute;ndar. Son
+                                un conjunto de datos usados a trav&eacute;s de varios m&oacute;dulos, aplicaciones y
+                                procesos en la plataforma de BMC, aunque principalmente en Remedy. En general, la
+                                estructura y contenido de estos datos es transversal a todo Remedy. Estos datos se usan
+                                en Remedy para:</li>
+                            <ul>
+                                <li>Segregar datos entre operaciones (Empresa), para identificar a clientes y
+                                    proveedores dentro de la estructura de soporte (Empresa),</li>
+                                <li>Identificar a la propia estructura de soporte (Organizaci&oacute;n), para asignar
+                                    trabajo y controlar la asignaci&oacute;n del mismo (grupos de soporte), para
+                                    identificar a las personas que asumen los diferentes roles dentro de la estructura
+                                    de soporte (personas), </li>
+                                <li>Categorizar a los componentes tecnol&oacute;gicos hospedados en la CMDB
+                                    (Cat&aacute;logo de producto) </li>
+                            </ul>
+                        </ul>
+                    </header>
+                    <div> <!-- Secci&oacute;n 1 -->
+                        <h2><a name="">Proceso Recibir Infraestructura de la Red</a>
+                        </h2>
+                        <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                            <p>Las siguientes son algunas de las operaciones que se pueden realizar en SITE-EP:</p>
+                            <ul>
+                                <li><a href="../../Site-EP/index.html#c1"
+                                        title="Creaci&oacute;n de un CI">Creaci&oacute;n de un CI</a></li>
+                                <li>
+                                    <a href="../../Site-EP/index.html#c2"
+                                        title="Puesta en operaci&oacute;n de radiobases 2G y 3G">Puesta en
+                                        operaci&oacute;n de radiobases 2G y 3G</a>
+                                </li>
+                                <li>
+                                    <a href="../../Site-EP/index.html#c3"
+                                        title="Puesta en operaci&oacute;n de radiobases 4G">Puesta en operaci&oacute;n
+                                        de radiobases 4G</a>
+                                </li>
+                                <li>
+                                    <a href="../../Site-EP/index.html#c6"
+                                        title="Puesta en operaci&oacute;n del resto de los nodos">Puesta en
+                                        operaci&oacute;n del resto de los nodos</a>
+                                </li>
+                                <li>
+                                    <a href="../../Site-EP/index.html#c4"
+                                        title="Puesta en operaci&oacute;n de radiobases 2G y 3G por Autoentrega">Puesta
+                                        en operaci&oacute;n de radiobases 2G y 3G por Autoentrega</a>
+                                </li>
+                                <li>
+                                    <a href="../../Site-EP/index.html#c5"
+                                        title="Puesta en operaci&oacute;n de radiobases 4G por Autoentrega">Puesta en
+                                        operaci&oacute;n de radiobases 4G por Autoentrega</a>
+                                </li>
+                                <li>
+                                    <a href="../../Site-EP/index.html#c7"
+                                        title="Puesta en operaci&oacute;n del resto de los nodos por Autoentrega">Puesta
+                                        en operaci&oacute;n del resto de los nodos por Autoentrega</a>
+                                </li>
+                                <li>
+                                    <a href="../../Site-EP/index.html#c8"
+                                        title="Modificaci&oacute;n de atributos de un CI antes del estado OPERANDO">Modificaci&oacute;n
+                                        de atributos de un CI antes del estado OPERANDO</a>
+                                </li>
+                                <li>
+                                    <a href="../../Site-EP/index.html#c9"
+                                        title="Modificaci&oacute;n de atributos de un CI durante el estado OPERANDO">Modificaci&oacute;n
+                                        de atributos de un CI durante el estado OPERANDO</a>
+                                </li>
+                                <li>
+                                    <a href="../../Site-EP/index.html#c10"
+                                        title="Generaci&oacute;n de ATP para liberaci&oacute;n de Alarmas">Generaci&oacute;n
+                                        de ATP para liberaci&oacute;n de Alarmas</a>
+                                </li>
+                                <li>
+                                    <a href="../../Site-EP/index.html#c11"
+                                        title="Eliminaci&oacute;n de un CI">Eliminaci&oacute;n de un CI</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Termina el contenido de la secci&oacute;n -->
+                    </div> <!-- Secci&oacute;n 1 -->
+                </div>
+            </div>
+        </ng-container>
+
+
+        <ng-container *ngSwitchDefault>
+            <h2>Página no encontrada</h2>
+        </ng-container>
+    </div>
+</section>

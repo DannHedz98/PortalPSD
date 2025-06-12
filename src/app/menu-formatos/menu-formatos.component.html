@@ -1,0 +1,22 @@
+<!-- MENU DESPLEGABLE QUE SE MOSTRARA EN LAS OPCIONES DE FORMATOS-->
+<!-- app-menu-enlaces -->
+<nav class="sidebar">
+    <h1>FORMATOS</h1>
+    <ul>
+      <li *ngFor="let item of menuItems; let i = index"
+      [class.active]="openSubmenuIndex === i">
+        <a [routerLink]="['/formatos',item.url]" (click)="toggleSubmenu(i, $event)">
+          {{ item.name }}
+        </a>
+        <!-- <ul *ngIf="openSubmenuIndex === i">
+          <li *ngFor="let subItem of item.subItems">
+            <a [href]="subItem.url" target="_blank">
+                {{ subItem }}
+            </a>
+          </li>
+        </ul> -->
+      </li>
+    </ul>
+  </nav>
+  
+

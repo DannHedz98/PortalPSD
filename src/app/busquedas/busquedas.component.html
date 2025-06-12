@@ -1,0 +1,138 @@
+<app-navbar></app-navbar>
+
+<div class="body">
+    <section class="formulario">
+        <div class="navbar">
+            <div>
+                <h3 class="">Busquedas OYM Corporativo</h3>
+            </div>
+        </div>
+
+        <!--NAV BAR DE LISTA-->
+
+        <div *ngIf="mostrarBusquedas" class="card text-center">
+            <div class="card-header pestañas">
+
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link pestaña" [ngClass]="{ 'active': activeTab === 'Nombre' }"
+                            (click)="setActive('Nombre')">Consulta Nomina</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pestaña" [ngClass]="{ 'active': activeTab === 'Grupo' }"
+                            (click)="setActive('Grupo')">Consulta Grupo Soporte</a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+
+            <!--**BUSQUEDA POR NOMBRE DE RUTINA**-->
+
+            <div class="card-body">
+
+
+                <!-- Contenido de cada sección -->
+
+                <section *ngIf="activeTab === 'Nombre'">
+                    <h2>Consulta Nómina</h2>
+
+                    <div class="card" style="margin: 1vi auto;">
+                        <form (submit)="buscarEmpleado(); $event.preventDefault();">
+                            <div class="form-floating mb-3 busqueda">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" [(ngModel)]="numeroEmpleado"
+                                        name="numeroEmpleado" placeholder="Ingrese Numero de empleado" required>
+                                    <button class="btn btn-outline-success" type="button"
+                                        (click)="buscarEmpleado()">BUSCAR</button>
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        (click)="limpiarBusqueda()">LIMPIAR</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="card-body resultados" *ngIf="resultados.length > 0">
+                        <div class="container text-center">
+                            <div class="row align-items-start">
+                                <table class="tabla" style="margin-top: 1rem">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Numero de Empleado</th>
+                                            <th>Usuario Universal</th>
+                                            <th>Direccion</th>
+                                            <th>Gerencia</th>
+                                            <th>Departamentos</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let empleado of resultados">
+                                            <td>{{ empleado.values['Short Description'] }}</td>
+                                            <td>{{ empleado.values['NUMEROEMPLEADO'] }}</td>
+                                            <td>{{ empleado.values['USUARIO'] }}</td>
+                                            <td>{{ empleado.values['DIRECCION'] }}</td>
+                                            <td>{{ empleado.values['GERENCIA'] }}</td>
+                                            <td>{{ empleado.values['DEPARTAMENTO'] }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+
+
+                <section *ngIf="activeTab === 'Grupo'">
+                    <h2>Consulta Grupo Soporte</h2>
+
+                    <div class="card" style="margin: 1vi auto;">
+                        <form (submit)="buscarGrupo(); $event.preventDefault();">
+                            <div class="form-floating mb-3 busqueda">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" [(ngModel)]="nombreGrupo"
+                                        name="nombreGrupo" placeholder="Ingrese Grupo de Soporte" required>
+                                    <button class="btn btn-outline-success" type="button"
+                                        (click)="buscarGrupo()">BUSCAR</button>
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        (click)="limpiarBusqueda()">LIMPIAR</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="card-body resultados" *ngIf="resultados2.length > 0">
+                        <div class="container text-center">
+                            <div class="row align-items-start">
+                                <table class="tabla" style="margin-top: 1rem">
+                                    <thead>
+                                        <tr>
+                                            <th>ID Grupo de Soporte</th>
+                                            <th>Estado</th>
+                                            <th>Empresa de soporte</th>
+                                            <th>Organizacion de Soporte</th>
+                                            <th>Nombre Grupo de Soporte</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let grupo of resultados2">
+                                            <td>{{ grupo.values['Support Group ID'] }}</td>
+                                            <td>{{ grupo.values['Status'] }}</td>
+                                            <td>{{ grupo.values['Company'] }}</td>
+                                            <td>{{ grupo.values['Support Organization'] }}</td>
+                                            <td>{{ grupo.values['Support Group Name'] }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </section>
+</div>
