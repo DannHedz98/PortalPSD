@@ -10,9 +10,9 @@
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
+                        
 
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
 
                         <p>
                             Este módulo habilita al proceso correctivo, ya que en el módulo de
@@ -37,7 +37,7 @@
                             </li>
                         </ul>
                         <!-- Se agrego esta linea de codigo el 26/02/2024 -->
-                        <table cellpadding="3" cellspacing="0" class="tabla">
+                        <table cellpadding="3" cellspacing="0" class="tabla2">
                             <thead>
                                 <tr class="TableSubHeadingColor" class="header">
                                     <td>Tipo Incidente</td>
@@ -99,7 +99,7 @@
                             <p><strong>Estados del incidente</strong></p>
                             <p>El incidente tiene un ciclo de vida que comienza con el estado "Nuevo" y termina con el
                                 estado "Cerrado". La siguiente tabla describe los estados del incidente.</p>
-                            <table cellpadding="3" cellspacing="0" class="tabla">
+                            <table cellpadding="3" cellspacing="0" >
                                 <thead>
                                     <tr class="TableSubHeadingColor" class="header">
                                         <td>Estado</td>
@@ -173,7 +173,7 @@
                         <div class="sectionWrapper"> <!-- Aquí escribir el contenido de esta sección -->
                             <p>En esta sección se listan las operaciones más comunes para los tres tipos
                                 de incidentes: Alarmas, CPD's e Incidentes de TI.</p>
-                            <table class="tabla" cellpadding="3" cellspacing="0">
+                            <table cellpadding="3" cellspacing="0">
                                 <thead>
                                     <tr class="TableSubHeadingColor" class="header">
                                         <td>&nbsp;</td>
@@ -212,8 +212,8 @@
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Revisar SLA's de incidentes</strong></p>
                         <p>
                             SLA son las siglas de "Service Level Agreement" o "Acuerdo de Niveles de
@@ -253,7 +253,7 @@
                                             servicio se están cumpliendo?</li>
                                     </ol>
                                 </td>
-                                <td><video src="../Generales/SLM_Revision_Objetivos.mp4" width="500" autoplay controls
+                                <td><video src="Generales/SLM_Revision_Objetivos.mp4" width="500" autoplay controls
                                         loop></video></td>
                             </tr>
                         </table>
@@ -266,19 +266,19 @@
                             <li><a routerLink="/doc/Incidentes/EscalarTI">Escalar el CPD</a></li>
                             <li><a routerLink="/doc/Incidentes/CerrarTI">Cerrar el CPD</a></li>
                         </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
         </ng-container>
 
         <!------------------------------------------- PAGINA: SLA CPD ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'SLAcpd'">
+        <!-- <ng-container *ngSwitchCase="'SLAcpd'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Revisar SLA's de incidentes</strong></p>
                         <p>
                             SLA son las siglas de "Service Level Agreement" o "Acuerdo de Niveles de
@@ -331,19 +331,19 @@
                             <li><a routerLink="/doc/Incidentes/EscalarCPD">Escalar el CPD</a></li>
                             <li><a routerLink="/doc/Incidentes/CerrarCPD">Cerrar el CPD</a></li>
                         </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
-        </ng-container>
+        </ng-container> -->
 
         <!------------------------------------------- PAGINA: SLA ALARMA ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'SLAalarma'">
+        <!-- <ng-container *ngSwitchCase="'SLAalarma'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Revisar SLA's de incidentes</strong></p>
                         <p>
                             SLA son las siglas de "Service Level Agreement" o "Acuerdo de Niveles de
@@ -397,19 +397,19 @@
                             <li><a routerLink="/doc/Incidentes/EscalarCPD">Escalar el CPD</a></li>
                             <li><a routerLink="/doc/Incidentes/CerrarCPD">Cerrar el CPD</a></li>
                         </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
-        </ng-container>
+        </ng-container> -->
 
         <!------------------------------------------- PAGINA: SLA ------------------------------------------->
-
+<!-- 
         <ng-container *ngSwitchCase="'SLA'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Revisar SLA's de incidentes</strong></p>
                         <p>
                             SLA son las siglas de "Service Level Agreement" o "Acuerdo de Niveles de
@@ -463,10 +463,10 @@
                             <li><a routerLink="/doc/Incidentes/EscalarCPD">Escalar el CPD</a></li>
                             <li><a routerLink="/doc/Incidentes/CerrarCPD">Cerrar el CPD</a></li>
                         </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
-        </ng-container>
+        </ng-container> -->
 
         <!------------------------------------------- PAGINA: RELACION INC ------------------------------------------->
 
@@ -474,8 +474,8 @@
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Relacionar incidentes hijos a un padre</strong></p>
                         <p>
                             Material para que el usuario puede relacionar de forma correcta incidentes hijos a un padre
@@ -507,8 +507,8 @@
                                         loop></video></td>
                             </tr>
                         </table>
-                        <a href="/Incidentes/relaciondeincidentespower.pptx">Material en Power Point</a>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                        <a href="Incidentes/relaciondeincidentespower.pptx">Material en Power Point</a>
+                    </header> 
                 </div>
             </div>
         </ng-container>
@@ -519,8 +519,8 @@
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Escalar Incidente</strong></p>
                         <p>
                             Cuando el ingeniero asignado no tiene la capacidad ni las herramientas para resolver el
@@ -599,18 +599,19 @@
                             <li><a routerLink="/doc/Incidentes/CrearTareaTI">Crear Tarea(s) en Inciente</a></li>
                             <li><a routerLink="/doc/Incidentes/CerrarTI">Cerrar Incidente</a></li>
                         </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
         </ng-container>
+
         <!------------------------------------------- PAGINA: ESCALAR CPD ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'EscalarCPD'">
+        <!-- <ng-container *ngSwitchCase="'EscalarCPD'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Escalar CPD</strong></p>
                         <p>
                             Cuando el ingeniero asignado no tiene la capacidad ni las herramientas para resolver el
@@ -657,18 +658,20 @@
                             <li><a routerLink="/doc/Incidentes/CrearTareaCPD">Crear Tarea(s) en Inciente</a></li>
                             <li><a routerLink="/doc/Incidentes/CerrarCPD">Cerrar Incidente</a></li>
                         </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
-        </ng-container>
+        </ng-container> -->
+
+
         <!------------------------------------------- PAGINA: ESCALAR ALARMA ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'EscalarAlarma'">
+        <!-- <ng-container *ngSwitchCase="'EscalarAlarma'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Escalar la alarma</strong></p>
                         <p>
                             Cuando el ingeniero asignado no tiene la capacidad ni las herramientas para resolver el
@@ -715,18 +718,20 @@
                             <li><a routerLink="/doc/Incidentes/CrearTarea">Crear Tarea(s) en Inciente</a></li>
                             <li><a routerLink="/doc/Incidentes/CerrarAlarma">Cerrar Incidente</a></li>
                         </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
-        </ng-container>
+        </ng-container> -->
+
+
         <!------------------------------------------- PAGINA: DOCUMENTAR TI ------------------------------------------->
 
         <ng-container *ngSwitchCase="'DocumentarTI'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Documentar el Incidente</strong></p>
                         <p>
                             En cualquier momento se deben documentar los trabajos realizados en la atención y
@@ -820,18 +825,19 @@
                             <li><a routerLink="/doc/Incidentes/EscalarTI">Escalar Incidente</a></li>
                             <li><a routerLink="/doc/Incidentes/CerrarTI">Cerrar Incidente</a></li>
                         </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
         </ng-container>
+
         <!------------------------------------------- PAGINA: DOCUMENTAR CPD ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'DocumentarCPD'">
+        <!-- <ng-container *ngSwitchCase="'DocumentarCPD'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Documentar el CPD</strong></p>
                         <p>
                             En cualquier momento se deben documentar los trabajos realizados en la atención y
@@ -912,19 +918,19 @@
                             <li><a routerLink="/doc/Incidentes/EscalarCPD">Escalar Incidente</a></li>
                             <li><a routerLink="/doc/Incidentes/CerrarCPD">Cerrar Incidente</a></li>
                         </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
-        </ng-container>
+        </ng-container> -->
 
         <!------------------------------------------- PAGINA: DOCUMENTAR ALARMA ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'DocumentarAlarma'">
+        <!-- <ng-container *ngSwitchCase="'DocumentarAlarma'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Documentar la alarma</strong></p>
                         <p>
                             En cualquier momento se deben documentar los trabajos realizados en la atención y
@@ -1002,10 +1008,10 @@
                             <li><a routerLink="/doc/Incidentes/EscalarAlarma">Escalar Incidente</a></li>
                             <li><a routerLink="/doc/Incidentes/CerrarAlarma">Cerrar Incidente</a></li>
                         </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
-        </ng-container>
+        </ng-container> -->
 
         <!------------------------------------------- PAGINA: CREAR TI ------------------------------------------->
 
@@ -1013,8 +1019,8 @@
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC SMART IT - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC SMART IT - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Creación de Incidentes de TI</strong></p>
                         <p>
                             Un incidente de TI es cualquier incidente que se genera en la infraestructura, pero que no
@@ -1025,7 +1031,7 @@
                                 <td valign="top">
                                     <strong>Instrucciones:</strong>
                                     <ol>
-                                        <li>Ingresar a la consola de peticiones de <a href="https://remedycloudamx-rsso.onbmc.com/rsso/start">
+                                        <li>Ingresar a la consola de peticiones de <a href="https://remedycloudamx-smartit.onbmc.com/smartit/app/#/">
                                             Smart IT</a>, si no lo ha hecho aun, conocer su usuario <a href="/doc/Generales/Acceso">aquí</a>. 
                                             Dirigirse a: "<b>BMC Helix ITSM</b> > <b>Crear nuevo</b> > <b>Incidencia</b>".
                                         </li>
@@ -1114,14 +1120,14 @@
                             <li><a routerLink="/doc/Incidentes/EscalarTI">Escalación del incidente</a></li>
                             <li><a routerLink="/doc/Incidentes/CerrarTI">Cerrar el incidente</a></li> -->
                         </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
         </ng-container>
 
         <!------------------------------------------- PAGINA: CREAR CPD ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'CrearCPD'">
+        <!-- <ng-container *ngSwitchCase="'CrearCPD'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
@@ -1198,16 +1204,16 @@
                 </div>
             </div>
 
-        </ng-container>
+        </ng-container> -->
 
         <!------------------------------------------- PAGINA: CREAR ALARMA ------------------------------------------->
-
+<!-- 
         <ng-container *ngSwitchCase="'CrearAlarma'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Creación de alarmas</strong></p>
                         <p>
                             Las alarmas, que antes generaban un TT (Trouble Ticket), ahora generan un incidente de tipo
@@ -1248,10 +1254,10 @@
                             <li><a routerLink="/doc/Incidentes/EscalarAlarma">Escalación del incidente</a></li>
                             <li><a routerLink="/doc/Incidentes/CerrarAlarma">Cerrar el incidente</a></li>
                         </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
-        </ng-container>
+        </ng-container> -->
 
         <!------------------------------------------- PAGINA: CREAR TAREA TI ------------------------------------------->
 
@@ -1367,13 +1373,13 @@
 
         <!------------------------------------------- PAGINA: CREAR TAREA CPD ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'CrearTareaCPD'">
+        <!-- <ng-container *ngSwitchCase="'CrearTareaCPD'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
+                        
 
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
 
                         <p><strong>Crear tarea(s) en el CPD</strong></p>
                         <p>
@@ -1502,20 +1508,20 @@
                             <li><a routerLink="/doc/Incidentes/EscalarCPD">Escalar CPD</a></li>
                             <li><a routerLink="/doc/Incidentes/CerrarCPD">Cerrar CPD</a></li>
                         </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
-        </ng-container>
+        </ng-container> -->
 
         <!------------------------------------------- PAGINA: CREAR TAREA ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'CrearTarea'">
+        <!-- <ng-container *ngSwitchCase="'CrearTarea'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
+                        
 
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
 
                         <p><strong>Crear tarea(s) en la alarma</strong></p>
                         <p>En el módulo de incidentes existe la posibilidad de asignar actividades aisladas
@@ -1724,7 +1730,7 @@
                 </div>
             </div>
 
-        </ng-container>
+        </ng-container> -->
 
         <!------------------------------------------- PAGINA: CERRAR TI ------------------------------------------->
 
@@ -1732,8 +1738,8 @@
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Cerrar Incidente</strong></p>
                         <p>
                             Una vez que se ha encontrado una solución al incidente entonces hay que cerrar el
@@ -1837,19 +1843,19 @@
                             <li><a routerLink="/doc/Incidentes/CrearTareaTI">Crear Tarea(s) para TI</a></li>
                             <li><a routerLink="/doc/Incidentes/EscalarTI">Escalar TI</a></li>
                         </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
         </ng-container>
 
         <!------------------------------------------- PAGINA: CERRAR CPD ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'CerrarCPD'">
+        <!-- <ng-container *ngSwitchCase="'CerrarCPD'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Cerrar CPD</strong></p>
                         <p>
                             Una vez que se ha encontrado una solución a la queja del usuario entonces hay que
@@ -1921,19 +1927,19 @@
                             <li><a routerLink="/doc/Incidentes/CrearTareaCPD">Crear Tarea(s) para CPD</a></li>
                             <li><a routerLink="/doc/Incidentes/EscalarCPD">Escalar CPD</a></li>
                         </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
-        </ng-container>
+        </ng-container> -->
 
         <!------------------------------------------- PAGINA: CERRAR ALARMA ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'CerrarAlarma'">
+        <!-- <ng-container *ngSwitchCase="'CerrarAlarma'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Cerrar la alarma</strong></p>
                         <p>
                             Una vez que se ha restaurado el servicio y la falla que originó la alarma entonces
@@ -1979,10 +1985,10 @@
                             <li><a routerLink="/doc/Incidentes/CrearTarea">Crear Tarea(s) para alarma</a></li>
                             <li><a routerLink="/doc/Incidentes/EscalarAlarma">Escalar alarma</a></li>
                         </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
-        </ng-container>
+        </ng-container> -->
 
         <!------------------------------------------- PAGINA: BUSCAR KM ------------------------------------------->
 
@@ -1990,8 +1996,8 @@
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Buscar instructivo</strong></p>
                         <strong>Instrucciones:</strong>
                         <table class="tabla" cellpadding="0" cellspacing="0" border="0">
@@ -2045,7 +2051,7 @@
                                         loop></video></td>
                             </tr>
                         </table>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
         </ng-container>
@@ -2056,8 +2062,8 @@
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Atención de Incidente de TI</strong></p>
                         <p>
                             Una vez que el incidente ha sido creado, Remedy ITSM corre su proceso de asignacón
@@ -2121,250 +2127,7 @@
                             <li><a routerLink="/doc/Incidentes/EscalarTI">Escalar el Incidente</a></li>
                             <li><a routerLink="/doc/Incidentes/CerrarTI">Cerrar el Incidente</a></li> -->
                         </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
-                </div>
-            </div>
-        </ng-container>
-
-        <!------------------------------------------- PAGINA: ATENCION CPD ------------------------------------------->
-
-        <ng-container *ngSwitchCase="'AtencionCPD'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
-                        <p><strong>Atención de CPD</strong></p>
-                        <p>
-                            Una vez que el CPD ha sido creado, Remedy ITSM corre su proceso de asignacón
-                            automática. En el caso de CPDs, este se basa en un mapeo de asignaciones usando las
-                            ubicaciones, particularmente las regiones. Por lo tanto, los CPD's serán asignados al
-                            grupo de atención correspondiente.
-                        </p>
-                        <p>
-                            Si se pertenece a un grupo de atención de CPDs, entonces el grupo tendrá
-                            asignado un CPD. Seguir estos pasos para atender el CPD:
-                        </p>
-                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
-                            <tr>
-                                <td valign="top">
-                                    <strong>Instrucciones:</strong>
-                                    <ol>
-                                        <li>Ingresar al sistema Remedy, si no lo ha hecho todavía. Ver
-                                            cómo <a routerLink="/doc/Generales/Acceso">aquí</a>.</li>
-                                        <li>Ingresar a la consola de aspectos generales o a la consola de incidentes y
-                                            localizar el incidente asignado. Ver cómo <a
-                                                routerLink="/doc/Generales/Consolas">aquí</a>.</li>
-                                        <li>Tomar la atención del incidente. Para iniciar el proceso de
-                                            atención dar clic en la liga <img src="Incidentes/asignarme.png"
-                                                width="19"><strong>"Asignarme a mí mismo"</strong>.
-                                        </li>
-                                    </ol>
-                                    <strong>Resultados:</strong>
-                                    <ol>
-                                        <li>Observar que el campo de <strong>Usuario asignado+</strong> tiene el nombre
-                                            de usuario.</li>
-                                        <li>Observar que el campo de <strong>Estado</strong> cambió a
-                                            <strong>"En curso"</strong>.
-                                        </li>
-                                        <li>Observar los SLA's. Ver cómo <a
-                                                routerLink="/doc/Incidentes/SLAcpd">aquí.</a>
-                                        </li>
-                                    </ol>
-                                    <p>Lo anterior indica que se han comenzadon los trabajos del incidente y se han
-                                        dejado los tiempos de atención atrás. Ahora se mide el tiempo de
-                                        Resolución</p>
-                                    <p>Además de atender el CPD, se debe documentar. Ver cómo <a
-                                            routerLink="/doc/Incidentes/DocumentarCPD">aquí</a>.</p>
-                                </td>
-                                <td valign="top"><video src="Incidentes/atender.mp4" width="600" autoplay controls loop
-                                        controls muted></video></td>
-                            </tr>
-                            <tr>
-                                <td valign="top"><a name="consulta"><strong>Buscar instructivo para atender un incidente
-                                            proveniente de una queja de cliente</strong></a>
-                                    <ol>
-                                        <li>Dentro del folio de incidente asignado en estado en curso</li>
-                                        <li>Seleccionar la opción <strong>"Buscar en base de
-                                                conocimientos"</strong> dentro del apartado
-                                            <strong>Funciones</strong>, ubicado en la parte inferior izquierda de la
-                                            pantalla.
-                                        </li>
-                                        <li>Se mostrar&acute; el listado de instructivos que coinciden con el resumen
-                                            del Incidente.</li>
-                                        <li>Seleccionar el instructivo a utilizar e ingresar a &eacute;ste.</li>
-                                        <li>Revisar la información del instructivo.</li>
-                                        <li>Hacer clic en la pesta&ntilde;a <strong>Detalles</strong> y en la
-                                            sección <strong>"Adjuntos de artículo"</strong>
-                                            seleccionar un registro de la tabla y hacer clic en el botón
-                                            <strong>Mostrar</strong> para abrir el archivo adjunto que viene con el
-                                            instructivo.
-                                        </li>
-                                        <li>Revisar la información del archivo adjunto.</li>
-                                        <li>Una vez que se haya revisado la información del archivo adjunto, se
-                                            procede a su valoración haciendo clic en el botón
-                                            <strong>Valoración</strong> que se encuentra en la parte inferior del
-                                            instructivo.
-                                        </li>
-                                        <li>Seleccionar un valor del campo <strong>Evaluación</strong>, este
-                                            valor representará la percepción que se tiene acerca de la
-                                            calidad del instructivo.</li>
-                                        <li>En el campo <strong>Detalles de valoración</strong> ingresar
-                                            comentarios sobre la valoración seleccionada.</li>
-                                        <li>Hacer clic en el botón <strong>Guardar</strong>.</li>
-                                        <li>Hacer clic en la pesta&ntilde;a <strong>Valoración</strong> para
-                                            observar las diferentes valoraciones que se han hecho sobre el instructivo.
-                                        </li>
-                                        <li>En caso de que el instructivo sea útil en la solución del
-                                            incidente de queja oprimir el botón <strong>Usar</strong> ubicado en
-                                            la parte inferior de la pantalla. Lo cual regresará
-                                            automáticamente al registro del incidente.</li>
-                                        <li>De lo contrario, regresar manualmente dando clic en la liga que muestra el
-                                            ID del registro del incidente, ubicada en la parte superior del formulario a
-                                            un costado del ícono inicio <img width="20" height="20"
-                                                src="Incidentes/atencioncpd_clip_image004.png">.</li>
-                                        <li>Para consultar nuevamente el instructivo, ir a la pesta&ntilde;a
-                                            <strong>Relaciones</strong>, seleccionar el registro de tipo
-                                            <strong>"Solución RKM"</strong> y hacer doble clic o hacer
-                                            clic en el ícono de lentes <img width="14" height="14"
-                                                src="Incidentes/atencioncpd_clip_image002.png">para abrirlo.
-                                        </li>
-                                    </ol>
-                                </td>
-                                <td valign="top"><video src="Incidentes/buscarkmcpd.mp4" width="600" autoplay controls
-                                        loop></video></td>
-                            </tr>
-                        </table>
-                        <strong>Temas relacionados:</strong>
-                        <ul>
-                            <li><a routerLink="/doc/Incidentes/CrearCPD">Creación del CPD</a></li>
-                            <li><a routerLink="/doc/Incidentes/SLAcpd">Revisar el SLA del CPD</a></li>
-                            <li><a routerLink="/doc/Incidentes/DocumentarCPD">Documentar el CPD</a></li>
-                            <li><a routerLink="/doc/Incidentes/CrearTareaCPD">Crear Tarea(s) en el CPD</a></li>
-                            <li><a routerLink="/doc/Incidentes/EscalarCPD">Escalar el CPD</a></li>
-                            <li><a routerLink="/doc/Incidentes/CerrarCPD">Cerrar CPD</a></li>
-                        </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
-                </div>
-            </div>
-        </ng-container>
-
-        <!------------------------------------------- PAGINA: ATENCION ALARMA ------------------------------------------->
-
-        <ng-container *ngSwitchCase="'AtencionAlarma'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
-                        <p><strong>Atención de alarmas</strong></p>
-                        <p>
-                            Una vez que la alarma ha sido creada, Remedy ITSM corre su proceso de asignación
-                            automática. En el caso de alarmas, este se basa en un mapeo de asignaciones usando
-                            las categorías de producto. Por lo tanto, las alarmas serán asignadas al grupo
-                            de atención correspondiente.
-                        </p>
-                        <p>
-                            Si pertenece a un grupo de atención de alarmas, entonces el grupo tendrá
-                            asignada una alarma. Seguir estos pasos para atender la alarma:
-                        </p>
-                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
-                            <tr>
-                                <td valign="top">
-                                    <strong>Instrucciones:</strong>
-                                    <ol>
-                                        <li>Ingresar al sistema Remedy. Ver cómo <a
-                                                routerLink="/doc/Generales/Acceso">aquí</a>.</li>
-                                        <li>Ingresar a la consola de aspectos generales o a la consola de incidentes y
-                                            localizar el incidente asignado. Ver cómo <a
-                                                routerLink="/doc/Generales/Consolas">aquí</a>.</li>
-                                        <li>Tomar la atención del incidente. Para iniciar el proceso de
-                                            atención dar clic en la liga <img src="Incidentes/asignarme.png" width="19"
-                                                alt="Asignarme a mi mismo"> <strong>"Asignarme a mí
-                                                mismo"</strong>.</li>
-                                    </ol>
-                                    <strong>Resultados:</strong>
-                                    <ol>
-                                        <li>Observar que el campo de <strong>Usuario asignado+</strong> tiene el nombre
-                                            de usuario.</li>
-                                        <li>Observar que el campo de <strong>Estado</strong> cambió a
-                                            <strong>"En curso"</strong>
-                                        </li>
-                                        <li>Observar los SLA's. Ver cómo <a
-                                                routerLink="/doc/Incidentes/SLAalarma">aquí.</a></li>
-                                    </ol>
-                                    <p>Lo anterior indica que han comenzado los trabajos del incidente y se han dejado
-                                        los tiempos de atención atrás. Ahora se mide el tiempo de
-                                        Resolución.</p>
-                                    <p>Además de atender la alarma se debe documentar. Ver cómo <a
-                                            routerLink="/doc/Incidentes/DocumentarAlarma">aquí</a>.</p>
-                                </td>
-                                <td valign="top"><video src="Incidentes/atender.mp4" width="600" autoplay controls loop
-                                        controls muted>atender</video></td>
-                            </tr>
-                            <tr>
-                                <td valign="top"><a name="consulta">
-                                        <p><strong>Consulta de Instructivo</strong></p>
-                                    </a><br>
-                                    Remedy Control se encarga de buscar un instructivo en la base de conocimientos al
-                                    momento de la creación de la alarma y lo relaciona con el incidente que se
-                                    crea en Remedy, indicando en el campo &ldquo;Artículo Encontrado&rdquo; que
-                                    se ha localizado un instructivo. <br>
-                                    <strong>Pasos para la consulta de un instructivo</strong>
-                                    <ol>
-                                        <li>En una alarma abierta, dar clic en la pesta&ntilde;a
-                                            <strong>Relaciones.</strong>
-                                        </li>
-                                        <li>Seleccionar el registro de tipo "Solución RKM" y dar doble
-                                            clic o dar clic en el ícono ver <img width="14" height="14"
-                                                src="Incidentes/botonver.png" alt="atencion alarma"> para abrir el
-                                            instructivo que
-                                            ayudará en la resolución de la alarma.</li>
-                                        <li>Revisar la información del instructivo</li>
-                                        <li>Hacer clic en la pesta&ntilde;a <strong>Detalles</strong> y en la
-                                            sección <strong>"Adjuntos de artículo"</strong>
-                                            seleccionar un registro de la tabla y hacer clic en el botón
-                                            <strong>Mostrar</strong> para abrir el archivo adjunto que viene con el
-                                            instructivo.
-                                        </li>
-                                        <li>Revisar la información del archivo adjunto.</li>
-                                        <li>Una vez que se haya revisado la información del archivo adjunto, se
-                                            procede a su valoración haciendo clic en el botón
-                                            <strong>Valoración</strong> que se encuentra en la parte inferior del
-                                            instructivo.
-                                        </li>
-                                        <li>Seleccionar un valor del campo <strong>Evaluación</strong>. Este
-                                            valor representará la percepción que se tiene acerca de la
-                                            calidad del instructivo.</li>
-                                        <li>En el campo <strong>Detalles de valoración</strong>, ingresar
-                                            comentarios sobre la valoración seleccionada.</li>
-                                        <li>Hacer clic en el botón <strong>Guardar</strong>.</li>
-                                        <li>Hacer clic en la pesta&ntilde;a <strong>Valoración</strong> para
-                                            observar las diferentes valoraciones que se han hecho sobre el instructivo.
-                                        </li>
-                                        <li>Hacer doble clic en uno de los registros para ver el detalle del mismo, se
-                                            abrirá una ventana emergente.</li>
-                                        <li>Hacer clic en el botón <strong>Cerrar</strong>.</li>
-                                        <li>Para regresar a la Alarma hacer clic en la liga que muestra el ID del
-                                            registro ubicada en la parte superior del formulario a un costado del
-                                            ícono "Inicio" <img width="20" height="20" src="Incidentes/botoninicio.png"
-                                                alt="Atencion alarma"></li>
-                                    </ol>
-                                </td>
-                                <td valign="top"><video src="Incidentes/alarmainstructivo.mp4" width="600" autoplay
-                                        controls loop controls></video></td>
-                            </tr>
-                        </table>
-                        <strong>Temas relacionados:</strong>
-                        <ul>
-                            <li><a routerLink="/doc/Incidentes/CrearAlarma">Creación de alarma</a></li>
-                            <li><a routerLink="/doc/Incidentes/SLAalarma">Revisar el SLA de la alarma</a></li>
-                            <li><a routerLink="/doc/Incidentes/DocumentarAlarma">Documentar la alarma</a></li>
-                            <li><a routerLink="/doc/Incidentes/CrearTarea">Crear Tarea(s) en la alarma</a></li>
-                            <li><a routerLink="/doc/Incidentes/EscalarAlarma">Escalar alarma</a></li>
-                            <li><a routerLink="/doc/Incidentes/CerrarAlarma">Cerrar alarma</a></li>
-                        </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
         </ng-container>
@@ -2375,8 +2138,8 @@
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> <!-- Encabezado -->
+                        
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
                         <p><strong>Atención de un incidente</strong></p>
                         <p>
                             Una vez que el incidente ha sido creado, Remedy ITSM corre su proceso de asignación
@@ -2429,7 +2192,7 @@
                             <li><a routerLink="/doc/Incidentes/EscalarCPD">Escalar el CPD</a></li>
                             <li><a routerLink="/doc/Incidentes/CerrarCPD">Cerrar CPD</a></li>
                         </ul>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
+                    </header> 
                 </div>
             </div>
         </ng-container>

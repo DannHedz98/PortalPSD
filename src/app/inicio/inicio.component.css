@@ -19,10 +19,22 @@ html {
 .container {
     display: flex;
     background-color: transparent;
-    height: 90vh;
+    height:80vh;
     flex-wrap: wrap;
-    /* Permite que los elementos se ajusten */
 }
+.footer p{
+    margin-bottom: 0px;
+}
+
+.footer {
+    /* margin-top: 3px; */
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding-bottom: 5px;
+    width: 100%;
+  }
+  
 
 .left,
 .right {
@@ -271,12 +283,14 @@ input {
 }
 
 
+
+
 /* Media Queries */
 @media (max-width: 768px) {
     .container {
         display: block;
         background-color: transparent;
-        height: 180vh;
+        height: 127vh;
         flex-direction: column;
     }
 

@@ -10,8 +10,8 @@
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Change Management - Gestión de Cambios</h2> <!-- Encabezado -->
+
+                        <h2>BMC ITSM - Change Management - Gestión de Cambios</h2>
                         <p>
                             Este módulo habilita al proceso de intervenciones en la red, ya que en el
                             módulo
@@ -30,7 +30,7 @@
                                 Cambios de clase Emergencia.
                             </li>
                         </ul>
-                    </header> <!-- Termina el texto principal -->
+                    </header>
                     <div> <!-- Sección 1 -->
                         <h3>Ciclo de vida de los cambios</h3>
                         <div class="sectionWrapper"> <!-- Aquí escribir el contenido de esta sección -->
@@ -54,7 +54,7 @@
                             <p>El cambio tiene un ciclo de vida que comienza con el estado "Borrador" y
                                 termina
                                 con el estado "Cerrado". La siguiente tabla describe los estados del cambio.</p>
-                            <table cellpadding="3" cellspacing="0" class="tabla">
+                            <table cellpadding="3" cellspacing="0" class="tabla2">
                                 <thead>
                                     <tr class="TableSubHeadingColor" class="header">
                                         <td>Estado</td>
@@ -189,158 +189,13 @@
             </div>
         </ng-container>
 
-        <!------------------------------------------- PAGINA: SLA ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'SLA'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Change Management - Gestión de Cambios</h2> <!-- Encabezado -->
-                        <p><strong>Revisar SLA's de Cambios</strong></p>
-                        <p>
-                            SLA son las siglas de "Service Level Agreement" o "Acuerdo de Niveles de
-                            Servicio". Cada proveedor de servicio, debe tener previamente acordados los
-                            terminos bajos los cuales se hará la entrega del servicio.
-                        </p>
-                        <p>
-                            Para revisar el estado del SLA en el cambio, siga estos pasos:
-                        </p>
-                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
-                            <tr>
-                                <td valign="top">
-                                    <strong>Instrucciones:</strong>
-                                    <ol>
-                                        <li>Ingrese al sistema Remedy si no lo ha hecho todavía. Vea cómo
-                                            <a routerLink="/doc/Generales/Acceso">aquí</a>.
-                                        </li>
-                                        <li>Ingrese a la consola de aspectos generales o a la consola de cambios y
-                                            localice el cambio de interes. Vea cómo <a
-                                                routerLink="/doc/Generales/Consolas">aquí</a>.</li>
-                                        <li>De clic en el ícono de color en la caja de "Estado de
-                                            SLM"</li>
-                                    </ol>
-                                    <strong>Resultados:</strong>
-                                    <ol>
-                                        <li>Observe la lista de objetivos de servicio.</li>
-                                        <li>Observe el estado de cada objetivo de servicio. &iquest;Sus objetivos de
-                                            servicio se están cumpliendo?</li>
-                                    </ol>
-                                </td>
-                                <td><video src="/../Generales/SLM_Revision_Objetivos.mp4" width="600" autoplay controls
-                                        loop></video></td>
-                            </tr>
-                        </table>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
-                </div>
-            </div>
-        </ng-container>
-
-        <!------------------------------------------- PAGINA: ENVIAR CAMBIO ------------------------------------------->
-
-        <ng-container *ngSwitchCase="'EnviarCambio'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Change Management - Gestión de Cambios</h2> <!-- Encabezado -->
-                        <p><strong>Enviar el cambio al proceso de aprobación (normal, estándar,
-                                emergencia)</strong></p>
-                        <p>Para enviar un cambio al proceso de aprobación siga estos pasos:</p>
-                        <table class="tabla">
-                            <tr>
-                                <td valign="top">
-                                    <ol>
-                                        <li>Seleccionar <strong>Aplicaciones > Gestión de cambios > Buscar
-                                                Cambio</strong></li>
-                                        <li>Realice la búsqueda del cambio en estado Borrador que desea enviar al
-                                            proceso de aprobación</li>
-                                        <li>Ingrese al cambio seleccionado</li>
-                                        <li>Dentro del recuadro <strong>Iniciar</strong> oprima la flecha y seleccione
-                                            la opción Siguiente fase, o bien, Oprima el botón
-                                            <strong>Siguiente fase</strong>, ubicado en la parte inferior del cambio
-                                        </li>
-                                        <li>El cambio quedará de solo lectura y en espera de la aprobación
-                                            correspondiente</li>
-                                    </ol>
-                                </td>
-                                <td valign="top"><video src="/Cambios/Enviar cambio a aprobacion.mp4" width="600"
-                                        autoplay controls loop></video></td>
-                            </tr>
-                        </table>
-                        <p>Todos los cambios deberán ser autorizados en un inicio por el jefe inmediato del
-                            solicitante (excepto masivos), para avanzar del estado Petición de
-                            autorización al estado Programado para aprobación.</p>
-                        <p>La siguiente tabla muestra los niveles de aprobación que serán necesarios para
-                            cada tipo de cambio. Una vez completado el proceso de aprobación el cambio
-                            pasará del estado Programado para aprobación al estado Implantación en
-                            curso.</p>
-                    </header> <!-- Termina el texto principal -->
-                </div>
-            </div>
-        </ng-container>
-
-        <!------------------------------------------- PAGINA: CREAR TAREA ------------------------------------------->
-
-        <ng-container *ngSwitchCase="'CrearTarea'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Change Management - Gestión de Cambios</h2> <!-- Encabezado -->
-                        <p><strong>Crear tarea(s) en el cambio</strong></p>
-                        <p>
-                            En el módulo de cambios existe la posibilidad de asignar actividades aisladas
-                            relacionadas al cambio.</p>
-                        <p>Para crear una tarea siga estos pasos. Repita la operación si desea crear más
-                            tareas. </p>
-                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
-                            <tr>
-                                <td valign="top">
-                                    <strong>Instrucciones:</strong>
-                                    <ol>
-                                        <li>Dentro del folio de cambio asignado en estado en curso</li>
-                                        <li>Ingrese al apartado <strong>Tareas</strong></li>
-                                        <li>En el campo Tipo de petición seleccione el valor <strong>Ad
-                                                hoc</strong> y oprima el botón <strong>Relacionar</strong></li>
-                                        <li>Visualice la pantalla de la nueva tarea</li>
-                                        <li>Documente las actividades a realizar en el campo <strong>Resumen</strong>
-                                            y/o <strong>Notas</strong></li>
-                                        <li>Documente el campo <strong>Tipo de Tarea</strong> con el valor <strong>Queja
-                                                del Cliente</strong></li>
-                                        <li>Seleccionar el apartado Asignación/Fechas</li>
-                                        <li>En Asignación de tareas documente los campos Empresa asignada,
-                                            Organización asignada y Grupo asignado. </li>
-                                        <li>En Fechas/hora documente la Fecha programada de inicio y la Fecha programada
-                                            de finalización. </li>
-                                        <li>En el campo "Tipo de Tarea" seleccione el tipo de cambio que
-                                            está generando.</li>
-                                        <li>Oprima el botón Guardar</li>
-                                        <li>En el apartado de Tareas dentro del cambio visualizará el registro de
-                                            la tarea creada</li>
-                                        <li>Generar todas las tareas que sean necesarias</li>
-                                        <li>*Opcional. Modificar secuencia de las tareas</li>
-                                    </ol>
-                                </td>
-                                <td valign="top"><video src="/../Incidentes/creatarea.mp4" width="600" autoplay controls
-                                        loop></video>
-                                </td>
-                            </tr>
-                        </table>
-                    </header> <!-- Termina el texto principal --><!-- Sección 1 --><!-- Sección 2 -->
-                </div>
-            </div>
-        </ng-container>
-
-        <!------------------------------------------- PAGINA: CREAR CAMBIO ------------------------------------------->
 
         <ng-container *ngSwitchCase="'CrearCambio'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-
-                        <h2>BMC ITSM - Change Management - Gestión de Cambios</h2> <!-- Encabezado -->
+                        <h2>BMC ITSM - Change Management - Gestión de Cambios</h2>
 
                         <p><strong>Creación de un cambio Normal</strong></p>
                         <p>Los cambios son categorizados de acuerdo al impacto y al riesgo (impacto bajo, riesgo bajo,
@@ -356,7 +211,8 @@
                                     <strong>Instrucciones:</strong>
                                     <ol>
                                         <li>Ingresar a la consola de peticiones de <a
-                                                href="https://remedycloudamx-rsso.onbmc.com/rsso/start">
+                                                href="https://remedycloudamx-smartit.onbmc.com/smartit/app/#/"
+                                                target="_blank">
                                                 Smart IT</a>, si no lo ha hecho aun, conocer su usuario <a
                                                 routerLink="/doc/Generales/Acceso">aquí</a>.
                                             Dirigirse a: "<b>BMC Helix ITSM</b> > <b>Crear nuevo</b> > <b>Peticion de
@@ -503,608 +359,21 @@
                                     <p><strong>Nota: </strong> Una vez que el cambio fue aprobado se generará una
                                         tarea para el grupo asignado y para cada grupo de apoyo</p>
                                 </td>
-                                <td valign="top"><video src="/Cambios/TELCEL-SAAS-Creación_de_Cambios.mp4" width="600"
+                                <td valign="top"><video src="Cambios/TELCEL-SAAS-Creación_de_Cambios.mp4" width="600"
                                         autoplay controls loop></video></td>
                             </tr>
                         </table>
-                    </header> <!-- Termina el texto principal -->
+                    </header>
                 </div>
             </div>
         </ng-container>
 
-        <!------------------------------------------- PAGINA: CREAR CAMBIO NORMAL ------------------------------------------->
-
-        <ng-container *ngSwitchCase="'CrearCambioNormal'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-
-                        <h2>BMC ITSM - Change Management - Gestión de Cambios</h2> <!-- Encabezado -->
-
-                        <p><strong>Creación de un cambio Normal</strong></p>
-                        <p>Los cambios de clase normal son cambios que pasan por todo el proceso de cambios. Los cambios
-                            normales son categorizados de acuerdo al impacto y al riesgo (impacto bajo, riesgo bajo,
-                            impacto alto, riesgo alto). Estos cambios son seleccionados por default al momento de la
-                            creación del cambio.
-                        </p>
-                        <p>Para crear un cambio normal siga estos pasos:</p>
-
-                        <table class="tabla">
-                            <tr>
-                                <td valign="top">
-                                    <ol>
-                                        <li>Seleccionar <strong>Aplicaciones > Seleccionar Gestión de cambios
-                                                > Nuevo Cambio</strong></li>
-                                        <li>Documente el campo Resumen y Notas con una descripción del cambio
-                                            (Estos campos se deben llenar en mayúsculas).</li>
-                                        <li>Para indicar el tipo de cambio solicitado seleccione el valor
-                                            <strong>Normal</strong> dentro del campo Clase
-                                        </li>
-                                        <li>El grupo responsable que ejecutará el cambio deberá ser
-                                            documentado en el campo "Grupo de gestores"</li>
-                                        <li>Para agregar el Plan de Actividades del cambio seleccione la pestaña
-                                            Detalles de trabajo.</li>
-                                        <li>Documente el campo Notas.</li>
-                                        <li>Agregue el archivo en el campo Adjunto.</li>
-                                        <li>En la sección de "Más Detalles" agregar más archivos
-                                            adjuntos si fuera necesario, seleccionar "Yes"en el campo "Bloqueado" y en
-                                            el campo "Acceso a vista" seleccionar el valor "Publico".</li>
-                                        <li>Oprima el botón "Agregar".</li>
-                                        <li>Para indicar el sitio afectado por el cambio seleccione la pestaña
-                                            "Relaciones"</li>
-                                        <li>Seleccione el valor Elemento de configuración en el campo
-                                            "Buscar"</li>
-                                        <li>Ingrese el nombre del sitio </li>
-                                        <li>Oprima el ícono de lupa o presione la tecla Enter</li>
-                                        <li>En la lista de sitios que se despliega seleccione el sitio que estará
-                                            relacionado al cambio y oprima el botón Relacionar</li>
-                                        <li>Regrese a la pantalla del cambio </li>
-                                        <li>Para indicar la plataforma afectada seleccione la pestaña
-                                            Categorización </li>
-                                        <li>Documente los 3 niveles de los apartados <strong>Categorización de
-                                                producto</strong> y <strong>Categorización operacional</strong>.
-                                        </li>
-                                        <li>Seleccione la pestaña Fecha/sistema, documente la Fecha Programada de
-                                            Inicio y Fecha Programada de Finalización respetando los horarios en
-                                            los que pueden afectarse los sitios como lo realiza actualmente (El cambio
-                                            se debe generarse 48 horas antes de la Fecha de inicio y el tiempo de
-                                            planeación entre la Fecha de Inicio y la fecha de Fin debe ser 8
-                                            Horas como máximo.)</li>
-                                        <li>Para indicar si habrá afectación de servicio seleccione la
-                                            pestaña AMX</li>
-                                        <li>Documente el campo Service Affecting</li>
-                                        <li>Documente el campo Duration Service Aff</li>
-                                        <li>Documente el campo Excluir_Horario </li>
-                                        <li>Oprima el botón Guardar del cambio</li>
-                                    </ol>
-                                    <p><strong>Nota: </strong> Al guardar el cambio se documentan las fechas programadas
-                                        de inicio y finalización, estas serán documentadas con las
-                                        fechas reales cuando se de la aprobación del jefe del solicitante.
-                                    </p>
-                                    <p><strong>Nota: </strong> En caso de ser necesario el apoyo de otros grupos, una
-                                        vez guardado el cambio se habilitará la pestaña <strong>Grp
-                                            Asg</strong> donde se podrán agregar todos los grupos necesarios,
-                                        mientras el cambio se encuentre en estado <strong>Borrador</strong>.
-                                    <p>Para agregar grupos auxiliares:
-                                    <p>En la pestaña <strong>Grp Asg</strong> desplegar el campo <strong>Grupo
-                                            asignado</strong>, filtrar por compañía, organización y
-                                        seleccionar un grupo de soporte. Dar clic en <strong>Agregar</strong>. Repetir
-                                        por cada grupo necesario.
-                                    <p><strong>Nota: </strong> Una vez que el cambio fue aprobado se generará una
-                                        tarea para el grupo asignado y para cada grupo de apoyo</p>
-                                </td>
-                                <td valign="top"><video src="/Cambios/crearcambionormal.mp4" width="600" autoplay
-                                        controls loop></video></td>
-                            </tr>
-                        </table>
-                        <p><strong>Cambios múltiples</strong></p>
-                        <p>Cuando se genera un cambio para varios CI&rsquo;s, puede solicitarse un cambio
-                            "múltiple". Siga estos pasos para generar un cambio normal múltiple:
-                        </p>
-                        <table class="tabla">
-                            <tr>
-                                <td valign="top">
-                                    <p>Ingresar a la pantalla Nuevo Cambio</p>
-                                    <ol>
-                                        <li>Seleccionar <strong>Aplicaciones > Gestión de cambios > Nuevo
-                                                Cambio</strong></li>
-                                        <li>Documente el cambio Normal como se describe en el apartado Crear Cambio
-                                            Normal (Ver Crear Cambio Normal)</li>
-                                        <li>Para indicar que será un cambio múltiple seleccione la
-                                            pestaña AMX</li>
-                                        <li>Seleccione la casilla del campo Cambio Múltiple</li>
-                                        <li>Documente el campo Ejecución Parcial con el valor correspondiente
-                                            (Para ejecución parcial cada cambio llevará su propio ciclo de
-                                            vida, para cambios no parciales se deberán aprobar todos para que
-                                            avancen al estado Implantación en curso)</li>
-                                        <li>Oprima el botón Guardar del cambio</li>
-                                    </ol>
-                                    <p>Indicar sitios afectados en cada cambio para generar los cambios múltiples
-                                    </p>
-                                    <ol>
-                                        <li>Seleccione la pestaña Múltiple</li>
-                                        <li>Ingrese el nombre del sitio en el campo CI Name (Si no conoce el nombre del
-                                            sitio realice la búsqueda Ver Buscar sitios)</li>
-                                        <li>Oprima el botón Agregar</li>
-                                    </ol>
-                                    <p>Eliminar sitios afectados antes de generar los cambios múltiples</p>
-                                    <ol>
-                                        <li>Seleccione la pestaña Múltiple</li>
-                                        <li>Seleccione el nombre del sitio en la tabla de sitios</li>
-                                        <li>Oprima el botón Eliminar</li>
-                                    </ol>
-                                    <p>Generar cambios múltiples</p>
-                                    <ol>
-                                        <li>Una vez indicados todos los sitios que serán afectados oprima el
-                                            botón Crear Múltiple</li>
-                                    </ol>
-                                    <p>Nota: Todos los cambios serán creados en estado Borrador</p>
-                                    <p>Buscar sitios</p>
-                                    <ol>
-                                        <li>Seleccione la pestaña Múltiple</li>
-                                        <li>Oprima el ícono de lupa </li>
-                                        <li>Ingrese a la liga Usar búsqueda avanzada</li>
-                                        <li>Documente al menos un criterio de búsqueda</li>
-                                        <li>Oprima el botón Buscar</li>
-                                    </ol>
-                                    <p><strong>Nota: </strong> Al guardar el cambio se documentan las fechas programadas
-                                        de inicio y finalización, estas serán documentadas con las
-                                        fechas reales cuando se de la aprobación del jefe del solicitante.
-                                    </p>
-                                    <p><strong>Nota: </strong> En caso de ser necesario el apoyo de otros grupos, una
-                                        vez guardado el cambio se habilitará la pestaña <strong>Grp
-                                            Asg</strong> donde se podrán agregar todos los grupos necesarios,
-                                        mientras el cambio se encuentre en estado <strong>Borrador</strong>.
-                                    <p>Para agregar grupos auxiliares:
-                                    <p>En la pestaña <strong>Grp Asg</strong> desplegar el campo <strong>Grupo
-                                            asignado</strong>, filtrar por compañía, organización y
-                                        seleccionar un grupo de soporte. Dar clic en <strong>Agregar</strong>. Repetir
-                                        por cada grupo necesario.
-                                    <p><strong>Nota: </strong> Una vez que el cambio fue aprobado se generará una
-                                        tarea para el grupo asignado y para cada grupo de apoyo</p>
-                                </td>
-                                <td valign="top"><video src="/Cambios/crearcambionormalmultple.mp4" width="600" autoplay
-                                        controls loop></video>
-                                    <video src="/Cambios/buscarsitiocambiomultiple.mp4" width="600" autoplay controls
-                                        loop></video>
-                                </td>
-                            </tr>
-                        </table>
-                    </header> <!-- Termina el texto principal -->
-                </div>
-            </div>
-        </ng-container>
-
-        <!------------------------------------------- PAGINA: CREAR CAMBIO ESTANDAR ------------------------------------------->
-
-        <ng-container *ngSwitchCase="'CrearCambioEstandar'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-
-                        <h2>BMC ITSM - Change Management - Gestión de Cambios</h2> <!-- Encabezado -->
-
-                        <p><strong>Creación de un cambio Estándar.</strong></p>
-                        <p>Los cambios estándar son cambios que requieren de dos fases de aprobaciones. Estos
-                            cambios tienen poco impacto o no tienen impacto en los servicios.
-                        </p>
-                        <p><b>Para crear un cambio estándar siga estos pasos:</b></p>
-
-                        <table class="tabla">
-                            <tr>
-                                <td valign="top">
-                                    <p>Ingresar a la pantalla Nuevo Cambio</p>
-                                    <ol>
-                                        <li>Seleccionar Aplicaciones > Gestión de cambios > Nuevo Cambio.
-                                        </li>
-                                        <li>Documente el campo Resumen y Notas con una descripción del cambio
-                                            (Estos campos se deben llenar en mayúsculas).</li>
-                                        <li>Para indicar el tipo de cambio solicitado seleccione el valor
-                                            Estándar dentro del campo Clase.</li>
-                                        <li>El grupo responsable que ejecutará el cambio deberá ser
-                                            documentado en el campo Grupo de gestores.</li>
-                                        <li>Para agregar el Plan de Actividades del cambio seleccione la pestaña
-                                            Detalles de trabajo.</li>
-                                        <li>Documente el campo Notas.</li>
-                                        <li>Agregue el archivo en el campo Adjunto.</li>
-                                        <li>En la sección de "Más Detalles" agregar más archivos
-                                            adjuntos si fuera necesario, seleccionar "Yes"en el campo "Bloqueado" y en
-                                            el campo "Acceso a vista" seleccionar el valor "Publico".</li>
-                                        <li>Oprima el botón "Agregar".</li>
-                                        <li>Para indicar la plataforma afectada seleccione la pestaña
-                                            Categorización </li>
-                                        <li>Documente los 3 niveles de los apartados <strong>Categorización de
-                                                producto</strong> y <strong>Categorización operacional</strong>
-                                        </li>
-                                        <li>Para indicar el sitio afectado por el cambio seleccione la pestaña
-                                            Relaciones.</li>
-                                        <li>Seleccione el valor Elemento de configuración en el campo Buscar.
-                                        </li>
-                                        <li>Ingrese el nombre del sitio.</li>
-                                        <li>Oprima el ícono de lupa o presione la tecla Enter.</li>
-                                        <li>En la lista de sitios que se despliega seleccione el sitio que estará
-                                            relacionado al cambio y oprima el botón Relacionar.</li>
-                                        <li>Regrese a la pantalla del cambio y oprima el botón Guardar.</li>
-                                    </ol>
-                                    <p><strong>Nota: </strong> Al guardar el cambio se documentan las fechas programadas
-                                        de inicio y finalización, estas serán documentadas con las
-                                        fechas reales cuando se de la aprobación del jefe del solicitante.
-                                    </p>
-                                    <p><strong>Nota: </strong> En caso de ser necesario el apoyo de otros grupos, una
-                                        vez guardado el cambio se habilitará la pestaña <strong>Grp
-                                            Asg</strong> donde se podrán agregar todos los grupos necesarios,
-                                        mientras el cambio se encuentre en estado <strong>Borrador</strong>.
-                                    <p>Para agregar grupos auxiliares:
-                                    <p>En la pestaña <strong>Grp Asg</strong> desplegar el campo <strong>Grupo
-                                            asignado</strong>, filtrar por compañía, organización y
-                                        seleccionar un grupo de soporte. Dar clic en <strong>Agregar</strong>. Repetir
-                                        por cada grupo necesario.
-                                    <p><strong>Nota: </strong> Una vez que el cambio fue aprobado se generará una
-                                        tarea para el grupo asignado y para cada grupo de apoyo</p>
-                                </td>
-                                <td valign="top"><video src="//Cambios/creacambioestandar.mp4" width="600" autoplay
-                                        controls loop></video></td>
-                            </tr>
-                        </table>
-                    </header> <!-- Termina el texto principal -->
-                </div>
-            </div>
-        </ng-container>
-
-        <!------------------------------------------- PAGINA: CREAR CAMBIO EMERGENCIA ------------------------------------------->
-
-        <ng-container *ngSwitchCase="'CrearCambioEmergencia'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-
-                        <h2>BMC ITSM - Change Management - Gestión de Cambios</h2> <!-- Encabezado -->
-
-                        <p><strong>Creación de un cambio de Emergencia</strong></p>
-                        <p>Los cambios de clase Emergencia son originados por un incidente de alto impacto para el
-                            negocio. Una vez que se encuentra una solución o una solución temporal, se
-                            genera un cambio de clase emergencia que debe ser relacionado al incidente que lo origina.
-                            Aunque no siempre es necesario, el cambio sería la consecuencia lógica de
-                            resolver un incidente de alto impacto.
-                        </p>
-                        <p>Para crear un cambio de emergencia siga estos pasos:</p>
-
-                        <table class="tabla">
-                            <tr>
-                                <td valign="top">
-                                    <ol>
-                                        <li>Seleccionar <strong>Aplicaciones > Gestión de cambios > Nuevo
-                                                Cambio</strong></li>
-                                        <li>Documente el campo Resumen y Notas con una descripción del cambio
-                                            (Estos campos se deben llenar en mayúsculas).</li>
-                                        <li>Para indicar el tipo de cambio solicitado seleccione el valor
-                                            <strong>Emergencia</strong> dentro del campo Clase
-                                        </li>
-                                        <li>Seleccionar la opción "1-Extenso/Generalizado" del campo "Impacto*".
-                                            Seleccionar "1-Critico" del campo "Urgencia*, donde la "Prioridad" se
-                                            calculará automáticamente quedando como "Critica".</li>
-                                        <li>El grupo responsable que ejecutará el cambio deberá ser
-                                            documentado en el campo "Grupo de gestores"</li>
-                                        <li>Para agregar el Plan de Actividades del cambio seleccione la pestaña
-                                            Detalles de trabajo.</li>
-                                        <li>Documente el campo Notas.</li>
-                                        <li>Agregue el archivo en el campo Adjunto.</li>
-                                        <li>En la sección de "Más Detalles" agregar más archivos
-                                            adjuntos si fuera necesario, seleccionar "Yes"en el campo "Bloqueado" y en
-                                            el campo "Acceso a vista" seleccionar el valor "Publico".</li>
-                                        <li>Oprima el botón "Agregar".</li>
-                                        <li>Para indicar el sitio afectado por el cambio seleccione la pestaña
-                                            "Relaciones"</li>
-                                        <li>Seleccione el valor Elemento de configuración en el campo Buscar</li>
-                                        <li>Ingrese el nombre del sitio</li>
-                                        <li>Oprima el ícono de lupa o presione la tecla Enter</li>
-                                        <li>En la lista de sitios que se despliega seleccione el sitio que estará
-                                            relacionado al cambio y oprima el botón Relacionar</li>
-                                        <li>Regrese a la pantalla del cambio </li>
-                                        <li>(Opcional) Para indicar el incidente que disparó el cambio seleccione
-                                            la pestaña "Relaciones"</li>
-                                        <li>Seleccione el valor "Incidencia" en el campo Buscar </li>
-                                        <li>(opcional) Ingrese el ID del incidente </li>
-                                        <li>Oprima el ícono de lupa o presione la tecla Enter</li>
-                                        <li>En la lista de incidentes que se despliega seleccione el registro que
-                                            estará relacionado al cambio y oprima el botón Relacionar</li>
-                                        <li>Si no se muestra ningún incidente que coincida con la búsqueda
-                                            o si no colocó un criterio de búsqueda puede ingresar a la
-                                            liga Usar búsqueda avanzada donde podrá hacer una
-                                            búsqueda más final del incidente a relacionar. </li>
-                                        <li>Para indicar la plataforma afectada seleccione la pestaña
-                                            Categorización </li>
-                                        <li>Documente los 3 niveles de los apartados <strong>Categorización de
-                                                producto</strong> y <strong>Categorización operacional</strong>.
-                                        </li>
-                                        <li>Seleccione la pestaña "Fecha/sistema", documente la
-                                            "Fecha Programada de Inicio" y "Fecha Programada de
-                                            Finalización" (La Fecha de fin debe ser mayor a la fecha de
-                                            inicio)</li>
-                                        <li>Para indicar el folio de la emergencia o alarma seleccione la pestaña
-                                            "AMX"</li>
-                                        <li>Documente el campo Folio Emergencia o Alarma</li>
-                                        <li>Oprima el botón "Guardar"</li>
-                                    </ol>
-                                    <p><strong>Nota: </strong> Al guardar el cambio se documentan las fechas programadas
-                                        de inicio y finalización, estas serán documentadas con las
-                                        fechas reales cuando se de la aprobación del jefe del solicitante.
-                                    </p>
-                                    <p><strong>Nota: </strong> En caso de ser necesario el apoyo de otros grupos, una
-                                        vez guardado el cambio se habilitará la pestaña <strong>Grp
-                                            Asg</strong> donde se podrán agregar todos los grupos necesarios,
-                                        mientras el cambio se encuentre en estado <strong>Borrador</strong>.
-                                    <p>Para agregar grupos auxiliares:
-                                    <p>En la pestaña <strong>Grp Asg</strong> desplegar el campo <strong>Grupo
-                                            asignado</strong>, filtrar por compañía, organización y
-                                        seleccionar un grupo de soporte. Dar clic en <strong>Agregar</strong>. Repetir
-                                        por cada grupo necesario.
-                                    <p><strong>Nota: </strong> Una vez que el cambio fue aprobado se generará una
-                                        tarea para el grupo asignado y para cada grupo de apoyo</p>
-                                </td>
-                                <td valign="top"><video src="//Cambios/crearcambioemergencia.mp4" width="600" autoplay
-                                        controls loop></video></td>
-                            </tr>
-                        </table>
-                    </header> <!-- Termina el texto principal -->
-                </div>
-            </div>
-        </ng-container>
-
-        <!------------------------------------------- PAGINA: COLISIONES ------------------------------------------->
-
-        <ng-container *ngSwitchCase="'Colisiones'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h3>Detección de colisión en CRQs de tipo normal y emergencia</h3>
-                        <!-- Encabezado -->
-                        <p>
-                            Este manual tiene como finalidad que los usuarios tengan el conocimiento de cómo
-                            llevar acabo el nuevo modo de registro de un cambio Normal y Emergencia y el modo en el que
-                            se bloquearan los cambios debido a temas de colisión. Es importante la
-                            revisión de este manual, evite contratiempos con sus solicitudes de cambio.
-                        </p>
-                        <strong>Colisión</strong>
-                        <p>
-                            Una colisión se presenta cuando una solicitud de cambio o más coincide con
-                            algún Nodo (CI) y Fechas programadas de inicio y fin.
-                        </p>
-                    </header> <!-- Termina el texto principal -->
-                    <div> <!-- Sección 2 -->
-                        <h3><a name="configinicio">Nuevo flujo de colisiones</a></h3>
-                        <div class="sectionWrapper"> <!-- Aquí escribir el contenido de esta sección -->
-                            <p>
-                                A continuación se mostraran las modificaciones que presentara el módulo de
-                                cambios respecto al proceso de bloqueo de cambios <strong>Normales</strong> o
-                                <strong>Emergencia</strong> por colisión:
-                            </p>
-                            <ul>
-                                <li>La colisión aplicara para todo cambio que tengan su <strong>ubicación
-                                        de cambio</strong> en <strong>TELCEL</strong>.</li>
-                                <li>En este nuevo flujo los cambios Normales y Emergencia deberán llenarse de
-                                    manera completa, no permitiendo que primero se ingrese la información general
-                                    del cambio, nodo y despues las fechas programadas de inicio y fin (las fechas
-                                    ya serán obligatorias).</li>
-                                <li>Una vez creado un CRQ Normal o Emergencia en estado Borrador este deberá ser
-                                    avanzado a <strong>Petición de Autorización</strong>, esto con la
-                                    finalidad de garantizar su horario de cambio.
-                                    <p><strong>NOTA</strong>: En caso de dejar su cambio en borrador y se llegue a
-                                        registrar otro con un nodo (CI) y fechas programadas de inicio y fin similares
-                                        ambos se bloquearan por colisión.</p>
-                                </li>
-                                <li>Para desbloquear un cambio por colisión se deberá cambiar las fechas
-                                    programadas de inicio y fin, guardara el cambio y actualizara el registro.</li>
-                                <li>En caso de colisión aparecerá una pestaña llamada
-                                    "Colisión" en la cual se mostrara una tabla informativa con los cambios que
-                                    colisiona. </li>
-                                <li>Los cambios <strong>Estándar</strong> quedan fuera de este proceso.</li>
-                            </ul>
-                        </div> <!-- Termina el contenido de la sección -->
-                    </div> <!-- Sección 2 -->
-                    <div> <!-- Sección 3 -->
-                        <h3><a name="configinicio">Nueva forma de llenar CRQS Normales y Emergencia</a>
-                        </h3>
-                        <div class="sectionWrapper"> <!-- Aquí escribir el contenido de esta sección -->
-                            <p>
-                                Los cambios Normales y Emergencia deben llenarse de la forma que el manual lo indica:
-                            </p>
-                            <ul>
-                                <li><a href="../Cambios/crearcambionormal.html" title="Cambios Normales">Cambios
-                                        Normales y Múltiples</a> </li>
-                            </ul>
-                            <ul>
-                                <li><a href="../Cambios/crearcambioemergencia.html" title="Cambios Emergencia">Cambios
-                                        Emergencia</a> </li>
-                            </ul>
-                        </div> <!-- Termina el contenido de la sección -->
-                    </div> <!-- Sección 3 -->
-                    <div> <!-- Sección 4 -->
-                        <h3>Ejemplo de registro de cambio
-                        </h3>
-                        <div class="sectionWrapper"> <!-- Aquí escribir el contenido de esta sección -->
-                            <strong>Ejemplo CRQ Normal o Emergencia creado sin colisión.</strong>
-                            <ol>
-                                <li>Primero deberá llenar la información general.</li><img src="Cambios/colision1.png"
-                                    width="300">
-                                <li>Despues en la pestaña de Detalles de trabajo anexara sus documentos
-                                    correspondientes (en caso de aplicar).</li><img src="Cambios/colision2.png"
-                                    width="300"><img src="Cambios/colision3.png" width="700">
-                                <li>Seleccionara los nodos que estarán relacionados a su cambio:</li><img
-                                    src="Cambios/colision4.png" width="700">
-                                <li>Despues llenara la pestaña de categorización:</li><img src="Cambios/colision5.png"
-                                    width="300">
-                                <li>Agregara sus fechas programadas de inicio y fin.</li><img
-                                    src="Cambios/colision6.png" width="300">
-                                <p><strong>Nota</strong>: En caso de no agregar las fechas Remedy enviara un error lo
-                                    cual no le permitirá guardar el cambio registrado.
-                                </p>
-                                <img src="Cambios/colision7.png" width="300">
-                                <li>Y finalmente guardar su cambio.</li>
-                                <li>Despues de guardar su cambio, en caso de no tener detalles adicionales
-                                    deberá avanzarlo a la siguiente fase ya sea en el botón de la parte
-                                    superior de la pantalla o en el botón que se encuentra en la parte inferior
-                                    izquierda de su pantalla</li><img src="Cambios/colision8.png" width="700"><img
-                                    src="Cambios/colision9.png" width="500">
-                            </ol>
-                            <p>
-                                Una vez avanzado a Petición de autorización, su CRQ quedara registrado
-                                correctamente sin ningún contratiempo.
-                            </p>
-                            <p>
-                                <strong>Nota: </strong> Se le recomienda que antes de registrar un nuevo cambio tenga ya
-                                acordadas las fechas programadas de inicio y fin y sus documentos listos
-                                correspondientes.
-                            </p>
-                            <strong>Ejemplo de registro de cambio con colisión</strong>
-                            <p>
-                                Ejemplo CRQ Normal o Emergencia
-                            </p>
-                            <p>
-                                Se repiten los pasos del 1 al 6 (Ejemplo CRQ Normal o Emergencia creado sin
-                                colisión)
-                            </p>
-                            <p>
-                                Despues de guardar el cambio, si detecta colisión este se bloqueara de la
-                                parte superior de la pantalla y bloqueara el botón de Siguiente fase.
-                            </p>
-                            <img src="Cambios/colision10.png" width="700">
-                            <img src="Cambios/colision11.png" width="400">
-                            <p>
-                                Mostrando el mensaje "No puede avanzar este CRQ debido a que está en
-                                colisión. Cambie sus fechas y guarde el cambio.", lo cual no permitirá
-                                mover el cambio a ningún estatus.
-                            </p>
-                            <p>
-                                Adicional se habilitara una pestaña llamada Colisión donde se podrá
-                                ver una tabla informativa sobre con que cambio está colisionando el suyo:
-                            </p>
-                            <p>
-                                Esta tabla incluye:
-                            </p>
-                            <ol>
-                                <li>ID CRQ</li>
-                                <li>Fecha programada de inicio y fin</li>
-                                <li>Clase (Normal y Emergencia)</li>
-                                <li>Solicitante</li>
-                                <li>Ubicación del Cambio</li>
-                            </ol>
-                            <img src="Cambios/colision12.png" width="400">
-                            <p>
-                                Para quitar el bloqueo deberá ir a la pestaña de Fecha/sistema y cambiar
-                                sus fechas programadas de inicio y fin.
-                            </p>
-                            <img src="Cambios/colision13.png" width="400">
-                            <p>
-                                Guardara su cambio y lo actualizara ya sea de la parte superior derecha o en el icono de
-                                actualizar.
-                            </p>
-                            <img src="Cambios/colision14.png" width="400">
-                            <p>
-                                En automático su cambio será desbloqueado.
-                            </p>
-                            <img src="Cambios/colision15.png" width="700">
-                        </div> <!-- Termina el contenido de la sección -->
-                    </div> <!-- Sección 4 -->
-                    <div> <!-- Sección 5 -->
-                        <h3>Detalles adicionales
-                        </h3>
-                        <div class="sectionWrapper"> <!-- Aquí escribir el contenido de esta sección -->
-                            <ul>
-                                <li>La pestaña Colisión aparece en todos los cambios, en caso de que su
-                                    cambio ya se encuentre en Petición de autorización haga caso omiso a
-                                    la pestaña, esta es solo informativa.</li>
-                                <li>Si existe dos cambios en borrador que no han sido avanzados y colisionan pueden
-                                    tener inconsistencias, se recomienda realizar el llenado correctamente como se
-                                    comenta en un principio.</li>
-                                <li>En caso de tener algún inconveniente con sus horarios comuníquese con
-                                    su gestor o coordinador de cambios.</li>
-                                <li>Adicional puede consultar el Calendario de Cambios de Remedy que se encuentra en la
-                                    siguiente ruta: Gestión de Cambios > Calendario, el cual le podrá dar
-                                    más visibilidad de horarios.</li>
-                            </ul>
-                            <img src="Cambios/colision16.png" width="400">
-                            <p>
-                                Para ver su funcionalidad y configuración del calendario de cambios ingrese a:
-                            </p>
-                            <ul>
-                                <li><a href="../Cambios/CalendarioCambiosFC.html"
-                                        title="Calendario de cambios">Calendario de cambios</a> </li>
-                            </ul>
-                            <img src="Cambios/colision17.png" width="600">
-                        </div> <!-- Termina el contenido de la sección -->
-                    </div> <!-- Sección 5 -->
-                </div>
-            </div>
-        </ng-container>
-
-        <!-- ----------------------------------------- PAGINA: CERRAR CAMBIO ----------------------------------------- -->
-
-        <ng-container *ngSwitchCase="'CerrarCambio1'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h3>BMC ITSM - Change Management - Gestión de Cambios</h3> <!-- Encabezado -->
-                        <p><strong>Cierre del cambio</strong></p>
-                        <p>Para cerrar el cambio siga estos pasos:</p>
-                        <table>
-                            <tr>
-                                <td valign="top">
-                                    <ol>
-                                        <li>Seleccionar <strong>Aplicaciones > Gestión de cambios > Buscar
-                                                Cambio</strong></li>
-                                    </ol>
-                                    <p>Nota: Puede ingresar al cambio desde su Consola de Aspectos Generales, o bien,
-                                        desde la Consola de Cambios como se explica en el apartado de fundamentos (Ver
-                                        apartado Fundamentos)</p>
-                                    <ol>
-                                        <li>Ingrese al cambio que se encuentra en estado "Terminado"</li>
-                                        <li>Seleccione la pestaña "Tareas"</li>
-                                        <li>Visualizar todas las tareas en estado cerrado </li>
-                                        <p><strong>Nota: </strong>Si las tareas no están cerradas realizar el
-                                            seguimiento de cada una, <a href="../Tareas/index.html">ver cómo
-                                                aquí</a>.</p>
-                                        <p><strong>Nota: </strong>Al cerrar todas las tareas relacionadas al cambio, el
-                                            estado del cambio pasará automáticamente a
-                                            <strong>Terminado</strong>.
-                                        </p>
-                                        <li>Oprima el botón "Siguiente fase", o bien, abra el
-                                            menú del recuadro "Implantar" y seleccione "Siguiente
-                                            fase"</li>
-                                        <li>El cambio pasará al estado <strong>Cerrado</strong> documentado en
-                                            automático el motivo del estado con el valor <strong>Con
-                                                exito</strong> o <strong>Sin exito</strong>, dependiendo
-                                            de las tareas.</li>
-                                    </ol>
-                                    <p>Nota: Si al menos una tarea se cerró con el motivo de estado
-                                        "Fallido" el cambio tendrá el motivo de estado <strong>Sin
-                                            exito</strong>, de lo contrario se documentará con el valor
-                                        <strong>Con exito</strong>.
-                                    </p>
-                                    <p>Nota: El proceso de cierre aplica para los tres tipos de cambios<b>(Estandar,
-                                            Normal y Emergencia).</b></p>
-                                </td>
-                                <td valign="top"><video src="//Cambios/cerrarcambio.mp4" width="600" autoplay></video>
-                                </td>
-                            </tr>
-                        </table>
-                    </header> <!-- Termina el texto principal -->
-                </div>
-            </div>
-        </ng-container>
-
-        <!------------------------------------------- PAGINA: CALENDARIO CAMBIOS ------------------------------------------->
 
         <ng-container *ngSwitchCase="'CalendarioCambios'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
+
                         <h3><strong>Calendario de cambios. Funciones y configuración</strong></h3>
                         <p>Este manual tiene como finalidad mostrar al usuario la funcionalidad del Calendario de
                             Cambios de Remedy ITSM así como tambie le mostrara la configuració del
@@ -1456,7 +725,7 @@
                             <br>Correo Guardia Remedy: soporte.tid&#64;mail.telcel.com
                             <br>Ing. Carlos Enrique Cortes Cruz: carlos.cortes&#64;quitze.com
                         </p>
-                    </header> <!-- Termina el texto principal -->
+                    </header>
                 </div>
             </div>
         </ng-container>
@@ -1467,8 +736,8 @@
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h2>BMC ITSM - Change Management - Gestión de Cambios</h2> <!-- Encabezado -->
+
+                        <h2>BMC ITSM - Change Management - Gestión de Cambios</h2>
                         <p><strong>Enviar el cambio al proceso de aprobación (normal, estándar,
                                 emergencia)</strong></p>
                         <p>Para enviar un cambio al proceso de aprobación siga estos pasos:</p>
@@ -1478,9 +747,9 @@
                                     <strong>Instrucciones:</strong>
                                     <ol>
                                         <li>Ingresar al sistema <a
-                                                href="https://remedycloudamx-rsso.onbmc.com/rsso/start">
+                                                href="https://remedycloudamx-smartit.onbmc.com/smartit/app/#/" target="_blank">
                                                 Smart IT</a>, si no lo ha hecho aun, conocer su usuario <a
-                                                href="/doc/Generales/Acceso">aquí</a>.
+                                                routerLink="/doc/Generales/Acceso">aquí</a>.
                                         </li>
                                         <li>Dirigirse a: "<b>BMC Helix ITSM</b>, hacer clic en <img width="17"
                                                 height="17" src="img/Busqueda.png">,
@@ -1541,31 +810,768 @@
                                             <b>Solucion</b> debe incluir un mensaje que resuma la solucion.
                                         </li>
 
-                                        <p><b>Todos los cambios que se realicen en las tareas, se veran reflejadas en el cambio
-                                            desde el que se crearon. 
-                                            Cuando todas las tareas asociadas cambien de Estado a "Cerrado", el cambio automaticamente
-                                            se actualiza a Estado "Terminado"</b>
+                                        <p><b>Todos los cambios que se realicen en las tareas, se veran reflejadas en el
+                                                cambio
+                                                desde el que se crearon.
+                                                Cuando todas las tareas asociadas cambien de Estado a "Cerrado", el
+                                                cambio automaticamente
+                                                se actualiza a Estado "Terminado"</b>
                                         </p>
                                     </ol>
                                 </td>
-                                <td valign="top"><video src="//Cambios/TELCEL-SAAS-Atención_de_Cambios.mp4" width="600"
+                                <td valign="top"><video src="Cambios/TELCEL-SAAS-Atención_de_Cambios.mp4" width="600"
                                         autoplay controls loop></video></td>
                             </tr>
                         </table>
 
-                    </header> <!-- Termina el texto principal -->
+                    </header>
                 </div>
             </div>
         </ng-container>
 
-        <!------------------------------------------- PAGINA: APROBAR CAMBIO ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'AprobarCambio'">
+        <!------------------------------------------- PAGINA: SLA ------------------------------------------->
+
+        <!-- <ng-container *ngSwitchCase="'SLA'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <!-- Titulo del documento y texto principal-->
-                        <h3>BMC ITSM - Change Management - Gestión de Cambios</h3> <!-- Encabezado -->
+                        <h2>BMC ITSM - Change Management - Gestión de Cambios</h2> 
+                        <p><strong>Revisar SLA's de Cambios</strong></p>
+                        <p>
+                            SLA son las siglas de "Service Level Agreement" o "Acuerdo de Niveles de
+                            Servicio". Cada proveedor de servicio, debe tener previamente acordados los
+                            terminos bajos los cuales se hará la entrega del servicio.
+                        </p>
+                        <p>
+                            Para revisar el estado del SLA en el cambio, siga estos pasos:
+                        </p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Instrucciones:</strong>
+                                    <ol>
+                                        <li>Ingrese al sistema Remedy si no lo ha hecho todavía. Vea cómo
+                                            <a routerLink="/doc/Generales/Acceso">aquí</a>.
+                                        </li>
+                                        <li>Ingrese a la consola de aspectos generales o a la consola de cambios y
+                                            localice el cambio de interes. Vea cómo <a
+                                                routerLink="/doc/Generales/Consolas">aquí</a>.</li>
+                                        <li>De clic en el ícono de color en la caja de "Estado de
+                                            SLM"</li>
+                                    </ol>
+                                    <strong>Resultados:</strong>
+                                    <ol>
+                                        <li>Observe la lista de objetivos de servicio.</li>
+                                        <li>Observe el estado de cada objetivo de servicio. &iquest;Sus objetivos de
+                                            servicio se están cumpliendo?</li>
+                                    </ol>
+                                </td>
+                                <td><video src="/../Generales/SLM_Revision_Objetivos.mp4" width="600" autoplay controls
+                                        loop></video></td>
+                            </tr>
+                        </table>
+                    </header> 
+                </div>
+            </div>
+        </ng-container> -->
+
+        <!------------------------------------------- PAGINA: ENVIAR CAMBIO ------------------------------------------->
+
+        <!-- <ng-container *ngSwitchCase="'EnviarCambio'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                    
+                        <h2>BMC ITSM - Change Management - Gestión de Cambios</h2> 
+                        <p><strong>Enviar el cambio al proceso de aprobación (normal, estándar,
+                                emergencia)</strong></p>
+                        <p>Para enviar un cambio al proceso de aprobación siga estos pasos:</p>
+                        <table class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <ol>
+                                        <li>Seleccionar <strong>Aplicaciones > Gestión de cambios > Buscar
+                                                Cambio</strong></li>
+                                        <li>Realice la búsqueda del cambio en estado Borrador que desea enviar al
+                                            proceso de aprobación</li>
+                                        <li>Ingrese al cambio seleccionado</li>
+                                        <li>Dentro del recuadro <strong>Iniciar</strong> oprima la flecha y seleccione
+                                            la opción Siguiente fase, o bien, Oprima el botón
+                                            <strong>Siguiente fase</strong>, ubicado en la parte inferior del cambio
+                                        </li>
+                                        <li>El cambio quedará de solo lectura y en espera de la aprobación
+                                            correspondiente</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="/Cambios/Enviar cambio a aprobacion.mp4" width="600"
+                                        autoplay controls loop></video></td>
+                            </tr>
+                        </table>
+                        <p>Todos los cambios deberán ser autorizados en un inicio por el jefe inmediato del
+                            solicitante (excepto masivos), para avanzar del estado Petición de
+                            autorización al estado Programado para aprobación.</p>
+                        <p>La siguiente tabla muestra los niveles de aprobación que serán necesarios para
+                            cada tipo de cambio. Una vez completado el proceso de aprobación el cambio
+                            pasará del estado Programado para aprobación al estado Implantación en
+                            curso.</p>
+                    </header> 
+                </div>
+            </div>
+        </ng-container> -->
+
+        <!------------------------------------------- PAGINA: CREAR TAREA ------------------------------------------->
+
+        <!-- <ng-container *ngSwitchCase="'CrearTarea'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+              
+                        <h2>BMC ITSM - Change Management - Gestión de Cambios</h2>
+                        <p><strong>Crear tarea(s) en el cambio</strong></p>
+                        <p>
+                            En el módulo de cambios existe la posibilidad de asignar actividades aisladas
+                            relacionadas al cambio.</p>
+                        <p>Para crear una tarea siga estos pasos. Repita la operación si desea crear más
+                            tareas. </p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Instrucciones:</strong>
+                                    <ol>
+                                        <li>Dentro del folio de cambio asignado en estado en curso</li>
+                                        <li>Ingrese al apartado <strong>Tareas</strong></li>
+                                        <li>En el campo Tipo de petición seleccione el valor <strong>Ad
+                                                hoc</strong> y oprima el botón <strong>Relacionar</strong></li>
+                                        <li>Visualice la pantalla de la nueva tarea</li>
+                                        <li>Documente las actividades a realizar en el campo <strong>Resumen</strong>
+                                            y/o <strong>Notas</strong></li>
+                                        <li>Documente el campo <strong>Tipo de Tarea</strong> con el valor <strong>Queja
+                                                del Cliente</strong></li>
+                                        <li>Seleccionar el apartado Asignación/Fechas</li>
+                                        <li>En Asignación de tareas documente los campos Empresa asignada,
+                                            Organización asignada y Grupo asignado. </li>
+                                        <li>En Fechas/hora documente la Fecha programada de inicio y la Fecha programada
+                                            de finalización. </li>
+                                        <li>En el campo "Tipo de Tarea" seleccione el tipo de cambio que
+                                            está generando.</li>
+                                        <li>Oprima el botón Guardar</li>
+                                        <li>En el apartado de Tareas dentro del cambio visualizará el registro de
+                                            la tarea creada</li>
+                                        <li>Generar todas las tareas que sean necesarias</li>
+                                        <li>*Opcional. Modificar secuencia de las tareas</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="/../Incidentes/creatarea.mp4" width="600" autoplay controls
+                                        loop></video>
+                                </td>
+                            </tr>
+                        </table>
+                    </header> 
+                </div>
+            </div>
+        </ng-container> -->
+
+        <!------------------------------------------- PAGINA: CREAR CAMBIO ------------------------------------------->
+
+
+        <!------------------------------------------- PAGINA: CREAR CAMBIO NORMAL ------------------------------------------->
+
+        <!-- <ng-container *ngSwitchCase="'CrearCambioNormal'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        
+
+                        <h2>BMC ITSM - Change Management - Gestión de Cambios</h2> 
+
+                        <p><strong>Creación de un cambio Normal</strong></p>
+                        <p>Los cambios de clase normal son cambios que pasan por todo el proceso de cambios. Los cambios
+                            normales son categorizados de acuerdo al impacto y al riesgo (impacto bajo, riesgo bajo,
+                            impacto alto, riesgo alto). Estos cambios son seleccionados por default al momento de la
+                            creación del cambio.
+                        </p>
+                        <p>Para crear un cambio normal siga estos pasos:</p>
+
+                        <table class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <ol>
+                                        <li>Seleccionar <strong>Aplicaciones > Seleccionar Gestión de cambios
+                                                > Nuevo Cambio</strong></li>
+                                        <li>Documente el campo Resumen y Notas con una descripción del cambio
+                                            (Estos campos se deben llenar en mayúsculas).</li>
+                                        <li>Para indicar el tipo de cambio solicitado seleccione el valor
+                                            <strong>Normal</strong> dentro del campo Clase
+                                        </li>
+                                        <li>El grupo responsable que ejecutará el cambio deberá ser
+                                            documentado en el campo "Grupo de gestores"</li>
+                                        <li>Para agregar el Plan de Actividades del cambio seleccione la pestaña
+                                            Detalles de trabajo.</li>
+                                        <li>Documente el campo Notas.</li>
+                                        <li>Agregue el archivo en el campo Adjunto.</li>
+                                        <li>En la sección de "Más Detalles" agregar más archivos
+                                            adjuntos si fuera necesario, seleccionar "Yes"en el campo "Bloqueado" y en
+                                            el campo "Acceso a vista" seleccionar el valor "Publico".</li>
+                                        <li>Oprima el botón "Agregar".</li>
+                                        <li>Para indicar el sitio afectado por el cambio seleccione la pestaña
+                                            "Relaciones"</li>
+                                        <li>Seleccione el valor Elemento de configuración en el campo
+                                            "Buscar"</li>
+                                        <li>Ingrese el nombre del sitio </li>
+                                        <li>Oprima el ícono de lupa o presione la tecla Enter</li>
+                                        <li>En la lista de sitios que se despliega seleccione el sitio que estará
+                                            relacionado al cambio y oprima el botón Relacionar</li>
+                                        <li>Regrese a la pantalla del cambio </li>
+                                        <li>Para indicar la plataforma afectada seleccione la pestaña
+                                            Categorización </li>
+                                        <li>Documente los 3 niveles de los apartados <strong>Categorización de
+                                                producto</strong> y <strong>Categorización operacional</strong>.
+                                        </li>
+                                        <li>Seleccione la pestaña Fecha/sistema, documente la Fecha Programada de
+                                            Inicio y Fecha Programada de Finalización respetando los horarios en
+                                            los que pueden afectarse los sitios como lo realiza actualmente (El cambio
+                                            se debe generarse 48 horas antes de la Fecha de inicio y el tiempo de
+                                            planeación entre la Fecha de Inicio y la fecha de Fin debe ser 8
+                                            Horas como máximo.)</li>
+                                        <li>Para indicar si habrá afectación de servicio seleccione la
+                                            pestaña AMX</li>
+                                        <li>Documente el campo Service Affecting</li>
+                                        <li>Documente el campo Duration Service Aff</li>
+                                        <li>Documente el campo Excluir_Horario </li>
+                                        <li>Oprima el botón Guardar del cambio</li>
+                                    </ol>
+                                    <p><strong>Nota: </strong> Al guardar el cambio se documentan las fechas programadas
+                                        de inicio y finalización, estas serán documentadas con las
+                                        fechas reales cuando se de la aprobación del jefe del solicitante.
+                                    </p>
+                                    <p><strong>Nota: </strong> En caso de ser necesario el apoyo de otros grupos, una
+                                        vez guardado el cambio se habilitará la pestaña <strong>Grp
+                                            Asg</strong> donde se podrán agregar todos los grupos necesarios,
+                                        mientras el cambio se encuentre en estado <strong>Borrador</strong>.
+                                    <p>Para agregar grupos auxiliares:
+                                    <p>En la pestaña <strong>Grp Asg</strong> desplegar el campo <strong>Grupo
+                                            asignado</strong>, filtrar por compañía, organización y
+                                        seleccionar un grupo de soporte. Dar clic en <strong>Agregar</strong>. Repetir
+                                        por cada grupo necesario.
+                                    <p><strong>Nota: </strong> Una vez que el cambio fue aprobado se generará una
+                                        tarea para el grupo asignado y para cada grupo de apoyo</p>
+                                </td>
+                                <td valign="top"><video src="/Cambios/crearcambionormal.mp4" width="600" autoplay
+                                        controls loop></video></td>
+                            </tr>
+                        </table>
+                        <p><strong>Cambios múltiples</strong></p>
+                        <p>Cuando se genera un cambio para varios CI&rsquo;s, puede solicitarse un cambio
+                            "múltiple". Siga estos pasos para generar un cambio normal múltiple:
+                        </p>
+                        <table class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <p>Ingresar a la pantalla Nuevo Cambio</p>
+                                    <ol>
+                                        <li>Seleccionar <strong>Aplicaciones > Gestión de cambios > Nuevo
+                                                Cambio</strong></li>
+                                        <li>Documente el cambio Normal como se describe en el apartado Crear Cambio
+                                            Normal (Ver Crear Cambio Normal)</li>
+                                        <li>Para indicar que será un cambio múltiple seleccione la
+                                            pestaña AMX</li>
+                                        <li>Seleccione la casilla del campo Cambio Múltiple</li>
+                                        <li>Documente el campo Ejecución Parcial con el valor correspondiente
+                                            (Para ejecución parcial cada cambio llevará su propio ciclo de
+                                            vida, para cambios no parciales se deberán aprobar todos para que
+                                            avancen al estado Implantación en curso)</li>
+                                        <li>Oprima el botón Guardar del cambio</li>
+                                    </ol>
+                                    <p>Indicar sitios afectados en cada cambio para generar los cambios múltiples
+                                    </p>
+                                    <ol>
+                                        <li>Seleccione la pestaña Múltiple</li>
+                                        <li>Ingrese el nombre del sitio en el campo CI Name (Si no conoce el nombre del
+                                            sitio realice la búsqueda Ver Buscar sitios)</li>
+                                        <li>Oprima el botón Agregar</li>
+                                    </ol>
+                                    <p>Eliminar sitios afectados antes de generar los cambios múltiples</p>
+                                    <ol>
+                                        <li>Seleccione la pestaña Múltiple</li>
+                                        <li>Seleccione el nombre del sitio en la tabla de sitios</li>
+                                        <li>Oprima el botón Eliminar</li>
+                                    </ol>
+                                    <p>Generar cambios múltiples</p>
+                                    <ol>
+                                        <li>Una vez indicados todos los sitios que serán afectados oprima el
+                                            botón Crear Múltiple</li>
+                                    </ol>
+                                    <p>Nota: Todos los cambios serán creados en estado Borrador</p>
+                                    <p>Buscar sitios</p>
+                                    <ol>
+                                        <li>Seleccione la pestaña Múltiple</li>
+                                        <li>Oprima el ícono de lupa </li>
+                                        <li>Ingrese a la liga Usar búsqueda avanzada</li>
+                                        <li>Documente al menos un criterio de búsqueda</li>
+                                        <li>Oprima el botón Buscar</li>
+                                    </ol>
+                                    <p><strong>Nota: </strong> Al guardar el cambio se documentan las fechas programadas
+                                        de inicio y finalización, estas serán documentadas con las
+                                        fechas reales cuando se de la aprobación del jefe del solicitante.
+                                    </p>
+                                    <p><strong>Nota: </strong> En caso de ser necesario el apoyo de otros grupos, una
+                                        vez guardado el cambio se habilitará la pestaña <strong>Grp
+                                            Asg</strong> donde se podrán agregar todos los grupos necesarios,
+                                        mientras el cambio se encuentre en estado <strong>Borrador</strong>.
+                                    <p>Para agregar grupos auxiliares:
+                                    <p>En la pestaña <strong>Grp Asg</strong> desplegar el campo <strong>Grupo
+                                            asignado</strong>, filtrar por compañía, organización y
+                                        seleccionar un grupo de soporte. Dar clic en <strong>Agregar</strong>. Repetir
+                                        por cada grupo necesario.
+                                    <p><strong>Nota: </strong> Una vez que el cambio fue aprobado se generará una
+                                        tarea para el grupo asignado y para cada grupo de apoyo</p>
+                                </td>
+                                <td valign="top"><video src="/Cambios/crearcambionormalmultple.mp4" width="600" autoplay
+                                        controls loop></video>
+                                    <video src="/Cambios/buscarsitiocambiomultiple.mp4" width="600" autoplay controls
+                                        loop></video>
+                                </td>
+                            </tr>
+                        </table>
+                    </header> 
+                </div>
+            </div>
+        </ng-container> -->
+
+        <!------------------------------------------- PAGINA: CREAR CAMBIO ESTANDAR ------------------------------------------->
+
+        <!-- <ng-container *ngSwitchCase="'CrearCambioEstandar'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        
+
+                        <h2>BMC ITSM - Change Management - Gestión de Cambios</h2> 
+
+                        <p><strong>Creación de un cambio Estándar.</strong></p>
+                        <p>Los cambios estándar son cambios que requieren de dos fases de aprobaciones. Estos
+                            cambios tienen poco impacto o no tienen impacto en los servicios.
+                        </p>
+                        <p><b>Para crear un cambio estándar siga estos pasos:</b></p>
+
+                        <table class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <p>Ingresar a la pantalla Nuevo Cambio</p>
+                                    <ol>
+                                        <li>Seleccionar Aplicaciones > Gestión de cambios > Nuevo Cambio.
+                                        </li>
+                                        <li>Documente el campo Resumen y Notas con una descripción del cambio
+                                            (Estos campos se deben llenar en mayúsculas).</li>
+                                        <li>Para indicar el tipo de cambio solicitado seleccione el valor
+                                            Estándar dentro del campo Clase.</li>
+                                        <li>El grupo responsable que ejecutará el cambio deberá ser
+                                            documentado en el campo Grupo de gestores.</li>
+                                        <li>Para agregar el Plan de Actividades del cambio seleccione la pestaña
+                                            Detalles de trabajo.</li>
+                                        <li>Documente el campo Notas.</li>
+                                        <li>Agregue el archivo en el campo Adjunto.</li>
+                                        <li>En la sección de "Más Detalles" agregar más archivos
+                                            adjuntos si fuera necesario, seleccionar "Yes"en el campo "Bloqueado" y en
+                                            el campo "Acceso a vista" seleccionar el valor "Publico".</li>
+                                        <li>Oprima el botón "Agregar".</li>
+                                        <li>Para indicar la plataforma afectada seleccione la pestaña
+                                            Categorización </li>
+                                        <li>Documente los 3 niveles de los apartados <strong>Categorización de
+                                                producto</strong> y <strong>Categorización operacional</strong>
+                                        </li>
+                                        <li>Para indicar el sitio afectado por el cambio seleccione la pestaña
+                                            Relaciones.</li>
+                                        <li>Seleccione el valor Elemento de configuración en el campo Buscar.
+                                        </li>
+                                        <li>Ingrese el nombre del sitio.</li>
+                                        <li>Oprima el ícono de lupa o presione la tecla Enter.</li>
+                                        <li>En la lista de sitios que se despliega seleccione el sitio que estará
+                                            relacionado al cambio y oprima el botón Relacionar.</li>
+                                        <li>Regrese a la pantalla del cambio y oprima el botón Guardar.</li>
+                                    </ol>
+                                    <p><strong>Nota: </strong> Al guardar el cambio se documentan las fechas programadas
+                                        de inicio y finalización, estas serán documentadas con las
+                                        fechas reales cuando se de la aprobación del jefe del solicitante.
+                                    </p>
+                                    <p><strong>Nota: </strong> En caso de ser necesario el apoyo de otros grupos, una
+                                        vez guardado el cambio se habilitará la pestaña <strong>Grp
+                                            Asg</strong> donde se podrán agregar todos los grupos necesarios,
+                                        mientras el cambio se encuentre en estado <strong>Borrador</strong>.
+                                    <p>Para agregar grupos auxiliares:
+                                    <p>En la pestaña <strong>Grp Asg</strong> desplegar el campo <strong>Grupo
+                                            asignado</strong>, filtrar por compañía, organización y
+                                        seleccionar un grupo de soporte. Dar clic en <strong>Agregar</strong>. Repetir
+                                        por cada grupo necesario.
+                                    <p><strong>Nota: </strong> Una vez que el cambio fue aprobado se generará una
+                                        tarea para el grupo asignado y para cada grupo de apoyo</p>
+                                </td>
+                                <td valign="top"><video src="//Cambios/creacambioestandar.mp4" width="600" autoplay
+                                        controls loop></video></td>
+                            </tr>
+                        </table>
+                    </header> 
+                </div>
+            </div>
+        </ng-container> -->
+
+        <!------------------------------------------- PAGINA: CREAR CAMBIO EMERGENCIA ------------------------------------------->
+
+        <!-- <ng-container *ngSwitchCase="'CrearCambioEmergencia'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        
+
+                        <h2>BMC ITSM - Change Management - Gestión de Cambios</h2> 
+
+                        <p><strong>Creación de un cambio de Emergencia</strong></p>
+                        <p>Los cambios de clase Emergencia son originados por un incidente de alto impacto para el
+                            negocio. Una vez que se encuentra una solución o una solución temporal, se
+                            genera un cambio de clase emergencia que debe ser relacionado al incidente que lo origina.
+                            Aunque no siempre es necesario, el cambio sería la consecuencia lógica de
+                            resolver un incidente de alto impacto.
+                        </p>
+                        <p>Para crear un cambio de emergencia siga estos pasos:</p>
+
+                        <table class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <ol>
+                                        <li>Seleccionar <strong>Aplicaciones > Gestión de cambios > Nuevo
+                                                Cambio</strong></li>
+                                        <li>Documente el campo Resumen y Notas con una descripción del cambio
+                                            (Estos campos se deben llenar en mayúsculas).</li>
+                                        <li>Para indicar el tipo de cambio solicitado seleccione el valor
+                                            <strong>Emergencia</strong> dentro del campo Clase
+                                        </li>
+                                        <li>Seleccionar la opción "1-Extenso/Generalizado" del campo "Impacto*".
+                                            Seleccionar "1-Critico" del campo "Urgencia*, donde la "Prioridad" se
+                                            calculará automáticamente quedando como "Critica".</li>
+                                        <li>El grupo responsable que ejecutará el cambio deberá ser
+                                            documentado en el campo "Grupo de gestores"</li>
+                                        <li>Para agregar el Plan de Actividades del cambio seleccione la pestaña
+                                            Detalles de trabajo.</li>
+                                        <li>Documente el campo Notas.</li>
+                                        <li>Agregue el archivo en el campo Adjunto.</li>
+                                        <li>En la sección de "Más Detalles" agregar más archivos
+                                            adjuntos si fuera necesario, seleccionar "Yes"en el campo "Bloqueado" y en
+                                            el campo "Acceso a vista" seleccionar el valor "Publico".</li>
+                                        <li>Oprima el botón "Agregar".</li>
+                                        <li>Para indicar el sitio afectado por el cambio seleccione la pestaña
+                                            "Relaciones"</li>
+                                        <li>Seleccione el valor Elemento de configuración en el campo Buscar</li>
+                                        <li>Ingrese el nombre del sitio</li>
+                                        <li>Oprima el ícono de lupa o presione la tecla Enter</li>
+                                        <li>En la lista de sitios que se despliega seleccione el sitio que estará
+                                            relacionado al cambio y oprima el botón Relacionar</li>
+                                        <li>Regrese a la pantalla del cambio </li>
+                                        <li>(Opcional) Para indicar el incidente que disparó el cambio seleccione
+                                            la pestaña "Relaciones"</li>
+                                        <li>Seleccione el valor "Incidencia" en el campo Buscar </li>
+                                        <li>(opcional) Ingrese el ID del incidente </li>
+                                        <li>Oprima el ícono de lupa o presione la tecla Enter</li>
+                                        <li>En la lista de incidentes que se despliega seleccione el registro que
+                                            estará relacionado al cambio y oprima el botón Relacionar</li>
+                                        <li>Si no se muestra ningún incidente que coincida con la búsqueda
+                                            o si no colocó un criterio de búsqueda puede ingresar a la
+                                            liga Usar búsqueda avanzada donde podrá hacer una
+                                            búsqueda más final del incidente a relacionar. </li>
+                                        <li>Para indicar la plataforma afectada seleccione la pestaña
+                                            Categorización </li>
+                                        <li>Documente los 3 niveles de los apartados <strong>Categorización de
+                                                producto</strong> y <strong>Categorización operacional</strong>.
+                                        </li>
+                                        <li>Seleccione la pestaña "Fecha/sistema", documente la
+                                            "Fecha Programada de Inicio" y "Fecha Programada de
+                                            Finalización" (La Fecha de fin debe ser mayor a la fecha de
+                                            inicio)</li>
+                                        <li>Para indicar el folio de la emergencia o alarma seleccione la pestaña
+                                            "AMX"</li>
+                                        <li>Documente el campo Folio Emergencia o Alarma</li>
+                                        <li>Oprima el botón "Guardar"</li>
+                                    </ol>
+                                    <p><strong>Nota: </strong> Al guardar el cambio se documentan las fechas programadas
+                                        de inicio y finalización, estas serán documentadas con las
+                                        fechas reales cuando se de la aprobación del jefe del solicitante.
+                                    </p>
+                                    <p><strong>Nota: </strong> En caso de ser necesario el apoyo de otros grupos, una
+                                        vez guardado el cambio se habilitará la pestaña <strong>Grp
+                                            Asg</strong> donde se podrán agregar todos los grupos necesarios,
+                                        mientras el cambio se encuentre en estado <strong>Borrador</strong>.
+                                    <p>Para agregar grupos auxiliares:
+                                    <p>En la pestaña <strong>Grp Asg</strong> desplegar el campo <strong>Grupo
+                                            asignado</strong>, filtrar por compañía, organización y
+                                        seleccionar un grupo de soporte. Dar clic en <strong>Agregar</strong>. Repetir
+                                        por cada grupo necesario.
+                                    <p><strong>Nota: </strong> Una vez que el cambio fue aprobado se generará una
+                                        tarea para el grupo asignado y para cada grupo de apoyo</p>
+                                </td>
+                                <td valign="top"><video src="//Cambios/crearcambioemergencia.mp4" width="600" autoplay
+                                        controls loop></video></td>
+                            </tr>
+                        </table>
+                    </header> 
+                </div>
+            </div>
+        </ng-container> -->
+
+        <!------------------------------------------- PAGINA: COLISIONES ------------------------------------------->
+
+        <!-- <ng-container *ngSwitchCase="'Colisiones'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        
+                        <h3>Detección de colisión en CRQs de tipo normal y emergencia</h3>
+                        
+                        <p>
+                            Este manual tiene como finalidad que los usuarios tengan el conocimiento de cómo
+                            llevar acabo el nuevo modo de registro de un cambio Normal y Emergencia y el modo en el que
+                            se bloquearan los cambios debido a temas de colisión. Es importante la
+                            revisión de este manual, evite contratiempos con sus solicitudes de cambio.
+                        </p>
+                        <strong>Colisión</strong>
+                        <p>
+                            Una colisión se presenta cuando una solicitud de cambio o más coincide con
+                            algún Nodo (CI) y Fechas programadas de inicio y fin.
+                        </p>
+                    </header> 
+                    <div>
+                        <h3><a name="configinicio">Nuevo flujo de colisiones</a></h3>
+                        <div class="sectionWrapper">
+                            <p>
+                                A continuación se mostraran las modificaciones que presentara el módulo de
+                                cambios respecto al proceso de bloqueo de cambios <strong>Normales</strong> o
+                                <strong>Emergencia</strong> por colisión:
+                            </p>
+                            <ul>
+                                <li>La colisión aplicara para todo cambio que tengan su <strong>ubicación
+                                        de cambio</strong> en <strong>TELCEL</strong>.</li>
+                                <li>En este nuevo flujo los cambios Normales y Emergencia deberán llenarse de
+                                    manera completa, no permitiendo que primero se ingrese la información general
+                                    del cambio, nodo y despues las fechas programadas de inicio y fin (las fechas
+                                    ya serán obligatorias).</li>
+                                <li>Una vez creado un CRQ Normal o Emergencia en estado Borrador este deberá ser
+                                    avanzado a <strong>Petición de Autorización</strong>, esto con la
+                                    finalidad de garantizar su horario de cambio.
+                                    <p><strong>NOTA</strong>: En caso de dejar su cambio en borrador y se llegue a
+                                        registrar otro con un nodo (CI) y fechas programadas de inicio y fin similares
+                                        ambos se bloquearan por colisión.</p>
+                                </li>
+                                <li>Para desbloquear un cambio por colisión se deberá cambiar las fechas
+                                    programadas de inicio y fin, guardara el cambio y actualizara el registro.</li>
+                                <li>En caso de colisión aparecerá una pestaña llamada
+                                    "Colisión" en la cual se mostrara una tabla informativa con los cambios que
+                                    colisiona. </li>
+                                <li>Los cambios <strong>Estándar</strong> quedan fuera de este proceso.</li>
+                            </ul>
+                        </div> 
+                    </div> 
+                    <div>
+                        <h3><a name="configinicio">Nueva forma de llenar CRQS Normales y Emergencia</a>
+                        </h3>
+                        <div class="sectionWrapper"> 
+                            <p>
+                                Los cambios Normales y Emergencia deben llenarse de la forma que el manual lo indica:
+                            </p>
+                            <ul>
+                                <li><a href="../Cambios/crearcambionormal.html" title="Cambios Normales">Cambios
+                                        Normales y Múltiples</a> </li>
+                            </ul>
+                            <ul>
+                                <li><a href="../Cambios/crearcambioemergencia.html" title="Cambios Emergencia">Cambios
+                                        Emergencia</a> </li>
+                            </ul>
+                        </div> 
+                    </div> 
+                    <div> 
+                        <h3>Ejemplo de registro de cambio
+                        </h3>
+                        <div class="sectionWrapper">
+                            <strong>Ejemplo CRQ Normal o Emergencia creado sin colisión.</strong>
+                            <ol>
+                                <li>Primero deberá llenar la información general.</li><img src="Cambios/colision1.png"
+                                    width="300">
+                                <li>Despues en la pestaña de Detalles de trabajo anexara sus documentos
+                                    correspondientes (en caso de aplicar).</li><img src="Cambios/colision2.png"
+                                    width="300"><img src="Cambios/colision3.png" width="700">
+                                <li>Seleccionara los nodos que estarán relacionados a su cambio:</li><img
+                                    src="Cambios/colision4.png" width="700">
+                                <li>Despues llenara la pestaña de categorización:</li><img src="Cambios/colision5.png"
+                                    width="300">
+                                <li>Agregara sus fechas programadas de inicio y fin.</li><img
+                                    src="Cambios/colision6.png" width="300">
+                                <p><strong>Nota</strong>: En caso de no agregar las fechas Remedy enviara un error lo
+                                    cual no le permitirá guardar el cambio registrado.
+                                </p>
+                                <img src="Cambios/colision7.png" width="300">
+                                <li>Y finalmente guardar su cambio.</li>
+                                <li>Despues de guardar su cambio, en caso de no tener detalles adicionales
+                                    deberá avanzarlo a la siguiente fase ya sea en el botón de la parte
+                                    superior de la pantalla o en el botón que se encuentra en la parte inferior
+                                    izquierda de su pantalla</li><img src="Cambios/colision8.png" width="700"><img
+                                    src="Cambios/colision9.png" width="500">
+                            </ol>
+                            <p>
+                                Una vez avanzado a Petición de autorización, su CRQ quedara registrado
+                                correctamente sin ningún contratiempo.
+                            </p>
+                            <p>
+                                <strong>Nota: </strong> Se le recomienda que antes de registrar un nuevo cambio tenga ya
+                                acordadas las fechas programadas de inicio y fin y sus documentos listos
+                                correspondientes.
+                            </p>
+                            <strong>Ejemplo de registro de cambio con colisión</strong>
+                            <p>
+                                Ejemplo CRQ Normal o Emergencia
+                            </p>
+                            <p>
+                                Se repiten los pasos del 1 al 6 (Ejemplo CRQ Normal o Emergencia creado sin
+                                colisión)
+                            </p>
+                            <p>
+                                Despues de guardar el cambio, si detecta colisión este se bloqueara de la
+                                parte superior de la pantalla y bloqueara el botón de Siguiente fase.
+                            </p>
+                            <img src="Cambios/colision10.png" width="700">
+                            <img src="Cambios/colision11.png" width="400">
+                            <p>
+                                Mostrando el mensaje "No puede avanzar este CRQ debido a que está en
+                                colisión. Cambie sus fechas y guarde el cambio.", lo cual no permitirá
+                                mover el cambio a ningún estatus.
+                            </p>
+                            <p>
+                                Adicional se habilitara una pestaña llamada Colisión donde se podrá
+                                ver una tabla informativa sobre con que cambio está colisionando el suyo:
+                            </p>
+                            <p>
+                                Esta tabla incluye:
+                            </p>
+                            <ol>
+                                <li>ID CRQ</li>
+                                <li>Fecha programada de inicio y fin</li>
+                                <li>Clase (Normal y Emergencia)</li>
+                                <li>Solicitante</li>
+                                <li>Ubicación del Cambio</li>
+                            </ol>
+                            <img src="Cambios/colision12.png" width="400">
+                            <p>
+                                Para quitar el bloqueo deberá ir a la pestaña de Fecha/sistema y cambiar
+                                sus fechas programadas de inicio y fin.
+                            </p>
+                            <img src="Cambios/colision13.png" width="400">
+                            <p>
+                                Guardara su cambio y lo actualizara ya sea de la parte superior derecha o en el icono de
+                                actualizar.
+                            </p>
+                            <img src="Cambios/colision14.png" width="400">
+                            <p>
+                                En automático su cambio será desbloqueado.
+                            </p>
+                            <img src="Cambios/colision15.png" width="700">
+                        </div> 
+                    </div> 
+                    <div> 
+                        <h3>Detalles adicionales
+                        </h3>
+                        <div class="sectionWrapper"> 
+                            <ul>
+                                <li>La pestaña Colisión aparece en todos los cambios, en caso de que su
+                                    cambio ya se encuentre en Petición de autorización haga caso omiso a
+                                    la pestaña, esta es solo informativa.</li>
+                                <li>Si existe dos cambios en borrador que no han sido avanzados y colisionan pueden
+                                    tener inconsistencias, se recomienda realizar el llenado correctamente como se
+                                    comenta en un principio.</li>
+                                <li>En caso de tener algún inconveniente con sus horarios comuníquese con
+                                    su gestor o coordinador de cambios.</li>
+                                <li>Adicional puede consultar el Calendario de Cambios de Remedy que se encuentra en la
+                                    siguiente ruta: Gestión de Cambios > Calendario, el cual le podrá dar
+                                    más visibilidad de horarios.</li>
+                            </ul>
+                            <img src="Cambios/colision16.png" width="400">
+                            <p>
+                                Para ver su funcionalidad y configuración del calendario de cambios ingrese a:
+                            </p>
+                            <ul>
+                                <li><a href="../Cambios/CalendarioCambiosFC.html"
+                                        title="Calendario de cambios">Calendario de cambios</a> </li>
+                            </ul>
+                            <img src="Cambios/colision17.png" width="600">
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </ng-container> -->
+
+        <!-- ----------------------------------------- PAGINA: CERRAR CAMBIO ----------------------------------------- -->
+
+        <!-- <ng-container *ngSwitchCase="'CerrarCambio1'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        
+                        <h3>BMC ITSM - Change Management - Gestión de Cambios</h3> 
+                        <p><strong>Cierre del cambio</strong></p>
+                        <p>Para cerrar el cambio siga estos pasos:</p>
+                        <table>
+                            <tr>
+                                <td valign="top">
+                                    <ol>
+                                        <li>Seleccionar <strong>Aplicaciones > Gestión de cambios > Buscar
+                                                Cambio</strong></li>
+                                    </ol>
+                                    <p>Nota: Puede ingresar al cambio desde su Consola de Aspectos Generales, o bien,
+                                        desde la Consola de Cambios como se explica en el apartado de fundamentos (Ver
+                                        apartado Fundamentos)</p>
+                                    <ol>
+                                        <li>Ingrese al cambio que se encuentra en estado "Terminado"</li>
+                                        <li>Seleccione la pestaña "Tareas"</li>
+                                        <li>Visualizar todas las tareas en estado cerrado </li>
+                                        <p><strong>Nota: </strong>Si las tareas no están cerradas realizar el
+                                            seguimiento de cada una, <a href="../Tareas/index.html">ver cómo
+                                                aquí</a>.</p>
+                                        <p><strong>Nota: </strong>Al cerrar todas las tareas relacionadas al cambio, el
+                                            estado del cambio pasará automáticamente a
+                                            <strong>Terminado</strong>.
+                                        </p>
+                                        <li>Oprima el botón "Siguiente fase", o bien, abra el
+                                            menú del recuadro "Implantar" y seleccione "Siguiente
+                                            fase"</li>
+                                        <li>El cambio pasará al estado <strong>Cerrado</strong> documentado en
+                                            automático el motivo del estado con el valor <strong>Con
+                                                exito</strong> o <strong>Sin exito</strong>, dependiendo
+                                            de las tareas.</li>
+                                    </ol>
+                                    <p>Nota: Si al menos una tarea se cerró con el motivo de estado
+                                        "Fallido" el cambio tendrá el motivo de estado <strong>Sin
+                                            exito</strong>, de lo contrario se documentará con el valor
+                                        <strong>Con exito</strong>.
+                                    </p>
+                                    <p>Nota: El proceso de cierre aplica para los tres tipos de cambios<b>(Estandar,
+                                            Normal y Emergencia).</b></p>
+                                </td>
+                                <td valign="top"><video src="/Cambios/cerrarcambio.mp4" width="600" autoplay></video>
+                                </td>
+                            </tr>
+                        </table>
+                    </header> 
+                </div>
+            </div>
+        </ng-container> -->
+
+        <!------------------------------------------- PAGINA: CALENDARIO CAMBIOS ------------------------------------------->
+
+
+        <!------------------------------------------- PAGINA: APROBAR CAMBIO ------------------------------------------->
+
+        <!-- <ng-container *ngSwitchCase="'AprobarCambio'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        
+                        <h3>BMC ITSM - Change Management - Gestión de Cambios</h3> 
                         <p><strong>Aprobar el Cambio</strong></p>
                         <p>Sin importar la clase del cambio, cada clase sigue su propio proceso de aprobaciones. Por lo
                             que al levantar el cambio se requerirá al menos una aprobación .
@@ -1598,14 +1604,14 @@
                                         <li>Oprima el botón Aceptar</li>
                                     </ol>
                                 </td>
-                                <td valign="top"><video src="//Cambios/aprobarcambio.mp4" width="600" autoplay controls
+                                <td valign="top"><video src="Cambios/aprobarcambio.mp4" width="600" autoplay controls
                                         loop></video></td>
                             </tr>
                         </table>
-                    </header> <!-- Termina el texto principal -->
+                    </header> 
                 </div>
             </div>
-        </ng-container>
+        </ng-container> -->
 
         <ng-container *ngSwitchDefault>
             <h3>Página no encontrada</h3>

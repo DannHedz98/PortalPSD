@@ -27,7 +27,6 @@ export class MenuDocumentacionComponent {
       subItems: []
     },
 
-
     {
       name: 'Proceso de Accesos',
       url: 'ModeloEstandar/PAccesos',  // URL para la opción principal
@@ -41,16 +40,15 @@ export class MenuDocumentacionComponent {
              { name: 'Renovacion de vigencia', url: 'Accesos/RenovacionADM' },
              { name: 'Cancelar ADMs', url: 'Accesos/CancelarADM' }
           ]
-           },
-           {
-             name: 'Solicitud de acceso COR', url: '', subItems: [
-               { name: 'Perfil FO', url: 'Accesos/CreacionCorFO' },
-               { name: 'Perfil BO', url: 'Accesos/CreacionCorBO' }
-             ]
-        }
+        //    },
+        //    {
+        //      name: 'Solicitud de acceso COR', url: '', subItems: [
+        //        { name: 'Perfil FO', url: 'Accesos/CreacionCorFO' },
+        //        { name: 'Perfil BO', url: 'Accesos/CreacionCorBO' }
+        //      ]
+       }
       ]
     },
-
 
     {
       name: 'Proceso Correctivo',
@@ -86,18 +84,17 @@ export class MenuDocumentacionComponent {
             { name: 'Atencion', url: 'Incidentes/AtencionTI' },
              { name: 'Documentacion', url: 'Incidentes/DocumentarTI' },
              { name: 'Escalacion', url: 'Incidentes/EscalarTI' },
+             { name: 'Relacion inc', url: 'Incidentes/RelacionINC' },
              { name: 'Creacion de tarea(s)', url: 'Incidentes/CrearTareaTI' },
              { name: 'Cierre', url: 'Incidentes/CerrarTI' }
           ]
         },
         {
-          name: 'Conocimiento', url: '', subItems: [
-            // { name: 'Busqueda desde Alarmas', url: 'Incidentes/AtencionAlarma' },
-            // { name: 'Busqueda desde CPDs', url: 'Incidentes/AtencionCPD' },
-            // { name: 'Busqueda desde incidentes de TI', url: 'Incidentes/AtencionTI' },
+          name: 'Conocimientos', url: '', subItems: [
             { name: 'Creacion de conocimiento', url: 'Conocimientos/CrearConocimiento' },
             { name: 'Revision y publicacion', url: 'Conocimientos/PublicarConocimiento' },
-            { name: 'Solicitud de modificacion', url: 'Conocimientos/ModificarConocimiento' }
+            { name: 'Solicitud de modificacion', url: 'Conocimientos/SolicitarConocimiento' },
+            { name: 'Modificar conocimiento', url: 'Conocimientos/ModificarConocimiento'}
           ]
         },
         {
@@ -105,13 +102,20 @@ export class MenuDocumentacionComponent {
             { name: 'Ciclo de vida', url: 'Problemas/index' },
             { name: 'Creacion de un Problema', url: 'Problemas/CreacionProblema' },
             { name: 'Atencion de  un Problema', url: 'Problemas/AtencionProblema' },
+            { name: 'Documentar Problema', url: 'Problemas/DocumentarProblema' },
             { name: 'Cierre de un Problema', url: 'Problemas/CierreProblema' }
+          ]
+        },
+        {
+          name: 'Tareas', url: '', subItems: [
+            { name: 'Creacion de tarea', url: 'Tareas/CrearTarea' },
+            { name: 'Atender tarea', url: 'Tareas/AtenderTarea' },
+            { name: 'Documentar tarea', url: 'Tareas/DocumentarTarea' },
+            { name: 'Cerrar tarea', url: 'Tareas/CerrarTarea' }
           ]
         }
       ]
     },
-
-
 
     {
       name: 'Proceso de Emergencia',
@@ -120,7 +124,6 @@ export class MenuDocumentacionComponent {
         {
           name: 'Declarar una emergencia', url: '',
           subItems: [
-            // { name: 'Desde una alarma', url: 'Incidentes/index' },
             { name: 'Desde un incidente', url: 'Incidentes/index' }
           ]
         },
@@ -133,14 +136,11 @@ export class MenuDocumentacionComponent {
       ]
     },
 
-
     {
       name: 'Proceso Estadistico',
       url: 'ModeloEstandar/PEstadistico',
       subItems: []
     },
-
-
 
     {
       name: 'Proceso de Intervencion de red',
@@ -150,7 +150,8 @@ export class MenuDocumentacionComponent {
           name: 'Cambios', url: '',
           subItems: [
             { name: 'Generar un cambio', url: 'Cambios/CrearCambio' },
-            { name: 'Cerrar un cambio', url: 'Cambios/CerrarCambio' }
+            { name: 'Cerrar un cambio', url: 'Cambios/CerrarCambio' },
+            { name: 'Calendario cambios', url: 'Cambios/CalendarioCambios' }
           ]
         },
         // {
@@ -171,7 +172,6 @@ export class MenuDocumentacionComponent {
       ]
     },
 
-
     {
       name: 'Procesos Preventivo',
       url: 'ModeloEstandar/PPreventivo',
@@ -187,7 +187,6 @@ export class MenuDocumentacionComponent {
         }
       ]
     },
-
 
     {
       name: 'Movilidad',

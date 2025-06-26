@@ -39,6 +39,7 @@
               "entry": "src/server.ts"
             },
             "baseHref":"/smartit/PortalPSD/"
+            
 
           },
           "configurations": {

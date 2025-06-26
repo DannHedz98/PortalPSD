@@ -42,7 +42,7 @@ export class FormatosComponent {
         text: 'Formatos relacionados a la Gestion de accesos',
         text2: 'Enlaces relacionados:',
         links: [
-          { label: 'FORMATO ALTA DE PERFILES ADM.XLSX', url: `${this.URL}/Formatos/Gestion_Accesos/Formato Alta de Perfiles ADM.xlsx` },
+          { label: 'FORMATO CATALOGOS ADM.XLSX', url: `${this.URL}/Formatos/Gestion_Accesos/FormatoCatalogosADM.xlsx` },
           { label: '200ONBOARDING_ADM_USUARIOS_LDAP.XLS', url: `${this.URL}/Formatos/Gestion_Accesos/ONBOARDING_ADM_USUARIOS_LDAP.xls` },
           { label: '22ONBOARDING_ADM_CORRESPONDENCIA_DEPTOS_GRUPOS DE SOPORTE.XLSX', url: `${this.URL}/Formatos/Gestion_Accesos/22ONBOARDING_ADM_CORRESPONDENCIA_DEPTOS_GRUPOS DE SOPORTE.xlsx` },
           { label: '23ONBOARDING ADM CORRESPONDENCIA ROLES GRUPO SOPORTE.XLSX', url: `${this.URL}/Formatos/Gestion_Accesos/23Onboarding ADM CorrespondenciaRolesGrupoSoporte.xlsx` },

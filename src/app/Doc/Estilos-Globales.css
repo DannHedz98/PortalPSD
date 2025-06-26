@@ -1,34 +1,202 @@
-.Contenido{
+#summary,
+.mainContent {
+    padding: 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* --------- */
+.Contenido {
     padding-left: 60px;
     padding-right: 50px;
     padding-top: 15px;
-    height: 85vh;       
-    overflow-y: auto; 
+    height: 85vh;
+    overflow-y: auto;
 }
 
-.tabla{
+.tabla {
     width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
+    border-collapse: collapse;
+    overflow-x: auto;
+    display: block;
+    margin-bottom: 20px;
 }
 
-.tabla2{
-        border-collapse: collapse;
-        margin-bottom: 20px;
+/* Hacer video y tabla responsiva */
+.tabla video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 1rem;
 }
 
-.celdas tr, td{
+.tabla td,
+.tabla th {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+
+
+.tabla2 {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.celdas tr,
+td {
     border: 1px solid black;
     padding: 8px;
     text-align: left;
 }
 
-.header{
+.header {
     background-color: #050046;
     color: white;
 }
 
-.summary{
+.summary {
     padding: 15px 20px 20px 20px;
     background-color: rgb(241, 245, 255);
+}
+
+.introduction {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #050046;
+    border-radius: 10px;
+    height: 400px;
+    padding: 25px 20px 20px 20px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    align-content: center;
+}
+
+.introduction h3 {
+    color: white;
+}
+
+.top ol {
+    color: white;
+}
+
+.tabla-indice {
+    border-color: transparent;
+    margin: 0 auto;
+}
+
+.button-as-link {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: #007bff;
+    /* Azul típico de un link */
+    text-decoration: underline;
+    cursor: pointer;
+    font: inherit;
+}
+
+.button-as-link:hover {
+    text-decoration: none;
+}
+
+
+.intro-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.video-section {
+    flex: 1 1 60%;
+    min-width: 350px;
+    padding-top: 50px;
+}
+
+.index-section {
+    flex: 1 1 30%;
+    min-width: 250px;
+}
+
+.button-as-link {
+    background: none;
+    border: none;
+    color: #00aaff;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 4px 0;
+}
+
+.index-section ol,
+.index-section ul {
+    padding-left: 20px;
+}
+
+.index-section li {
+    color: white;
+}
+
+video {
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tabla {
+        display: block;
+    }
+
+    .tabla tr {
+        display: flex;
+        flex-direction: column-reverse; /* ✅ Esto invierte el orden: video arriba */
+    }
+
+    .tabla td {
+        width: 100% !important;
+        display: block;
+    }
+
+    .tabla td video {
+        width: 100% !important;
+        height: auto;
+    }
+}
+
+
+/* Solo en pantallas grandes */
+@media screen and (min-width: 769px) {
+    /* Aplica a filas de la tabla donde hay video */
+    .tabla tr {
+        display: table-row; /* Asegurar que se comporta como tabla */
+    }
+
+    .tabla tr td:first-child {
+        width: 50%; /* Ajusta este valor según lo que desees */
+        vertical-align: top;
+    }
+
+    .tabla tr td:last-child {
+        width: 50%;
+        vertical-align: top;
+    }
+
+    .tabla td video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
 }

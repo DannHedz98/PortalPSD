@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LoginService } from '../service/login.service';
 import { AuthService } from '../service/auth.service';
+import { FooterComponent } from '../footer/footer.component';
 import { Router, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -10,11 +11,14 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [RouterLink, FormsModule, RouterModule, HttpClientModule, CommonModule],
+  imports: [RouterLink, FormsModule, RouterModule, HttpClientModule, CommonModule ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css',
 })
 export class InicioComponent {
+
+   currentYear: number = new Date().getFullYear();
+
   cargando: boolean = false;
   mostrarModal: boolean = false;
   usuario: string = '';

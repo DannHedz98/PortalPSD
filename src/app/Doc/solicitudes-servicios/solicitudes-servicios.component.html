@@ -1,1 +1,130 @@
-<p>solicitudes-servicios works!</p>
+<app-navbar></app-navbar>
+<app-menu-documentacion></app-menu-documentacion>
+<section class="Contenido">
+    <app-nav-doc></app-nav-doc>
+    <div [ngSwitch]="pageId">
+
+        <!------------------------------------------- PAGINA: INDEX ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'index'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h2>BMC ITSM - Digital WorkPlace - Solicitud de accesos</h2> <!-- Encabezado -->
+
+                        <p>Este apartado permite definir un catalogo de servicios, y automatizar la solicitud de
+                            aquellos servicio para la comunidad de usuarios permitiendo la autoayuda</p>
+                        <p>DWP se integra con otras aplicaciones, como Incidentes y Work Orders para resolver peticiones
+                            de usuarios. Gestiona el proceso completo, desde la creación de la solicitud hasta su
+                            resolución.</p>
+                        <p>Anteriormente se generaban las solicitudes por medio de SRM (Service Request Management),
+                            esta funcionalidad fue migrada a <a href="https://remedycloudamx-dwp.onbmc.com/dwp/app/"
+                                target="_blank">Digital Work Place</a></p>
+                        <p>DWP no solo es para usuarios finales, sino también para usuarios de TI. El uso de DWP en TI
+                            facilita la generación de solicitudes de servicio interdepartamentales, de manera que al
+                            solicitar servicios permite una mejor gestión y seguimiento de las solicitudes.</p>
+
+                        <h3>Ciclo de vida de las solicitudes</h3>
+
+
+                            <p>
+                                Las solicitudes tienen un ciclo de vida que contiene los siguientes estados:
+                            </p>
+                            <table cellpadding="3" cellspacing="0" >
+                                <thead>
+                                    <tr class="TableSubHeadingColor header" >
+                                        <td>Estado</td>
+                                        <td>Descripci&oacute;n</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Submiitted</span></code></td>
+                                        <td>La solicitud ha sido creada, pero no ha sido enviada todav&iacute;a.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Approval</span></code></td>
+                                        <td>La solicitud ha sido enviada y est&aacute; en revisi&oacute;n.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">In Progress</span></code></td>
+                                        <td>El trabajo de la solicitud ha sido temporalmente suspendido. Es necesario
+                                            indicar una raz&oacute;n por la que se encuentra en este estado.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Completed</span></code>
+                                        </td>
+                                        <td>La solicitud ha sido enviada y est&aacute; pendiente de aprobaci&oacute;n.
+                                            La
+                                            solicitud pasar&aacute; a estado &quot;Iniciado&quot; cuando todos los
+                                            aprobadores la hayan aprobado.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Closed</span></code></td>
+                                        <td>Este estado indica que el trabajo planeado ya se ha aprobado para
+                                            implementaci&oacute;n, ya se han propuesto fechas y se han estimado los
+                                            costos.
+                                            Cuando las actividades comiencen el estado cambiar&aacute; a &quot;En
+                                            progreso&quot;.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Cancelled</span></code></td>
+                                        <td>Ha comenzado el trabajo en las actividades planeadas. Cuando todas las
+                                            actividades se terminen el estado cambiar&aacute; a &quot;Completada&quot;.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Failed</span></code></td>
+                                        <td>La solicitud ha sido completada y todas las actividades han terminado. El
+                                            usuario puede revisar los trabajos realizados. En caso de que el trabajo no
+                                            sea
+                                            de su satisfacci&oacute;n, el usuario puede &quot;Reabrir&quot; la
+                                            solicitud.
+                                        </td>
+                                    </tr>
+                                    <!-- <tr>
+                                        <td><code><span class="code_name">Rechazada</span></code></td>
+                                        <td>Alguno de los aprobadores rechaz&oacute; la solicitud.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Cancelada</span></code></td>
+                                        <td>La solicitud fue cancelada (a lo mejor el usuario se acord&oacute; de su
+                                            password).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code><span class="code_name">Cerrada</span></code></td>
+                                        <td>La solicitud se ha cerrado si el usuario ha llenado una encuesta (para los
+                                            casos
+                                            que apliquen) o el sistema cerr&oacute; la solicitud (despu&eacute;s de unos
+                                            d&iacute;s el sistema cierra las solicitudes completadas de forma
+                                            autom&aacute;tica).</td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+
+
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+        <!------------------------------------------- PAGINA: CATEGORIAS ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'Categorias'">
+            CATEGORIAS
+        </ng-container>
+        <!------------------------------------------- PAGINA: SOLICITUD SERVICIO ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'SolicitudServicio'">
+            SOLICITUD SERVICIO
+        </ng-container>
+        <!------------------------------------------- PAGINA: CONSULTA PETICIONES ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'ConsultaPeticiones'">
+            CONSULTA PETICIONES
+        </ng-container>
+        <ng-container *ngSwitchDefault>
+            <h2>Página no encontrada</h2>
+        </ng-container>
+    </div>
+</section>

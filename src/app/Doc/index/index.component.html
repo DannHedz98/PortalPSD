@@ -5,6 +5,74 @@
 <section class="Contenido">
     <app-nav-doc></app-nav-doc>
     <div id="summary" class="summary">
+
+        <div class="introduction">
+            <h3 style="margin-bottom: 20px; text-align: center;">BIENVENIDO A REMEDY HELIX SAAS</h3>
+            <p style="color: white;">
+                A continuación encontraras un breve video introductorio para la navegación de la
+                página principal de <b>BMC Digital Workplace</b>. Si se requiere consultar un tema específico,
+                es posible hacerlo mediante los vínculos ubicados a la izquierda del video...
+            </p>
+            <p style="color: white;">
+                Para este proceso se necesita ingresar a la pantalla principal de
+                <a href="https://remedycloudamx-dwp.onbmc.com/dwp/app/#/page/hjmyqbot" target="_blank">
+                    Remedy Helix SaaS</a>, si no lo ha hecho aún, conocer su usuario
+                <a routerLink="/doc/Generales/Acceso">aquí</a>.
+            </p>
+
+            <div class="intro-container">
+                <div class="index-section">
+                    <p style="color: white;"><strong>Índice:</strong></p>
+                    <ol>
+                        <li><button type="button" class="button-as-link" (click)="irASeccion(17)">Página
+                                Principal</button></li>
+                        <li><button type="button" class="button-as-link" (click)="irASeccion(27)">Panel de Remedy
+                                Cloud</button></li>
+                        <li><button type="button" class="button-as-link" (click)="irASeccion(55)">Panel de Remedy
+                                Tradicional</button></li>
+                        <li><button type="button" class="button-as-link" (click)="irASeccion(78)">Aplicaciones
+                                Móviles</button></li>
+                        <li>
+                            <button type="button" class="button-as-link" (click)="irASeccion(104)">Búsqueda de
+                                artículos</button>
+                            <ul>
+                                <li><button class="button-as-link" (click)="irASeccion(137)">Visualizar
+                                        artículo</button></li>
+                                <li><button class="button-as-link" (click)="irASeccion(174)">Valoración de
+                                        artículo</button></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="button-as-link" (click)="irASeccion(238)">Sección "Mi actividad"</button>
+                            <ul>
+                                <li><button class="button-as-link" (click)="irASeccion(250)">Eventos activos</button>
+                                </li>
+                                <li><button class="button-as-link" (click)="irASeccion(283)">Eventos pasados</button>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="button-as-link" (click)="irASeccion(358)">Sección "Catálogo"</button>
+                            <ul>
+                                <li><button class="button-as-link" (click)="irASeccion(375)">Búsqueda de
+                                        servicios</button></li>
+                                <li><button class="button-as-link" (click)="irASeccion(432)">Visualización de
+                                        servicios</button></li>
+                            </ul>
+                        </li>
+                        <li><button class="button-as-link" (click)="irASeccion(457)">Notificaciones</button></li>
+                        <li><button class="button-as-link" (click)="irASeccion(503)">Preferencias</button></li>
+                        <li><button class="button-as-link" (click)="irASeccion(554)">Cierre de sesión</button></li>
+                    </ol>
+                </div>
+
+                <div class="video-section">
+                    <video id="Video" src="Generales/BMC DWP - Navegación sobre la solución.mp4" autoplay
+                        controls></video>
+                </div>
+            </div>
+        </div>
+
         <div id="mainContent" class="mainContent">
             <h2>BMC ITSM - Remedy en la Nube - Manual del usuario</h2>
             <p>
@@ -17,13 +85,21 @@
                 estándar y sus procesos.</p>
             <ul>
                 <li><a routerLink="/doc/ModeloEstandar/index" title="Modelo Estandar">Modelo Estándar</a></li>
-                <li><a routerLink="/doc/ModeloEstandar/PAccesos" title="Proceso de Accesos">Proceso de Solicitud de Accesos</a></li>
-                <li><a routerLink="/doc/ModeloEstandar/PCorrectivo" title="Proceso Correctivo">Proceso Correctivo</a> </li>
-                <li><a routerLink="/doc/ModeloEstandar/PEmergencias" title="Proceso de Emergencias">Proceso de Emergencias</a></li>
-                <li><a routerLink="/doc/ModeloEstandar/PEstadistico" title="Proceso Estadistico">Proceso Estadístico</a></li>
-                <li><a routerLink="/doc/ModeloEstandar/PIntervenciones" title="Proceso de intervenciones en la red">Proceso de Intervenciones en la Red</a></li>
-                <li><a routerLink="/doc/ModeloEstandar/PPreventivo" title="Proceso Preventivo">Proceso Preventivo</a> </li>
-                <li><a routerLink="/doc/ModeloEstandar/PRecibir" title="Proceso recibir e integrar infraestructura de la red">Proceso Recibir e Integrar Infraestructura de la Red</a></li>
+                <li><a routerLink="/doc/ModeloEstandar/PAccesos" title="Proceso de Accesos">Proceso de Solicitud de
+                        Accesos</a></li>
+                <li><a routerLink="/doc/ModeloEstandar/PCorrectivo" title="Proceso Correctivo">Proceso Correctivo</a>
+                </li>
+                <li><a routerLink="/doc/ModeloEstandar/PEmergencias" title="Proceso de Emergencias">Proceso de
+                        Emergencias</a></li>
+                <li><a routerLink="/doc/ModeloEstandar/PEstadistico" title="Proceso Estadistico">Proceso Estadístico</a>
+                </li>
+                <li><a routerLink="/doc/ModeloEstandar/PIntervenciones"
+                        title="Proceso de intervenciones en la red">Proceso de Intervenciones en la Red</a></li>
+                <li><a routerLink="/doc/ModeloEstandar/PPreventivo" title="Proceso Preventivo">Proceso Preventivo</a>
+                </li>
+                <li><a routerLink="/doc/ModeloEstandar/PRecibir"
+                        title="Proceso recibir e integrar infraestructura de la red">Proceso Recibir e Integrar
+                        Infraestructura de la Red</a></li>
             </ul>
             <p>
                 Si usted es un usuario que ya conoce Remedy ITSM, seleccione del menú superior el tema
@@ -34,9 +110,10 @@
                 <li><a routerLink="/doc/Generales/index" title="Conozca ITSM">Generales - Conozca Remedy ITSM</a></li>
                 <li><a routerLink="/doc/Incidentes/index" title="Gestion de Incidentes">Gestión de Incidentes</a></li>
                 <li><a routerLink="/doc/Cambios/index" title="Gestion de Cambios">Gestión de Cambios</a></li>
-                <!-- <li><a href="" title="Gestion de Solicitudes">Gestión de Solicitudes</a></li> -->
-                <li><a routerLink="/doc/OrdenesTrabajo/index" title="Gestion de ordenes de trabajo">Gestión de órdenes de trabajo</a></li>
-                <li><a routerLink="/doc/Conocimientos/index" title="Gestion de Conocimientos">Gestión de Conocimientos</a></li>
+                <li><a routerLink="/doc/OrdenesTrabajo/index" title="Gestion de ordenes de trabajo">Gestión de órdenes
+                        de trabajo</a></li>
+                <li><a routerLink="/doc/Conocimientos/index" title="Gestion de Conocimientos">Gestión de
+                        Conocimientos</a></li>
                 <li><a routerLink="/doc/Tareas/index" title="Tareas">Tareas</a></li>
                 <li><a routerLink="/doc/Problemas/index" title="Gestion de Problemas">Gestión de Problemas</a></li>
             </ul>

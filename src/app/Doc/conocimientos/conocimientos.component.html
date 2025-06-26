@@ -35,7 +35,7 @@
                                 art&iacute;culo. Sin embargo, aunque el art&iacute;culo est&eacute; asignado a otro
                                 usuario, el autor no pierde la autor&iacute;a del art&iacute;culo.
                             </p>
-                            <table cellpadding="3" cellspacing="0" class="tabla">
+                            <table cellpadding="3" cellspacing="0" >
                                 <thead>
                                     <tr class="TableSubHeadingColor header">
                                         <td>Estado</td>
@@ -149,11 +149,89 @@
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <h1>BMC ITSM - Gesti&oacute;n de Conocimientos</h1> <!-- Encabezado -->
+                        <p><strong>Creaci&oacute;n de art&iacute;culo de conocimiento</strong></p>
+                        <p>En este apartado conocer&aacute; como crear un art&iacute;culo de conocimiento.</p>
+                        <p>Para crearlo siga estos pasos:</p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <ol>
+                                        <li>En el men&uacute; &quot;Aplicaciones&quot; de lado izquierdo, seleccionar
+                                            &quot;Gesti&oacute;n de Conocimientos&quot; &gt; &quot;Art&iacute;culo
+                                            Nuevo&quot;</li>
+                                        <li>Seleccionar la plantilla de &quot;C&oacute;mo&quot; y presione
+                                            &quot;Crear&quot;</li>
+                                        <li>Seleccionar &quot;Visibilidad de art&iacute;culo&quot; del men&uacute;
+                                            &quot;Funciones&quot;</li>
+                                        <li>Seleccionar la empresa &quot;TELCEL&quot; y seleccione el grupo
+                                            &quot;Telcel&quot;. Dar clic en &quot;Guardar&quot;</li>
+                                        <li>Llenar el campo &quot;T&iacute;tulo*&quot;</li>
+                                        <li>Llenar los campos &quot;Causa Probable&quot; y &quot;Descripci&oacute;n del
+                                            problema&quot; en la parte de &quot;IDENTIFICA&quot;. </li>
+                                        <li>Navegar hacia abajo y llenar los campos que correspondan en la parte
+                                            &quot;SOLUCIONA&quot;</li>
+                                        <li>En la pesta&ntilde;a &quot;Detalles&quot;, seleccionar &quot;TELCEL&quot; en
+                                            el campo &quot;Empresa*+&quot;</li>
+                                        <li>Colocar palabras clave que sirvan para la b&uacute;squeda simple en el campo
+                                            &quot;Palabras clave&quot;</li>
+                                        <li>Seleccionar el valor de &quot;ALM&quot; en el campo &quot;Tipo&quot;</li>
+                                        <li>Seleccionar el grupo asignado al que pertenece el usuario en el campo
+                                            &quot;Grupo asignado*+&quot;</li>
+                                        <li>Seleccionar al jefe del usuario en el campo &quot;Usuario asignado+&quot;
+                                        </li>
+                                        <li>Seleccionar &quot;Nivel 1 de producto&quot; = HARDWARE, &quot;Nivel 2 de
+                                            producto&quot; = TELECOMUNICACIONES, &quot;Nivel 3 de producto&quot; = NODO
+                                            B en la pesta&ntilde;a Categorizaciones</li>
+                                        <li>Repita el paso D4-13 pero en la pesta&ntilde;a &quot;Categorizaciones de
+                                            Resoluci&oacute;n&quot;</li>
+                                        <li>Seleccionar &quot;Borrador&quot; del campo &quot;Estado*&quot; o de la barra
+                                            de estado (Color verde)</li>
+                                        <li>Presionar &quot;Guardar&quot; (hasta la parte de abajo)</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Conocimientos/TELCEL-BMC SMART IT - Creación de conocimiento.mp4" width="600" autoplay
+                                        controls loop></video></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" valign="top">
+                                    <p><strong>Nota:</strong></p>
+                                    <p>Los grupos de visibilidad sirven para controlar el acceso a los art&iacute;culos
+                                        de conocimiento. Existen dos grupos por defecto:</p>
+                                    <ul>
+                                        <li>ALL: que permite el acceso a todos los usuarios de la
+                                            compa&ntilde;&iacute;a. Este grupo particularmente sirve para cualquier
+                                            compa&ntilde;&iacute;a, pero no significa que un art&iacute;culo sea visible
+                                            para todas las compa&ntilde;&iacute;as.</li>
+                                        <li>TELCEL: que permite el acceso a todos los usuarios de TELCEL.</li>
+                                    </ul>
+                                    <p>Solo el administrador puede crear grupos de visibilidad. Si requiere un grupo de
+                                        visibilidad contacte al administrador.</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/Conocimientos/PublicarConocimiento">Publicaci&oacute;n de
+                                    art&iacute;culo de conocimiento</a></li>
+                            <li><a routerLink="/doc/Conocimientos/SolicitarConocimiento">Solicitud de
+                                    modificaci&oacute;n al art&iacute;culo de conocimiento</a></li>
+                            <li><a routerLink="/doc/Conocimientos/ModificarConocimiento">Modificaci&oacute;n del
+                                    art&iacute;culo de conocimiento</a></li>
+                        </ul>
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'CrearConocimiento2'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
                         <!-- Titulo del documento y texto principal-->
                         <h1>BMC ITSM - Gesti&oacute;n de Conocimientos</h1> <!-- Encabezado -->
                         <p><strong>Creaci&oacute;n de art&iacute;culo de conocimiento</strong></p>
-                        <p>
-                            En este apartado conocer&aacute; como crear un art&iacute;culo de conocimiento.</p>
+                        <p>En este apartado conocer&aacute; como crear un art&iacute;culo de conocimiento.</p>
                         <p>Para crearlo siga estos pasos:</p>
                         <table cellpadding="0" cellspacing="0" border="0" class="tabla">
                             <tr>
@@ -426,7 +504,8 @@
                                         <li>Una vez que se haya revisado la informaci&oacute;n del archivo adjunto, se
                                             procede a su valoraci&oacute;n haciendo clic en el bot&oacute;n
                                             <strong>Valoraci&oacute;n</strong> que se encuentra en la parte inferior del
-                                            instructivo.</li>
+                                            instructivo.
+                                        </li>
                                         <li>Seleccionar un valor del campo <strong>Evaluaci&oacute;n</strong>, este
                                             valor representar&aacute; la percepci&oacute;n que se tiene acerca de la
                                             calidad del instructivo.</li>

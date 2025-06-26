@@ -8,7 +8,6 @@ import { IndexComponent } from './Doc/index/index.component';
 import { NavDocComponent } from './Doc/nav-doc/nav-doc.component';
 import { GeneralesComponent } from './Doc/generales/generales.component';
 import { ModeloEstandarComponent } from './Doc/modelo-estandar/modelo-estandar.component';
-import { PortafolioEmpComponent } from './Doc/portafolio-emp/portafolio-emp.component';
 import { IncidentesComponent } from './Doc/incidentes/incidentes.component';
 import { CambiosComponent } from './Doc/cambios/cambios.component';
 import { OrdenesdetrabajoComponent } from './Doc/ordenesdetrabajo/ordenesdetrabajo.component';
@@ -18,6 +17,7 @@ import { MovilidadComponent } from './Doc/movilidad/movilidad.component';
 import { ProblemasComponent } from './Doc/problemas/problemas.component';
 import { ConocimientosComponent } from './Doc/conocimientos/conocimientos.component';
 import { RutinasMantenimientoComponent } from './Doc/rutinas-mantenimiento/rutinas-mantenimiento.component';
+import { SolicitudesServiciosComponent } from './Doc/solicitudes-servicios/solicitudes-servicios.component';
 
 export const routes: Routes = [
     {path: '',component: InicioComponent},
@@ -60,7 +60,12 @@ export const routes: Routes = [
     {path: 'doc/Cambios/index', component: CambiosComponent, data: {renderMode: 'client', id:'index'}},
     {path: 'doc/Cambios/CerrarCambio', component: CambiosComponent, data: {renderMode: 'client', id:'CerrarCambio'}},
     {path: 'doc/Cambios/CrearCambio', component: CambiosComponent, data: {renderMode: 'client', id:'CrearCambio'}},
+    {path: 'doc/Cambios/CalendarioCambios', component: CambiosComponent, data: {renderMode: 'client', id:'CalendarioCambios'}},
 
+    {path: 'doc/SolicitudServicio/index', component: SolicitudesServiciosComponent, data: {renderMode: 'client', id:'index'}},
+    {path: 'doc/SolicitudServicio/Categorias', component: SolicitudesServiciosComponent, data: {renderMode: 'client', id:'Categorias'}},
+    {path: 'doc/SolicitudServicio/SolicitudServicio', component: SolicitudesServiciosComponent, data: {renderMode: 'client', id:'SolicitudServicio'}},
+    {path: 'doc/SolicitudServicio/ConsultaPeticiones', component: SolicitudesServiciosComponent, data: {renderMode: 'client', id:'ConultaPeticiones'}},
 
     {path: 'doc/OrdenesTrabajo/index', component: OrdenesdetrabajoComponent, data: {renderMode: 'client', id:'index'}},
     {path: 'doc/OrdenesTrabajo/CrearTareaWO', component: OrdenesdetrabajoComponent, data: {renderMode: 'client', id:'CrearTareaWO'}},
@@ -90,6 +95,7 @@ export const routes: Routes = [
     {path: 'doc/Incidentes/SLAti', component: IncidentesComponent, data: {renderMode: 'client', id:'SLAti'}},
     {path: 'doc/Incidentes/AtencionTI', component: IncidentesComponent, data: {renderMode: 'client', id:'AtencionTI'}},
     {path: 'doc/Incidentes/DocumentarTI', component: IncidentesComponent, data: {renderMode: 'client', id:'DocumentarTI'}},
+    {path: 'doc/Incidentes/RelacionINC', component: IncidentesComponent, data: {renderMode: 'client', id:'RelacionINC'}},
     {path: 'doc/Incidentes/EscalarTI', component: IncidentesComponent, data: {renderMode: 'client', id:'EscalarTI'}},
     {path: 'doc/Incidentes/CrearTareaTI', component: IncidentesComponent, data: {renderMode: 'client', id:'CrearTareaTI'}},
     {path: 'doc/Incidentes/CerrarTI', component: IncidentesComponent, data: {renderMode: 'client', id:'CerrarTI'}},
