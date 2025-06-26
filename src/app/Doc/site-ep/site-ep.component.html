@@ -1,1 +1,380 @@
-<p>site-ep works!</p>
+<app-navbar></app-navbar>
+<app-menu-documentacion></app-menu-documentacion>
+<section class="Contenido">
+    <app-nav-doc></app-nav-doc>
+    <div [ngSwitch]="pageId">
+        <ng-container *ngSwitchCase="'SiteEP_AccesoDWP-Remedy'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>Acceder desde DWP - Remedy Tradicional</h1> <!-- Encabezado -->
+                        <p>
+                            A continuaci&oacute;n se muestra la forma de acceder a SITE-EP desde DWP - Remedy Tradicional.</p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Instrucciones</strong>
+                                    <ol>
+                                        <li>
+                                            Desde el dispositivo ingresar a la direcci&oacute;n <strong><a
+                                                    href="https://remedycloudamx-rsso.onbmc.com/rsso/start">https://remedycloudamx-rsso.onbmc.com/rsso/start</a></strong>.
+                                        </li>
+                                        <li>
+                                            La p&aacute;gina mostrar&aacute; un formulario de inicio de sesi&oacute;n, escribir
+                                            usuario y contraseña y presionar el botón &quot;<b>Iniciar sesión</b>&quot;.
+                                        </li>
+                                        <li>
+                                            Una vez se ha iniciado sesi&oacute;n, ser&aacute; redirigido a DWP en donde se
+                                            presentan cuatro opciones Remedy Cloud, Remedy
+                                            Tradicional, Preguntas Frecuentes y Aplicaciones M&oacute;viles, dar clic en
+                                            <b>Remedy Tradicional</b>, con lo anterior se navegará a Remedy.
+                                        </li>
+        
+                                        <li>
+                                            Una vez que se encuentra en Remedy, dar clic en el men&uacute; <b>Aplicaciones</b>,
+                                            que se encuentra en la parte izquierda de la p&aacute;gina, esto desplegar&aacute;
+                                            un conjunto de opciones.
+                                        </li>
+        
+        
+                                        <li>
+                                            Mover el cursor a la opci&oacute;n <b>Accesos directos</b>, para que se muestre el
+                                            sub men&uacute; y dar clic en la opci&oacute;n <b>Site EP</b>.
+                                        </li>
+                                    </ol>
+                                </td>
+                                <td valign="middle"><video src="Site-EP/SITE EP - Acceso por DWP-Remedy.mp4" width="600"
+                                        height="400" autoplay controls loop></video>
+                                </td>
+                            </tr>
+        
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/SiteEP/SiteEP_AccesoHelix-ITSM">Acceder desde Helix ITSM</a></li>
+        
+                        </ul>
+                    </header> <!-- Termina el texto principal --><!-- Secci&oacute;n 1 --><!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+        </ng-container>
+        
+        <ng-container *ngSwitchCase="'SiteEP_AccesoHelix-ITSM'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>Acceder desde Helix ITSM</h1> <!-- Encabezado -->
+                        <p>
+                            A continuaci&oacute;n se muestra la forma de acceder a SITE-EP desde Helix ITSM.
+                        </p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Instrucciones</strong>
+                                    <ol>
+                                        <li>
+                                            Desde el dispositivo ingresar a la direcci&oacute;n <strong><a
+                                                    href="https://remedycloudamx-rsso.onbmc.com/rsso/start">https://remedycloudamx-rsso.onbmc.com/rsso/start</a></strong>.
+                                        </li>
+                                        <li>
+                                            La p&aacute;gina mostrar&aacute; un formulario de inicio de sesi&oacute;n, escribir
+                                            usuario y contraseña y presionar el bot&oacute;n &quot;<b>Iniciar sesión</b>&quot;.
+                                        </li>
+                                        <li>
+                                            Una vez se ha iniciado sesi&oacute;n, ser&aacute; redirigido a BMC Helix ITSM,
+                                            ah&iacute; encontrar&aacute; un men&uacute; que presenta las opciones ITSM, Panel,
+                                            Consola, Calendario, Registrador Inteligente, Crear Nuevo y M&aacute;s, arrastrar el
+                                            cursor y dar clic en <b>M&aacute;s</b>, con lo anterior se desplegar&aacute;n nuevas
+                                            opciones.
+                                        </li>
+                                        <li>
+                                            Encontrar&aacute; la opci&oacute;n que dice <b>Site EP</b>, arrastrar el cursor y
+                                            dar clic en dicha opci&oacute;n para acceder a la p&aacute;gina.
+                                        </li>
+                                    </ol>
+                                </td>
+                                <td valign="middle"><video src="Site-EP/SITE EP - Acceso por Helix ITSM.mp4" width="600"
+                                        height="400" autoplay controls loop></video>
+                                </td>
+                            </tr>
+        
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li>
+                                <a routerLink="/doc/SiteEP/SiteEP_AccesoDWP-Remedy">Acceder desde DWP - Remedy Tradicional</a>
+                            </li>
+        
+                        </ul>
+                    </header> <!-- Termina el texto principal --><!-- Secci&oacute;n 1 --><!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+        </ng-container>
+
+        <!---------------- PAGINA: SITE-EP Crear CI ----------------->
+        <ng-container *ngSwitchCase="'SiteEP_CrearCI'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>SITE EP - Creaci&oacute;n de CI's</h1> <!-- Encabezado -->
+                        <p>
+                            A continuaci&oacute;n se muestra la forma de crear CI's.</p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Instrucciones</strong>
+                                    <ol>
+                                        <li>
+                                            Al ingresar a SITE-EP se nos mostrar&aacute; un bot&oacute;n que contiene la descripci&oacute;n &quot;<b>+ Crear nuevo</b>&quot;, al hacer clic en &eacute;l se
+                                            mostrar&aacute; el formulario a llenar.
+                                        </li>
+                                        <li>
+                                            Colocar el Identificador del Sitio.
+                                        </li>
+                                        <li>
+                                            Seleccionar una Compañ&iacute;a (<b>AMERICA MOVIL</b>, <b>BMCOpsMonitoring</b>, <b>CLARO ARGENTINA</b>, <b>CLARO PUERTO RICO</b>, <b>TELCEL</b>).
+                                        </li>
+                                        <li>
+                                            Especificar una Regi&oacute;n, se mostrar&aacute;n las regiones elegibles de acuerdo con la Compan&iacute;a seleccionada. Se puede escribir
+                                            el nombre de la regi&oacute;n para filtrar a&uacute;n m&aacute;s las opciones.
+                                        </li>
+                                        <li>
+                                            Elegir una Tecnolog&iacute;a de la lista desplegable.
+                                        </li>
+                                        <li>
+                                            Escribir el Nombre del Sitio.
+                                        </li>
+                                        <li>
+                                            Para llenar el campo "Sitio Conectado a" se puede dar clic al bot&oacute;n &quot;<b>Buscar Sitio</b>&quot;, al hacerlo se mostrar&aacute; una ventana
+                                            que permitir&aacute; elegir una de las opciones, adicionalmente la ventana cuenta con un campo de b&uacute;squeda que contiene la
+                                            descripción &quot;<b>Buscar</b>&quot;, en dicho campo se pueden escribir palabras para filtrar las opciones y elegir m&aacute;s r&aacute;pido. Para
+                                            elegir el "Sitio Conectado a" se debe marcar el radio button asociado a la opción y dar clic en el botón "Seleccionar".
+                                        </li>
+                                        <li>
+                                            Elegir el Tipo de Sitio de la lista desplegable.
+                                        </li>
+                                        <li>
+                                            Al desplazarnos hacia abajo de la p&aacute;gina, se encontrar&aacute;n tres pestañas: Datos Generales, Historial y Sistem Fields,
+                                            seleccionar la pestaña <b>Datos Generales</b>.
+                                        </li>
+                                        <li>
+                                            En la sección &quot;<b>Atributos del sitio</b>&quot; validar la Prioridad del Sitio, y en la sección &quot;<b>Categor&iacute;as de Producto</b>&quot; validar
+                                            cada una de las categor&iacute;as (1, 2 y 3).
+                                        </li>
+                                        <li>
+                                            Al final de la p&aacute;gina aparece un bot&oacute;n con la descripción &quot;<b>+ Crear</b>&quot;, al hacer clic en &eacute;l, cuando los campos se han
+                                            rellenado de manera correcta, se crea el CI y aparece un mensaje que indica que el CI se ha guardado correctamente.
+                                        </li>
+                                    </ol>
+                                </td>
+                                <td valign="middle"><video src="Site-EP/SITE EP - Creación de CI's.mp4" width="600" height="400"
+                                        autoplay controls loop></video>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/SiteEP/SiteEP_BuscarCI">B&uacute;squeda de CI's</a></li>
+                            <li><a routerLink="/doc/SiteEP/SiteEP_ModificarCI">Modificaci&oacute;n de CI's</a></li>
+                            <li><a routerLink="/doc/SiteEP/SiteEP_ReportesCI">Reportes de CI's</a></li>
+                        </ul>
+                    </header> <!-- Termina el texto principal --><!-- Secci&oacute;n 1 --><!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+        </ng-container>
+
+        <!---------------- PAGINA: SITE-EP Buscar CI ---------------->
+        <ng-container *ngSwitchCase="'SiteEP_BuscarCI'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>SITE EP - B&uacute;squeda de CI's</h1> <!-- Encabezado -->
+                        <p>
+                            A continuación se muestra la forma de realizar la b&uacute;squeda CI's.
+                        </p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Instrucciones</strong>
+                                    <ol>
+                                        <li>
+                                            Al ingresar a SITE-EP se nos mostrar&aacute; un campo de b&uacute;squeda, en el cual, al hacer clic sobre &eacute;l, escribir lo que se desea buscar y presionar la tecla enter o el bot&oacute;n con el &iacute;cono de una lupa, despliega los resultados de b&uacute;squeda. Se trata de una funcionalidad vers&aacute;til, pues al escribir una Regi&oacute;n, Identificador del Sitio, Tecnolog&iacute;a, o cualquier otro valor, la b&uacute;squeda muestra las coincidencias en todas las columnas.
+                                        </li>
+                                        <li>
+                                            En la p&aacute;gina hay una opci&oacute;n que dice &quot;<b>Filtrar</b>&quot;, que como su nombre lo indica, permite delimitar a&uacute;n m&aacute;s los resultados
+                                            mostrados, para aplicar un filtro hay que acercar el cursor a &eacute;sta opci&oacute;n y dar clic en ella, al hacerlo se despliega un
+                                            menú que permite seleccionar las columnas por la que se desea filtrar, una vez que se selecciona una columna, se debe
+                                            escribir el valor que se desea usar como filtro y presionar <b>enter</b> para agregar el t&eacute;rmino a los filtros seleccionados,
+                                            se pueden agregar tantos filtros como se desee. Cuando se han especificado todos los filtros se debe presionar el botón
+                                            &quot;<b>Aplicar filtros</b>&quot;, e inmediatamente se mostrar&aacute;n los resultados.
+                                        </li>
+                                        <li>
+                                            Las funcionalidades de b&uacute;squeda y filtro se pueden usar al mismo tiempo.
+                                        </li>
+                                        <li>
+                                            Imaginemos el siguiente escenario, se han creado dos filtros, el primero es Tipo de Sitio: NODO, el segundo es ESTATUS:
+                                            OPERANDO, y se desea tener un filtro que muestre todos los nodos que se encuentran operando, para ello hay que acercar
+                                            el cursor y dar clic en el bot&oacute;n &quot;<b>Guardar</b>&quot;, a continuaci&oacute;n, se desplegar&aacute; un campo que
+                                            pedir&aacute; un nombre para el filtro personalizado, una vez especificado el nombre del filtro, se debe presionar en la
+                                            opci&oacute;n &quot;<b>Guardar</b>&quot;, con lo anterior se ha creado un filtro personalizado que se puede usar en cualquier momento. &Eacute;ste filtro se puede editar para a&ntilde;adir m&aacute;s filtros y
+                                            delimitar m&aacute;s los resultados.
+                                        </li>
+                                    </ol>
+                                </td>
+                                <td valign="middle"><video src="Site-EP/SITE EP - Busqueda de CI's.mp4" width="600" height="400" autoplay
+                                        controls loop></video>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/SiteEP/SiteEP_CrearCI">Creaci&oacute;n de CI's</a></li>
+                            <li><a routerLink="/doc/SiteEP/SiteEP_ModificarCI">Modificaci&oacute;n de CI's</a></li>
+                            <li><a routerLink="/doc/SiteEP/SiteEP_ReportesCI">Reportes de CI's</a></li>
+                        </ul>
+                    </header> <!-- Termina el texto principal --><!-- Secci&oacute;n 1 --><!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+        </ng-container>
+
+        <!-------------- PAGINA: SITE-EP Modificar CI --------------->
+        <ng-container *ngSwitchCase="'SiteEP_ModificarCI'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>SITE EP - Modificaci&oacute;n de CI's</h1> <!-- Encabezado -->
+                        <p>
+                            A continuación se muestra la forma de realizar la modificaci&uacute;n CI's.
+                        </p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Instrucciones</strong>
+                                    <ol>
+                                        <li>
+                                            Al ingresar a SITE-EP se nos mostrar&aacute; una tabla con una lista de resultados, para modificar un CI, hay que ubicar
+                                            la columna que dice &quot;<b>Identificador del Sitio</b>&quot;, as&iacute; como la fila que contiene la informaci&oacute;n del
+                                            CI que se desea modificar, cuando ya se han ubicado los dos elementos anteriores, se debe dar clic al identificador del
+                                            sitio, esto abrir&aacute; una nueva pesta&ntilde;a con la informaci&oacute;n del CI, el siguiente paso consiste en
+                                            escribir o seleccionar los nuevos valores de los campos, cuando ya se han realizado todas las modificaciones deseadas,
+                                            hay que desplazarse hasta abajo del formulario y presionar el bot&oacute;n con el &iacute;cono de un l&aacute;piz que
+                                            dice &quot;<b>Modificar</b>&quot;, una vez que se guardan los cambios, aparece un mensaje que le indica al usuario que las
+                                            modificaciones se guardaron correctamente.
+                                        </li>
+                                        <li>
+                                            Adicionalmente, es posible llevar a cabo una modificaci&oacute;n masiva de CI&rsquo;s, para ello, en la tabla que
+                                            presenta los resultados, en la parte izquierda de cada registro hay un checkbox (columna &quot;<b>Actions</b>&quot;), al marcar
+                                            dicho checkbox en los registros que se desean modificar, aparece una opci&oacute;n que dice &quot;<b>Update Site-EP
+                                            Field</b>&quot;, hay que arrastrar el cursor y dar clic en esa opci&oacute;n, al hacerlo aparece un formulario que pone el
+                                            nombre de cada columna de la tabla y campos para escribir o seleccionar el valor nuevo, por ejemplo, aparece la columna
+                                            &quot;Region&quot; y abajo una lista que permite especificar la regi&oacute;n, una vez que se han realizado las
+                                            modificaciones deseadas, hay que ir a la parte inferior del formulario y dar clic en el bot&oacute;n &quot;<b>Save</b>&quot;,
+                                            lo cual cierra el formulario, si los cambios no se ven reflejados, se puede presionar el bot&oacute;n de recarga que
+                                            est&aacute; a lado del bot&oacute;n &quot;Filtrar&quot;.
+                                        </li>
+                                    </ol>
+                                </td>
+                                <td valign="middle"><video src="Site-EP/SITE EP - Modificación de CI's.mp4" width="600" height="400" autoplay
+                                        controls loop></video>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/SiteEP/SiteEP_CrearCI">Creaci&oacute;n de CI's</a></li>
+                            <li><a routerLink="/doc/SiteEP/SiteEP_BuscarCI">B&uacute;squeda de CI's</a></li>
+                            <li><a routerLink="/doc/SiteEP/SiteEP_ReportesCI">Reportes de CI's</a></li>
+                        </ul>
+                    </header> <!-- Termina el texto principal --><!-- Secci&oacute;n 1 --><!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'SiteEP_ReportesCI'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <!-- Titulo del documento y texto principal-->
+                        <h1>SITE EP - Reportes de CI's</h1> <!-- Encabezado -->
+                        <p>
+                            A continuación se muestra la forma de obtener reportes CI's.
+                        </p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Instrucciones</strong>
+                                    <ol>
+                                        <li>
+                                            Al ingresar a SITE-EP se nos mostrar&aacute; una tabla con una lista de resultados, para exportar los registros a
+                                            formato CSV, en la parte izquierda de cada registro hay un checkbox (columna &quot;<b>Actions</b>&quot;), es necesario marcar
+                                            el checkbox (haciendo clic sobre &eacute;l) de los registros que se desean exportar, una vez que ya se encuentran
+                                            marcados, en la parte superior de la tabla, hay un bot&oacute;n con un &iacute;cono de un archivo que tiene una flecha
+                                            hacia arriba y que dice &quot;<b>Exportar</b>&quot;, cuando se presiona dicho bot&oacute;n, se despliega un men&uacute; que
+                                            ofrece dos opciones &quot;<b>Exportar todas las filas</b>&quot; y &quot;<b>Exportar las filas seleccionadas</b>&quot;, al elegir una
+                                            de esas opciones se descarga el archivo con los registros en formato CSV.
+                                        </li>
+                                        <li>
+                                            En la parte superior de la p&aacute;gina se encuentra un men&uacute; con las opciones &quot;SITE-EP
+                                                Console&quot;, &quot;Ubicaciones&quot;, &quot;Site-EP Administraci&oacute;n&quot; y
+                                            &quot;Reportes&quot;, al acercar el cursor y dar clic en &quot;<b>Reportes</b>&quot;, se despliega un men&uacute;
+                                            con las opciones &quot;Reporte Site-EP Dashboards&quot; y &quot;Reporte Ubicaciones Dashboards&quot;, al
+                                            seleccionar la opci&oacute;n &quot;<b>Reporte Site-EP Dashboards</b>&quot; se abre una nueva pesata&ntilde;a en donde se
+                                            presentan los registros, botones y campos que permiten aplicar filtros para delimitar los registros a exportar, una vez
+                                            que se han especificado los filtros, en la parte superior derecha de la pantalla hay un bot&oacute;n que dice
+                                            &quot;<b>Share</b>&quot; y al presionarlo se muestra una peque&ntilde;a ventana que ofrece tres opciones
+                                            &quot;<b>Link</b>&quot;, &quot;<b>Export</b>&quot; y &quot;<b>Download</b>&quot;, hay que elegir la opci&oacute;n
+                                            &quot;<b>Download</b>&quot;, &eacute;sta opci&oacute;n permite guardar los registros en tres formatos: PDF, Excel (XLSX)
+                                            y CSV, se debe elegir la opci&oacute;n preferida y posteriormente hacer clic en el bot&oacute;n de descarga.
+                                        </li>
+                                        <li>
+                                            Con un solo clic es posible quitar todos los filtros que se aplicaron, para ello hay que localizar el bot&oacute;n que
+                                            tiene el &iacute;cono &quot;<b>&#x2304;</b>&quot; que se encuentra a lado del bot&oacute;n &quot;<b>Share</b>&quot;,
+                                            al hacer clic en &eacute;l, aparece un texto que dice &quot;<b>Reset filters</b>&quot;, cuando se da clic en esa
+                                            opci&oacute;n, todos los filtros que se hab&iacute;an aplicado son removidos, aparece el mensaje &quot;<b>Personalized
+                                                data removed</b>&quot;, se recarga la p&aacute;gina y se muestran de nuevo todos los registros.
+                                        </li>
+                                        <li>
+                                            Adicionalmente, es posible filtrar por los valores que aparecen en una columna, para ello hay que ubicar la columna en
+                                            donde se desea filtrar, a la derecha hay un bot&oacute;n que contiene un &iacute;cono de un embudo apuntando hacia
+                                            abajo, hay que hacer clic en el bot&oacute;n y aparecer&aacute; una peque&ntilde;a ventana con los valores que se
+                                            encuentran en esa columna, se debe marcar el checkbox del valor por el que se desea filtrar y presionar
+                                            &quot;<b>Ok</b>&quot;, al hacerlo &uacute;nicamente se mostrar&aacute;n los registros que tienen el valor o valores
+                                            seleccionados en la columna especificada.
+                                            Si se desean eliminar los filtros de una columna, nuevamente hay que dar clic en el bot&oacute;n que contiene un
+                                            &iacute;cono de un embudo apuntando hacia abajo, buscar la opci&oacute;n que dice &quot;<b>Clear filter</b>&quot; y dar
+                                            clic en ella.
+                                        </li>
+                                        <li>
+                                            El n&uacute;mero m&aacute;ximo de elementos que se pueden extraer en el reporte para dashboards es de <b>10000</b> registros.
+                                        </li>
+                                    </ol>
+                                </td>
+                                <td valign="middle"><video src="Site-EP/SITE EP - Reportes de CI's.mp4" width="600" height="400" autoplay
+                                        controls loop></video>
+                                </td>
+                            </tr>
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/SiteEP/SiteEP_CrearCI">Creaci&oacute;n de CI's</a></li>
+                            <li><a routerLink="/doc/SiteEP/SiteEP_BuscarCI">B&uacute;squeda de CI's</a></li>
+                            <li><a routerLink="/doc/SiteEP/SiteEP_ModificarCI">Modificaci&oacute;n de CI's</a></li>
+                        </ul>
+                    </header> <!-- Termina el texto principal --><!-- Secci&oacute;n 1 --><!-- Secci&oacute;n 2 -->
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchDefault>
+            <h2>Página no encontrada</h2>
+        </ng-container>
+    </div>
+</section>

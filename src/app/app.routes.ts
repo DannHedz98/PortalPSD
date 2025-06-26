@@ -18,6 +18,7 @@ import { MovilidadComponent } from './Doc/movilidad/movilidad.component';
 import { ProblemasComponent } from './Doc/problemas/problemas.component';
 import { ConocimientosComponent } from './Doc/conocimientos/conocimientos.component';
 import { RutinasMantenimientoComponent } from './Doc/rutinas-mantenimiento/rutinas-mantenimiento.component';
+import { SiteEPComponent } from './Doc/site-ep/site-ep.component';
 
 export const routes: Routes = [
     {path: '',component: InicioComponent},
@@ -83,6 +84,14 @@ export const routes: Routes = [
     {path: 'doc/ModeloEstandar/PIntervenciones', component: ModeloEstandarComponent, data: {renderMode: 'client', id:'PIntervenciones'}},
     {path: 'doc/ModeloEstandar/PPreventivo', component: ModeloEstandarComponent, data: {renderMode: 'client', id:'PPreventivo'}},
     {path: 'doc/ModeloEstandar/PRecibir', component: ModeloEstandarComponent, data: {renderMode: 'client', id:'PRecibir'}},
+
+    { path: 'doc/SiteEP/SiteEP_AccesoDWP-Remedy', component: SiteEPComponent, data: { renderMode: 'client', id: 'SiteEP_AccesoDWP-Remedy' } },
+    { path: 'doc/SiteEP/SiteEP_AccesoHelix-ITSM', component: SiteEPComponent, data: { renderMode: 'client', id: 'SiteEP_AccesoHelix-ITSM' } },
+    { path: 'doc/SiteEP/SiteEP_CrearCI', component: SiteEPComponent, data: { renderMode: 'client', id: 'SiteEP_CrearCI' } }, 
+    { path: 'doc/SiteEP/SiteEP_BuscarCI', component: SiteEPComponent, data: { renderMode: 'client', id: 'SiteEP_BuscarCI' } },
+    { path: 'doc/SiteEP/SiteEP_ModificarCI', component: SiteEPComponent, data: { renderMode: 'client', id: 'SiteEP_ModificarCI' } },
+    { path: 'doc/SiteEP/SiteEP_ReportesCI', component: SiteEPComponent, data: { renderMode: 'client', id: 'SiteEP_ReportesCI' } },
+    
 
 
     {path: 'doc/Incidentes/index', component: IncidentesComponent, data: {renderMode: 'client', id:'index'}},

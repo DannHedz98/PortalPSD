@@ -225,9 +225,13 @@ export class MenuDocumentacionComponent {
         {
           name: 'SITE-EP', url: '',
           subItems: [
-            { name: 'Creacion de un CI', url: 'https://www.youtube.com/watch?v=456' },
-            { name: 'Consulta de un CI', url: 'https://www.youtube.com/watch?v=456' },
-            { name: 'Puesta en operacion de radiobases 2G y 3G', url: 'https://www.youtube.com/watch?v=456' },
+            { name: 'Acceso por DWP-Remedy', url: 'SiteEP/SiteEP_AccesoDWP-Remedy' },
+            { name: 'Acceso por Helix ITSM', url: 'SiteEP/SiteEP_AccesoHelix-ITSM' },
+            { name: `Creación de CI's`, url: 'SiteEP/SiteEP_CrearCI' },
+            { name: `Búsqueda de CI's`, url: 'SiteEP/SiteEP_BuscarCI' },
+            { name: `Modificación de CI's`, url: 'SiteEP/SiteEP_ModificarCI' },
+            { name: `Reportes de CI's`, url: 'SiteEP/SiteEP_ReportesCI' },
+            /*{ name: 'Puesta en operacion de radiobases 2G y 3G', url: 'https://www.youtube.com/watch?v=456' },
             { name: 'Puesta en operacion de radiobases 4G', url: 'https://www.youtube.com/watch?v=456' },
             { name: 'Puesta en operacion de radiobases 2G y 3G por autoentrega', url: 'https://www.youtube.com/watch?v=456' },
             { name: 'Puesta en operacion de radiobases 4G por autoentrega', url: 'https://www.youtube.com/watch?v=456' },
@@ -237,7 +241,7 @@ export class MenuDocumentacionComponent {
             { name: 'Modificacion de atributos de un CI durante el estado OPERANDO', url: 'https://www.youtube.com/watch?v=456' },
             { name: 'Solicitar modificacion de un CI a travez del servicio en la nube (SRM)', url: 'https://www.youtube.com/watch?v=456' },
             { name: 'Generacion de ATP para liberacion de alarmas', url: 'https://www.youtube.com/watch?v=456' },
-            { name: 'Eliminacion de un CI', url: 'https://www.youtube.com/watch?v=456' }
+            { name: 'Eliminacion de un CI', url: 'https://www.youtube.com/watch?v=456' }*/
           ]
         }
       ]

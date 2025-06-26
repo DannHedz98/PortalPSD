@@ -65,6 +65,7 @@
 .sidebar ul ul li {
   padding: 3px 0;
   border-top: none;
+  border: 1px solid transparent; /* Evita los saltos */
 }
 
 /* Estilo de los enlaces del submenú */
