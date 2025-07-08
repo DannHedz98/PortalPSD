@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-ordenesdetrabajo',
-  imports: [NavbarComponent, NavDocComponent, MenuDocumentacionComponent, CommonModule],
+  imports: [NavbarComponent, NavDocComponent, MenuDocumentacionComponent, CommonModule, RouterLink],
   templateUrl: './ordenesdetrabajo.component.html',
   styleUrls: ['../Estilos-Globales.css']
 })

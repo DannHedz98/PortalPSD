@@ -65,6 +65,7 @@
 .sidebar ul ul li {
   padding: 3px 0;
   border-top: none;
+  border: 1px solid transparent; /* Evita los saltos */
 }
 
 /* Estilo de los enlaces del submenú */
@@ -114,7 +115,7 @@ span.open {
   top: 280px;
   left: 0px;
   width: 130px;
-  height: 30px;
+  /* height: 30px; */
   transform: rotate(-90deg);
   transform-origin: left top;
   background-color: #020025;

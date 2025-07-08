@@ -1,6 +1,6 @@
-#summary,
+/* #summary, */
 .mainContent {
-    padding: 1rem;
+    padding: 16px;
     max-width: 100%;
     box-sizing: border-box;
     font-family: sans-serif;
@@ -8,8 +8,8 @@
 
 /* --------- */
 .Contenido {
-    padding-left: 60px;
-    padding-right: 50px;
+    padding-left: 30px;
+    padding-right: 20px;
     padding-top: 15px;
     height: 85vh;
     overflow-y: auto;
@@ -67,13 +67,13 @@ td {
     margin-bottom: 20px;
     background-color: #050046;
     border-radius: 10px;
-    height: 400px;
-    padding: 25px 20px 20px 20px;
-    display: inline-block;
-    width: auto;
-    height: auto;
+    /* height: 400px; */
+    padding: 25px 20px;
+    display: block;
+    width: 100%;
     overflow: visible;
     align-content: center;
+    box-sizing: border-boxs;
 }
 
 .introduction h3 {
@@ -108,26 +108,31 @@ td {
 
 .intro-container {
     display: flex;
+    /* flex-direction: row; */
+    /* align-items: flex-start; */
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    /* justify-content: space-between; */
 }
 
 .video-section {
     flex: 1 1 60%;
-    min-width: 350px;
-    padding-top: 50px;
+    /* box-sizing: border-box; */
+    /* min-width: 350px; */
+    padding-top: 15px;
 }
 
 .index-section {
-    flex: 1 1 30%;
-    min-width: 250px;
+    /* box-sizing: border-box; */
+    flex: 1 1 300px;
+    /* min-width: 250px; */
 }
 
 .button-as-link {
     background: none;
     border: none;
     color: #00aaff;
+    text-align: left;
     text-decoration: underline;
     cursor: pointer;
     padding: 4px 0;
@@ -146,22 +151,36 @@ video {
     width: 100%;
     max-width: 750px;
     height: auto;
+    border-radius: 8px;
 }
 
 @media (max-width: 768px) {
     .intro-container {
         flex-direction: column;
     }
+
+    .index-section, .video-section{
+        flex: 1 1 100%;
+    }
 }
 
 @media screen and (max-width: 768px) {
+    .summary {
+        padding: 15px 10px 20px 10px;
+    }
+
+    .mainContent {
+        padding: 4px;
+    }
+
     .tabla {
         display: block;
     }
 
     .tabla tr {
         display: flex;
-        flex-direction: column-reverse; /* ✅ Esto invierte el orden: video arriba */
+        flex-direction: column-reverse;
+        /* ✅ Esto invierte el orden: video arriba */
     }
 
     .tabla td {
@@ -176,15 +195,14 @@ video {
 }
 
 
-/* Solo en pantallas grandes */
 @media screen and (min-width: 769px) {
-    /* Aplica a filas de la tabla donde hay video */
+
     .tabla tr {
-        display: table-row; /* Asegurar que se comporta como tabla */
+        display: table-row;
     }
 
     .tabla tr td:first-child {
-        width: 50%; /* Ajusta este valor según lo que desees */
+        width: 50%;
         vertical-align: top;
     }
 

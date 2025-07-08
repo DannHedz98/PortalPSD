@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../../navbar/navbar.component';
 import { NavDocComponent } from '../nav-doc/nav-doc.component';
+import { NavbarComponent } from '../../navbar/navbar.component';
 import { MenuDocumentacionComponent } from '../../menu-documentacion/menu-documentacion.component';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
 import { RouterLink } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-solicitudes-servicios',
-  imports: [NavbarComponent, NavDocComponent, MenuDocumentacionComponent, CommonModule, RouterLink],
-  templateUrl: './solicitudes-servicios.component.html',
+  selector: 'app-funcionalidad',
+  imports: [NavDocComponent, NavbarComponent, MenuDocumentacionComponent, CommonModule, RouterLink],
+  templateUrl: './funcionalidad.component.html',
   styleUrls: ['../Estilos-Globales.css']
 })
-export class SolicitudesServiciosComponent {
+export class FuncionalidadComponent {
   pageId!: string;
 
   constructor(private route: ActivatedRoute) {

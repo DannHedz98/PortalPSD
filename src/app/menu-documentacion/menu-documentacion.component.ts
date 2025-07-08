@@ -32,21 +32,21 @@ export class MenuDocumentacionComponent {
       url: 'ModeloEstandar/PAccesos',  // URL para la opción principal
       subItems: [
         {
-          name: 'Solicitud de accesos', url: '', 
+          name: 'Solicitud de accesos', url: '',
           subItems: [
             { name: 'Creacion de solicitud ADM', url: 'Accesos/SolicitarAcceso' },
             { name: 'Aprobacion de ADM', url: 'Accesos/AprobarADM' },
-             { name: 'Seguimiento de solicitud', url: 'Accesos/SeguimientoADM' },
-             { name: 'Renovacion de vigencia', url: 'Accesos/RenovacionADM' },
-             { name: 'Cancelar ADMs', url: 'Accesos/CancelarADM' }
+            { name: 'Seguimiento de solicitud', url: 'Accesos/SeguimientoADM' },
+            { name: 'Renovacion de vigencia', url: 'Accesos/RenovacionADM' },
+            { name: 'Cancelar ADMs', url: 'Accesos/CancelarADM' }
           ]
-        //    },
-        //    {
-        //      name: 'Solicitud de acceso COR', url: '', subItems: [
-        //        { name: 'Perfil FO', url: 'Accesos/CreacionCorFO' },
-        //        { name: 'Perfil BO', url: 'Accesos/CreacionCorBO' }
-        //      ]
-       }
+          //    },
+          //    {
+          //      name: 'Solicitud de acceso COR', url: '', subItems: [
+          //        { name: 'Perfil FO', url: 'Accesos/CreacionCorFO' },
+          //        { name: 'Perfil BO', url: 'Accesos/CreacionCorBO' }
+          //      ]
+        }
       ]
     },
 
@@ -80,13 +80,13 @@ export class MenuDocumentacionComponent {
           name: 'Incidentes de TI', url: '',
           subItems: [
             { name: 'Creacion', url: 'Incidentes/CrearTI' },
-             { name: 'Niveles de serivicio', url: 'Incidentes/SLAti' },
+            { name: 'Niveles de serivicio', url: 'Incidentes/SLAti' },
             { name: 'Atencion', url: 'Incidentes/AtencionTI' },
-             { name: 'Documentacion', url: 'Incidentes/DocumentarTI' },
-             { name: 'Escalacion', url: 'Incidentes/EscalarTI' },
-             { name: 'Relacion inc', url: 'Incidentes/RelacionINC' },
-             { name: 'Creacion de tarea(s)', url: 'Incidentes/CrearTareaTI' },
-             { name: 'Cierre', url: 'Incidentes/CerrarTI' }
+            { name: 'Documentacion', url: 'Incidentes/DocumentarTI' },
+            { name: 'Escalacion', url: 'Incidentes/EscalarTI' },
+            { name: 'Relacion inc', url: 'Incidentes/RelacionINC' },
+            { name: 'Creacion de tarea(s)', url: 'Incidentes/CrearTareaTI' },
+            { name: 'Cierre', url: 'Incidentes/CerrarTI' }
           ]
         },
         {
@@ -94,7 +94,7 @@ export class MenuDocumentacionComponent {
             { name: 'Creacion de conocimiento', url: 'Conocimientos/CrearConocimiento' },
             { name: 'Revision y publicacion', url: 'Conocimientos/PublicarConocimiento' },
             { name: 'Solicitud de modificacion', url: 'Conocimientos/SolicitarConocimiento' },
-            { name: 'Modificar conocimiento', url: 'Conocimientos/ModificarConocimiento'}
+            { name: 'Modificar conocimiento', url: 'Conocimientos/ModificarConocimiento' }
           ]
         },
         {
@@ -173,6 +173,24 @@ export class MenuDocumentacionComponent {
     },
 
     {
+      name: 'Funcionalidad',
+      url: 'Funcionalidad/index',
+      subItems: [
+
+        {
+          name: 'Smart-IT', url: '',
+          subItems: [            
+            { name: 'Calendario', url: 'Funcionalidad/Calendario' },
+            { name: 'Consola de Tickets', url: 'Funcionalidad/Consola' },
+            { name: 'Crear nuevo ticket', url: 'Funcionalidad/CrearNuevo' },
+            { name: 'Panel de actividad', url: 'Funcionalidad/Panel' },
+          ]
+        }
+      ]
+    },
+
+
+    {
       name: 'Procesos Preventivo',
       url: 'ModeloEstandar/PPreventivo',
       subItems: [
@@ -192,25 +210,26 @@ export class MenuDocumentacionComponent {
       name: 'Movilidad',
       url: 'Movilidad/index',
       subItems: [
+
+
         {
-          name: 'Smart-IT', url: '',
+          name: 'Smart-IT (Movil)', url: '',
           subItems: [
-            { name: 'Smart-IT', url: 'Movilidad/SmartIt' },
-            { name: 'Instalacion y configuracion', url: 'Movilidad/SmartIt_InstalarConfigurar' },
-            { name: 'Navegacion', url: 'Movilidad/SmartIt_Navegar' },
-            { name: 'Atencion de tareas', url: 'Movilidad/SmartIt_AtenderTarea' },
-            { name: 'Atencion de Ordenes de trabajo', url: 'Movilidad/SmartIt_AtenderWO' },
-            { name: 'Atencion de incidentes', url: 'Movilidad/SmartIt_AtenderINC' }
+            { name: 'Smart-IT', url: 'Movilidad/SmartIt_Movil' },
+            { name: 'Instalacion y configuracion', url: 'Movilidad/SmartIt_Movil_InstalarConfigurar' },
+            { name: 'Navegacion', url: 'Movilidad/SmartIt_Movil_Navegar' },
+            { name: 'Atencion de tareas', url: 'Movilidad/SmartIt_Movil_AtenderTarea' },
+            { name: 'Atencion de Ordenes de trabajo', url: 'Movilidad/SmartIt_Movil_AtenderWO' },
+            { name: 'Atencion de incidentes', url: 'Movilidad/SmartIt_Movil_AtenderINC' }
           ]
         },
         {
-          name: 'DWP',
-          url: '',
+          name: 'DWP (Movil)', url: '',
           subItems: [
-            { name: 'DWP', url: 'Movilidad/DWP' },
-            { name: 'Instalacion y configuracion', url: 'Movilidad/DWP_InstalarConfigurar' },
-            { name: 'Navegacion', url: 'Movilidad/DWP_Navegar' },
-            { name: 'Aprovacion de peticiones', url: 'Movilidad/DWP_Aprueba' },
+            { name: 'DWP', url: 'Movilidad/DWP_Movil' },
+            { name: 'Instalacion y configuracion', url: 'Movilidad/DWP_Movil_InstalarConfigurar' },
+            { name: 'Navegacion', url: 'Movilidad/DWP_Movil_Movil_Navegar' },
+            { name: 'Aprovacion de peticiones', url: 'Movilidad/DWP_Movil_Aprueba' },
             { name: 'Alta de Usuario DWP', url: 'Movilidad/AltaUsuarioDWP' }
           ]
         }
@@ -224,9 +243,13 @@ export class MenuDocumentacionComponent {
         {
           name: 'SITE-EP', url: '',
           subItems: [
-            { name: 'Creacion de un CI', url: 'https://www.youtube.com/watch?v=456' },
-            { name: 'Consulta de un CI', url: 'https://www.youtube.com/watch?v=456' },
-            { name: 'Puesta en operacion de radiobases 2G y 3G', url: 'https://www.youtube.com/watch?v=456' },
+            { name: 'Acceso por DWP-Remedy', url: 'SiteEP/SiteEP_AccesoDWP-Remedy' },
+            { name: 'Acceso por Helix ITSM', url: 'SiteEP/SiteEP_AccesoHelix-ITSM' },
+            { name: `Creación de CI's`, url: 'SiteEP/SiteEP_CrearCI' },
+            { name: `Búsqueda de CI's`, url: 'SiteEP/SiteEP_BuscarCI' },
+            { name: `Modificación de CI's`, url: 'SiteEP/SiteEP_ModificarCI' },
+            { name: `Reportes de CI's`, url: 'SiteEP/SiteEP_ReportesCI' },
+            /*{ name: 'Puesta en operacion de radiobases 2G y 3G', url: 'https://www.youtube.com/watch?v=456' },
             { name: 'Puesta en operacion de radiobases 4G', url: 'https://www.youtube.com/watch?v=456' },
             { name: 'Puesta en operacion de radiobases 2G y 3G por autoentrega', url: 'https://www.youtube.com/watch?v=456' },
             { name: 'Puesta en operacion de radiobases 4G por autoentrega', url: 'https://www.youtube.com/watch?v=456' },
@@ -236,7 +259,7 @@ export class MenuDocumentacionComponent {
             { name: 'Modificacion de atributos de un CI durante el estado OPERANDO', url: 'https://www.youtube.com/watch?v=456' },
             { name: 'Solicitar modificacion de un CI a travez del servicio en la nube (SRM)', url: 'https://www.youtube.com/watch?v=456' },
             { name: 'Generacion de ATP para liberacion de alarmas', url: 'https://www.youtube.com/watch?v=456' },
-            { name: 'Eliminacion de un CI', url: 'https://www.youtube.com/watch?v=456' }
+            { name: 'Eliminacion de un CI', url: 'https://www.youtube.com/watch?v=456' }*/
           ]
         }
       ]
@@ -253,7 +276,7 @@ export class MenuDocumentacionComponent {
 
   toggleSubmenu(index: number, event: Event) {
     if (this.openSubmenuIndex === index) {
-      event.preventDefault(); 
+      event.preventDefault();
       this.openSubmenuIndex = null;
     } else {
       this.openSubmenuIndex = index;

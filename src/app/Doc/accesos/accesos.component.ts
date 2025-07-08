@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-accesos',
-  imports: [NavDocComponent, NavbarComponent, MenuDocumentacionComponent, CommonModule],
+  imports: [NavDocComponent, NavbarComponent, MenuDocumentacionComponent, CommonModule, RouterLink],
   templateUrl: './accesos.component.html',
   styleUrls: ['../Estilos-Globales.css']
 })

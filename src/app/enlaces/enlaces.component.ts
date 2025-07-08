@@ -21,9 +21,9 @@ export class EnlacesComponent {
       text: 'Contenido de Helix SaaS',
       text2: 'Enlaces relacionados:',
       links: [
-        { label: 'Acceso', url: 'https://remedycloudamx-rsso.onbmc.com/rsso/start' },
-        { label: 'DWP', url: 'https://dwp.oymcloud.americamovil.com/dwp/app/#/account/login?returnUrl=%2F' },
-        { label: 'Smart IT', url: 'https://remedycloudamx-rsso.onbmc.com/rsso/start' }
+        { label: 'Acceso', url: 'https://remedycloudamx.onbmc.com/arsys/' },
+        { label: 'DWP', url: 'https://remedycloudamx-dwp.onbmc.com/dwp/app/#/' },
+        { label: 'Smart IT', url: 'https://remedycloudamx-smartit.onbmc.com/smartit/app/#/' }
       ]
     },
     'IDMCloud': {

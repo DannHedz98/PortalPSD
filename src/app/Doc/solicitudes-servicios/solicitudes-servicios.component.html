@@ -28,101 +28,352 @@
                         <h3>Ciclo de vida de las solicitudes</h3>
 
 
-                            <p>
-                                Las solicitudes tienen un ciclo de vida que contiene los siguientes estados:
-                            </p>
-                            <table cellpadding="3" cellspacing="0" >
-                                <thead>
-                                    <tr class="TableSubHeadingColor header" >
-                                        <td>Estado</td>
-                                        <td>Descripci&oacute;n</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="TableRowColor">
-                                        <td><code><span class="code_name">Submiitted</span></code></td>
-                                        <td>La solicitud ha sido creada, pero no ha sido enviada todav&iacute;a.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code><span class="code_name">Approval</span></code></td>
-                                        <td>La solicitud ha sido enviada y est&aacute; en revisi&oacute;n.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code><span class="code_name">In Progress</span></code></td>
-                                        <td>El trabajo de la solicitud ha sido temporalmente suspendido. Es necesario
-                                            indicar una raz&oacute;n por la que se encuentra en este estado.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code><span class="code_name">Completed</span></code>
-                                        </td>
-                                        <td>La solicitud ha sido enviada y est&aacute; pendiente de aprobaci&oacute;n.
-                                            La
-                                            solicitud pasar&aacute; a estado &quot;Iniciado&quot; cuando todos los
-                                            aprobadores la hayan aprobado.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code><span class="code_name">Closed</span></code></td>
-                                        <td>Este estado indica que el trabajo planeado ya se ha aprobado para
-                                            implementaci&oacute;n, ya se han propuesto fechas y se han estimado los
-                                            costos.
-                                            Cuando las actividades comiencen el estado cambiar&aacute; a &quot;En
-                                            progreso&quot;.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code><span class="code_name">Cancelled</span></code></td>
-                                        <td>Ha comenzado el trabajo en las actividades planeadas. Cuando todas las
-                                            actividades se terminen el estado cambiar&aacute; a &quot;Completada&quot;.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><code><span class="code_name">Failed</span></code></td>
-                                        <td>La solicitud ha sido completada y todas las actividades han terminado. El
-                                            usuario puede revisar los trabajos realizados. En caso de que el trabajo no
-                                            sea
-                                            de su satisfacci&oacute;n, el usuario puede &quot;Reabrir&quot; la
-                                            solicitud.
-                                        </td>
-                                    </tr>
-                                    <!-- <tr>
-                                        <td><code><span class="code_name">Rechazada</span></code></td>
-                                        <td>Alguno de los aprobadores rechaz&oacute; la solicitud.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code><span class="code_name">Cancelada</span></code></td>
-                                        <td>La solicitud fue cancelada (a lo mejor el usuario se acord&oacute; de su
-                                            password).</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code><span class="code_name">Cerrada</span></code></td>
-                                        <td>La solicitud se ha cerrado si el usuario ha llenado una encuesta (para los
-                                            casos
-                                            que apliquen) o el sistema cerr&oacute; la solicitud (despu&eacute;s de unos
-                                            d&iacute;s el sistema cierra las solicitudes completadas de forma
-                                            autom&aacute;tica).</td>
-                                    </tr> -->
-                                </tbody>
-                            </table>
-
+                        <p>
+                            Las solicitudes tienen un ciclo de vida que contiene los siguientes estados:
+                        </p>
+                        <table cellpadding="3" cellspacing="0">
+                            <thead>
+                                <tr class="TableSubHeadingColor header">
+                                    <td>Estado</td>
+                                    <td>Descripci&oacute;n</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableRowColor">
+                                    <td><code><span class="code_name">Submitted</span></code></td>
+                                    <td>La solicitud ha sido creada, pero no ha sido enviada todav&iacute;a.</td>
+                                </tr>
+                                <tr>
+                                    <td><code><span class="code_name">Approval</span></code></td>
+                                    <td>La solicitud ha sido enviada y fue aprobada para su ejecucion.</td>
+                                </tr>
+                                <tr>
+                                    <td><code><span class="code_name">In Progress</span></code></td>
+                                    <td>Este estado indica que el trabajo planeado ya se ha aprobado para
+                                        implementaci&oacute;n, ya se han propuesto fechas y se han estimado los
+                                        costos.
+                                        Cuando las actividades comiencen el estado cambiar&aacute; a &quot;En
+                                        progreso&quot;.</td>
+                                </tr>
+                                <tr>
+                                    <td><code><span class="code_name">Completed</span></code>
+                                    </td>
+                                    <td>La solicitud ha sido completada y todas las actividades han terminado. El
+                                        usuario puede revisar los trabajos realizados. En caso de que el trabajo no
+                                        sea
+                                        de su satisfacci&oacute;n, el usuario puede &quot;Reabrir&quot; la
+                                        solicitud.</td>
+                                </tr>
+                                <tr>
+                                    <td><code><span class="code_name">Closed</span></code></td>
+                                    <td>La solicitud se ha cerrado si el usuario ha llenado una encuesta (para los casos
+                                        que apliquen) o el sistema cerró la solicitud (después de unos dís el sistema
+                                        cierra las solicitudes completadas de forma automática).</td>
+                                </tr>
+                                <tr>
+                                    <td><code><span class="code_name">Cancelled</span></code></td>
+                                    <td>La solicitud fue cancelada
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code><span class="code_name">Failed</span></code></td>
+                                    <td>La solicitud no activo ningun proceso y no hubo continuidad.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <h2>Guía de uso de DWP</h2>
+                            <div class="sectionWrapper">
+                                <p>En esta sección se listan las principales operaciones migradas de Service Request
+                                    Managment a Digital WorkPlace.</p>
+                                <table cellpadding="3" cellspacing="0">
+                                    <thead>
+                                        <tr class="TableSubHeadingColor" class="header">
+                                            <td></td>
+                                            <td>Operacion</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="TableRowColor">
+                                            <td><code><span class="code_name">Acceso</span></code></td>
+                                            <td><a routerLink="/doc/SolicitudServicio/Acceso">Acceso a DWP</a></td>
+                                        </tr>
+                                        <tr class="TableRowColor">
+                                            <td><code><span class="code_name">Busqueda</span></code></td>
+                                            <td><a routerLink="/doc/SolicitudServicio/Categorias">Examinar
+                                                    categorias</a></td>
+                                        </tr>
+                                        <tr class="TableRowColor">
+                                            <td><code><span class="code_name">Solicitud</span></code></td>
+                                            <td><a routerLink="/doc/SolicitudServicio/SolicitudServicio">Solicitud de un
+                                                    servicio</a></td>
+                                        </tr>
+                                        <tr class="TableRowColor">
+                                            <td><code><span class="code_name">Consulta</span></code></td>
+                                            <td><a routerLink="/doc/SolicitudServicio/ConsultaPeticiones">Consulta de
+                                                    peticiones</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
 
                     </header>
                 </div>
             </div>
         </ng-container>
+
+        <!------------------------------------------- PAGINA: CATEGORIAS ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'Acceso'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h2>BMC ITSM - Digital WorkPlace - Solicitud de accesos</h2>
+
+                        <p><strong>Acceso a nuevas peticiones</strong></p>
+                        <P>Derivado de la migracion hacia Remedy Helix SaaS, varias funcionalidades fueron modificadas
+                            incluyendo la solicitud de servicios.</P>
+                        <p>Para ingresar al nuevo sitio de peticiones siga estos pasos:</p>
+
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <p><strong>Instrucciones:</strong></p>
+                                    <ol>
+                                        <li>Anteriormente la herramienta SRM era la indicada para generar solicitudes
+                                            como
+                                            <b>Alta de accesos</b> o <b>Alta de rutinas de mantenimiento</b> accediendo
+                                            desde Remedy Tradicional. Con la
+                                            migracion a Remedy Helix SaaS, se implementaron las peticiones atraves de <a
+                                                href="https://remedycloudamx-dwp.onbmc.com/dwp/app/#/"
+                                                target="_blank">Digital Work Place</a>. si aun no ha accedido, conocer
+                                            su usuario
+                                            <a routerLink="/doc/Generales/Acceso">aquí</a>.
+                                        </li>
+                                        <li>Al ingresar a la pagina principal, dirigirse a la seccion "Catalogo" ubicada
+                                            en la parte superior de la pantalla.</li>
+                                        <li>Esto abrira un nuevo sitio en el que se ubican todos los servicios
+                                            disponibles en Remedy.</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video
+                                        src="/smartit/PortalPSD/SolicitudServicio/01.SRM a DWP - Acceso.mp4" width="600"
+                                        autoplay controls loop></video></td>
+                            </tr>
+                        </table>
+                        <p><strong>Temas relacionados:</strong></p>
+                        <ul>
+                            <li><a routerLink="/doc/SolicitudServicio/Categorias">Examinar categorias</a></li>
+                            <li><a routerLink="/doc/SolicitudServicio/SolicitudServicio">Solicitud de servicios</a></li>
+                            <li><a routerLink="/doc/SolicitudServicio/ConsultaPeticiones">Consulta de peticiones</a>
+                            </li>
+
+                        </ul>
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
         <!------------------------------------------- PAGINA: CATEGORIAS ------------------------------------------->
 
         <ng-container *ngSwitchCase="'Categorias'">
-            CATEGORIAS
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h2>BMC ITSM - Digital WorkPlace - Solicitud de accesos</h2>
+
+                        <p><strong>Busqueda de servicios y examinar categorias</strong></p>
+                        <P>Derivado de la migracion hacia Remedy Helix SaaS, varias funcionalidades fueron modificadas
+                            incluyendo la solicitud de servicios.</P>
+                        <p>Para conocer los servicios disponibles siga estos pasos:</p>
+
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <p><strong>Instrucciones:</strong></p>
+                                    <ol>
+                                        <li>Anteriormente la herramienta SRM era utilizada para solicitar servicios
+                                            organizados por categorias accediendo desde Remedy Tradicional. Con la
+                                            migracion a Remedy Helix SaaS, el catalogo de sercivios fue modificado a una
+                                            vista mas grafica desde <a
+                                                href="https://remedycloudamx-dwp.onbmc.com/dwp/app/#/"
+                                                target="_blank">Digital Work Place</a>. si aun no ha accedido, conocer
+                                            su usuario
+                                            <a routerLink="/doc/Generales/Acceso">aquí</a>.
+                                        </li>
+                                        <li>Al ingresar a la pagina principal, dirigirse a la seccion "Catalogo" ubicada
+                                            en la parte superior de la pantalla.</li>
+                                        <li>Esto abrira un nuevo sitio en el que se ubican todos los servicios
+                                            disponibles en Remedy.</li>
+                                        <li>La nueva vista de los servicios se encontrara dividida en secciones. Esto
+                                            para facilitar la busqueda e identificacion de los servicios.</li>
+                                        <li>En el caso de no encontrar el servicio requerido en la pantalla principal
+                                            del catalogo, es posible buscarlo por medio de la categoria a la que
+                                            pertenece.
+                                            En la parte superior izquierda de la pantalla hacer clic en "Examinar
+                                            Categorias"
+                                        </li>
+                                        <li>Se desplegara un menu con las categorias y servicios disponibles.</li>
+                                        <li>Al hacer clic en una categoria, apareceran todos los servicios
+                                            pertenecientes a ella. Al hacer clic en uno de ellos, pueden visualizarse
+                                            mas detalles al respecto del servicio y proceder a solicitarlo.</li>
+                                        <li>En el caso de conocer el nombre de la categoria o del servicio, es posible
+                                            hacer una busqueda mas directa por medio de la barra de navegacion.
+                                            Ingresando el nombre del servicio, se mostraran todas las coincidencias
+                                            disponibles para solicitar un servicio o para consultar articulos de
+                                            conocimiento.</li>
+                                        <li>Por ultimo, es posible realizar la busqueda directamente desde la pagina
+                                            principal de Digital WorkPlace, con ayuda de la barra de navegacion.</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video
+                                        src="/smartit/PortalPSD/SolicitudServicio/02.SRM a DWP - Examinar Categorias y Busqueda de servicios.mp4"
+                                        width="600" autoplay controls loop></video></td>
+                            </tr>
+                        </table>
+                        <p><strong>Temas relacionados:</strong></p>
+                        <ul>
+                            <li><a routerLink="/doc/SolicitudServicio/Acceso">Acceso a DWP</a></li>
+                            <li><a routerLink="/doc/SolicitudServicio/SolicitudServicio">Solicitud de servicios</a></li>
+                            <li><a routerLink="/doc/SolicitudServicio/ConsultaPeticiones">Consulta de peticiones</a>
+                            </li>
+
+                        </ul>
+                    </header>
+                </div>
+            </div>
         </ng-container>
+
         <!------------------------------------------- PAGINA: SOLICITUD SERVICIO ------------------------------------------->
 
         <ng-container *ngSwitchCase="'SolicitudServicio'">
-            SOLICITUD SERVICIO
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h2>BMC ITSM - Digital WorkPlace - Solicitud de accesos</h2>
+
+                        <p><strong>Solicitud de servicio</strong></p>
+                        <P>Derivado de la migracion hacia Remedy Helix SaaS, varias funcionalidades fueron modificadas
+                            incluyendo la solicitud de servicios.</P>
+                        <p>Para solicitar un servicio en Remedy siga estos pasos:</p>
+
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <p><strong>Instrucciones:</strong></p>
+                                    <ol>
+                                        <li>Anteriormente la herramienta SRM era la indicada para generar solicitudes de
+                                            servicios accediendo desde Remedy Tradicional. Con la
+                                            migracion a Remedy Helix SaaS, se implementaron las peticiones atraves de <a
+                                                href="https://remedycloudamx-dwp.onbmc.com/dwp/app/#/"
+                                                target="_blank">Digital Work Place</a>. si aun no ha accedido, conocer
+                                            su usuario
+                                            <a routerLink="/doc/Generales/Acceso">aquí</a>.
+                                        </li>
+                                        <li>Al ingresar a la pagina principal, dirigirse a la seccion "Catalogo" ubicada
+                                            en la parte superior de la pantalla.</li>
+                                        <li>Esto abrira un nuevo sitio en el que se ubican todos los servicios
+                                            disponibles en Remedy.</li>
+                                        <li>Localizar el servicio necesario por medio de la pantalla principal, la lista
+                                            de categorias o el buscador
+                                            <ul>
+                                                <li>Pantalla principal</li>
+                                                <li>Menu de categorias</li>
+                                                <li>Buscador</li>
+                                            </ul>
+                                        </li>
+                                        <li>Al localizar el servicio, hacer clic en "Detalles" para conocer una breve
+                                            descripcion del servicio. En el caso de querer solicitar el servicio hacer
+                                            clic en "Pedir ahora".</li>
+                                        <li>Se abrira una nueva pagina que, dependiendo del servicio solicitado,
+                                            mostrara un formulario con diferentes campos requeridos para generar la
+                                            solicitud. Se necesita
+                                            documentar todos los campos marcados como obligatorio para enviar la
+                                            peticion.<p>Nota: En el caso de que el servicio lo requiera, deben
+                                                adjuntarse los archivos correspondientes, teniendo un maximo de 4
+                                                archivos de no mas de 5MB.</p>
+                                        </li>
+                                        <li>Finalmente, hacer clic en "Enviar Peticion" para que el servicio sea
+                                            solicitado.</li>
+
+                                    </ol>
+                                </td>
+                                <td valign="top"><video
+                                        src="/smartit/PortalPSD/SolicitudServicio/03.SRM a DWP - Solicitud de un servicio.mp4"
+                                        width="600" autoplay controls loop></video></td>
+                            </tr>
+                        </table>
+                        <p><strong>Temas relacionados:</strong></p>
+                        <ul>
+                            <li><a routerLink="/doc/SolicitudServicio/Acceso">Acceso a DWP</a></li>
+                            <li><a routerLink="/doc/SolicitudServicio/Categorias">Examinar categorias</a></li>
+                            <li><a routerLink="/doc/SolicitudServicio/ConsultaPeticiones">Consulta de peticiones</a>
+                            </li>
+
+                        </ul>
+                    </header>
+                </div>
+            </div>
         </ng-container>
+
         <!------------------------------------------- PAGINA: CONSULTA PETICIONES ------------------------------------------->
 
         <ng-container *ngSwitchCase="'ConsultaPeticiones'">
-            CONSULTA PETICIONES
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h2>BMC ITSM - Digital WorkPlace - Solicitud de accesos</h2>
+
+                        <p><strong>Acceso a nuevas peticiones</strong></p>
+                        <P>Derivado de la migracion hacia Remedy Helix SaaS, varias funcionalidades fueron modificadas
+                            incluyendo la solicitud de servicios.</P>
+                        <p>Para ingresar al nuevo sitio de peticiones siga estos pasos:</p>
+
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <p><strong>Instrucciones:</strong></p>
+                                    <ol>
+                                        <li>Anteriormente para consultar el status de las peticiones generadas, se utilizaba SRM en donde se podian buscar por medio de REQs. Con la
+                                            migracion a Remedy Helix SaaS, se implementaron las peticiones atraves de <a
+                                                href="https://remedycloudamx-dwp.onbmc.com/dwp/app/#/"
+                                                target="_blank">Digital Work Place</a>. si aun no ha accedido, conocer
+                                            su usuario
+                                            <a routerLink="/doc/Generales/Acceso">aquí</a>.
+                                        </li>
+                                        <li>Al ingresar a la pagina principal, dirigirse a la seccion "Mi actividad" ubicada
+                                            en la parte superior de la pantalla.</li>
+                                        <li>Esto abrira un nuevo sitio en el que se ubican dos secciones, <b>Eventos activos</b> y <b>Eventos pasados</b>.
+                                        <ul>
+                                            <li><b>Eventos activos: </b>Solicitudes de servicios que aun estan en proceso de ejecucion o aprobacion.</li>
+                                            <li><b>Eventos pasados: </b>Solicitudes de servicios que ya han sido cerradas o canceladas.</li>
+                                        </ul></li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video
+                                        src="/smartit/PortalPSD/SolicitudServicio/04.SRM a DWP - Consulta de peticiones creadas.mp4"
+                                        width="600" autoplay controls loop></video></td>
+                            </tr>
+                        </table>
+                        <p><strong>Temas relacionados:</strong></p>
+                        <ul>
+                            <li><a routerLink="/doc/SolicitudServicio/Categorias">Examinar categorias</a></li>
+                            <li><a routerLink="/doc/SolicitudServicio/SolicitudServicio">Solicitud de servicios</a></li>
+                            <li><a routerLink="/doc/SolicitudServicio/Categorias">Examinar categorias</a></li>
+
+                        </ul>
+                    </header>
+                </div>
+            </div>
         </ng-container>
+
+
         <ng-container *ngSwitchDefault>
             <h2>Página no encontrada</h2>
         </ng-container>

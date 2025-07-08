@@ -10,9 +10,9 @@
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
 
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
+
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2>
 
                         <p>
                             Este módulo habilita al proceso correctivo, ya que en el módulo de
@@ -37,7 +37,7 @@
                             </li>
                         </ul>
                         <!-- Se agrego esta linea de codigo el 26/02/2024 -->
-                        <table cellpadding="3" cellspacing="0" class="tabla2">
+                        <table cellpadding="3" cellspacing="0">
                             <thead>
                                 <tr class="TableSubHeadingColor" class="header">
                                     <td>Tipo Incidente</td>
@@ -99,7 +99,7 @@
                             <p><strong>Estados del incidente</strong></p>
                             <p>El incidente tiene un ciclo de vida que comienza con el estado "Nuevo" y termina con el
                                 estado "Cerrado". La siguiente tabla describe los estados del incidente.</p>
-                            <table cellpadding="3" cellspacing="0" >
+                            <table cellpadding="3" cellspacing="0">
                                 <thead>
                                     <tr class="TableSubHeadingColor" class="header">
                                         <td>Estado</td>
@@ -177,7 +177,7 @@
                                 <thead>
                                     <tr class="TableSubHeadingColor" class="header">
                                         <td>&nbsp;</td>
-                                        
+
                                         <td>Incidentes de TI</td>
                                     </tr>
                                 </thead>
@@ -186,7 +186,8 @@
                                         <td><code><span class="code_name">Creación</span></code></td>
                                         <!-- <td><a routerLink="/doc/Incidentes/CrearAlarma">Creación de una alarma</a></td> -->
                                         <!-- <td><a routerLink="/doc/Incidentes/CrearCPD">Creación de CPD</a></td> -->
-                                        <td><a routerLink="/doc/Incidentes/CrearTI">Creación de Incidente de TI</a></td>
+                                        <td><a routerLink="/doc/Incidentes/CrearTI">Creación de
+                                                Incidente de TI</a></td>
                                     </tr>
                                     <!-- <tr class="TableRowColor">
                                         <td><code><span class="code_name">Niveles de Servicio</span></code></td>
@@ -194,7 +195,8 @@
                                     </tr> -->
                                     <tr class="TableRowColor">
                                         <td><code><span class="code_name">Atención</span></code></td>
-                                        <td colspan="3" align="center"><a routerLink="/doc/Incidentes/AtencionTI">Tomar un
+                                        <td colspan="3" align="center"><a
+                                                routerLink="/doc/Incidentes/AtencionTI">Tomar un
                                                 incidente</a>
                                         </td>
                                     </tr>
@@ -206,14 +208,269 @@
             </div>
         </ng-container>
 
+        <!------------------------------------------- PAGINA: CREAR TI ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'CrearTI'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h2>BMC SMART IT - Incident Management - Gestión de Incidentes</h2>
+                        <p><strong>Creación de Incidentes de TI</strong></p>
+                        <p>
+                            Un incidente de TI es cualquier incidente que se genera en la infraestructura, pero que no
+                            proviene de una alarma y tampoco de una queja de cliente (CPD).</p>
+                        <p>Para crear un Incidente de TI siga estos pasos:</p>
+                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Instrucciones:</strong>
+                                    <ol>
+                                        <li>Ingresar a la consola de peticiones de <a
+                                                href="https://remedycloudamx-smartit.onbmc.com/smartit/app/#/">
+                                                Smart IT</a>, si no lo ha hecho aun, conocer su usuario <a
+                                                routerLink="/doc/Generales/Acceso">aquí</a>.
+                                            Dirigirse a: "<b>BMC Helix ITSM</b> > <b>Crear nuevo</b> >
+                                            <b>Incidencia</b>".
+                                        </li>
+                                        <li>El campo "<b>Empresa</b>" se llena automaticamente y es necesario completar
+                                            el
+                                            campo "Cliente" de manera manual
+                                            con la información del usuario que esta generando el incidente.</li>
+                                        <li>Completar la información de los campos:</li>
+                                        <ul>
+                                            <li>"<b>Resumen:</b>" Información simplificada del incidente.</li>
+                                            <li>"<b>Descripcion:</b>" Informacion detallada del incidente.</li>
+                                            <li>"<b>Impacto:</b>" Grado de afectación que tiene la organización.</li>
+                                            <li>"<b>Urgencia:</b>" Grado de rapidez con el que se desea que se resuelva
+                                                la incidencia.</li>
+                                            <li>"<b>Prioridad:</b>" Se llena de acuerdo a la combinación de los campos
+                                                Impacto y Urgencia.</li>
+                                            <li>"<b>Estado:</b>" El valor automaticamente se mostrara como "Nuevo".</li>
+                                            <li>"<b>Tipo de incidencia:</b>" Petición de serv. por el usuario.</li>
+                                            <li>"<b>(Opcional) CI:</b>" Elemento de configuración afectado.</li>
+                                            <li>"<b>Categorización operacional</b>": Puede seleccionarse una de las
+                                                opciones por Default o armar una opcion seleccionando cada uno de los 3
+                                                niveles haciendo clic en "Examinar".</li>
+                                            <ul>Ejemplo:
+                                                <li>Nivel 1 de categoría operacional = "<b>FALLA</b>"
+                                                </li>
+                                                <li>Nivel 2 de categoría operacional =
+                                                    "<b>FUNCIONABILIDAD</b>"</li>
+                                                <li>Nivel 3 de categoría operacional = "<b>OPERACION</b>"
+                                                </li>
+                                            </ul>
+                                            <li>"<b>Categorización de producto</b>": Puede seleccionarse una de las
+                                                opciones por Default o armar una opcion seleccionando cada uno de los 3
+                                                niveles haciendo clic en "Examinar".</li>
+                                            <ul>Ejemplo:
+                                                <li>Nivel 1 de categoría de producto = "<b>SOFTWARE</b>"
+                                                </li>
+                                                <li>Nivel 2 de categoría de producto = "<b>APLICACION</b>"</li>
+                                                <li>Nivel 3 de categoría de producto = "<b>APLICACIONES REGIONALES</b>"
+                                                </li>
+                                            </ul>
+                                        </ul>
+                                        <li>En la seccion "<b>Areas impactadas</b>" se configuran los siguientes
+                                            valores: </li>
+                                        <ul>
+                                            <li>"<b>Empresa:</b>" Compañia afectada.</li>
+                                            <li>"<b>Zona:</b>" Region afectada, depende de Empresa.</li>
+                                            <li>"<b>Grupo de ubicaciones:</b>" Depende de Zona.</li>
+                                            <li>"<b>Ubicacion:</b>" Depende de Zona.</li>
+                                            <li>"<b>Organizacion:</b>" Direccion afectada.</li>
+                                            <li>"<b>Departamento:</b>" Direccion o gerencia afectada.</li>
+                                        </ul>
+                                        <p>Al concluir, hacer clic en "Agregar". Este proceso puede repetirse para
+                                            agregar las areas afectadas necesarias.</p>
+                                        <li>En la seccion "<b>Usuario Asignado</b>" se configura el personal que debe
+                                            atender la incidencia.</li>
+                                        <ul>
+                                            <li>"<b>Grupo de soporte:</b>" Grupo de soporte al que pertenece el usuario.
+                                            </li>
+                                            <li>"<b>Persona:</b>" Usuario de remedy a quien se le asignara la solucion
+                                                del incidente.</li>
+                                        </ul>
+                                        <p>En caso de requerir mayor detalle para localizar al usuario, hacer clic en
+                                            "Examinar" lo que mostrara los campos <b>Empresa</b> y <b>Organizacion</b>
+                                        </p>
+                                        <li>(Opcional) Si se requiere agregar un archivo adjunto, hacer clic en
+                                            "<b>Adjuntar archivos</b>".
+                                            Puede agregarse un maximo de 3 adjuntos.</li>
+                                        <li>Una vez documentada la información del incidente, hacer clic en el
+                                            botón "<b>Guardar</b>".</li>
+                                        <p>El ID del incidente se mostrara en la parte superior de la pagina.
+                                            Posteriormente toda la informacion adicional
+                                            del registro incluyendo archivos adjuntos.
+                                        </p>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Incidentes/TELCEL-SAAS-Creación_de_Incidentes.mp4"
+                                        width="600" autoplay controls loop></video>
+                                </td>
+                            </tr>
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/Incidentes/AtencionTI">Atención del incidente</a>
+                            </li>
+                        </ul>
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+        <!------------------------------------------- PAGINA: RELACION INC ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'RelacionINC'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2>
+                        <p><strong>Relacionar incidentes hijos a un padre</strong></p>
+                        <p>
+                            Material para que el usuario puede relacionar de forma correcta incidentes hijos a un padre
+                            se recomienda bajar el archivo powerpoint para tener mas recomendaciones </p>
+                        <p>Al cerrar el incidente padre los incidetes relacionados (hijos) pueden tardar aproximadamente
+                            5 minutos en comenzar a cerrarse </p>
+                        <p>Para relacionar los incidetes siga los pasos:</p>
+                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Instrucciones:</strong>
+                                    <ol>
+                                        <li>ingrese a Remedy con sus credenciales de acceso.</li>
+                                        <li>Busque y abra el incidente que sera el incidente padre.</li>
+                                        <li>Dirijase a la pestaña relaciones y en la parte inferior en BUSCAR seleccione
+                                            INCIDENCIA y a continuacion busque la incidencia o las incidencias a
+                                            relacionar (hijas)</li>
+                                        <li>Seleccione la o las incidencias a relacionar</li>
+                                        <li><strong> En tipo de relacion se debera seleccionar ORIGINAL DE</strong>.
+                                        </li>
+                                        <li>Dar clic en Relacionar</li>
+                                        <li>Verificamos que el incidente hijo pase a estado pendiente y procedemos a
+                                            cerrar el incidente padre llenando los campos requeridos para el cierre</li>
+                                        <li>Validamos que los incidentes hijos se cierren (puede demorar hasta 5 minutos
+                                            en comenzar a cerrar los incidentes, por el proceso de escalacion). </li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Incidentes/incpadrehijo.mp4" width="600" autoplay controls
+                                        loop></video></td>
+                            </tr>
+                        </table>
+                        <a href="Incidentes/relaciondeincidentespower.pptx">Material en Power Point</a>
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+        <!------------------------------------------- PAGINA: ESCALAR TI ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'EscalarTI'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2>
+                        <p><strong>Escalar Incidente</strong></p>
+                        <p>
+                            Cuando el ingeniero asignado no tiene la capacidad ni las herramientas para resolver el
+                            incidente entonces debe "<b>escalar</b>". Para escalar es necesario reasignar el
+                            incidente al grupo correspondiente, quien finalmente deberá resolver el incidente.
+                        </p>
+                        <p>Para escalar un incidente siga estos pasos:</p>
+                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Instrucciones:</strong>
+                                    <ol>
+                                        <li>Ingresar a sistema "<b>Remedy</b>", si no lo ha hecho
+                                            todavía. Ver cómo <a
+                                                routerLink="/doc/Generales/Acceso">aquí</a>.</li>
+                                        <li>Ingresar a la consola de aspectos generales o a la consola de incidentes y
+                                            localice el incidente asignado. Ver cómo <a
+                                                routerLink="/doc/Generales/Consolas">aquí</a>.</li>
+                                        <li>En el Incidente a reasignar, hacer clic en el campo "<b>Grupo
+                                                asignado</b>".</li>
+                                        <ul>
+                                            <li>Se desplegará una lista con las <b>empresas</b> de soporte
+                                                configuradas en el sistema, seleccionar la empresa a la que pertenece el
+                                                grupo de soporte al que se reasignará el Incidente.</li>
+                                            <li>Se desplegará una lista con las <b>organizaciones</b> de soporte
+                                                relacionadas con la empresa de soporte seleccionada en el paso anterior,
+                                                seleccionar la organización a la que pertenece el grupo de
+                                                soporte al que se reasignará el Incidente.</li>
+                                            <li>Se desplegará una lista con los <b>grupos de soporte</b>
+                                                relacionados con la organización de soporte seleccionada en el
+                                                paso anterior, seleccionar el grupo de soporte al que se
+                                                reasignará Incidente.</li>
+                                        </ul>
+                                        <li>Al seleccionar el grupo de soporte, el campo "<b>Grupo
+                                                asignado</b>" se llenará con el nombre del grupo elegido y
+                                            se borrará la información contenida en el campo
+                                            "<b>Usuario asignado</b>".</li>
+                                        <li>Hacer clic en el botón <strong>Guardar,</strong> el campo Estado
+                                            cambiará de valor a "<b>Asignado</b>".</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Incidentes/escalar.mp4" width="600" autoplay controls
+                                        loop></video>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>Para escalar incidentes de forma masiva seguir los siguientes pasos:</p>
+                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Instrucciones:</strong>
+                                    <ol>
+                                        <li>Ingresar a sistema "<b>Remedy</b>", si no lo ha hecho
+                                            todavía. Ver cómo <a
+                                                routerLink="/doc/Generales/Acceso">aquí</a>.</li>
+                                        <li>Realize la busqueda de los incidentes dependiendo a la necesidad.</li>
+                                        <li>Seleccione los incidentes a reasignar Y damos Clic en "<b>Modificar
+                                                Todo</b>".</li>
+                                        <ul>
+                                            <li>Nos dirigimos a la pesaña de Categorizacion y Elegimos la Empresa</li>
+                                            <li>En grupo asignado, seleccionamos el grupo a donde se asignaran los
+                                                tickets </li>
+                                        </ul>
+                                        <li>Hacer clic en el botón <strong>Guardar,</strong> </li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Incidentes/asignmas.mp4" width="600" autoplay controls
+                                        loop></video>
+                                </td>
+                            </tr>
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/Incidentes/CrearTI">Creación de Incidente</a></li>
+                            <li><a routerLink="/doc/Incidentes/AtencionTI">Atención de Incidente</a>
+                            </li>
+                            <li><a routerLink="/doc/Incidentes/SLAti">Revisar SLA de Incidente</a>
+                            </li>
+                            <li><a routerLink="/doc/Incidentes/DocumentarTI">Documentar Incidente</a>
+                            </li>
+                            <li><a routerLink="/doc/Incidentes/CrearTareaTI">Crear Tarea(s) en
+                                    Inciente</a></li>
+                            <li><a routerLink="/doc/Incidentes/CerrarTI">Cerrar Incidente</a></li>
+                        </ul>
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+
         <!------------------------------------------- PAGINA: SLA TI ------------------------------------------->
 
         <ng-container *ngSwitchCase="'SLAti'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
+
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2>
                         <p><strong>Revisar SLA's de incidentes</strong></p>
                         <p>
                             SLA son las siglas de "Service Level Agreement" o "Acuerdo de Niveles de
@@ -239,7 +496,8 @@
                                     <strong>Instrucciones:</strong>
                                     <ol>
                                         <li>Ingresar al sistema "<b>Remedy</b>", si no lo ha hecho
-                                            todavía. Vea cómo <a routerLink="/doc/Generales/Acceso">aquí</a>.</li>
+                                            todavía. Vea cómo <a
+                                                routerLink="/doc/Generales/Acceso">aquí</a>.</li>
                                         <li>Ingrese a la consola de aspectos generales o a la consola de incidentes y
                                             localice el incidente asignado. Vea cómo <a
                                                 routerLink="/doc/Generales/Consolas">aquí</a>.</li>
@@ -262,14 +520,583 @@
                             <li><a routerLink="/doc/Incidentes/CrearTI">Creación de CPD</a></li>
                             <li><a routerLink="/doc/Incidentes/AtencionTI">Atención del CPD</a></li>
                             <li><a routerLink="/doc/Incidentes/DocumentarTI">Documentar CPD</a></li>
-                            <li><a routerLink="/doc/Incidentes/CrearTI">Crear Tarea(s) en el CPD</a></li>
                             <li><a routerLink="/doc/Incidentes/EscalarTI">Escalar el CPD</a></li>
                             <li><a routerLink="/doc/Incidentes/CerrarTI">Cerrar el CPD</a></li>
                         </ul>
-                    </header> 
+                    </header>
                 </div>
             </div>
         </ng-container>
+
+
+        <!------------------------------------------- PAGINA: DOCUMENTAR TI ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'DocumentarTI'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2>
+                        <p><strong>Documentar el Incidente</strong></p>
+                        <p>
+                            En cualquier momento se deben documentar los trabajos realizados en la atención y
+                            restauración del servicio en el incidente. Esta parte es fundamental para guardar
+                            registro de lo que se ha hecho para cumplir lo siguiente:
+                        </p>
+                        <ul>
+                            <li>Auditorías del trabajo realizado por los agentes asignados al incidente.</li>
+                            <li>Fuente de conocimiento para otros incidentes relacionados.</li>
+                            <li>Medio de comunicación entre los diferentes agentes asignados.</li>
+                        </ul>
+                        <p>
+                            En Remedy ITSM, el medio para documentar un incidente, es a trav&eacute;s de notas de
+                            trabajo. Observe los siguientes pasos para documentar el incidente:
+                        </p>
+                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Agregar información de trabajo:</strong>
+                                    <ol>
+                                        <li>Ingresar al sistema "<b>Remedy</b>", si no lo ha hecho
+                                            todavía. Ver cómo <a
+                                                routerLink="/doc/Generales/Acceso">aquí</a>.</li>
+                                        <li>Ingresar a la consola de aspectos generales o a la consola de incidentes y
+                                            localice el incidente asignado. Ver cómo <a
+                                                routerLink="/doc/Generales/Consolas">aquí</a>.</li>
+                                        <li>Hacer clic en la pesta&ntilde;a "<b>Detalles de trabajo</b>".</li>
+                                        <li>Bajar a la sección <b>Agregar información de trabajo</b>.</li>
+                                        <li>En el campo "<b>Notas</b>" agregar texto descriptivo a cerca de la
+                                            información de trabajo.</li>
+                                        <li>En el campo "<b>Adjunto</b>", dar clic en el ícono <img
+                                                src="Incidentes/carpeta.png" width="15"> "<b>Examinar adjunto</b>".</li>
+                                        <li>Dar clic en el botón <b>Browse</b> y elegir el archivo que se
+                                            adjuntará.</li>
+                                        <li>Una vez que se ha seleccionado el archivo deseado, hacer clic en el
+                                            botón "<b>Aceptar</b>" para adjuntar el archivo al
+                                            incidente.</li>
+                                        <ul>
+                                            <li>Para remover el archivo adjunto, hacer clic en el ícono
+                                                "<b>Eliminar adjunto</b>".</li>
+                                            <li>Para visualizar el archivo adjunto, hacer clic en el ícono
+                                                "<b>Ver archivo adjunto</b>".</li>
+                                        </ul>
+                                        <li>Hacer clic en la liga "<b>Más detalles:</b>"</li>
+                                        <ul>
+                                            <li>"<b>Adjunto #2:</b>" Permite agregar un segundo archivo al
+                                                incidente.</li>
+                                            <li>"<b>Adjunto #3:</b>" Permite agregar un tercer archivo al
+                                                incidente.</li>
+                                            <li>"<b>Tipo de información de trabajo:</b>" Permite
+                                                categorizar la información de trabajo que se está
+                                                agregando, por defecto este campo tiene el valor Información
+                                                General.</li>
+                                            <li>"<b>Bloqueado:</b>" Indica si es posible modificar la
+                                                información de trabajo que se está agregando una vez que
+                                                se haya guardado, el valor por defecto es No.</li>
+                                            <li>"<b>Acceso a vista:</b>" Especifica qui&eacute;n puede
+                                                visualizar la información de trabajo que se está
+                                                agregando, Interno (personal de soporte) o Público (cliente), el
+                                                valor por defecto es Interno.</li>
+                                        </ul>
+                                        <li>Hacer clic en el botón "<b>Guardar</b>" para agregar la
+                                            información de trabajo.</li>
+                                    </ol>
+                                    <strong>Modificar información de trabajo:</strong><br>
+                                    <em><strong>Nota:</strong> Sólo se puede modificar la información de
+                                        trabajo si es que el campo Bloqueado tiene el valor "<b>No</b>".</em>
+                                    <ol>
+                                        <li>En un registro de incidente abierto, hacer clic en la pesta&ntilde;a
+                                            "<b>Detalles de trabajo</b>".</li>
+                                        <li>En la tabla que se muestra, elegir un registro para su modificación y
+                                            hacer doble clic o hacer clic en el ícono Editar información
+                                            de trabajo ubicado debajo del texto "<b>Detalles de trabajo</b>".
+                                        </li>
+                                        <li>En la sección "<b>Editar información de trabajo</b>"
+                                            se desplegará la información del registro seleccionado.</li>
+                                        <li>Editar la información necesaria y hacer clic en el botón
+                                            "<b>Guardar</b>".</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Incidentes/documentar.mp4" width="600" autoplay controls
+                                        loop></video>
+                                </td>
+                            </tr>
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/Incidentes/CrearTI">Creación de Incidente</a></li>
+                            <li><a routerLink="/doc/Incidentes/AtencionTI">Atención de Incidente</a>
+                            </li>
+                            <li><a routerLink="/doc/Incidentes/SLAti">Revisar SLA de Incidente</a>
+                            </li>
+                            <li><a routerLink="/doc/Incidentes/CreatTareaTI">Crear Tarea(s) en
+                                    Incidente</a></li>
+                            <li><a routerLink="/doc/Incidentes/EscalarTI">Escalar Incidente</a></li>
+                            <li><a routerLink="/doc/Incidentes/CerrarTI">Cerrar Incidente</a></li>
+                        </ul>
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+        <!------------------------------------------- PAGINA: BUSCAR KM ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'BuscarKm'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2>
+                        <p><strong>Buscar instructivo</strong></p>
+                        <strong>Instrucciones:</strong>
+                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top">
+                                    <ol>
+                                        <li>Dentro del folio de incidente asignado en estado en curso</li>
+                                        <li>Seleccione la opción <strong>Buscar en base de conocimientos</strong>
+                                            dentro del apartado <strong>Funciones</strong>, ubicado en la parte inferior
+                                            izquierda de la pantalla</li>
+                                        <li>Se mostrará el listado de instructivos que coinciden con el resumen
+                                            del Incidente</li>
+                                        <li>Seleccione el instructivo a utilizar e ingrese a &eacute;ste</li>
+                                        <li>Revisar la información del instructivo</li>
+                                        <li>Hacer clic en la pesta&ntilde;a <strong>Detalles</strong> y en la
+                                            sección <strong>Adjuntos de artículo</strong> seleccionar un
+                                            registro de la tabla y hacer clic en el botón
+                                            <strong>Mostrar</strong> para abrir el archivo adjunto que viene con el
+                                            instructivo
+                                        </li>
+                                        <li>Revisar la información del instructivo</li>
+                                        <li>Una vez que se haya revisado la información del archivo adjunto, se
+                                            procede a su valoración haciendo clic en el botón
+                                            <strong>Valoración</strong> que se encuentra en la parte inferior del
+                                            instructivo.
+                                        </li>
+                                        <li>Seleccionar un valor del campo <strong>Evaluación</strong>, este
+                                            valor representará la percepción que se tiene acerca de la
+                                            calidad del instructivo.</li>
+                                        <li>Opcional. En el campo <strong>Detalles de valoración</strong>,
+                                            ingresar algún comentario extra a la valoración seleccionada.
+                                        </li>
+                                        <li>Hacer clic en el botón <strong>Guardar</strong>.</li>
+                                        <li>En caso de que el instructivo sea útil en la solución del
+                                            incidente de queja oprima el botón <strong>Usar</strong> ubicado en
+                                            la parte inferior de la pantalla</li>
+                                        <li>Regrese al registro del incidente con la queja del cliente</li>
+                                        <li>En la pesta&ntilde;a <strong>Relaciones</strong> seleccionar el registro de
+                                            tipo <strong>Solución RKM</strong> y hacer doble clic, o bien, hacer
+                                            clic en el ícono lentes para abrir el instructivo que se usó
+                                            en la resolución del registro de queja.</li>
+                                        <li>Hacer clic en la pesta&ntilde;a <strong>Valoración</strong> para
+                                            observar las diferentes valoraciones que se han hecho sobre el instructivo.
+                                        </li>
+                                        <li>Para regresar al registro de queja hacer clic en la liga que muestra el ID
+                                            del registro ubicada en la parte superior del formulario a un costado del
+                                            ícono inicio</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Incidentes/buscarkmcpd.mp4" width="600" autoplay controls
+                                        loop></video></td>
+                            </tr>
+                        </table>
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+        <!------------------------------------------- PAGINA: ATENCION TI ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'AtencionTI'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2>
+                        <p><strong>Atención de Incidente de TI</strong></p>
+                        <p>
+                            Una vez que el incidente ha sido creado, Remedy ITSM corre su proceso de asignacón
+                            automática. Este se basa en un mapeo de asignaciones
+                            usando las categorís de producto. Por lo tanto, los incidentes de TI serán
+                            asignados al grupo de atención correspondiente.
+                        </p>
+                        <p>
+                            Si usted pertenece a un grupo de atención de Incidentes, entonces su grupo
+                            tendrá asignado un incidente. Siga estos pasos para atender el Incidente:
+                        </p>
+                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Instrucciones:</strong>
+                                    <ol>
+                                        <li>Ingresar al sistema <a
+                                                href="https://remedycloudamx-rsso.onbmc.com/rsso/start">
+                                                Smart IT</a>, si no lo ha hecho aun, conocer su usuario <a
+                                                routerLink="/doc/Generales/Acceso">aquí</a>.
+                                        </li>
+                                        <li>Dirigirse a: "<b>BMC Helix ITSM</b>, hacer clic en <img width="17"
+                                                height="17" src="img/Busqueda.png">,
+                                            escribir el ID del incidente y dar "Enter".</li>
+                                        <li>Se desplegara una lista con las incidencias que coincidan con el ID
+                                            ingresado.
+                                            Al encontrar la deseada, se mostrara una vista previa, hacer clic en <b>Ver
+                                                incidencia completa</b>.
+                                        </li>
+                                    </ol>
+                                    <strong>Atencion:</strong>
+                                    <ol>
+                                        <li>Observar que el campo de "<b>Asignado a</b>" tiene el
+                                            nombre de su usuario. De lo contrario hacer clic en "Asignarme a mi mismo"
+                                        </li>
+                                        <li>Observar que el campo de "<b>Estado</b>" cambió a
+                                            "<b>En curso</b>". Si no lo ha hecho, presionar el boton "Editar" para
+                                            cambiarlo manualmente.</li>
+                                        <li>Lo anterior indica que usted ha comenzado los trabajos del incidente y ha
+                                            dejado
+                                            los tiempos de atención atrás. Ahora se mide el tiempo de
+                                            Resolución</li>
+                                    </ol>
+                                    <strong>Seguimiento y documentación:</strong>
+                                    <ol>
+                                        <li>Para conocer todos los incidentes asignados a un usuario es necesario
+                                            acceder a:
+                                            "<b>Consola</b> > <b>Consola de tickets</b>", esto desplegara una lista a la
+                                            cual se deben aplicar los filtros
+                                            "Mis tickets asignados" y "Tipo de ticket: Incidente" principalmente,
+                                            despues agregar los filtros necesarios y hacer clic en <b>Aplicar
+                                                filtros</b>.
+                                        </li>
+                                        <li>Al ser asignado un incidente, este puede ser documentado por medio de notas
+                                            en la parte derecha de la pantalla.
+                                            Para incluir una, solo es necesario escribir el mensaje de seguimiento, el
+                                            tipo de nota por Default sera
+                                            "Informacion General" y dar clic en "<b>Publicacion</b>".
+                                            <p>Es posible incluir hasta 3 archivos a la publicacion de la nota, haciendo
+                                                clic en "<b>Adjuntar archivo</b>"</p>
+                                        </li>
+
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Incidentes/TELCEL-SAAS-Atención_de_incidentes.mp4"
+                                        width="600" autoplay controls loop></video>
+                                </td>
+                            </tr>
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/Incidentes/CrearTI">Creación del Incidente</a>
+                            </li>
+                            <!-- <li><a routerLink="/doc/Incidentes/SLAti">Revisar el SLA del Incidente</a></li>
+                            <li><a routerLink="/doc/Incidentes/DocumentarTI">Documentar el Incidente</a></li>
+                            <li><a routerLink="/doc/Incidentes/CrearTareaTI">Crear Tarea(s) en el Incidente</a></li>
+                            <li><a routerLink="/doc/Incidentes/EscalarTI">Escalar el Incidente</a></li>
+                            <li><a routerLink="/doc/Incidentes/CerrarTI">Cerrar el Incidente</a></li> -->
+                        </ul>
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+        <!------------------------------------------- PAGINA: ATENCION ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'Atencion'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2>
+                        <p><strong>Atención de un incidente</strong></p>
+                        <p>
+                            Una vez que el incidente ha sido creado, Remedy ITSM corre su proceso de asignación
+                            automática. En el caso de CPDs, este se basa en un mapeo de asignaciones usando las
+                            ubiciones, particularmente las regiones. Para alarmas, las asignaciones son hacia el COR. Y
+                            los incidentes de TI son asignados de acuerdo a su categorización de producto. </p>
+                        <p>
+                            Si usted pertenece a un grupo de atención, entonces su grupo tendrá asignado
+                            un incidente. Siga estos pasos para atender el incidente:
+                        </p>
+                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top">
+                                    <strong>Instrucciones:</strong>
+                                    <ol>
+                                        <li>Ingrese al sistema Remedy si no lo ha hecho todavía. Vea cómo
+                                            <a routerLink="/doc/Generales/Acceso">aquí</a>.
+                                        </li>
+                                        <li>Ingrese a la consola de aspectos generales o a la consola de incidentes y
+                                            localice el incidente asignado. Vea cómo <a
+                                                routerLink="/doc/Generales/Consolas">aquí</a>.</li>
+                                        <li>Tome la atención del incidente. Para iniciar el proceso de
+                                            atención haga clic en la liga <img src="Incidentes/asignarme.png"
+                                                width="19">"Asignarme a mí mismo".</li>
+                                    </ol>
+                                    <strong>Resultados:</strong>
+                                    <ol>
+                                        <li>Observe que el campo de "Usuario asignado+" tiene el nombre de su
+                                            usuario.</li>
+                                        <li>Observe que el campo de "Estado" cambió a "En
+                                            curso"</li>
+                                        <li>Observe sus SLA's. Vea cómo <a
+                                                routerLink="/doc/Incidentes/SLAcpd">aquí.</a>
+                                        </li>
+                                    </ol>
+                                    <p>Lo anterior indica que usted ha comenzado los trabajos del incidente y ha dejado
+                                        los tiempos de atención atrás. Ahora se mide el tiempo de
+                                        Resolució</p>
+                                    <p>Además de atender el incidente, debe documentarlo. Vea cómo <a
+                                            routerLink="/doc/Incidentes/DocumentarCPD">aquí</a>.</p>
+                                </td>
+                                <td><video src="Incidentes/atender.mp4" width="600" autoplay controls loop></video></td>
+                            </tr>
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/Incidentes/AtencionAlarma">Creación de CPD</a>
+                            </li>
+                            <li><a routerLink="/doc/Incidentes/SLAcpd">Revisar el SLA del CPD</a></li>
+                            <li><a routerLink="/doc/Incidentes/DocumentarCPD">Documentar el CPD</a>
+                            </li>
+                            <li><a routerLink="/doc/Incidentes/CrearTareaCPD">Crear Tarea(s) en el
+                                    CPD</a></li>
+                            <li><a routerLink="/doc/Incidentes/EscalarCPD">Escalar el CPD</a></li>
+                            <li><a routerLink="/doc/Incidentes/CerrarCPD">Cerrar CPD</a></li>
+                        </ul>
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+        <!------------------------------------------- PAGINA: CREAR TAREA TI ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'CrearTareaTI'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2>
+                        <p><strong>Crear tarea(s) en Incidente</strong></p>
+                        <p>En el módulo de incidentes existe la posibilidad de asignar actividades aisladas a su
+                            solución sin reasignar el incidente y por lo tanto, manteniendo la responsabilidad de
+                            la solución.</p>
+                        <p>El asignado a la tarea solo mantiene la responsabilidad de la tarea, mientras el asignado al
+                            incidente mantiene la responsabilidad del incidente.</p>
+                        <p>Para crear una tarea siga estos pasos. Repita la operación si desea crear más
+                            tareas.</p>
+                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td><strong>Creación de una Tarea de Incidentes</strong></td>
+                                <td>
+                                    <strong>Pasos para la creación de una tarea de Incidentes</strong>
+                                    <ol>
+                                        <li>Ingresar al sistema "<b>Remedy</b>", si no lo ha hecho
+                                            todavía. Ver cómo <a
+                                                routerLink="/doc/Generales/Acceso">aquí</a>.</li>
+                                        <li>Ingresar a la consola de aspectos generales o a la consola de incidentes y
+                                            localice el incidente asignado. Ver cómo <a
+                                                routerLink="/doc/Generales/Consolas">aquí</a>.</li>
+                                        <li>En el incidente abierto, hacer clic en la pesta&ntilde;a
+                                            "<b>Tareas</b>".</li>
+                                        <li>En el campo "<b>Tipo de petición</b>" seleccione el valor
+                                            "<b>Ad hoc</b>" y oprima el botón
+                                            "<b>Relacionar</b>".</li>
+                                        <li>Visualizara la pantalla de la nueva "<b>Tarea</b>" con la
+                                            siguiente información mapeada del incidente:</li>
+                                    </ol>
+                                    <table class="tabla" cellspacing="0" cellpadding="3">
+                                        <thead>
+                                            <tr class="TableSubHeadingColor">
+                                                <td>Incidente</td>
+                                                <td>Tarea</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableRowColor">
+                                                <td>Resumen</td>
+                                                <td>Nombre / Resumen</td>
+                                            </tr>
+                                            <tr class="TableRowColor">
+                                                <td>Región del CI</td>
+                                                <td>Ubicación de la tarea</td>
+                                            </tr>
+                                            <tr class="TableRowColor">
+                                                <td>Asignado al incidente</td>
+                                                <td>Información del Solicitante</td>
+                                            </tr>
+                                            <tr class="TableRowColor">
+                                                <td>Solicitante del incidente</td>
+                                                <td>Información de Solicitado para</td>
+                                            </tr>
+                                            <tr class="TableRowColor">
+                                                <td>Categorización de Resolución de Producto</td>
+                                                <td>Categorización de Producto</td>
+                                            </tr>
+                                            <tr class="TableRowColor">
+                                                <td>CI</td>
+                                                <td>CI</td>
+                                            </tr>
+                                            <tr class="TableRowColor">
+                                                <td>Asignación de la Tarea</td>
+                                                <td>Propietario del CI</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td><video src="Incidentes/creatarea.mp4" width="600" autoplay controls loop></video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top"><strong>*Secuencia de tareas</strong><br>
+                                    <p>Cuando se han generado todas las tareas asociadas al incidente puede modificar el
+                                        número de secuencia de las mismas, es decir, el orden en el que se
+                                        ejecutarán. Una secuencia menor implica que se ejecutará primero
+                                        esa tarea.</p>
+                                    <p>En caso de requerir que todas las tareas se ejecuten al mismo tiempo
+                                        deberá asignarles el mismo número de secuencia.</p>
+                                    <p>Para modificar la secuencia de una tarea, &eacute;sta debe tener el estado
+                                        "<b>Por Fases</b>"</p>
+                                    <ol>
+                                        <li>Seleccionar el registro de la tarea en la tabla "<b>Tareas y Grupos de
+                                                Tareas</b>" dentro del incidente.</li>
+                                        <li>Oprimir las flechas que se encuentran en la parte superior derecha del
+                                            apartado <b>Tareas</b> para modificar la secuencia.</li>
+                                    </ol>
+                                </td>
+                                <td><video src="Incidentes/creartareasecuencia.mp4" width="600" autoplay controls
+                                        loop></video>
+                                </td>
+                            </tr>
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/Incidentes/CrearTI">Creación de TI</a></li>
+                            <li><a routerLink="/doc/Incidentes/AtencionTI">Atención de TI</a></li>
+                            <li><a routerLink="/doc/Incidentes/SLAti">Revisar SLA de TI</a></li>
+                            <li><a routerLink="/doc/Incidentes/DocumentarTI">Documentar TI</a></li>
+                            <li><a routerLink="/doc/Incidentes/EscalarTI">Escalar TI</a></li>
+                            <li><a routerLink="/doc/Incidentes/CerrarTI">Cerrar TI</a></li>
+                        </ul>
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+        <!------------------------------------------- PAGINA: CERRAR TI ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'CerrarTI'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2>
+                        <p><strong>Cerrar Incidente</strong></p>
+                        <p>
+                            Una vez que se ha encontrado una solución al incidente entonces hay que cerrar el
+                            registro del incidente. </p>
+                        <p>Al cerrar el incidente, este debe pasar al estado "<b>Resuelto</b>" y esperar el
+                            visto bueno por el solicitante. Si el solicitante no está satisfecho con la
+                            solución ofrecida, puede solicitar una "<b>Reapertura</b>" del incidente.
+                        </p>
+                        <p>Finalmente, si el solicitante está satisfecho con la solución, el sistema
+                            cierra automáticamente los incidentes unos días despu&eacute;s.</p>
+                        <p>Para resolver el incidente siga estos pasos:</p>
+                        <table class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <p><strong>Resolución de un registro de Incidente</strong></p>
+                                    Una vez que se cuenta con la solución de la falla, se aplica, documenta y
+                                    resuelve el registro de incidente.
+                                    <p><strong>Pasos para el cierre del registro de un Incidente</strong></p>
+                                    <ol>
+                                        <li>Ingresar al sistema "<b>Remedy</b>", si no lo ha hecho
+                                            todavía. Ver cómo <a
+                                                routerLink="/doc/Generales/Acceso">aquí</a>.</li>
+                                        <li>Ingresar a la consola de aspectos generales o a la consola de incidentes y
+                                            localice el incidente asignado. Ver cómo <a
+                                                routerLink="/doc/Generales/Consolas">aquí</a>.</li>
+                                        <li>En el registro del Incidente abierto, hacer clic en la pesta&ntilde;a
+                                            "<b>Categorización</b>"</li>
+                                        <li>Hacer clic en la liga "<b>Mostrar categorización de
+                                                resolución</b>"</li>
+                                        <li>En la sección "<b>Categorización de
+                                                resolución</b>", seleccionar los valores necesarios para los
+                                            campos "<b>Nivel 1, Nivel 2 y Nivel 3</b>".</li>
+                                        <li>Cambiar el valor del campo "<b>Estados</b>" a
+                                            "<b>Resuelto</b>" que se encuentra en la sección
+                                            "<b>Detalles de resolución</b>"</li>
+                                        <li>Escribir los comentarios de la solución en el campo
+                                            "<b>Resolución"</b></li>
+                                        <li>Dar clic en el botón "<b>Guardar</b>", el estado del
+                                            registro del incidente cambiará a "<b>Resuelto</b>" y se
+                                            agregará la nota de resolución en la pesta&ntilde;a
+                                            "<b>Detalles de trabajo</b>".</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Incidentes/resolvertiv1.mp4" width="600" autoplay controls
+                                        loop></video></td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <strong>Resolución de un incidente al cierre de las tareas
+                                        relacionadas</strong>
+                                    <ol>
+                                        <li>Dentro del folio de incidente asignado en estado
+                                            "<b>Pendiente</b>"</li>
+                                        <li>Una vez que se cerraron todas las tareas relacionadas, en la barra de
+                                            estados selecciona la opción "<b>Reanudar</b>" del recuadro
+                                            "<b>Resolución y recuperación</b>"</li>
+                                        <li>Oprimir el botón "<b>Resolver</b>", ubicado en la parte
+                                            inferior izquierda de la pantalla</li>
+                                        <li>Documentar el campo "<b>Resolución*</b>" y "<b>Motivo
+                                                de estado</b>" dentro del cuadro de diólogo que se muestra
+                                        </li>
+                                        *Cuando hay tareas asociadas al incidente el campo "Resolución"
+                                        debe ser documentado con la solución de las tareas asociadas.
+                                        <li>Oprima el botón "<b>Guardar</b>"</li>
+                                        <li>El incidente pasará al estado "<b>Resuelto</b>"</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Incidentes/cerrartareati.mp4" width="600" autoplay controls
+                                        loop></video></td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <p><strong>Reapertura de un Incidente</strong></p>
+                                    Si la solución relacionada con el registro de incidente es inapropiada, el
+                                    incidente podrá ser "<b>Reabierto</b>" con la finalidad de que se
+                                    reinicie el proceso de atención del incidente.<br>
+                                    <strong>Pasos para la reapertura de un Incidente</strong>
+                                    <ol>
+                                        <li>En el incidente resuelto hacer clic en el botón que se encuentra en
+                                            la barra de proceso<img width="19" height="19"
+                                                src="Incidentes/cerrarti_clip_image002_0000.png" alt="Botón">.</li>
+                                        <li>Seleccionar la opción "<b>Reabrir</b>".</li>
+                                        <li>El campo "<b>Estado</b>" cambiará a "<b>En
+                                                curso</b>" y el campo "<b>Motivo del estado</b>"
+                                            quedará en blanco.</li>
+                                        <li>Hacer clic en la pesta&ntilde;a "<b>Detalles de trabajo</b>" y
+                                            documentar una nota de Reapertura, agregar archivo adjunto si se necesita.
+                                        </li>
+                                        <li>Hacer clic en el botón "<b>Guardar</b>".</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video src="Incidentes/reaperturati.mp4" width="600" autoplay controls
+                                        loop></video></td>
+                            </tr>
+                        </table>
+                        <strong>Temas relacionados:</strong>
+                        <ul>
+                            <li><a routerLink="/doc/Incidentes/CrearTI">Creación de TI</a></li>
+                            <li><a routerLink="/doc/Incidentes/AtencionTI">Atención de TI</a></li>
+                            <li><a routerLink="/doc/Incidentes/SLAti">Revisar SLA de TI</a></li>
+                            <li><a routerLink="/doc/Incidentes/DocumentarTI">Documentar TI</a></li>
+                            <li><a routerLink="/doc/Incidentes/CrearTareaTI">Crear Tarea(s) para
+                                    TI</a></li>
+                            <li><a routerLink="/doc/Incidentes/EscalarTI">Escalar TI</a></li>
+                        </ul>
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
 
         <!------------------------------------------- PAGINA: SLA CPD ------------------------------------------->
 
@@ -403,7 +1230,7 @@
         </ng-container> -->
 
         <!------------------------------------------- PAGINA: SLA ------------------------------------------->
-<!-- 
+        <!-- 
         <ng-container *ngSwitchCase="'SLA'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
@@ -468,141 +1295,6 @@
             </div>
         </ng-container> -->
 
-        <!------------------------------------------- PAGINA: RELACION INC ------------------------------------------->
-
-        <ng-container *ngSwitchCase="'RelacionINC'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
-                        <p><strong>Relacionar incidentes hijos a un padre</strong></p>
-                        <p>
-                            Material para que el usuario puede relacionar de forma correcta incidentes hijos a un padre
-                            se recomienda bajar el archivo powerpoint para tener mas recomendaciones </p>
-                        <p>Al cerrar el incidente padre los incidetes relacionados (hijos) pueden tardar aproximadamente
-                            5 minutos en comenzar a cerrarse </p>
-                        <p>Para relacionar los incidetes siga los pasos:</p>
-                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
-                            <tr>
-                                <td valign="top">
-                                    <strong>Instrucciones:</strong>
-                                    <ol>
-                                        <li>ingrese a Remedy con sus credenciales de acceso.</li>
-                                        <li>Busque y abra el incidente que sera el incidente padre.</li>
-                                        <li>Dirijase a la pestaña relaciones y en la parte inferior en BUSCAR seleccione
-                                            INCIDENCIA y a continuacion busque la incidencia o las incidencias a
-                                            relacionar (hijas)</li>
-                                        <li>Seleccione la o las incidencias a relacionar</li>
-                                        <li><strong> En tipo de relacion se debera seleccionar ORIGINAL DE</strong>.
-                                        </li>
-                                        <li>Dar clic en Relacionar</li>
-                                        <li>Verificamos que el incidente hijo pase a estado pendiente y procedemos a
-                                            cerrar el incidente padre llenando los campos requeridos para el cierre</li>
-                                        <li>Validamos que los incidentes hijos se cierren (puede demorar hasta 5 minutos
-                                            en comenzar a cerrar los incidentes, por el proceso de escalacion). </li>
-                                    </ol>
-                                </td>
-                                <td valign="top"><video src="Incidentes/incpadrehijo.mp4" width="600" autoplay controls
-                                        loop></video></td>
-                            </tr>
-                        </table>
-                        <a href="Incidentes/relaciondeincidentespower.pptx">Material en Power Point</a>
-                    </header> 
-                </div>
-            </div>
-        </ng-container>
-
-        <!------------------------------------------- PAGINA: ESCALAR TI ------------------------------------------->
-
-        <ng-container *ngSwitchCase="'EscalarTI'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
-                        <p><strong>Escalar Incidente</strong></p>
-                        <p>
-                            Cuando el ingeniero asignado no tiene la capacidad ni las herramientas para resolver el
-                            incidente entonces debe "<b>escalar</b>". Para escalar es necesario reasignar el
-                            incidente al grupo correspondiente, quien finalmente deberá resolver el incidente.
-                        </p>
-                        <p>Para escalar un incidente siga estos pasos:</p>
-                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
-                            <tr>
-                                <td valign="top">
-                                    <strong>Instrucciones:</strong>
-                                    <ol>
-                                        <li>Ingresar a sistema "<b>Remedy</b>", si no lo ha hecho
-                                            todavía. Ver cómo <a routerLink="/doc/Generales/Acceso">aquí</a>.</li>
-                                        <li>Ingresar a la consola de aspectos generales o a la consola de incidentes y
-                                            localice el incidente asignado. Ver cómo <a
-                                                routerLink="/doc/Generales/Consolas">aquí</a>.</li>
-                                        <li>En el Incidente a reasignar, hacer clic en el campo "<b>Grupo
-                                                asignado</b>".</li>
-                                        <ul>
-                                            <li>Se desplegará una lista con las <b>empresas</b> de soporte
-                                                configuradas en el sistema, seleccionar la empresa a la que pertenece el
-                                                grupo de soporte al que se reasignará el Incidente.</li>
-                                            <li>Se desplegará una lista con las <b>organizaciones</b> de soporte
-                                                relacionadas con la empresa de soporte seleccionada en el paso anterior,
-                                                seleccionar la organización a la que pertenece el grupo de
-                                                soporte al que se reasignará el Incidente.</li>
-                                            <li>Se desplegará una lista con los <b>grupos de soporte</b>
-                                                relacionados con la organización de soporte seleccionada en el
-                                                paso anterior, seleccionar el grupo de soporte al que se
-                                                reasignará Incidente.</li>
-                                        </ul>
-                                        <li>Al seleccionar el grupo de soporte, el campo "<b>Grupo
-                                                asignado</b>" se llenará con el nombre del grupo elegido y
-                                            se borrará la información contenida en el campo
-                                            "<b>Usuario asignado</b>".</li>
-                                        <li>Hacer clic en el botón <strong>Guardar,</strong> el campo Estado
-                                            cambiará de valor a "<b>Asignado</b>".</li>
-                                    </ol>
-                                </td>
-                                <td valign="top"><video src="Incidentes/escalar.mp4" width="600" autoplay controls
-                                        loop></video>
-                                </td>
-                            </tr>
-                        </table>
-                        <p>Para escalar incidentes de forma masiva seguir los siguientes pasos:</p>
-                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
-                            <tr>
-                                <td valign="top">
-                                    <strong>Instrucciones:</strong>
-                                    <ol>
-                                        <li>Ingresar a sistema "<b>Remedy</b>", si no lo ha hecho
-                                            todavía. Ver cómo <a routerLink="/doc/Generales/Acceso">aquí</a>.</li>
-                                        <li>Realize la busqueda de los incidentes dependiendo a la necesidad.</li>
-                                        <li>Seleccione los incidentes a reasignar Y damos Clic en "<b>Modificar
-                                                Todo</b>".</li>
-                                        <ul>
-                                            <li>Nos dirigimos a la pesaña de Categorizacion y Elegimos la Empresa</li>
-                                            <li>En grupo asignado, seleccionamos el grupo a donde se asignaran los
-                                                tickets </li>
-                                        </ul>
-                                        <li>Hacer clic en el botón <strong>Guardar,</strong> </li>
-                                    </ol>
-                                </td>
-                                <td valign="top"><video src="Incidentes/asignmas.mp4" width="600" autoplay controls
-                                        loop></video>
-                                </td>
-                            </tr>
-                        </table>
-                        <strong>Temas relacionados:</strong>
-                        <ul>
-                            <li><a routerLink="/doc/Incidentes/CrearTI">Creación de Incidente</a></li>
-                            <li><a routerLink="/doc/Incidentes/AtencionTI">Atención de Incidente</a></li>
-                            <li><a routerLink="/doc/Incidentes/SLAti">Revisar SLA de Incidente</a></li>
-                            <li><a routerLink="/doc/Incidentes/DocumentarTI">Documentar Incidente</a></li>
-                            <li><a routerLink="/doc/Incidentes/CrearTareaTI">Crear Tarea(s) en Inciente</a></li>
-                            <li><a routerLink="/doc/Incidentes/CerrarTI">Cerrar Incidente</a></li>
-                        </ul>
-                    </header> 
-                </div>
-            </div>
-        </ng-container>
 
         <!------------------------------------------- PAGINA: ESCALAR CPD ------------------------------------------->
 
@@ -722,113 +1414,6 @@
                 </div>
             </div>
         </ng-container> -->
-
-
-        <!------------------------------------------- PAGINA: DOCUMENTAR TI ------------------------------------------->
-
-        <ng-container *ngSwitchCase="'DocumentarTI'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
-                        <p><strong>Documentar el Incidente</strong></p>
-                        <p>
-                            En cualquier momento se deben documentar los trabajos realizados en la atención y
-                            restauración del servicio en el incidente. Esta parte es fundamental para guardar
-                            registro de lo que se ha hecho para cumplir lo siguiente:
-                        </p>
-                        <ul>
-                            <li>Auditorías del trabajo realizado por los agentes asignados al incidente.</li>
-                            <li>Fuente de conocimiento para otros incidentes relacionados.</li>
-                            <li>Medio de comunicación entre los diferentes agentes asignados.</li>
-                        </ul>
-                        <p>
-                            En Remedy ITSM, el medio para documentar un incidente, es a trav&eacute;s de notas de
-                            trabajo. Observe los siguientes pasos para documentar el incidente:
-                        </p>
-                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
-                            <tr>
-                                <td valign="top">
-                                    <strong>Agregar información de trabajo:</strong>
-                                    <ol>
-                                        <li>Ingresar al sistema "<b>Remedy</b>", si no lo ha hecho
-                                            todavía. Ver cómo <a routerLink="/doc/Generales/Acceso">aquí</a>.</li>
-                                        <li>Ingresar a la consola de aspectos generales o a la consola de incidentes y
-                                            localice el incidente asignado. Ver cómo <a
-                                                routerLink="/doc/Generales/Consolas">aquí</a>.</li>
-                                        <li>Hacer clic en la pesta&ntilde;a "<b>Detalles de trabajo</b>".</li>
-                                        <li>Bajar a la sección <b>Agregar información de trabajo</b>.</li>
-                                        <li>En el campo "<b>Notas</b>" agregar texto descriptivo a cerca de la
-                                            información de trabajo.</li>
-                                        <li>En el campo "<b>Adjunto</b>", dar clic en el ícono <img
-                                                src="Incidentes/carpeta.png" width="15"> "<b>Examinar adjunto</b>".</li>
-                                        <li>Dar clic en el botón <b>Browse</b> y elegir el archivo que se
-                                            adjuntará.</li>
-                                        <li>Una vez que se ha seleccionado el archivo deseado, hacer clic en el
-                                            botón "<b>Aceptar</b>" para adjuntar el archivo al
-                                            incidente.</li>
-                                        <ul>
-                                            <li>Para remover el archivo adjunto, hacer clic en el ícono
-                                                "<b>Eliminar adjunto</b>".</li>
-                                            <li>Para visualizar el archivo adjunto, hacer clic en el ícono
-                                                "<b>Ver archivo adjunto</b>".</li>
-                                        </ul>
-                                        <li>Hacer clic en la liga "<b>Más detalles:</b>"</li>
-                                        <ul>
-                                            <li>"<b>Adjunto #2:</b>" Permite agregar un segundo archivo al
-                                                incidente.</li>
-                                            <li>"<b>Adjunto #3:</b>" Permite agregar un tercer archivo al
-                                                incidente.</li>
-                                            <li>"<b>Tipo de información de trabajo:</b>" Permite
-                                                categorizar la información de trabajo que se está
-                                                agregando, por defecto este campo tiene el valor Información
-                                                General.</li>
-                                            <li>"<b>Bloqueado:</b>" Indica si es posible modificar la
-                                                información de trabajo que se está agregando una vez que
-                                                se haya guardado, el valor por defecto es No.</li>
-                                            <li>"<b>Acceso a vista:</b>" Especifica qui&eacute;n puede
-                                                visualizar la información de trabajo que se está
-                                                agregando, Interno (personal de soporte) o Público (cliente), el
-                                                valor por defecto es Interno.</li>
-                                        </ul>
-                                        <li>Hacer clic en el botón "<b>Guardar</b>" para agregar la
-                                            información de trabajo.</li>
-                                    </ol>
-                                    <strong>Modificar información de trabajo:</strong><br>
-                                    <em><strong>Nota:</strong> Sólo se puede modificar la información de
-                                        trabajo si es que el campo Bloqueado tiene el valor "<b>No</b>".</em>
-                                    <ol>
-                                        <li>En un registro de incidente abierto, hacer clic en la pesta&ntilde;a
-                                            "<b>Detalles de trabajo</b>".</li>
-                                        <li>En la tabla que se muestra, elegir un registro para su modificación y
-                                            hacer doble clic o hacer clic en el ícono Editar información
-                                            de trabajo ubicado debajo del texto "<b>Detalles de trabajo</b>".
-                                        </li>
-                                        <li>En la sección "<b>Editar información de trabajo</b>"
-                                            se desplegará la información del registro seleccionado.</li>
-                                        <li>Editar la información necesaria y hacer clic en el botón
-                                            "<b>Guardar</b>".</li>
-                                    </ol>
-                                </td>
-                                <td valign="top"><video src="Incidentes/documentar.mp4" width="600" autoplay controls
-                                        loop></video>
-                                </td>
-                            </tr>
-                        </table>
-                        <strong>Temas relacionados:</strong>
-                        <ul>
-                            <li><a routerLink="/doc/Incidentes/CrearTI">Creación de Incidente</a></li>
-                            <li><a routerLink="/doc/Incidentes/AtencionTI">Atención de Incidente</a></li>
-                            <li><a routerLink="/doc/Incidentes/SLAti">Revisar SLA de Incidente</a></li>
-                            <li><a routerLink="/doc/Incidentes/CreatTareaTI">Crear Tarea(s) en Incidente</a></li>
-                            <li><a routerLink="/doc/Incidentes/EscalarTI">Escalar Incidente</a></li>
-                            <li><a routerLink="/doc/Incidentes/CerrarTI">Cerrar Incidente</a></li>
-                        </ul>
-                    </header> 
-                </div>
-            </div>
-        </ng-container>
 
         <!------------------------------------------- PAGINA: DOCUMENTAR CPD ------------------------------------------->
 
@@ -1013,117 +1598,7 @@
             </div>
         </ng-container> -->
 
-        <!------------------------------------------- PAGINA: CREAR TI ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'CrearTI'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
-                        <h2>BMC SMART IT - Incident Management - Gestión de Incidentes</h2> 
-                        <p><strong>Creación de Incidentes de TI</strong></p>
-                        <p>
-                            Un incidente de TI es cualquier incidente que se genera en la infraestructura, pero que no
-                            proviene de una alarma y tampoco de una queja de cliente (CPD).</p>
-                        <p>Para crear un Incidente de TI siga estos pasos:</p>
-                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
-                            <tr>
-                                <td valign="top">
-                                    <strong>Instrucciones:</strong>
-                                    <ol>
-                                        <li>Ingresar a la consola de peticiones de <a href="https://remedycloudamx-smartit.onbmc.com/smartit/app/#/">
-                                            Smart IT</a>, si no lo ha hecho aun, conocer su usuario <a href="/doc/Generales/Acceso">aquí</a>. 
-                                            Dirigirse a: "<b>BMC Helix ITSM</b> > <b>Crear nuevo</b> > <b>Incidencia</b>".
-                                        </li>
-                                        <li>El campo "<b>Empresa</b>" se llena automaticamente y es necesario completar el
-                                            campo "Cliente" de manera manual
-                                            con la información del usuario que esta generando el incidente.</li>
-                                        <li>Completar la información de los campos:</li>
-                                        <ul>
-                                            <li>"<b>Resumen:</b>" Información simplificada del incidente.</li>
-                                            <li>"<b>Descripcion:</b>" Informacion detallada del incidente.</li>
-                                            <li>"<b>Impacto:</b>" Grado de afectación que tiene la organización.</li>
-                                            <li>"<b>Urgencia:</b>" Grado de rapidez con el que se desea que se resuelva
-                                                la incidencia.</li>
-                                            <li>"<b>Prioridad:</b>" Se llena de acuerdo a la combinación de los campos
-                                                Impacto y Urgencia.</li>
-                                            <li>"<b>Estado:</b>" El valor automaticamente se mostrara como "Nuevo".</li>
-                                            <li>"<b>Tipo de incidencia:</b>" Petición de serv. por el usuario.</li>
-                                            <li>"<b>(Opcional) CI:</b>" Elemento de configuración afectado.</li>
-                                            <li>"<b>Categorización operacional</b>": Puede seleccionarse una de las
-                                                opciones por Default o armar una opcion seleccionando cada uno de los 3
-                                                niveles haciendo clic en "Examinar".</li>
-                                            <ul>Ejemplo:
-                                                <li>Nivel 1 de categoría operacional = "<b>FALLA</b>"
-                                                </li>
-                                                <li>Nivel 2 de categoría operacional =
-                                                    "<b>FUNCIONABILIDAD</b>"</li>
-                                                <li>Nivel 3 de categoría operacional = "<b>OPERACION</b>"
-                                                </li>
-                                            </ul>
-                                            <li>"<b>Categorización de producto</b>": Puede seleccionarse una de las
-                                                opciones por Default o armar una opcion seleccionando cada uno de los 3
-                                                niveles haciendo clic en "Examinar".</li>
-                                            <ul>Ejemplo:
-                                                <li>Nivel 1 de categoría de producto = "<b>SOFTWARE</b>"
-                                                </li>
-                                                <li>Nivel 2 de categoría de producto = "<b>APLICACION</b>"</li>
-                                                <li>Nivel 3 de categoría de producto = "<b>APLICACIONES REGIONALES</b>"
-                                                </li>
-                                            </ul>
-                                        </ul>
-                                        <li>En la seccion "<b>Areas impactadas</b>" se configuran los siguientes
-                                            valores: </li>
-                                        <ul>
-                                            <li>"<b>Empresa:</b>" Compañia afectada.</li>
-                                            <li>"<b>Zona:</b>" Region afectada, depende de Empresa.</li>
-                                            <li>"<b>Grupo de ubicaciones:</b>" Depende de Zona.</li>
-                                            <li>"<b>Ubicacion:</b>" Depende de Zona.</li>
-                                            <li>"<b>Organizacion:</b>" Direccion afectada.</li>
-                                            <li>"<b>Departamento:</b>" Direccion o gerencia afectada.</li>
-                                        </ul>
-                                        <p>Al concluir, hacer clic en "Agregar". Este proceso puede repetirse para
-                                            agregar las areas afectadas necesarias.</p>
-                                        <li>En la seccion "<b>Usuario Asignado</b>" se configura el personal que debe
-                                            atender la incidencia.</li>
-                                        <ul>
-                                            <li>"<b>Grupo de soporte:</b>" Grupo de soporte al que pertenece el usuario.
-                                            </li>
-                                            <li>"<b>Persona:</b>" Usuario de remedy a quien se le asignara la solucion
-                                                del incidente.</li>
-                                        </ul>
-                                        <p>En caso de requerir mayor detalle para localizar al usuario, hacer clic en
-                                            "Examinar" lo que mostrara los campos <b>Empresa</b> y <b>Organizacion</b>
-                                        </p>
-                                        <li>(Opcional) Si se requiere agregar un archivo adjunto, hacer clic en
-                                            "<b>Adjuntar archivos</b>".
-                                            Puede agregarse un maximo de 3 adjuntos.</li>
-                                        <li>Una vez documentada la información del incidente, hacer clic en el
-                                            botón "<b>Guardar</b>".</li>
-                                        <p>El ID del incidente se mostrara en la parte superior de la pagina.
-                                            Posteriormente toda la informacion adicional
-                                            del registro incluyendo archivos adjuntos.
-                                        </p>
-                                    </ol>
-                                </td>
-                                <td valign="top"><video src="Incidentes/TELCEL-SAAS-Creación_de_Incidentes.mp4"
-                                        width="600" autoplay controls loop></video>
-                                </td>
-                            </tr>
-                        </table>
-                        <strong>Temas relacionados:</strong>
-                        <ul>
-                            <li><a routerLink="/doc/Incidentes/AtencionTI">Atención del incidente</a></li>
-                            <!-- <li><a routerLink="/doc/Incidentes/SLAti">Revisar SLA del incidente</a></li>
-                            <li><a routerLink="/doc/Incidentes/DocumentarTI">Documentar el incidente</a></li>
-                            <li><a routerLink="/doc/Incidentes/CrearTareaTI">Crear Tarea(s) en el incidente</a></li>
-                            <li><a routerLink="/doc/Incidentes/EscalarTI">Escalación del incidente</a></li>
-                            <li><a routerLink="/doc/Incidentes/CerrarTI">Cerrar el incidente</a></li> -->
-                        </ul>
-                    </header> 
-                </div>
-            </div>
-        </ng-container>
 
         <!------------------------------------------- PAGINA: CREAR CPD ------------------------------------------->
 
@@ -1207,7 +1682,7 @@
         </ng-container> -->
 
         <!------------------------------------------- PAGINA: CREAR ALARMA ------------------------------------------->
-<!-- 
+        <!-- 
         <ng-container *ngSwitchCase="'CrearAlarma'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
@@ -1259,117 +1734,7 @@
             </div>
         </ng-container> -->
 
-        <!------------------------------------------- PAGINA: CREAR TAREA TI ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'CrearTareaTI'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2>
-                        <p><strong>Crear tarea(s) en Incidente</strong></p>
-                        <p>En el módulo de incidentes existe la posibilidad de asignar actividades aisladas a su
-                            solución sin reasignar el incidente y por lo tanto, manteniendo la responsabilidad de
-                            la solución.</p>
-                        <p>El asignado a la tarea solo mantiene la responsabilidad de la tarea, mientras el asignado al
-                            incidente mantiene la responsabilidad del incidente.</p>
-                        <p>Para crear una tarea siga estos pasos. Repita la operación si desea crear más
-                            tareas.</p>
-                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
-                            <tr>
-                                <td><strong>Creación de una Tarea de Incidentes</strong></td>
-                                <td>
-                                    <strong>Pasos para la creación de una tarea de Incidentes</strong>
-                                    <ol>
-                                        <li>Ingresar al sistema "<b>Remedy</b>", si no lo ha hecho
-                                            todavía. Ver cómo <a routerLink="/doc/Generales/Acceso">aquí</a>.</li>
-                                        <li>Ingresar a la consola de aspectos generales o a la consola de incidentes y
-                                            localice el incidente asignado. Ver cómo <a
-                                                routerLink="/doc/Generales/Consolas">aquí</a>.</li>
-                                        <li>En el incidente abierto, hacer clic en la pesta&ntilde;a
-                                            "<b>Tareas</b>".</li>
-                                        <li>En el campo "<b>Tipo de petición</b>" seleccione el valor
-                                            "<b>Ad hoc</b>" y oprima el botón
-                                            "<b>Relacionar</b>".</li>
-                                        <li>Visualizara la pantalla de la nueva "<b>Tarea</b>" con la
-                                            siguiente información mapeada del incidente:</li>
-                                    </ol>
-                                    <table class="tabla" cellspacing="0" cellpadding="3">
-                                        <thead>
-                                            <tr class="TableSubHeadingColor">
-                                                <td>Incidente</td>
-                                                <td>Tarea</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="TableRowColor">
-                                                <td>Resumen</td>
-                                                <td>Nombre / Resumen</td>
-                                            </tr>
-                                            <tr class="TableRowColor">
-                                                <td>Región del CI</td>
-                                                <td>Ubicación de la tarea</td>
-                                            </tr>
-                                            <tr class="TableRowColor">
-                                                <td>Asignado al incidente</td>
-                                                <td>Información del Solicitante</td>
-                                            </tr>
-                                            <tr class="TableRowColor">
-                                                <td>Solicitante del incidente</td>
-                                                <td>Información de Solicitado para</td>
-                                            </tr>
-                                            <tr class="TableRowColor">
-                                                <td>Categorización de Resolución de Producto</td>
-                                                <td>Categorización de Producto</td>
-                                            </tr>
-                                            <tr class="TableRowColor">
-                                                <td>CI</td>
-                                                <td>CI</td>
-                                            </tr>
-                                            <tr class="TableRowColor">
-                                                <td>Asignación de la Tarea</td>
-                                                <td>Propietario del CI</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td><video src="Incidentes/creatarea.mp4" width="600" autoplay controls loop></video>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td valign="top"><strong>*Secuencia de tareas</strong><br>
-                                    <p>Cuando se han generado todas las tareas asociadas al incidente puede modificar el
-                                        número de secuencia de las mismas, es decir, el orden en el que se
-                                        ejecutarán. Una secuencia menor implica que se ejecutará primero
-                                        esa tarea.</p>
-                                    <p>En caso de requerir que todas las tareas se ejecuten al mismo tiempo
-                                        deberá asignarles el mismo número de secuencia.</p>
-                                    <p>Para modificar la secuencia de una tarea, &eacute;sta debe tener el estado
-                                        "<b>Por Fases</b>"</p>
-                                    <ol>
-                                        <li>Seleccionar el registro de la tarea en la tabla "<b>Tareas y Grupos de
-                                                Tareas</b>" dentro del incidente.</li>
-                                        <li>Oprimir las flechas que se encuentran en la parte superior derecha del
-                                            apartado <b>Tareas</b> para modificar la secuencia.</li>
-                                    </ol>
-                                </td>
-                                <td><video src="Incidentes/creartareasecuencia.mp4" width="600" autoplay controls
-                                        loop></video>
-                                </td>
-                            </tr>
-                        </table>
-                        <strong>Temas relacionados:</strong>
-                        <ul>
-                            <li><a routerLink="/doc/Incidentes/CrearTI">Creación de TI</a></li>
-                            <li><a routerLink="/doc/Incidentes/AtencionTI">Atención de TI</a></li>
-                            <li><a routerLink="/doc/Incidentes/SLAti">Revisar SLA de TI</a></li>
-                            <li><a routerLink="/doc/Incidentes/DocumentarTI">Documentar TI</a></li>
-                            <li><a routerLink="/doc/Incidentes/EscalarTI">Escalar TI</a></li>
-                            <li><a routerLink="/doc/Incidentes/CerrarTI">Cerrar TI</a></li>
-                        </ul>
-                    </header>
-                </div>
-            </div>
-        </ng-container>
 
         <!------------------------------------------- PAGINA: CREAR TAREA CPD ------------------------------------------->
 
@@ -1732,121 +2097,6 @@
 
         </ng-container> -->
 
-        <!------------------------------------------- PAGINA: CERRAR TI ------------------------------------------->
-
-        <ng-container *ngSwitchCase="'CerrarTI'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
-                        <p><strong>Cerrar Incidente</strong></p>
-                        <p>
-                            Una vez que se ha encontrado una solución al incidente entonces hay que cerrar el
-                            registro del incidente. </p>
-                        <p>Al cerrar el incidente, este debe pasar al estado "<b>Resuelto</b>" y esperar el
-                            visto bueno por el solicitante. Si el solicitante no está satisfecho con la
-                            solución ofrecida, puede solicitar una "<b>Reapertura</b>" del incidente.
-                        </p>
-                        <p>Finalmente, si el solicitante está satisfecho con la solución, el sistema
-                            cierra automáticamente los incidentes unos días despu&eacute;s.</p>
-                        <p>Para resolver el incidente siga estos pasos:</p>
-                        <table class="tabla">
-                            <tr>
-                                <td valign="top">
-                                    <p><strong>Resolución de un registro de Incidente</strong></p>
-                                    Una vez que se cuenta con la solución de la falla, se aplica, documenta y
-                                    resuelve el registro de incidente.
-                                    <p><strong>Pasos para el cierre del registro de un Incidente</strong></p>
-                                    <ol>
-                                        <li>Ingresar al sistema "<b>Remedy</b>", si no lo ha hecho
-                                            todavía. Ver cómo <a routerLink="/doc/Generales/Acceso">aquí</a>.</li>
-                                        <li>Ingresar a la consola de aspectos generales o a la consola de incidentes y
-                                            localice el incidente asignado. Ver cómo <a
-                                                routerLink="/doc/Generales/Consolas">aquí</a>.</li>
-                                        <li>En el registro del Incidente abierto, hacer clic en la pesta&ntilde;a
-                                            "<b>Categorización</b>"</li>
-                                        <li>Hacer clic en la liga "<b>Mostrar categorización de
-                                                resolución</b>"</li>
-                                        <li>En la sección "<b>Categorización de
-                                                resolución</b>", seleccionar los valores necesarios para los
-                                            campos "<b>Nivel 1, Nivel 2 y Nivel 3</b>".</li>
-                                        <li>Cambiar el valor del campo "<b>Estados</b>" a
-                                            "<b>Resuelto</b>" que se encuentra en la sección
-                                            "<b>Detalles de resolución</b>"</li>
-                                        <li>Escribir los comentarios de la solución en el campo
-                                            "<b>Resolución"</b></li>
-                                        <li>Dar clic en el botón "<b>Guardar</b>", el estado del
-                                            registro del incidente cambiará a "<b>Resuelto</b>" y se
-                                            agregará la nota de resolución en la pesta&ntilde;a
-                                            "<b>Detalles de trabajo</b>".</li>
-                                    </ol>
-                                </td>
-                                <td valign="top"><video src="Incidentes/resolvertiv1.mp4" width="600" autoplay controls
-                                        loop></video></td>
-                            </tr>
-                            <tr>
-                                <td valign="top">
-                                    <strong>Resolución de un incidente al cierre de las tareas
-                                        relacionadas</strong>
-                                    <ol>
-                                        <li>Dentro del folio de incidente asignado en estado
-                                            "<b>Pendiente</b>"</li>
-                                        <li>Una vez que se cerraron todas las tareas relacionadas, en la barra de
-                                            estados selecciona la opción "<b>Reanudar</b>" del recuadro
-                                            "<b>Resolución y recuperación</b>"</li>
-                                        <li>Oprimir el botón "<b>Resolver</b>", ubicado en la parte
-                                            inferior izquierda de la pantalla</li>
-                                        <li>Documentar el campo "<b>Resolución*</b>" y "<b>Motivo
-                                                de estado</b>" dentro del cuadro de diólogo que se muestra
-                                        </li>
-                                        *Cuando hay tareas asociadas al incidente el campo "Resolución"
-                                        debe ser documentado con la solución de las tareas asociadas.
-                                        <li>Oprima el botón "<b>Guardar</b>"</li>
-                                        <li>El incidente pasará al estado "<b>Resuelto</b>"</li>
-                                    </ol>
-                                </td>
-                                <td valign="top"><video src="Incidentes/cerrartareati.mp4" width="600" autoplay controls
-                                        loop></video></td>
-                            </tr>
-                            <tr>
-                                <td valign="top">
-                                    <p><strong>Reapertura de un Incidente</strong></p>
-                                    Si la solución relacionada con el registro de incidente es inapropiada, el
-                                    incidente podrá ser "<b>Reabierto</b>" con la finalidad de que se
-                                    reinicie el proceso de atención del incidente.<br>
-                                    <strong>Pasos para la reapertura de un Incidente</strong>
-                                    <ol>
-                                        <li>En el incidente resuelto hacer clic en el botón que se encuentra en
-                                            la barra de proceso<img width="19" height="19"
-                                                src="Incidentes/cerrarti_clip_image002_0000.png" alt="Botón">.</li>
-                                        <li>Seleccionar la opción "<b>Reabrir</b>".</li>
-                                        <li>El campo "<b>Estado</b>" cambiará a "<b>En
-                                                curso</b>" y el campo "<b>Motivo del estado</b>"
-                                            quedará en blanco.</li>
-                                        <li>Hacer clic en la pesta&ntilde;a "<b>Detalles de trabajo</b>" y
-                                            documentar una nota de Reapertura, agregar archivo adjunto si se necesita.
-                                        </li>
-                                        <li>Hacer clic en el botón "<b>Guardar</b>".</li>
-                                    </ol>
-                                </td>
-                                <td valign="top"><video src="Incidentes/reaperturati.mp4" width="600" autoplay controls
-                                        loop></video></td>
-                            </tr>
-                        </table>
-                        <strong>Temas relacionados:</strong>
-                        <ul>
-                            <li><a routerLink="/doc/Incidentes/CrearTI">Creación de TI</a></li>
-                            <li><a routerLink="/doc/Incidentes/AtencionTI">Atención de TI</a></li>
-                            <li><a routerLink="/doc/Incidentes/SLAti">Revisar SLA de TI</a></li>
-                            <li><a routerLink="/doc/Incidentes/DocumentarTI">Documentar TI</a></li>
-                            <li><a routerLink="/doc/Incidentes/CrearTareaTI">Crear Tarea(s) para TI</a></li>
-                            <li><a routerLink="/doc/Incidentes/EscalarTI">Escalar TI</a></li>
-                        </ul>
-                    </header> 
-                </div>
-            </div>
-        </ng-container>
 
         <!------------------------------------------- PAGINA: CERRAR CPD ------------------------------------------->
 
@@ -1990,212 +2240,6 @@
             </div>
         </ng-container> -->
 
-        <!------------------------------------------- PAGINA: BUSCAR KM ------------------------------------------->
-
-        <ng-container *ngSwitchCase="'BuscarKm'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
-                        <p><strong>Buscar instructivo</strong></p>
-                        <strong>Instrucciones:</strong>
-                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
-                            <tr>
-                                <td valign="top">
-                                    <ol>
-                                        <li>Dentro del folio de incidente asignado en estado en curso</li>
-                                        <li>Seleccione la opción <strong>Buscar en base de conocimientos</strong>
-                                            dentro del apartado <strong>Funciones</strong>, ubicado en la parte inferior
-                                            izquierda de la pantalla</li>
-                                        <li>Se mostrará el listado de instructivos que coinciden con el resumen
-                                            del Incidente</li>
-                                        <li>Seleccione el instructivo a utilizar e ingrese a &eacute;ste</li>
-                                        <li>Revisar la información del instructivo</li>
-                                        <li>Hacer clic en la pesta&ntilde;a <strong>Detalles</strong> y en la
-                                            sección <strong>Adjuntos de artículo</strong> seleccionar un
-                                            registro de la tabla y hacer clic en el botón
-                                            <strong>Mostrar</strong> para abrir el archivo adjunto que viene con el
-                                            instructivo
-                                        </li>
-                                        <li>Revisar la información del instructivo</li>
-                                        <li>Una vez que se haya revisado la información del archivo adjunto, se
-                                            procede a su valoración haciendo clic en el botón
-                                            <strong>Valoración</strong> que se encuentra en la parte inferior del
-                                            instructivo.
-                                        </li>
-                                        <li>Seleccionar un valor del campo <strong>Evaluación</strong>, este
-                                            valor representará la percepción que se tiene acerca de la
-                                            calidad del instructivo.</li>
-                                        <li>Opcional. En el campo <strong>Detalles de valoración</strong>,
-                                            ingresar algún comentario extra a la valoración seleccionada.
-                                        </li>
-                                        <li>Hacer clic en el botón <strong>Guardar</strong>.</li>
-                                        <li>En caso de que el instructivo sea útil en la solución del
-                                            incidente de queja oprima el botón <strong>Usar</strong> ubicado en
-                                            la parte inferior de la pantalla</li>
-                                        <li>Regrese al registro del incidente con la queja del cliente</li>
-                                        <li>En la pesta&ntilde;a <strong>Relaciones</strong> seleccionar el registro de
-                                            tipo <strong>Solución RKM</strong> y hacer doble clic, o bien, hacer
-                                            clic en el ícono lentes para abrir el instructivo que se usó
-                                            en la resolución del registro de queja.</li>
-                                        <li>Hacer clic en la pesta&ntilde;a <strong>Valoración</strong> para
-                                            observar las diferentes valoraciones que se han hecho sobre el instructivo.
-                                        </li>
-                                        <li>Para regresar al registro de queja hacer clic en la liga que muestra el ID
-                                            del registro ubicada en la parte superior del formulario a un costado del
-                                            ícono inicio</li>
-                                    </ol>
-                                </td>
-                                <td valign="top"><video src="Incidentes/buscarkmcpd.mp4" width="600" autoplay controls
-                                        loop></video></td>
-                            </tr>
-                        </table>
-                    </header> 
-                </div>
-            </div>
-        </ng-container>
-
-        <!------------------------------------------- PAGINA: ATENCION TI ------------------------------------------->
-
-        <ng-container *ngSwitchCase="'AtencionTI'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
-                        <p><strong>Atención de Incidente de TI</strong></p>
-                        <p>
-                            Una vez que el incidente ha sido creado, Remedy ITSM corre su proceso de asignacón
-                            automática. Este se basa en un mapeo de asignaciones
-                            usando las categorís de producto. Por lo tanto, los incidentes de TI serán
-                            asignados al grupo de atención correspondiente.
-                        </p>
-                        <p>
-                            Si usted pertenece a un grupo de atención de Incidentes, entonces su grupo
-                            tendrá asignado un incidente. Siga estos pasos para atender el Incidente:
-                        </p>
-                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
-                            <tr>
-                                <td valign="top">
-                                    <strong>Instrucciones:</strong>
-                                    <ol>
-                                        <li>Ingresar al sistema <a href="https://remedycloudamx-rsso.onbmc.com/rsso/start">
-                                            Smart IT</a>, si no lo ha hecho aun, conocer su usuario <a href="/doc/Generales/Acceso">aquí</a>. 
-                                        </li>
-                                        <li>Dirigirse a: "<b>BMC Helix ITSM</b>, hacer clic en <img width="17" height="17" src="img/Busqueda.png">,
-                                            escribir el ID del incidente y dar "Enter".</li>
-                                        <li>Se desplegara una lista con las incidencias que coincidan con el ID ingresado. 
-                                            Al encontrar la deseada, se mostrara una vista previa, hacer clic en <b>Ver incidencia completa</b>.
-                                        </li>
-                                    </ol>
-                                    <strong>Atencion:</strong>
-                                    <ol>
-                                        <li>Observar que el campo de "<b>Asignado a</b>" tiene el
-                                            nombre de su usuario. De lo contrario hacer clic en "Asignarme a mi mismo"</li>
-                                        <li>Observar que el campo de "<b>Estado</b>" cambió a
-                                            "<b>En curso</b>". Si no lo ha hecho, presionar el boton "Editar" para cambiarlo manualmente.</li>
-                                        <li>Lo anterior indica que usted ha comenzado los trabajos del incidente y ha dejado
-                                            los tiempos de atención atrás. Ahora se mide el tiempo de
-                                            Resolución</li>
-                                    </ol>
-                                    <strong>Seguimiento y documentación:</strong>
-                                    <ol>
-                                        <li>Para conocer todos los incidentes asignados a un usuario es necesario acceder a: 
-                                            "<b>Consola</b> > <b>Consola de tickets</b>", esto desplegara una lista a la cual se deben aplicar los filtros
-                                            "Mis tickets asignados" y "Tipo de ticket: Incidente" principalmente, despues agregar los filtros necesarios y hacer clic en <b>Aplicar filtros</b>.
-                                        </li>
-                                        <li>Al ser asignado un  incidente, este puede ser documentado por medio de notas en la parte derecha de la pantalla.
-                                             Para incluir una, solo es necesario escribir el mensaje de seguimiento, el tipo de nota por Default sera 
-                                             "Informacion General" y dar clic en "<b>Publicacion</b>". 
-                                             <p>Es posible incluir hasta 3 archivos a la publicacion de la nota, haciendo clic en "<b>Adjuntar archivo</b>"</p>
-                                        </li>
-
-                                    </ol>
-                                </td>
-                                <td valign="top"><video src="Incidentes/TELCEL-SAAS-Atención_de_incidentes.mp4" width="600" autoplay controls
-                                        loop></video>
-                                </td>
-                            </tr>
-                        </table>
-                        <strong>Temas relacionados:</strong>
-                        <ul>
-                            <li><a routerLink="/doc/Incidentes/CrearTI">Creación del Incidente</a></li>
-                            <!-- <li><a routerLink="/doc/Incidentes/SLAti">Revisar el SLA del Incidente</a></li>
-                            <li><a routerLink="/doc/Incidentes/DocumentarTI">Documentar el Incidente</a></li>
-                            <li><a routerLink="/doc/Incidentes/CrearTareaTI">Crear Tarea(s) en el Incidente</a></li>
-                            <li><a routerLink="/doc/Incidentes/EscalarTI">Escalar el Incidente</a></li>
-                            <li><a routerLink="/doc/Incidentes/CerrarTI">Cerrar el Incidente</a></li> -->
-                        </ul>
-                    </header> 
-                </div>
-            </div>
-        </ng-container>
-
-        <!------------------------------------------- PAGINA: ATENCION ------------------------------------------->
-
-        <ng-container *ngSwitchCase="'Atencion'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
-                        <h2>BMC ITSM - Incident Management - Gestión de Incidentes</h2> 
-                        <p><strong>Atención de un incidente</strong></p>
-                        <p>
-                            Una vez que el incidente ha sido creado, Remedy ITSM corre su proceso de asignación
-                            automática. En el caso de CPDs, este se basa en un mapeo de asignaciones usando las
-                            ubiciones, particularmente las regiones. Para alarmas, las asignaciones son hacia el COR. Y
-                            los incidentes de TI son asignados de acuerdo a su categorización de producto. </p>
-                        <p>
-                            Si usted pertenece a un grupo de atención, entonces su grupo tendrá asignado
-                            un incidente. Siga estos pasos para atender el incidente:
-                        </p>
-                        <table class="tabla" cellpadding="0" cellspacing="0" border="0">
-                            <tr>
-                                <td valign="top">
-                                    <strong>Instrucciones:</strong>
-                                    <ol>
-                                        <li>Ingrese al sistema Remedy si no lo ha hecho todavía. Vea cómo
-                                            <a routerLink="/doc/Generales/Acceso">aquí</a>.
-                                        </li>
-                                        <li>Ingrese a la consola de aspectos generales o a la consola de incidentes y
-                                            localice el incidente asignado. Vea cómo <a
-                                                routerLink="/doc/Generales/Consolas">aquí</a>.</li>
-                                        <li>Tome la atención del incidente. Para iniciar el proceso de
-                                            atención haga clic en la liga <img src="Incidentes/asignarme.png"
-                                                width="19">"Asignarme a mí mismo".</li>
-                                    </ol>
-                                    <strong>Resultados:</strong>
-                                    <ol>
-                                        <li>Observe que el campo de "Usuario asignado+" tiene el nombre de su
-                                            usuario.</li>
-                                        <li>Observe que el campo de "Estado" cambió a "En
-                                            curso"</li>
-                                        <li>Observe sus SLA's. Vea cómo <a routerLink="/doc/Incidentes/SLAcpd">aquí.</a>
-                                        </li>
-                                    </ol>
-                                    <p>Lo anterior indica que usted ha comenzado los trabajos del incidente y ha dejado
-                                        los tiempos de atención atrás. Ahora se mide el tiempo de
-                                        Resolució</p>
-                                    <p>Además de atender el incidente, debe documentarlo. Vea cómo <a
-                                            routerLink="/doc/Incidentes/DocumentarCPD">aquí</a>.</p>
-                                </td>
-                                <td><video src="Incidentes/atender.mp4" width="600" autoplay controls loop></video></td>
-                            </tr>
-                        </table>
-                        <strong>Temas relacionados:</strong>
-                        <ul>
-                            <li><a routerLink="/doc/Incidentes/AtencionAlarma">Creación de CPD</a></li>
-                            <li><a routerLink="/doc/Incidentes/SLAcpd">Revisar el SLA del CPD</a></li>
-                            <li><a routerLink="/doc/Incidentes/DocumentarCPD">Documentar el CPD</a></li>
-                            <li><a routerLink="/doc/Incidentes/CrearTareaCPD">Crear Tarea(s) en el CPD</a></li>
-                            <li><a routerLink="/doc/Incidentes/EscalarCPD">Escalar el CPD</a></li>
-                            <li><a routerLink="/doc/Incidentes/CerrarCPD">Cerrar CPD</a></li>
-                        </ul>
-                    </header> 
-                </div>
-            </div>
-        </ng-container>
 
 
         <ng-container *ngSwitchDefault>

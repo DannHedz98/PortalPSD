@@ -1,0 +1,357 @@
+<app-navbar></app-navbar>
+<app-menu-documentacion></app-menu-documentacion>
+<section class="Contenido">
+    <app-nav-doc></app-nav-doc>
+    <div [ngSwitch]="pageId">
+
+        <!------------------------------------------- PAGINA: INDEX ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'index'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h1>BMC ITSM - Funcionalidad</h1>
+                        <p>La parte de funcionalidad permite la modificacion y atencion de tickets y registros por medio
+                            de las aplicaciones Smart It y Digital Workplace desde un navegador web. Estas herramientas
+                            actualmente funcionan si necesidad de estar conectado a la red interna.</p>
+                    </header>
+                    <div>
+                        <h2>Aplicaciones de Funcionalidad</h2>
+                        <div class="sectionWrapper">
+                            <p>En esta secci&oacute;n se listan las aplicaciones que utiliza la parte de Funcionalidad.
+                            </p>
+                            <table cellpadding="3" cellspacing="0" class="tabla2">
+                                <thead>
+                                    <tr class="TableSubHeadingColor header">
+                                        <td>&nbsp;</td>
+                                        <td width="300" align="center">Aplicación</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="TableRowColor">
+                                        <td rowspan="4"><code><span class="code_name">Smart-IT</span></code></td>
+                                        <td align="center"><a routerLink="/doc/Funcionalidad/Calendario">Calendario</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <!-- El primer <td> ya está ocupado por rowspan -->
+                                        <td align="center"><a routerLink="/doc/Funcionalidad/Consola">Consola de
+                                                Tickets</a></td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td align="center"><a routerLink="/doc/Funcionalidad/CrearNuevo">Crear Nuevo</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td align="center"><a routerLink="/doc/Funcionalidad/Panel">Panel de control</a>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+
+        <!------------------------------------------- PAGINA: CALENDARIO ------------------------------------------->
+        <ng-container *ngSwitchCase="'Calendario'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h2>BMC ITSM - Smart IT - Calendario</h2>
+
+                        <p><strong>Calendario de eventos de TI</strong></p>
+                        <P>La seccion de calendario sirve para visualizar y gestionar eventos y tickets de TI con la
+                            finalidad de tener una mejor organizacion en la planificacion, evitar conflictos entre
+                            actividades y mejorar la coordinacion entre los equipos.</P>
+                        <p>Para ingresar a esta seccion, siga estos pasos:</p>
+
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <p><strong>Instrucciones:</strong></p>
+                                    <ol>
+                                        <li>Ingresar a la consola de peticiones de <a
+                                                href="https://remedycloudamx-smartit.onbmc.com/smartit/app/#/"
+                                                target="_blank">
+                                                Smart IT</a>, si no lo ha hecho aun, conocer su usuario <a
+                                                routerLink="/doc/Generales/Acceso">aquí</a>.
+
+                                        </li>
+                                        <li>Al ingresar a la pagina principal, dirigirse a la seccion "Calendario"
+                                            ubicada
+                                            en la parte superior de la pantalla.</li>
+                                        <li>Se abrira una pantalla nueva en la que se muestra una forma grafica en
+                                            estilo de calendario para los tickets programados.</li>
+                                        <li>Se puede consultar informacion de acuerdo a filtros para mostrar en pantalla
+                                            los tickets especificos segun se requiera. Si los filtros utilizados son de
+                                            consulta frecuente, puede guardarse la plantilla para utilizarla en otra
+                                            ocasion Desplegando el menu "Filtrar", haciendo clic en Guardar y dando
+                                            nombre a la plantilla.</li>
+                                        <li>Al hacer clic en "Aplicar filtros", se mostraran en forma de linea de tiempo
+                                            los tickets que cumplan con los filtros, mostrando el resumen, ID del
+                                            ticket, prioridad y status.</li>
+                                        <li>El filtrado de la informacion puede modificarse en cualquier momento, para
+                                            varias la informacion que se mostrara en la pantalla.</li>
+                                        <li>Es posible cambiar la vista de los tickets para que sean presentados de
+                                            manera diaria, semanas o mensual segunla necesidad del usuario.</li>
+                                        <li>Si se requiere ver mas detalle de cada ticket, haciendo clic sobre el se
+                                            mostrara una vista previa con informacion general sobre el evento.</li>
+                                        <li>Si el ticket seleccionado requiere de mayor detalle o atencion, hacer clic
+                                            en "Ver ticket", en la parte superior derecha de la ventana de vista previa.
+                                        </li>
+                                        <li>Para desplazarse atraves del calendario, puede hacerse mediante los botones
+                                            "<" y ">" ubicados en la parte superiro derecha de la vista de
+                                                Calendario.</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video
+                                        src="/smartit/PortalPSD/Funcionalidad/SMART IT - Configurar Consola de Smart IT - Calendario.mp4"
+                                        width="600" autoplay controls loop></video></td>
+                            </tr>
+                        </table>
+                        <!-- <p><strong>Temas relacionados:</strong></p>
+                        <ul>
+                            <li><a routerLink="/doc/SolicitudServicio/Categorias">Examinar categorias</a></li>
+                            <li><a routerLink="/doc/SolicitudServicio/SolicitudServicio">Solicitud de servicios</a></li>
+                            <li><a routerLink="/doc/SolicitudServicio/ConsultaPeticiones">Consulta de peticiones</a>
+                            </li>
+                        </ul> -->
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+        <!------------------------------------------- PAGINA: CATEGORIAS ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'Consola'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h2>BMC ITSM - Smart IT - Calendario</h2>
+
+                        <p><strong>Consola de tickets de TI</strong></p>
+                        <P>La seccion de consola de tickets muestra el listado de INC, CRQ, WO, etc. que hayan sido
+                            generados hacia un grupo o usuario en especifico.</P>
+                        <p>Para ingresar a esta consola, siga estos pasos:</p>
+
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <p><strong>Instrucciones:</strong></p>
+                                    <ol>
+                                        <li>Ingresar a la consola de peticiones de <a
+                                                href="https://remedycloudamx-smartit.onbmc.com/smartit/app/#/"
+                                                target="_blank">
+                                                Smart IT</a>, si no lo ha hecho aun, conocer su usuario <a
+                                                routerLink="/doc/Generales/Acceso">aquí</a>.
+
+                                        </li>
+                                        <li>Al ingresar a la pagina principal, dirigirse a la seccion "Consola"
+                                            ubicada
+                                            en la parte superior de la pantalla.</li>
+                                        <li>Se abrira una pantalla nueva en la que se muestra el listado de los tickets
+                                            asignados al grupo o grupos al que pertenece.</li>
+                                        <li>El listado puede mostrar los tickets dependiendo de su asignacion.
+                                            <ul>
+                                                <li>Creado por mi: Plantillas de filtros generadas por el usuario.</li>
+                                                <li>Compartido conigo: Tickets cuyo proceso es compartido entre
+                                                    usuarios.</li>
+                                                <li>Preajustes de sistema: Muestra los tickes dependiendo de la
+                                                    prioridad, status, asignacion, etc.</li>
+                                            </ul>
+                                        </li>
+                                        <li>Se puede consultar informacion de acuerdo a filtros para mostrar en pantalla
+                                            los tickets especificos segun se requiera desplegando el menu "Filtrar",
+                                            seleccionando los filtros deseados y haciendo clic en "Aplicar Filtro".</li>
+                                        <li>Si la seleccion de filtros es de uso frecuente, puede guardarse como
+                                            plantilla haciendo clic en "Guardar como" en la parte superior de la
+                                            pantalla, asignando un titulo y posteriormente la plantilla puede ser
+                                            consultada en el menu de la parte superior izquierda, en la seccion
+                                            <b>Creado por mi</b>.
+                                        </li>
+                                        <li>El filtrado de la informacion puede modificarse en cualquier momento, para
+                                            variar la informacion que se mostrara en la pantalla.</li>
+                                        <li>Es posible cambiar la configuracion de columas que se muestran en pantalla
+                                            haciendo clic en "Columnas visibles" en la parte superior derecha de la
+                                            lista de tickets y seleccionando los campos que se requieran ver en la
+                                            lista.</li>
+                                        <li>Al hacer clic en "Guardar" en la parte superior de la pantalla, la seleccion
+                                            de campos mostrados en la lista quedara registrada.</li>
+                                        <li>Las plantillas de filtros puedes ser editadas, eliminadas o compartidas con
+                                            otros usuarios de Remedy en la herramienta de Smart IT haciendo clic en los
+                                            tres puntos ubicados a la derecha del boton "Guardar como".</li>
+
+                                        <li>Si se requiere aplicar una funcion especifica a mas de un ticket mostrado en
+                                            la lista, es posible hacerlo de manera grupal, seleccionando los tickets en
+                                            la parte izquierda de la lista, despues de que todos los tickets deseados
+                                            hayan sido marcados, seleccionar el cambio a aplicar en la parte superior de
+                                            la lista.</li>
+
+                                        <li>Si se requiere ver mas detalle de cada ticket, hacer clic en el para
+                                            desplegar la pantalla con la informacion general.</li>
+                                    </ol>
+                                </td>
+                                <td valign="top"><video
+                                        src="/smartit/PortalPSD/Funcionalidad/SMART IT - Configurar Consola de Smart IT - Consola de Tickets.mp4"
+                                        width="600" autoplay controls loop></video></td>
+                            </tr>
+                        </table>
+                        <!-- <p><strong>Temas relacionados:</strong></p>
+                        <ul>
+                            <li><a routerLink="/doc/SolicitudServicio/Categorias">Examinar categorias</a></li>
+                            <li><a routerLink="/doc/SolicitudServicio/SolicitudServicio">Solicitud de servicios</a></li>
+                            <li><a routerLink="/doc/SolicitudServicio/ConsultaPeticiones">Consulta de peticiones</a>
+                            </li>
+                        </ul> -->
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+
+        <!------------------------------------------- PAGINA: SOLICITUD SERVICIO ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'CrearNuevo'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h2>BMC ITSM - Smart IT - Crear Nuevo ticket</h2>
+
+                        <p><strong>Creacion de ticket nuevo</strong></p>
+                        <P>Para generar tickets sin necesidad de acceder a la vista clasica de Remedy, puede hacerse
+                            mediante la herramienta <b>Smart IT</b>.</P>
+                        <p>Para generar un ticket (INC, WO, CRQ, etc..), siga los siguientes pasos:</p>
+
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <p><strong>Instrucciones:</strong></p>
+                                    <ol>
+                                        <li>Ingresar a la consola de peticiones de <a
+                                                href="https://remedycloudamx-smartit.onbmc.com/smartit/app/#/"
+                                                target="_blank">
+                                                Smart IT</a>, si no lo ha hecho aun, conocer su usuario <a
+                                                routerLink="/doc/Generales/Acceso">aquí</a>.
+
+                                        </li>
+                                        <li>Al ingresar a la pagina principal, dirigirse a la seccion "Crear nuevo"
+                                            ubicada
+                                            en la parte superior de la pantalla.</li>
+                                        <li>Se desplegara un menu con todas las opciones de tipo de ticket que se pueden
+                                            crear. Es importante mencionar que el usuario debe de contar con los
+                                            permisos correspondientes para la creacion del ticket.</li>
+                                        <li>Al seleccionar el tipo de ticket, se mostrara una pantalla con un
+                                            formulario,
+                                            en donde se deberan llenar todos los datos obligatorios que requiere el
+                                            ticket para ser procesado y generado.</li>
+                                        <li>Dependiendo de la opcion seleccionada, puede varias el tipo de formulario,
+                                            los campos y las secciones a completar. </li>
+                                        <li>Al realizar el llenado completo de los campos obligatorios en el formulario,
+                                            hacer clic
+                                            en el boton "Guardar".</li>
+                                        <li>Al guardar el ticket, este podra ser consultado en la consola de Tickets de
+                                            <b>Smart IT.</b>
+                                        </li>
+                                        <li>En el caso de haber seleccionado incorrectamente la opcion de ticket a
+                                            crear,
+                                            puede cancelarse el proceso de creacion haciendo clic en el boton "cancelar"
+                                            en la parte inferior derecha de la pantalla.</li>
+
+                                    </ol>
+                                </td>
+                                <td valign="top"><video
+                                        src="/smartit/PortalPSD/Funcionalidad/SMART IT - Configurar Consola de Smart IT - Crear Nuevo.mp4"
+                                        width="600" autoplay controls loop></video></td>
+                            </tr>
+                        </table>
+                        <!-- <p><strong>Temas relacionados:</strong></p>
+                        <ul>
+                            <li><a routerLink="/doc/SolicitudServicio/Acceso">Acceso a DWP</a></li>
+                            <li><a routerLink="/doc/SolicitudServicio/Categorias">Examinar categorias</a></li>
+                            <li><a routerLink="/doc/SolicitudServicio/ConsultaPeticiones">Consulta de peticiones</a>
+                            </li>
+
+                        </ul> -->
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+        <!------------------------------------------- PAGINA: CONSULTA PETICIONES ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'Panel'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+
+                        <h2>BMC ITSM - Smart IT - Crear Nuevo ticket</h2>
+
+                        <p><strong>Panel de informacion y busqueda.</strong></p>
+                        <P>La herramienta Smart IT cuenta con una vista de Panel, en donde se puede
+                            visualizar informacion relevante acerca de Actualizacion y estadisticas de Tickets mostrada
+                            a manera de listas y graficas.</P>
+                        <p>Acceder a la vista de panel, siga los siguientes pasos:</p>
+
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <tr>
+                                <td valign="top">
+                                    <p><strong>Instrucciones:</strong></p>
+                                    <ol>
+                                        <li>Ingresar a la consola de peticiones de <a
+                                                href="https://remedycloudamx-smartit.onbmc.com/smartit/app/#/"
+                                                target="_blank">
+                                                Smart IT</a>, si no lo ha hecho aun, conocer su usuario <a
+                                                routerLink="/doc/Generales/Acceso">aquí</a>.
+
+                                        </li>
+                                        <li>Al ingresar a la pagina principal, dirigirse a la seccion "Panel"
+                                            ubicada
+                                            en la parte superior de la pantalla.</li>
+                                        <li>A continuacion se mostrara la vista principal del panel, en la parte
+                                            izquierda de la pantalla, se mostrara el listado de tickets que han sido
+                                            actualizados de alguna manera. La parte derecha mostrara la estadistica de
+                                            la lista desplegada anteriormente</li>
+                                        <li>Se pueden aplicar filtros a la lista desplegada a la izquierda, con la
+                                            finalidad de encontrar resultados especificos de manera mas rapida.</li>
+                                        <li>La parte derecha, mostrara estadisticas en tiempo real de los tickets
+                                            asignados o creados por un usuario al que tenemos acceso. Pueden ser sobre
+                                            un usuario especifico, un grupo al que pertenece, etc...</li>
+                                        <li>En la parte superior de la pantalla se encuentra una barra de busqueda
+                                            desplegable, con la cual podremos realizar busquedas hacia algun elemento
+                                            especifico utilizando el ID de ticket, el titulo del articulo de
+                                            conocimiento, el nombre de un usuario o algun otro indice. O tambien es
+                                            posible realizar una busqueda general en la que se muestren todos los
+                                           resultados que coincidan con lo ingresado en la barra de busqueda.</li>
+                                   </ol>
+                                </td>
+                                <td valign="top"><video
+                                        src="/smartit/PortalPSD/Funcionalidad/SMART IT - Configurar Consola de Smart IT - Panel.mp4"
+                                        width="600" autoplay controls loop></video></td>
+                            </tr>
+                        </table>
+                        <!-- <p><strong>Temas relacionados:</strong></p>
+                        <ul>
+                            <li><a routerLink="/doc/SolicitudServicio/Acceso">Acceso a DWP</a></li>
+                            <li><a routerLink="/doc/SolicitudServicio/Categorias">Examinar categorias</a></li>
+                            <li><a routerLink="/doc/SolicitudServicio/ConsultaPeticiones">Consulta de peticiones</a>
+                            </li>
+
+                        </ul> -->
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+
+        <ng-container *ngSwitchDefault>
+            <h2>Página no encontrada</h2>
+        </ng-container>
+    </div>
+</section>

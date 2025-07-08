@@ -10,17 +10,17 @@
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
-                        <h1>BMC ITSM - Movilidad</h1> 
+
+                        <h1>BMC ITSM - Movilidad</h1>
                         <p>La parte de movilidad permite la modificaci&oacute;n de registros de BMC Remedy desde un
                             dispositivo m&oacute;vil o tableta sin la necesidad de estar conectado a la red interna.
                             Adem&aacute;s de registrar la ubicaci&oacute;n f&iacute;sica del dispositivo mediante la
                             geolocalizaci&oacute;n del mismo.
                         </p>
-                    </header> 
-                    <div> 
+                    </header>
+                    <div>
                         <h2>Aplicaciones de Movilidad</h2>
-                        <div class="sectionWrapper"> <!-- Aqu&iacute; escribir el contenido de esta secci&oacute;n -->
+                        <div class="sectionWrapper">
                             <p>En esta secci&oacute;n se listan las aplicaciones que utiliza la parte de Movilidad.</p>
                             <table cellpadding="3" cellspacing="0" class="tabla2">
                                 <thead>
@@ -30,136 +30,43 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="TableRowColor">
-                                        <td><code><span class="code_name">Atenci&oacute;n de Tickets</span></code></td>
-                                        <td colspan="3" align="center"><a routerLink="/doc/Movilidad/SmartIt">BMC Smart-IT</a></td>
-                                    </tr>
-                                    <tr class="TableRowColor">
-                                        <td><code><span class="code_name">Aprobaci&oacute;n de Tickets</span></code>
-                                        </td>
-                                        <td colspan="3" align="center"><a routerLink="/doc/Movilidad/DWP">BMC DWP</a></td>
-                                    </tr>
-                                    <tr class="TableRowColor">
-                                        <td><code><span class="code_name">Capacitacion Smart-IT</span></code></td>
-                                        <td colspan="3" align="center"><a routerLink="/doc/Movilidad/SmartIT">Curso Smart-IT</a></td>
+                                    <!-- <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Capacitacon Smart-IT</span></code></td>
+                                        <td colspan="3" align="center"><a routerLink="/doc/Movilidad/SmartIt">BMC
+                                                Smart-IT</a></td>
                                     </tr>
                                     <tr class="TableRowColor">
                                         <td><code><span class="code_name">Capacitacion DWP</span></code></td>
-                                        <td colspan="3" align="center"><a routerLink="/doc/Movilidad/DWP">Curso DWP</a></td>
+                                        <td colspan="3" align="center"><a routerLink="/doc/Movilidad/DWP">BMC DWP</a>
+                                        </td>
+                                    </tr> -->
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Capacitacion Smart-IT Movil</span></code></td>
+                                        <td colspan="3" align="center"><a
+                                                routerLink="/doc/Movilidad/SmartIt_Movil">Curso Smart-IT</a></td>
+                                    </tr>
+                                    <tr class="TableRowColor">
+                                        <td><code><span class="code_name">Capacitacion DWP Movil</span></code></td>
+                                        <td colspan="3" align="center"><a routerLink="/doc/Movilidad/DWP_Movil">Curso
+                                                DWP</a></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div> <!-- Termina el contenido de la secci&oacute;n -->
-                    </div> 
+                    </div>
                 </div>
             </div>
         </ng-container>
 
-        <!------------------------------------------- PAGINA: ALTA USUARIO DWP ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'AltaUsuarioDWP'">
-            <div id="summary" class="summary">
-                <div id="mainContent" class="mainContent">
-                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <h1>BMC ITSM - Digital Work Place - Alta de usuario</h1> 
-                        <p></p>
-                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
-                            <p><strong>Instrucciones:</strong></p>
-                            <tr>
-                                <td valign="top">
-                                    <ul>Para solicitar el alta de un usuario, es necesario ingresar al portal de
-                                        <strong>DWP</strong> (Digital Work Place), utilizando las credenciales de acceso
-                                        de
-                                        Remedy.
-                                    </ul>
-                                    <ul>Al ingresar, el portal <b>DWP</b> nos solicitara aceptar Terminos y condiciones
-                                        de
-                                        uso de la plataforma, posteriormente se nos mostrara una pagina de inicio
-                                        desplegando las opciones de acceso rapido.</ul>
-                                    <ul>Para ingresar al servicio <b>Alta de Usuarios en DWP</b>, nos dirigiremos a la
-                                        barra
-                                        de navegacion superior, en la opcion <b>Catalog</b> y posteriormente,
-                                        desplegaremos
-                                        el menu: <b>Examinar categorías > Gestion de Accesos</b>. Esto nos llevara a una
-                                        pagina de resultados de busqueda, donde aparecera el servicio.</ul>
-                                </td>
-                                <td valign="top"><video src="Movilidad/AccesoServicioDWP.mp4" width="630" style="margin: 5px;"
-                                        autoplay controls loop></video></td>
-                            </tr>
-                            <tr>
-                                <td valign="top">
-                                    <ul>Al ingresar, se nos mostrara la siguiente pantalla, en donde se encuentra una
-                                        breve
-                                        descripcion del servicio a la izquierda y la seccion para solicitarlo del lado
-                                        derecho.</ul>
-                                    <ul>Para continuar con la solicitud, dirigirse al boton <b>✔ Pedir ahora</b></ul>
-                                </td>
-                                <td valign="top"><img src="Movilidad/AltaDWP_3.png" alt="ServiciosDWP" width="630"
-                                        style="margin: 5px;"></td>
-                            </tr>
-                            <tr>
-                                <td valign="top">
-                                    <ul>A continuación aparecera un formulario solicitando campos para el registro de un
-                                        nuevo usuario. Siendo unicamente los marcados en <b>(obligatorio)</b>, los que
-                                        deben
-                                        llenarse.</ul>
-                                </td>
-                                <td valign="top"><img src="Movilidad/PantallaServicioDWP.png" alt="ServiciosDWP" width="630"
-                                        style="margin: 5px;"></td>
-                            </tr>
-                            <tr>
-                                <td valign="top">
-                                    <ul style="margin-bottom: 3rem;">Para realizar el llenado de los datos, el primer
-                                        campo
-                                        requerido es <b>Numero de empleado</b>, ya que este definira el camino que el
-                                        proceso tomara.
-
-                                        <li style="margin-left:1rem;">Caso 1.
-                                            <ul>Si el numero de empleado que se ingreso ya cuenta con usuario en DWP,
-                                                automaticamente en el campo <b>Login</b> nos desplegara una lista con el
-                                                usuario asignado a ese numero de empleado.</ul>
-                                            <ul>De igual manera, un mensaje sugiriendo la posible contraseña para
-                                                acceder a
-                                                DWP o en su defecto, un enlace para realizar el reseteo de esta.</ul>
-                                            <ul>Por ultimo, de no encontrar otra coincidencia para ese usuario en el
-                                                campo
-                                                <b>Otras coincidenas</b>, el servicio no podra completarse.
-                                            </ul>
-                                        </li>
-                                        <li style="margin-left:1rem;">Caso 2.
-                                            <ul>Si el numero de empleado que se ingreso no cuenta con usuario en DWP, el
-                                                campo <b>Nombre Completo</b> desplegara una lista con el nombre del
-                                                empleado
-                                                de Remedy, ademas de autocompletar los demas campos bloqueados con la
-                                                informacion relacionada.</ul>
-                                            <ul>A continuacion se debe ingresar un correo electronico para asociar al
-                                                registro del usuario y la justificacion de por que se solicita el
-                                                servicio.
-                                            </ul>
-                                            <ul>finalmente, si todos los campos estan verificados, en la parte superior
-                                                aparecera una marca verde que indica que el registro esta listo para
-                                                hacer
-                                                enviado, ademas de que el boton <b>Enviar petición</b> se habilitara.
-                                                Bastara con presionarlo para completar el servicio</ul>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td valign="top"><video src="Movilidad/AltaUsuarioDWP.mp4" width="630" style="margin: 5px;"
-                                        autoplay controls loop></video></td>
-                            </tr>
-                        </table>
-                    </header> 
-                </div>
-            </div>
-        </ng-container>
 
         <!------------------------------------------- PAGINA: DWP ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'DWP'">
+        <ng-container *ngSwitchCase="'DWP_Movil'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <h1>BMC DWP</h1> 
+                        <h1>BMC DWP</h1>
                         <p>
                             Es una herramienta que esta dise&ntilde;ada para solicitar peticiones de servicio y realizar
                             aprobaciones de las peticiones solicitadas sin la necesidad de estar fisicamente en las
@@ -167,35 +74,27 @@
                         </p>
                         <p>Las siguientes ligas muestran la manera de operar la aplicaci&oacute;n BMC DWP:</p>
                         <ul>
-                            <li><a routerLink="/doc/Movilidad/DWP_InstalarConfigurar">Instalaci&oacute;n y Configuraci&oacute;n</a></li>
-                            <li><a routerLink="/doc/Movilidad/DWP_Navegar">Navegaci&oacute;n</a></li>
-                            <li><a routerLink="/doc/Movilidad/DWP_Aprueba">Aprobar peticiones</a></li>
-                            <li><a routerLink="/doc/Movilidad/DWP_Rechaza">Rechazar peticiones</a></li>
-                            <li><a routerLink="/doc/Movilidad/DWP_Preferencias">Preferencias de usuario</a></li>
+                            <li><a routerLink="/doc/Movilidad/DWP_Movil_InstalarConfigurar">Instalaci&oacute;n y
+                                    Configuraci&oacute;n</a></li>
+                            <li><a routerLink="/doc/Movilidad/DWP_Movil_Navegar">Navegaci&oacute;n</a></li>
+                            <li><a routerLink="/doc/Movilidad/DWP_Movil_Aprueba">Aprobar peticiones</a></li>
+                            <li><a routerLink="/doc/Movilidad/DWP_Movil_Rechaza">Rechazar peticiones</a></li>
+                            <!-- <li><a routerLink="/doc/Movilidad/DWP_Preferencias">Preferencias de usuario</a></li> -->
                             <li><a routerLink="/doc/Movilidad/AltaUsuarioDWP">Alta de Usuario</a></li>
                         </ul>
-                        <h1>Curso BMC DWP</h1> 
-                        <ul>
-                            <li><a href="DModulo1/index.html">Modulo 1</a></li>
-                            <li><a href="DModulo2/index.html">Modulo 2</a></li>
-                            <li><a href="DModulo3/index.html">Modulo 3</a></li>
-                            <li><a href="DModulo4/index.html">Modulo 4</a></li>
-                            <li><a href="DModulo5/index.html">Modulo 5</a></li>
-                            <li><a href="DCourseAssessment/index.html">Course Assessment</a></li>
-                        </ul>
-                    </header> 
+                    </header>
                 </div>
             </div>
         </ng-container>
 
         <!------------------------------------------- PAGINA: DWP APRUEBA ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'DWP_Aprueba'">
+        <ng-container *ngSwitchCase="'DWP_Movil_Aprueba'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
-                        <h1>BMC DWP - Aprobaci&oacute;n de Peticiones</h1> 
+
+                        <h1>BMC DWP - Aprobaci&oacute;n de Peticiones</h1>
                         <p>
                             El siguiente procedimiento muestra los pasos a seguir para la aprobaci&oacute;n de
                             peticiones utilizando BMC DWP.
@@ -206,7 +105,8 @@
                                     <strong>Instrucciones Android:</strong>
                                     <ol>
                                         <li>Ingresar a la aplicaci&oacute;n &quot;<b>DWP</b>&quot; <img width="18"
-                                                height="18" src="Movilidad/DWP_icono.png"> desde su dispositivo m&oacute;vil o
+                                                height="18" src="Movilidad/DWP_icono.png"> desde su dispositivo
+                                            m&oacute;vil o
                                             tableta, con su usuario y contraseña.</li>
                                         <li>Da clic sobre el icono de tres puntos <img width="18" height="18"
                                                 src="Movilidad/DWP_trespuntos.png">.</li>
@@ -232,8 +132,8 @@
                                                 sesi&oacute;n</b>&quot;.</li>
                                     </ol>
                                 </td>
-                                <td valign="middle"><video src="Movilidad/DWP_aprobar.mp4" width="600" height="400" autoplay
-                                        controls loop></video>
+                                <td valign="middle"><video src="Movilidad/DWP_aprobar.mp4" width="600" height="400"
+                                        autoplay controls loop></video>
                                 </td>
                             </tr>
                             <tr>
@@ -241,7 +141,8 @@
                                     <strong>Instrucciones iOS:</strong>
                                     <ol>
                                         <li>Ingresar a la aplicaci&oacute;n &quot;<b>DWP</b>&quot; <img width="18"
-                                                height="18" src="Movilidad/DWP_icono.png"> desde su dispositivo m&oacute;vil o
+                                                height="18" src="Movilidad/DWP_icono.png"> desde su dispositivo
+                                            m&oacute;vil o
                                             tableta, con su usuario y contrase�a.</li>
                                         <li>Da clic sobre el icono de tres puntos <img width="18" height="18"
                                                 src="Movilidad/DWP_trespuntos.png">.</li>
@@ -267,8 +168,8 @@
                                                 sesi&oacute;n</b>&quot;.</li>
                                     </ol>
                                 </td>
-                                <td valign="middle"><video src="Movilidad/smartit_atendertarea_ios.mp4" width="600" height="400"
-                                        autoplay controls loop></video>
+                                <td valign="middle"><video src="Movilidad/smartit_atendertarea_ios.mp4" width="600"
+                                        height="400" autoplay controls loop></video>
                                 </td>
                             </tr>
                         </table>
@@ -278,18 +179,18 @@
                             <li><a routerLink="/doc/Movilidad/DWP_Navegar">Navegaci&oacute;n</a></li>
                             <li><a routerLink="/doc/Movilidad/DWP_Rechaza">Rechazo</a></li>
                         </ul>
-                    </header> 
+                    </header>
                 </div>
             </div>
         </ng-container>
 
         <!------------------------------------------- PAGINA: DWP INSTALAR Y CONFIGURAR ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'DWP_InstalarConfigurar'">
+        <ng-container *ngSwitchCase="'DWP_Movil_InstalarConfigurar'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <h1>BMC DWP - <!--Instalaci&oacute;n y--> Configuraci&oacute;n</h1> 
+                        <h1>BMC DWP - <!--Instalaci&oacute;n y--> Configuraci&oacute;n</h1>
                         <p>
                             BMC DWP esta enfocado a atender la demanda de usuarios finales que requieren una
                             interacci&oacute;n con las &aacute;reas de TI, encargadas de gestionar los servicios
@@ -302,7 +203,9 @@
                                     <ol>
                                         <li>Desde el dispositivo m&oacute;vil o tableta abrir tu navegador e ingresar a
                                             la siguiente liga en la barra de direcciones:
-                                            <strong><a href="https://dwp.oymcloud.americamovil.com/dwp/app/">https://dwp.oymcloud.americamovil.com/dwp/app/</a></strong> y presionar
+                                            <strong><a
+                                                    href="https://dwp.oymcloud.americamovil.com/dwp/app/">https://dwp.oymcloud.americamovil.com/dwp/app/</a></strong>
+                                            y presionar
                                             la opci&oacute;n "Ir" (-->) de acuerdo al sistema operativo de su
                                             dispositivo.
                                         </li>
@@ -314,7 +217,8 @@
                                             en la parte inferior de la pantalla de tu dispositivo indicando que se
                                             agreg&oacute; exitosamente.</li>
                                         <li>En el inicio de tu dispositivo se cre&oacute; un icono de DWP, presionar el
-                                            &iacute;cono de BMC DWP.<img width="18" height="18" src="Movilidad/DWP_icono.png">
+                                            &iacute;cono de BMC DWP.<img width="18" height="18"
+                                                src="Movilidad/DWP_icono.png">
                                         </li>
                                         <li>En la siguiente ventana se solicita proporcionar los datos siguientes datos
                                             "usuario y password", mismos que ser&aacute;n iguales a los que se utiliza
@@ -322,8 +226,8 @@
                                     </ol>
                                 </td>
                                 <td valign="middle">
-                                    <video src="Movilidad/DWP_instalarconfigurar.mp4" width="600" height="400" autoplay controls
-                                        loop></video>
+                                    <video src="Movilidad/DWP_instalarconfigurar.mp4" width="600" height="400" autoplay
+                                        controls loop></video>
                                 </td>
                             </tr>
                             <tr>
@@ -349,8 +253,8 @@
                                     </ol>
                                 </td>
                                 <td valign="middle">
-                                    <video src="Movilidad/smartit_seguridadfuentes.mp4" width="600" height="400" autoplay controls
-                                        loop></video>
+                                    <video src="Movilidad/smartit_seguridadfuentes.mp4" width="600" height="400"
+                                        autoplay controls loop></video>
                                 </td>
                             </tr>
                             <tr>
@@ -364,14 +268,16 @@
                                             dispositivo.
                                         </li>
                                         <li>Una vez que cargo la p&aacute;gina, dar clic en el icono opciones <img
-                                                width="18" height="18" src="Movilidad/DWP_ios_compartir.png"> y seleccionar la
+                                                width="18" height="18" src="Movilidad/DWP_ios_compartir.png"> y
+                                            seleccionar la
                                             opci&oacute;n "Agregar a Inicio".</li>
                                         <li>Se mostrar&aacute; una ventana donde deber&aacute; asignar el siguiente
                                             nombre "DWP TELCEL" y dar clic en "Agregar", se mostrar&aacute; un mensaje
                                             en la parte inferior de la pantalla de tu dispositivo indicando que se
                                             agreg&oacute; exitosamente.</li>
                                         <li>En el inicio de tu dispositivo se cre&oacute; un icono de DWP, presionar el
-                                            &iacute;cono de BMC DWP. <img width="18" height="18" src="Movilidad/DWP_icono.png">
+                                            &iacute;cono de BMC DWP. <img width="18" height="18"
+                                                src="Movilidad/DWP_icono.png">
                                         </li>
                                         <li>En la siguiente ventana se solicita proporcionar los datos siguientes datos
                                             "usuario y password", mismos que ser&aacute;n iguales a los que se utiliza
@@ -380,8 +286,8 @@
                                 </td>
 
                                 <td valign="middle">
-                                    <video src="Movilidad/DWP_instalarconfigurar_ios.mp4" width="600" height="400" autoplay
-                                        controls loop></video>
+                                    <video src="Movilidad/DWP_instalarconfigurar_ios.mp4" width="600" height="400"
+                                        autoplay controls loop></video>
                                 </td>
                             </tr>
                         </table>
@@ -391,19 +297,19 @@
                             <li><a routerLink="/doc/Movilidad/DWP_Aprueba">Aprobaci&oacute;n</a></li>
                             <li><a routerLink="/doc/Movilidad/DWP_Rechaza">Rechazo</a></li>
                         </ul>
-                    </header> 
+                    </header>
                 </div>
             </div>
         </ng-container>
 
         <!------------------------------------------- PAGINA: DWP NAVEGAR ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'DWP_Navegar'">
+        <ng-container *ngSwitchCase="'DWP_Movil_Navegar'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
-                        <h1>BMC DWP - Navegaci&oacute;n</h1> 
+
+                        <h1>BMC DWP - Navegaci&oacute;n</h1>
                         <p>
                             BMC DWP cuenta con diferentes Ventanas para diferentes usos, a continuaci&oacute;n se
                             muestra la forma de navegar a trav&eacute;s de la ventana <strong>Consola</strong> misma que
@@ -421,7 +327,8 @@
                                             ventana &quot;<b>Cat&aacute;logo</b>&quot; que muestra todos los servicios a
                                             los cuales tiene acceso el usuario a solicitar.</li>
                                         <li>En la ventana de Cat&aacute;logo se tiene el icono de categor&iacute;as de
-                                            navegaci&oacute;n <img width="18" height="18" src="Movilidad/DWP_CatNav.png"> el cual
+                                            navegaci&oacute;n <img width="18" height="18"
+                                                src="Movilidad/DWP_CatNav.png"> el cual
                                             al dar clic se nos muestra la lista de categor&iacute;as en las que se
                                             segmentan los servicios, dicha categoria de navegaci&oacute;n nos sirve para
                                             ubicar m&aacute;s f&aacute;cilmente los servicios.</li>
@@ -432,7 +339,8 @@
                                             seleccionarlo se nos mostrar&aacute;n todos los requerimientos solicitados y
                                             donde podremos realzar filtrado de estos tickets </li>
                                         <li>En la Cosola se mostrar&aacute;n los tickets que cumplan con el filtrado
-                                            seleccionado el icono <img width="18" height="18" src="Movilidad/smartit_filtro.png">,
+                                            seleccionado el icono <img width="18" height="18"
+                                                src="Movilidad/smartit_filtro.png">,
                                             por defecto se muestran siete filtros &quot;<b>Todo</b>&quot;,
                                             &quot;<b>Aprobado</b>&quot;, &quot;<b>Rechazado</b>&quot;,
                                             &quot;<b>Terminado</b>&quot;, &quot;<b>Cerrado</b>&quot;,
@@ -441,8 +349,8 @@
                                             seleccionado. </li>
                                     </ol>
                                 </td>
-                                <td valign="middle"><video src="Movilidad/DWP_navegar.mp4" width="600" height="400" autoplay
-                                        controls loop></video>
+                                <td valign="middle"><video src="Movilidad/DWP_navegar.mp4" width="600" height="400"
+                                        autoplay controls loop></video>
                                 </td>
                             </tr>
                             <tr>
@@ -457,12 +365,14 @@
                                             ventana &quot;<b>Cat&aacute;logo</b>&quot; que muestra todos los servicios a
                                             los cuales tiene acceso el usuario a solicitar.</li>
                                         <li>En la ventana de Cat&aacute;logo se tiene el icono de categor&iacute;as de
-                                            navegaci&oacute;n <img width="18" height="18" src="Movilidad/DWP_CatNav.png"> el cual
+                                            navegaci&oacute;n <img width="18" height="18"
+                                                src="Movilidad/DWP_CatNav.png"> el cual
                                             al dar clic se nos muestra la lista de categor&iacute;as en las que se
                                             segmentan los servicios, dicha categoria de navegaci&oacute;n nos sirve para
                                             ubicar m&aacute;s f&aacute;cilmente los servicios.</li>
                                         <li>Hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_menu.png"> que se encuentra al costado izquierdo, se
+                                                src="Movilidad/smartit_menu.png"> que se encuentra al costado izquierdo,
+                                            se
                                             desplegar&aacute; la lista de opciones de ventanas, seleccionar la
                                             opci&oacute;n &quot;<b>Mi Actividad</b>&quot; que muestra una lista con las
                                             &uacute;ltimas acciones realizadas sobre los tickets a los que estamos
@@ -473,7 +383,8 @@
                                             seleccionarlo se nos mostrar&aacute;n todos los requerimientos solicitados y
                                             donde podremos realzar filtrado de estos tickets </li>
                                         <li>En la Cosola se mostrar&aacute;n los tickets que cumplan con el filtrado
-                                            seleccionado el icono <img width="18" height="18" src="Movilidad/smartit_filtro.png">,
+                                            seleccionado el icono <img width="18" height="18"
+                                                src="Movilidad/smartit_filtro.png">,
                                             por defecto se muestran siete filtros &quot;<b>Todo</b>&quot;,
                                             &quot;<b>Aprobado</b>&quot;, &quot;<b>Rechazado</b>&quot;,
                                             &quot;<b>Terminado</b>&quot;, &quot;<b>Cerrado</b>&quot;,
@@ -482,8 +393,8 @@
                                             seleccionado. </li>
                                     </ol>
                                 </td>
-                                <td valign="middle"><video src="Movilidad/smartit_navegar_ios.mp4" width="600" height="400"
-                                        autoplay controls loop></video>
+                                <td valign="middle"><video src="Movilidad/smartit_navegar_ios.mp4" width="600"
+                                        height="400" autoplay controls loop></video>
                                 </td>
                             </tr>
                         </table>
@@ -493,19 +404,19 @@
                             <li><a routerLink="/doc/Movilidad/DWP_Aprueba">Aprobaci&oacute;n</a></li>
                             <li><a routerLink="/doc/Movilidad/DWP_Rechaza">Rechazo</a></li>
                         </ul>
-                    </header> 
+                    </header>
                 </div>
             </div>
         </ng-container>
 
         <!------------------------------------------- PAGINA: PREFERENCIAS ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'DWP_Preferencias'">
+        <ng-container *ngSwitchCase="'DWP_Movil_Preferencias'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
-                        <h1>BMC DWP - Preferencias de usuario</h1> 
+
+                        <h1>BMC DWP - Preferencias de usuario</h1>
                         <strong>Instroducci&oacute;n</strong>
                         <p>
                             Digital Workplace ayuda a las organizaciones a impulsar, potenciar y dar forma al futuro del
@@ -953,19 +864,19 @@
                             <li><a routerLink="/doc/Movilidad/DWP_Aprueba">Aprobaci&oacute;n</a></li>
                             <li><a routerLink="/doc/Movilidad/DWP_Rechaza">Rechazo</a></li>
                         </ul>
-                    </header> 
+                    </header>
                 </div>
             </div>
         </ng-container>
 
         <!------------------------------------------- PAGINA: DWP RECHAZAR ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'DWP_Rechaza'">
+        <ng-container *ngSwitchCase="'DWP_Movil_Rechaza'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
-                        <h1>BMC DWP - Rechazo de Peticiones</h1> 
+
+                        <h1>BMC DWP - Rechazo de Peticiones</h1>
                         <p>
                             El siguiente procedimiento muestra los pasos a seguir para la aprobaci&oacute;n de
                             peticiones utilizando BMC DWP.
@@ -976,7 +887,8 @@
                                     <strong>Instrucciones Android:</strong>
                                     <ol>
                                         <li>Ingresar a la aplicaci&oacute;n &quot;<b>DWP</b>&quot; <img width="18"
-                                                height="18" src="Movilidad/DWP_icono.png"> desde su dispositivo m&oacute;vil o
+                                                height="18" src="Movilidad/DWP_icono.png"> desde su dispositivo
+                                            m&oacute;vil o
                                             tableta, con su usuario y contraseña.</li>
                                         <li>Da clic sobre el icono de tres puntos <img width="18" height="18"
                                                 src="Movilidad/DWP_trespuntos.png">.</li>
@@ -1005,8 +917,8 @@
                                                 sesi&oacute;n</b>&quot;.</li>
                                     </ol>
                                 </td>
-                                <td valign="middle"><video src="Movilidad/DWP_rechazar.mp4" width="600" height="400" autoplay
-                                        controls loop></video>
+                                <td valign="middle"><video src="Movilidad/DWP_rechazar.mp4" width="600" height="400"
+                                        autoplay controls loop></video>
                                 </td>
                             </tr>
                             <tr>
@@ -1014,7 +926,8 @@
                                     <strong>Instrucciones iOS:</strong>
                                     <ol>
                                         <li>Ingresar a la aplicaci&oacute;n &quot;<b>DWP</b>&quot; <img width="18"
-                                                height="18" src="Movilidad/DWP_icono.png"> desde su dispositivo m&oacute;vil o
+                                                height="18" src="Movilidad/DWP_icono.png"> desde su dispositivo
+                                            m&oacute;vil o
                                             tableta, con su usuario y contraseña.</li>
                                         <li>Da clic sobre el icono de tres puntos <img width="18" height="18"
                                                 src="Movilidad/DWP_trespuntos.png">.</li>
@@ -1043,8 +956,8 @@
                                                 sesi&oacute;n</b>&quot;.</li>
                                     </ol>
                                 </td>
-                                <td valign="middle"><video src="Movilidad/smartit_atendertarea_ios.mp4" width="600" height="400"
-                                        autoplay controls loop></video>
+                                <td valign="middle"><video src="Movilidad/smartit_atendertarea_ios.mp4" width="600"
+                                        height="400" autoplay controls loop></video>
                                 </td>
                             </tr>
                         </table>
@@ -1054,13 +967,13 @@
                             <li><a routerLink="/doc/Movilidad/DWP_navegar">Navegaci&oacute;n</a></li>
                             <li><a routerLink="/doc/Movilidad/DWP_aprueba">Aprobaci&oacute;n</a></li>
                         </ul>
-                    </header> 
+                    </header>
                 </div>
             </div>
         </ng-container>
 
         <!------------------------------------------- PAGINA: MDM ------------------------------------------->
-<!-- 
+        <!-- 
         <ng-container *ngSwitchCase="'MDM'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
@@ -1407,13 +1320,13 @@
 
         <!------------------------------------------- PAGINA: SMART IT ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'SmartIt'">
+        <ng-container *ngSwitchCase="'SmartIt_Movil'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
 
-                        <h1>BMC Smart-IT</h1> 
+
+                        <h1>BMC Smart-IT</h1>
 
                         <p>
                             Esta aplicaci&oacute;n otorga al personal de soporte una interface mucho m&aacute;s simple y
@@ -1424,49 +1337,44 @@
                         </p>
                         <p>Las siguientes ligas muestran la manera de operar la aplicaci&oacute;n BMC Smart-IT:</p>
                         <ul>
-                            <li><a routerLink="/doc/Movilidad/SmartIt_InstalarConfigurar">Instalaci&oacute;n y Configuraci&oacute;n</a></li>
-                            <li><a routerLink="/doc/Movilidad/SmartIt_Navegar">Navegaci&oacute;n</a></li>
-                            <li><a routerLink="/doc/Movilidad/SmartIt_AtenderTarea">Atenci&oacute;n de Tareas</a></li>
-                            <li><a routerLink="/doc/Movilidad/SmartIt_AtenderWO">Atenci&oacute;n de Ordenes de trabajo</a></li>
-                            <li><a routerLink="/doc/Movilidad/SmartIt_AtenderINC">Atenci&oacute;n de Incidentes</a></li>
+                            <li><a routerLink="/doc/Movilidad/SmartIt_Movil_InstalarConfigurar">Instalaci&oacute;n y
+                                    Configuraci&oacute;n</a></li>
+                            <li><a routerLink="/doc/Movilidad/SmartIt_Movil_Navegar">Navegaci&oacute;n</a></li>
+                            <li><a routerLink="/doc/Movilidad/SmartIt_Movil_AtenderTarea">Atenci&oacute;n de Tareas</a>
+                            </li>
+                            <li><a routerLink="/doc/Movilidad/SmartIt_Movil_AtenderWO">Atenci&oacute;n de Ordenes de
+                                    trabajo</a></li>
+                            <li><a routerLink="/doc/Movilidad/SmartIt_Movil_AtenderINC">Atenci&oacute;n de
+                                    Incidentes</a></li>
                         </ul>
 
                         <h2>Descarga de instructivos para Smart-IT</h2>
                         <ul>
-                            <li><a href="/PortalPSD/Movilidad/Instructivos/Smart IT Creacion, consulta y edicion de Cambios.pdf"
-                                    >Smart IT: Creaci&oacute;n, consulta y edici&oacute;n de Cambios</a></li>
-                            <li><a href="/PortalPSD/Movilidad/Instructivos/Smart IT Creacion, consulta y edicion de Incidentes.pdf"
-                                    >Smart IT: Creaci&oacute;n, consulta y edici&oacute;n de Incidentes</a></li>
-                            <li><a href="/PortalPSD/Movilidad/Instructivos/Smart_IT_Creaci&oacute;n_consulta_y_edici&oacute;n_de_Investigaci&oacute;n_de_Problemas.pdf"
-                                    >Smart IT: Creaci&oacute;n, consulta y edici&oacute;n de
+                            <li><a href="/smartit/PortalPSD/Movilidad/Instructivos/Smart IT Creacion, consulta y edicion de Cambios.pdf"
+                                    target="_blank">Smart IT: Creaci&oacute;n, consulta y edici&oacute;n de Cambios</a>
+                            </li>
+                            <li><a href="/smartit/PortalPSD/Movilidad/Instructivos/Smart IT Creacion, consulta y edicion de Incidentes.pdf"
+                                    target="_blank">Smart IT: Creaci&oacute;n, consulta y edici&oacute;n de
+                                    Incidentes</a></li>
+                            <li><a href="/smartit/PortalPSD/Movilidad/Instructivos/Smart_IT_Creación_consulta_y_edición_de_Investigación_de_Problemas.pdf"
+                                    target="_blank">Smart IT: Creaci&oacute;n, consulta y edici&oacute;n de
                                     Investigaci&oacute;n de Problemas</a></li>
-                            <li><a href="/PortalPSD/Movilidad/Instructivos/Smart IT Creaci&oacute;n, consulta y edici&oacute;n de Orden de Trabajo.pdf"
-                                    >Smart IT: Creaci&oacute;n, consulta y edici&oacute;n de Orden de
+                            <li><a href="/smartit/PortalPSD/Movilidad/Instructivos/Smart IT Creaci&oacute;n, consulta y edici&oacute;n de Orden de Trabajo.pdf"
+                                    target="_blank">Smart IT: Creaci&oacute;n, consulta y edici&oacute;n de Orden de
                                     Trabajo</a></li>
                         </ul>
-                        <h2>Capacitacion BMC Smart-IT</h2> <!-- Encabezado 2 -->
-                        <ul>
-                            <li><a href="SModulo1/index.html">Modulo 1</a></li>
-                            <li><a href="SModulo2/index.html">Modulo 2</a></li>
-                            <li><a href="SModulo3/index.html">Modulo 3</a></li>
-                            <li><a href="SModulo4/index.html">Modulo 4</a></li>
-                            <li><a href="SModulo5/index.html">Modulo 5</a></li>
-                            <li><a href="SModulo5/index.html">Modulo 6</a></li>
-                            <li><a href="SCourseAssessment/index.html">Course Assessment</a></li>
-                        </ul>
-
-                    </header> 
+                    </header>
                 </div>
             </div>
         </ng-container>
 
         <!------------------------------------------- PAGINA: SMART IT ATENDER INC ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'SmartIt_AtenderINC'">
+        <ng-container *ngSwitchCase="'SmartIt_Movil_AtenderINC'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        <h1>BMC Smart-IT - Atenci&oacute;n de Incidentes</h1> 
+                        <h1>BMC Smart-IT - Atenci&oacute;n de Incidentes</h1>
                         <p>
                             El siguiente procedimiento muestra los pasos a seguir para la atenci&oacute;n de una Tarea
                             utilizando BMC Smart-IT.
@@ -1506,36 +1414,43 @@
                                             archivo y por ultimo presionar el icono de &quot;<b>Aceptar</b>&quot; en la
                                             parte superior izquierda.</li>
                                         <li ALIGN="justify">Para editar el &quot;<b>Incidente</b>&quot; dar clic en el
-                                            &iacute;cono <img width="18" height="18" src="Movilidad/smartit_editar.png"> que se
+                                            &iacute;cono <img width="18" height="18" src="Movilidad/smartit_editar.png">
+                                            que se
                                             encuentra en la esquina superior de la pantalla.</li>
                                         <li ALIGN="justify">Hacer clic en el campo &quot;<b>Estado</b>&quot;,
                                             seleccionar la opci&oacute;n &quot;<b>En curso</b>&quot; y agregar una nota
                                             si se desea. Hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_palomita.png"> en ambas ventanas para guardar los cambios
+                                                src="Movilidad/smartit_palomita.png"> en ambas ventanas para guardar los
+                                            cambios
                                             realizados.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
                                         <li ALIGN="justify">Cambiar las categor&iacute;as, haciendo clic en el
-                                            &iacute;cono <img width="18" height="18" src="Movilidad/smartit_editar.png">, en la
+                                            &iacute;cono <img width="18" height="18"
+                                                src="Movilidad/smartit_editar.png">, en la
                                             secci&oacute;n &quot;<b>CATEGORIZACI&Oacute;N</b>&quot; hacer clic en
                                             &quot;<b>Operacional</b>&quot; o de &quot;<b>Producto</b>&quot;.</li>
                                         <li ALIGN="justify">Hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina superior de la
+                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina
+                                            superior de la
                                             pantalla y seleccionar la opci&oacute;n &quot;<b>Asignarme a
                                                 m&iacute;</b>&quot;.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
                                         <li ALIGN="justify">Hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina superior de la
+                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina
+                                            superior de la
                                             pantalla y seleccionar la opci&oacute;n &quot;<b>Editar</b>&quot;.</li>
                                         <li ALIGN="justify">Para agregar un &quot;<b>Archivo adjunto</b>&quot;, hacer
                                             clic en &quot;<b>Editar</b>&quot; y hacer clic en el bot&oacute;n <img
-                                                width="90" height="18" src="Movilidad/smartit_adjunto.png"> y elegir una de las
+                                                width="90" height="18" src="Movilidad/smartit_adjunto.png"> y elegir una
+                                            de las
                                             opciones &quot;<b>Tomar fotograf&iacute;a</b>&quot; o &quot;<b>De
                                                 archivos</b>&quot;.</li>
                                         <li ALIGN="justify">Esperar a que el archivo se adjunte (aparecer&aacute; arriba
                                             del cuadro naranja de Agregar Adjunto) y hacer clic en el &iacute;cono <img
-                                                width="18" height="18" src="Movilidad/smartit_palomita.png"> para guardar el
+                                                width="18" height="18" src="Movilidad/smartit_palomita.png"> para
+                                            guardar el
                                             archivo adjunto en el ticket de tarea.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
@@ -1545,18 +1460,20 @@
                                             opci&oacute;n en el campo &quot;<b>Motivo de estado</b>&quot;, en el campo
                                             &quot;<b>Nota de resoluci&oacute;n</b>&quot; agregar una categor&iacute;a de
                                             resoluci&oacute;n y hacer clic en el &iacute;cono <img width="18"
-                                                height="18" src="Movilidad/smartit_palomita.png"> tanto de la ventana de estado
+                                                height="18" src="Movilidad/smartit_palomita.png"> tanto de la ventana de
+                                            estado
                                             como de edici&oacute;n del incidente.</li>
                                         <li ALIGN="justify">Una vez guardada la modificaci&oacute;n, aparecer&aacute; el
                                             mensaje de confirmaci&oacute;n del incidente con el estado
                                             &quot;<b>Cerrado</b>&quot;. Hacer clic en el &iacute;cono <img width="18"
-                                                height="18" src="Movilidad/smartit_izq.png"> para validar que la tarea cerrada no
+                                                height="18" src="Movilidad/smartit_izq.png"> para validar que la tarea
+                                            cerrada no
                                             se encuentra m&aacute;s en la ventana de &quot;<b>Mis tickets
                                                 asignados</b>&quot;.</li>
                                     </ol>
                                 </td>
-                                <td valign="middle"><video src="Movilidad/smart_itAtencionInc.mp4" width="600" height="400"
-                                        autoplay controls loop></video>
+                                <td valign="middle"><video src="Movilidad/smart_itAtencionInc.mp4" width="600"
+                                        height="400" autoplay controls loop></video>
                                 </td>
                             </tr>
                             <tr>
@@ -1593,36 +1510,43 @@
                                             archivo y por ultimo presionar el icono de &quot;<b>Aceptar</b>&quot; en la
                                             parte superior izquierda.</li>
                                         <li ALIGN="justify">Para editar el &quot;<b>Incidente</b>&quot; dar clic en el
-                                            &iacute;cono <img width="18" height="18" src="Movilidad/smartit_editar.png"> que se
+                                            &iacute;cono <img width="18" height="18" src="Movilidad/smartit_editar.png">
+                                            que se
                                             encuentra en la esquina superior de la pantalla.</li>
                                         <li ALIGN="justify">Hacer clic en el campo &quot;<b>Estado</b>&quot;,
                                             seleccionar la opci&oacute;n &quot;<b>En curso</b>&quot; y agregar una nota
                                             si se desea. Hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_palomita.png"> en ambas ventanas para guardar los cambios
+                                                src="Movilidad/smartit_palomita.png"> en ambas ventanas para guardar los
+                                            cambios
                                             realizados.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
                                         <li ALIGN="justify">Cambiar las categor&iacute;as, haciendo clic en el
-                                            &iacute;cono <img width="18" height="18" src="Movilidad/smartit_editar.png">, en la
+                                            &iacute;cono <img width="18" height="18"
+                                                src="Movilidad/smartit_editar.png">, en la
                                             secci&oacute;n &quot;<b>CATEGORIZACI&Oacute;N</b>&quot; hacer clic en
                                             &quot;<b>Operacional</b>&quot; o de &quot;<b>Producto</b>&quot;.</li>
                                         <li ALIGN="justify">Hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina superior de la
+                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina
+                                            superior de la
                                             pantalla y seleccionar la opci&oacute;n &quot;<b>Asignarme a
                                                 m&iacute;</b>&quot;.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
                                         <li ALIGN="justify">Hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina superior de la
+                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina
+                                            superior de la
                                             pantalla y seleccionar la opci&oacute;n &quot;<b>Editar</b>&quot;.</li>
                                         <li ALIGN="justify">Para agregar un &quot;<b>Archivo adjunto</b>&quot;, hacer
                                             clic en &quot;<b>Editar</b>&quot; y hacer clic en el bot&oacute;n <img
-                                                width="90" height="18" src="Movilidad/smartit_adjunto.png"> y elegir una de las
+                                                width="90" height="18" src="Movilidad/smartit_adjunto.png"> y elegir una
+                                            de las
                                             opciones &quot;<b>Tomar fotograf&iacute;a</b>&quot; o &quot;<b>De
                                                 archivos</b>&quot;.</li>
                                         <li ALIGN="justify">Esperar a que el archivo se adjunte (aparecer&aacute; arriba
                                             del cuadro naranja de Agregar Adjunto) y hacer clic en el &iacute;cono <img
-                                                width="18" height="18" src="Movilidad/smartit_palomita.png"> para guardar el
+                                                width="18" height="18" src="Movilidad/smartit_palomita.png"> para
+                                            guardar el
                                             archivo adjunto en el ticket de tarea.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
@@ -1632,40 +1556,43 @@
                                             opci&oacute;n en el campo &quot;<b>Motivo de estado</b>&quot;, en el campo
                                             &quot;<b>Nota de resoluci&oacute;n</b>&quot; agregar una categor&iacute;a de
                                             resoluci&oacute;n y hacer clic en el &iacute;cono <img width="18"
-                                                height="18" src="Movilidad/smartit_palomita.png"> tanto de la ventana de estado
+                                                height="18" src="Movilidad/smartit_palomita.png"> tanto de la ventana de
+                                            estado
                                             como de edici&oacute;n del incidente.</li>
                                         <li ALIGN="justify">Una vez guardada la modificaci&oacute;n, aparecer&aacute; el
                                             mensaje de confirmaci&oacute;n del incidente con el estado
                                             &quot;<b>Cerrado</b>&quot;. Hacer clic en el &iacute;cono <img width="18"
-                                                height="18" src="Movilidad/smartit_izq.png"> para validar que la tarea cerrada no
+                                                height="18" src="Movilidad/smartit_izq.png"> para validar que la tarea
+                                            cerrada no
                                             se encuentra m&aacute;s en la ventana de &quot;<b>Mis tickets
                                                 asignados</b>&quot;.</li>
                                     </ol>
                                 </td>
-                                <td valign="middle"><video src="Movilidad/smartit_atendertarea_ios.mp4" width="600" height="400"
-                                        autoplay controls loop></video>
+                                <td valign="middle"><video src="Movilidad/smartit_atendertarea_ios.mp4" width="600"
+                                        height="400" autoplay controls loop></video>
                                 </td>
                             </tr>
                         </table>
                         <strong>Temas relacionados:</strong>
                         <ul>
-                            <li><a routerLink="/doc/Movilidad/SmartIt_InstalarConfigurar">Instalaci&oacute;n y Configuraci&oacute;n</a></li>
-                            <li><a routerLink="/doc/Movilidad/SmartIt_Navegar">Navegaci&oacute;n</a></li>
+                            <li><a routerLink="/doc/Movilidad/SmartIt_Movil_InstalarConfigurar">Instalaci&oacute;n y
+                                    Configuraci&oacute;n</a></li>
+                            <li><a routerLink="/doc/Movilidad/SmartIt_Movil_Navegar">Navegaci&oacute;n</a></li>
                         </ul>
-                    </header> 
+                    </header>
                 </div>
             </div>
         </ng-container>
 
         <!------------------------------------------- PAGINA: SMART IT ATENDER TAREA ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'SmartIt_AtenderTarea'">
+        <ng-container *ngSwitchCase="'SmartIt_Movil_AtenderTarea'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
 
-                        <h1>BMC Smart-IT - Atenci&oacute;n de Tareas</h1> 
+
+                        <h1>BMC Smart-IT - Atenci&oacute;n de Tareas</h1>
 
                         <p>
                             El siguiente procedimiento muestra los pasos a seguir para la atenci&oacute;n de una Tarea
@@ -1677,8 +1604,7 @@
                                     <strong>Instrucciones Android:</strong>
                                     <ol>
                                         <li ALIGN="justify">Habilitar la geolocalizaci&oacute;n en el dispositivo
-                                            m&oacute;vil o tableta. Para mayor referencia consulte: <a
-                                            routerLink="/doc/Movilidad/MDM">Geolocalizaci&oacute;n</a>.</li>
+                                            m&oacute;vil o tableta. </li>
                                         <li ALIGN="justify">Ingresar a la aplicaci&oacute;n &quot;<b>Smart IT</b>&quot;
                                             desde su dispositivo m&oacute;vil o tableta, con su usuario y
                                             contrase&ntilde;a.
@@ -1709,38 +1635,45 @@
                                             archivo y por ultimo presionar el icono de &quot;<b>Aceptar</b>&quot; en la
                                             parte superior izquierda.</li>
                                         <li ALIGN="justify">Para editar la &quot;<b>Tarea</b>&quot; dar clic en el
-                                            &iacute;cono <img width="18" height="18" src="Movilidad/smartit_editar.png"> que se
+                                            &iacute;cono <img width="18" height="18" src="Movilidad/smartit_editar.png">
+                                            que se
                                             encuentra en la esquina superior de la pantalla.</li>
                                         <li ALIGN="justify">Hacer clic en el campo &quot;<b>Estado</b>&quot;,
                                             seleccionar la opci&oacute;n &quot;<b>Trabajo en curso</b>&quot; y agregar
                                             una nota si se desea. Hacer clic en el &iacute;cono <img width="18"
-                                                height="18" src="Movilidad/smartit_palomita.png"> en ambas ventanas para guardar
+                                                height="18" src="Movilidad/smartit_palomita.png"> en ambas ventanas para
+                                            guardar
                                             los cambios realizados.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
                                         <li ALIGN="justify">Cambiar las categor&iacute;as, haciendo clic en el
-                                            &iacute;cono <img width="18" height="18" src="Movilidad/smartit_editar.png">, en la
+                                            &iacute;cono <img width="18" height="18"
+                                                src="Movilidad/smartit_editar.png">, en la
                                             secci&oacute;n &quot;<b>CATEGORIZACI&Oacute;N</b>&quot; hacer clic en
                                             &quot;<b>Operacional</b>&quot; o de &quot;<b>Producto</b>&quot;.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
                                         <li ALIGN="justify">Hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina superior de la
+                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina
+                                            superior de la
                                             pantalla y seleccionar la opci&oacute;n &quot;<b>Asignarme a
                                                 m&iacute;</b>&quot;.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
                                         <li ALIGN="justify">Hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina superior de la
+                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina
+                                            superior de la
                                             pantalla y seleccionar la opci&oacute;n &quot;<b>Editar</b>&quot;.</li>
                                         <li ALIGN="justify">Para agregar un &quot;<b>Archivo adjunto</b>&quot;, hacer
                                             clic en &quot;<b>Editar</b>&quot; y hacer clic en el bot&oacute;n <img
-                                                width="90" height="18" src="Movilidad/smartit_adjunto.png"> y elegir una de las
+                                                width="90" height="18" src="Movilidad/smartit_adjunto.png"> y elegir una
+                                            de las
                                             opciones &quot;<b>Tomar fotograf&iacute;a</b>&quot; o &quot;<b>De
                                                 archivos</b>&quot;.</li>
                                         <li ALIGN="justify">Esperar a que el archivo se adjunte (aparecer&aacute; arriba
                                             del cuadro naranja de Agregar Adjunto) y hacer clic en el &iacute;cono <img
-                                                width="18" height="18" src="Movilidad/smartit_palomita.png"> para guardar el
+                                                width="18" height="18" src="Movilidad/smartit_palomita.png"> para
+                                            guardar el
                                             archivo adjunto en el ticket de tarea.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
@@ -1748,11 +1681,13 @@
                                             secci&oacute;n de &quot;<b>CATEGORIZACI&Oacute;N</b>&quot;, hacer clic en el
                                             campo &quot;<b>Causa</b>&quot;, seleccionar la opci&oacute;n deseada y hacer
                                             clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_palomita.png"> para guardar la selecci&oacute;n.</li>
+                                                src="Movilidad/smartit_palomita.png"> para guardar la selecci&oacute;n.
+                                        </li>
                                         <li ALIGN="justify">Hacer clic en el campo &quot;<b>Soluci&oacute;n</b>&quot; y
                                             agregar texto que indique cu&aacute;l fue la soluci&oacute;n de la tarea en
                                             cuesti&oacute;n y hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_palomita.png"> para guardar tanto la elecci&oacute;n de la
+                                                src="Movilidad/smartit_palomita.png"> para guardar tanto la
+                                            elecci&oacute;n de la
                                             Causa como la Soluci&oacute;n.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
@@ -1761,21 +1696,23 @@
                                             &quot;<b>Cerrado</b>&quot; en el campo &quot;<b>Estado</b>&quot;, una
                                             opci&oacute;n en el campo &quot;<b>Motivo de estado</b>&quot;, agregar una
                                             nota y hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_palomita.png"> tanto de la ventana de estado como de
+                                                src="Movilidad/smartit_palomita.png"> tanto de la ventana de estado como
+                                            de
                                             edici&oacute;n de la tarea.</li>
                                         <li ALIGN="justify">Una vez guardada la modificaci&oacute;n, aparecer&aacute; el
                                             mensaje de confirmaci&oacute;n con la tarea en estado
                                             &quot;<b>Cerrado</b>&quot;. Hacer clic en el &iacute;cono <img width="18"
-                                                height="18" src="Movilidad/smartit_izq.png"> para validar que la tarea cerrada no
+                                                height="18" src="Movilidad/smartit_izq.png"> para validar que la tarea
+                                            cerrada no
                                             se encuentra m&aacute;s en la ventana de &quot;<b>Mis tickets
                                                 asignados</b>&quot;.</li>
                                         <li ALIGN="justify">Deshabilitar la geolocalizaci&oacute;n en el dispositivo
                                             m&oacute;vil o tableta. Para mayor referencia consulte: <a
-                                            routerLink="/doc/Movilidad/MDM">Geolocalizaci&oacute;n</a>.</li>
+                                                routerLink="/doc/Movilidad/MDM">Geolocalizaci&oacute;n</a>.</li>
                                     </ol>
                                 </td>
-                                <td valign="middle"><video src="Movilidad/smart_itAtencionTareas.mp4" width="600" height="400"
-                                        autoplay controls loop></video>
+                                <td valign="middle"><video src="Movilidad/smart_itAtencionTareas.mp4" width="600"
+                                        height="400" autoplay controls loop></video>
                                 </td>
                             <tr>
                                 <td valign="top">
@@ -1783,7 +1720,7 @@
                                     <ol>
                                         <li ALIGN="justify">Habilitar la geolocalizaci&oacute;n en el dispositivo
                                             m&oacute;vil o tableta. Para mayor referencia consulte: <a
-                                            routerLink="/doc/Movilidad/MDM">Geolocalizaci&oacute;n</a>.</li>
+                                                routerLink="/doc/Movilidad/MDM">Geolocalizaci&oacute;n</a>.</li>
                                         <li ALIGN="justify">Ingresar a la aplicaci&oacute;n &quot;<b>Smart IT</b>&quot;
                                             desde su dispositivo m&oacute;vil o tableta, con su usuario y
                                             contrase&ntilde;a.
@@ -1814,38 +1751,45 @@
                                             archivo y por ultimo presionar el icono de &quot;<b>Aceptar</b>&quot; en la
                                             parte superior izquierda.</li>
                                         <li ALIGN="justify">Para editar la &quot;<b>Tarea</b>&quot; dar clic en el
-                                            &iacute;cono <img width="18" height="18" src="Movilidad/smartit_editar.png"> que se
+                                            &iacute;cono <img width="18" height="18" src="Movilidad/smartit_editar.png">
+                                            que se
                                             encuentra en la esquina superior de la pantalla.</li>
                                         <li ALIGN="justify">Hacer clic en el campo &quot;<b>Estado</b>&quot;,
                                             seleccionar la opci&oacute;n &quot;<b>Trabajo en curso</b>&quot; y agregar
                                             una nota si se desea. Hacer clic en el &iacute;cono <img width="18"
-                                                height="18" src="Movilidad/smartit_palomita.png"> en ambas ventanas para guardar
+                                                height="18" src="Movilidad/smartit_palomita.png"> en ambas ventanas para
+                                            guardar
                                             los cambios realizados.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
                                         <li ALIGN="justify">Cambiar las categor&iacute;as, haciendo clic en el
-                                            &iacute;cono <img width="18" height="18" src="Movilidad/smartit_editar.png">, en la
+                                            &iacute;cono <img width="18" height="18"
+                                                src="Movilidad/smartit_editar.png">, en la
                                             secci&oacute;n &quot;<b>CATEGORIZACI&Oacute;N</b>&quot; hacer clic en
                                             &quot;<b>Operacional</b>&quot; o de &quot;<b>Producto</b>&quot;.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
                                         <li ALIGN="justify">Hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina superior de la
+                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina
+                                            superior de la
                                             pantalla y seleccionar la opci&oacute;n &quot;<b>Asignarme a
                                                 m&iacute;</b>&quot;.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
                                         <li ALIGN="justify">Hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina superior de la
+                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina
+                                            superior de la
                                             pantalla y seleccionar la opci&oacute;n &quot;<b>Editar</b>&quot;.</li>
                                         <li ALIGN="justify">Para agregar un &quot;<b>Archivo adjunto</b>&quot;, hacer
                                             clic en &quot;<b>Editar</b>&quot; y hacer clic en el bot&oacute;n <img
-                                                width="90" height="18" src="Movilidad/smartit_adjunto.png"> y elegir una de las
+                                                width="90" height="18" src="Movilidad/smartit_adjunto.png"> y elegir una
+                                            de las
                                             opciones &quot;<b>Tomar fotograf&iacute;a</b>&quot; o &quot;<b>De
                                                 archivos</b>&quot;.</li>
                                         <li ALIGN="justify">Esperar a que el archivo se adjunte (aparecer&aacute; arriba
                                             del cuadro naranja de Agregar Adjunto) y hacer clic en el &iacute;cono <img
-                                                width="18" height="18" src="Movilidad/smartit_palomita.png"> para guardar el
+                                                width="18" height="18" src="Movilidad/smartit_palomita.png"> para
+                                            guardar el
                                             archivo adjunto en el ticket de tarea.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
@@ -1853,11 +1797,13 @@
                                             secci&oacute;n de &quot;<b>CATEGORIZACI&Oacute;N</b>&quot;, hacer clic en el
                                             campo &quot;<b>Causa</b>&quot;, seleccionar la opci&oacute;n deseada y hacer
                                             clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_palomita.png"> para guardar la selecci&oacute;n.</li>
+                                                src="Movilidad/smartit_palomita.png"> para guardar la selecci&oacute;n.
+                                        </li>
                                         <li ALIGN="justify">Hacer clic en el campo &quot;<b>Soluci&oacute;n</b>&quot; y
                                             agregar texto que indique cu&aacute;l fue la soluci&oacute;n de la tarea en
                                             cuesti&oacute;n y hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_palomita.png"> para guardar tanto la elecci&oacute;n de la
+                                                src="Movilidad/smartit_palomita.png"> para guardar tanto la
+                                            elecci&oacute;n de la
                                             Causa como la Soluci&oacute;n.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
@@ -1866,41 +1812,44 @@
                                             &quot;<b>Cerrado</b>&quot; en el campo &quot;<b>Estado</b>&quot;, una
                                             opci&oacute;n en el campo &quot;<b>Motivo de estado</b>&quot;, agregar una
                                             nota y hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_palomita.png"> tanto de la ventana de estado como de
+                                                src="Movilidad/smartit_palomita.png"> tanto de la ventana de estado como
+                                            de
                                             edici&oacute;n de la tarea.</li>
                                         <li>Una vez guardada la modificaci&oacute;n, aparecer&aacute; el mensaje de
                                             confirmaci&oacute;n con la tarea en estado <strong>Cerrado</strong>. Hacer
-                                            clic en el &iacute;cono <img width="18" height="18" src="Movilidad/smartit_izq.png">
+                                            clic en el &iacute;cono <img width="18" height="18"
+                                                src="Movilidad/smartit_izq.png">
                                             para validar que la tarea cerrada no se encuentra m&aacute;s en la ventana
                                             de <strong>Mis tickets asignados</strong>.</li>
                                         <li>Deshabilitar la geolocalizaci&oacute;n en el dispositivo m&oacute;vil o
                                             tableta. Para mayor referencia consulte: <a
-                                            routerLink="/doc/Movilidad/MDM">Geolocalizaci&oacute;n</a>.</li>
+                                                routerLink="/doc/Movilidad/MDM">Geolocalizaci&oacute;n</a>.</li>
                                     </ol>
                                 </td>
-                                <td valign="middle"><video src="Movilidad/smartit_atendertarea_ios.mp4" width="600" height="400"
-                                        autoplay controls loop></video>
+                                <td valign="middle"><video src="Movilidad/smartit_atendertarea_ios.mp4" width="600"
+                                        height="400" autoplay controls loop></video>
                                 </td>
                             </tr>
                         </table>
                         <strong>Temas relacionados:</strong>
                         <ul>
-                            <li><a routerLink="/doc/Movilidad/SmartIt_InstalarConfigurar">Instalaci&oacute;n y Configuraci&oacute;n</a></li>
-                            <li><a routerLink="/doc/Movilidad/SmartIt_Navegar">Navegaci&oacute;n</a></li>
+                            <li><a routerLink="/doc/Movilidad/SmartIt_Movil_InstalarConfigurar">Instalaci&oacute;n y
+                                    Configuraci&oacute;n</a></li>
+                            <li><a routerLink="/doc/Movilidad/SmartIt_Movil_Navegar">Navegaci&oacute;n</a></li>
                         </ul>
-                    </header> 
+                    </header>
                 </div>
             </div>
         </ng-container>
 
         <!------------------------------------------- PAGINA: SMART IT ATENDER WO ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'SmartIt_AtenderWO'">
+        <ng-container *ngSwitchCase="'SmartIt_Movil_AtenderWO'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
-                        <h1>BMC Smart-IT - Atenci&oacute;n de Ordenes de Trabajo</h1> 
+
+                        <h1>BMC Smart-IT - Atenci&oacute;n de Ordenes de Trabajo</h1>
                         <p>
                             El siguiente procedimiento muestra los pasos a seguir para la atenci&oacute;n de una Orden
                             de Trabajo utilizando BMC Smart-IT.
@@ -1942,32 +1891,38 @@
                                             archivo y por ultimo presionar el icono de &quot;<b>Aceptar</b>&quot; en la
                                             parte superior izquierda.</li>
                                         <li ALIGN="justify">Para editar la &quot;<b>Orden de trabajo</b>&quot; dar clic
-                                            en el &iacute;cono <img width="18" height="18" src="Movilidad/smartit_editar.png"> que
+                                            en el &iacute;cono <img width="18" height="18"
+                                                src="Movilidad/smartit_editar.png"> que
                                             se encuentra en la esquina superior de la pantalla.</li>
                                         <li ALIGN="justify">Hacer clic en el campo &quot;<b>Estado</b>&quot;,
                                             seleccionar la opci&oacute;n &quot;<b>En curso</b>&quot; y agregar una nota
                                             si se desea. Hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_palomita.png"> en ambas ventanas para guardar los cambios
+                                                src="Movilidad/smartit_palomita.png"> en ambas ventanas para guardar los
+                                            cambios
                                             realizados.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
                                         <li ALIGN="justify">Hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina superior de la
+                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina
+                                            superior de la
                                             pantalla y seleccionar la opci&oacute;n &quot;<b>Asignarme a
                                                 m&iacute;</b>&quot;.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
                                         <li ALIGN="justify">Hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina superior de la
+                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina
+                                            superior de la
                                             pantalla y seleccionar la opci&oacute;n &quot;<b>Editar</b>&quot;.</li>
                                         <li ALIGN="justify">Para agregar un &quot;<b>Archivo adjunto</b>&quot;, hacer
                                             clic en &quot;<b>Editar</b>&quot; y hacer clic en el bot&oacute;n <img
-                                                width="90" height="18" src="Movilidad/smartit_adjunto.png"> y elegir una de las
+                                                width="90" height="18" src="Movilidad/smartit_adjunto.png"> y elegir una
+                                            de las
                                             opciones &quot;<b>Tomar fotograf&iacute;a</b>&quot; o &quot;<b>De
                                                 archivos</b>&quot;.</li>
                                         <li ALIGN="justify">Esperar a que el archivo se adjunte (aparecer&aacute; arriba
                                             del cuadro naranja de Agregar Adjunto) y hacer clic en el &iacute;cono <img
-                                                width="18" height="18" src="Movilidad/smartit_palomita.png"> para guardar el
+                                                width="18" height="18" src="Movilidad/smartit_palomita.png"> para
+                                            guardar el
                                             archivo adjunto en el ticket de ajo.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
@@ -1975,19 +1930,21 @@
                                             &quot;<b>Estado</b>&quot;, seleccionar la opci&oacute;n
                                             &quot;<b>Terminado</b>&quot;, una opci&oacute;n en el campo &quot;<b>Motivo
                                                 de estado</b>&quot;, agregar una nota y hacer clic en el &iacute;cono
-                                            <img width="18" height="18" src="Movilidad/smartit_palomita.png"> tanto de la ventana
+                                            <img width="18" height="18" src="Movilidad/smartit_palomita.png"> tanto de
+                                            la ventana
                                             de estado como de edici&oacute;n de la orden de trabajo.
                                         </li>
                                         <li ALIGN="justify">Una vez guardada la modificaci&oacute;n, aparecer&aacute; el
                                             mensaje de confirmaci&oacute;n con la orden de trabajo en estado
                                             &quot;<b>Terminado</b>&quot;. Hacer clic en el &iacute;cono <img width="18"
-                                                height="18" src="Movilidad/smartit_izq.png"> para validar que la orden de trabajo
+                                                height="18" src="Movilidad/smartit_izq.png"> para validar que la orden
+                                            de trabajo
                                             est&eacute; cerrada, no se deber&aacute; visualizar m&aacute;s en la ventana
                                             de &quot;<b>Mis tickets asignados</b>&quot;.</li>
                                     </ol>
                                 </td>
-                                <td valign="middle"><video src="Movilidad/smart_itAtencionWo.mp4" width="600" height="400"
-                                        autoplay controls loop></video>
+                                <td valign="middle"><video src="Movilidad/smart_itAtencionWo.mp4" width="600"
+                                        height="400" autoplay controls loop></video>
                                 </td>
                             </tr>
                             <tr>
@@ -2026,32 +1983,38 @@
                                             archivo y por ultimo presionar el icono de &quot;<b>Aceptar</b>&quot; en la
                                             parte superior izquierda.</li>
                                         <li ALIGN="justify">Para editar la &quot;<b>Orden de trabajo</b>&quot; dar clic
-                                            en el &iacute;cono <img width="18" height="18" src="Movilidad/smartit_editar.png"> que
+                                            en el &iacute;cono <img width="18" height="18"
+                                                src="Movilidad/smartit_editar.png"> que
                                             se encuentra en la esquina superior de la pantalla.</li>
                                         <li ALIGN="justify">Hacer clic en el campo &quot;<b>Estado</b>&quot;,
                                             seleccionar la opci&oacute;n &quot;<b>Trabajo en curso</b>&quot; y agregar
                                             una nota si se desea. Hacer clic en el &iacute;cono <img width="18"
-                                                height="18" src="Movilidad/smartit_palomita.png"> en ambas ventanas para guardar
+                                                height="18" src="Movilidad/smartit_palomita.png"> en ambas ventanas para
+                                            guardar
                                             los cambios realizados.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
                                         <li ALIGN="justify">Hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina superior de la
+                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina
+                                            superior de la
                                             pantalla y seleccionar la opci&oacute;n &quot;<b>Asignarme a
                                                 m&iacute;</b>&quot;.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
                                         <li ALIGN="justify">Hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina superior de la
+                                                src="Movilidad/smartit_editar.png"> que se encuentra en la esquina
+                                            superior de la
                                             pantalla y seleccionar la opci&oacute;n &quot;<b>Editar</b>&quot;.</li>
                                         <li ALIGN="justify">Para agregar un &quot;<b>Archivo adjunto</b>&quot;, hacer
                                             clic en &quot;<b>Editar</b>&quot; y hacer clic en el bot&oacute;n <img
-                                                width="90" height="18" src="Movilidad/smartit_adjunto.png"> y elegir una de las
+                                                width="90" height="18" src="Movilidad/smartit_adjunto.png"> y elegir una
+                                            de las
                                             opciones &quot;<b>Tomar fotograf&iacute;a</b>&quot; o &quot;<b>De
                                                 archivos</b>&quot;.</li>
                                         <li ALIGN="justify">Esperar a que el archivo se adjunte (aparecer&aacute; arriba
                                             del cuadro naranja de Agregar Adjunto) y hacer clic en el &iacute;cono <img
-                                                width="18" height="18" src="Movilidad/smartit_palomita.png"> para guardar el
+                                                width="18" height="18" src="Movilidad/smartit_palomita.png"> para
+                                            guardar el
                                             archivo adjunto en el ticket de ajo.</li>
                                         <li ALIGN="justify">Aparecer&aacute; un mensaje en color verde indicando que los
                                             cambios se han guardado correctamente.</li>
@@ -2059,45 +2022,48 @@
                                             &quot;<b>Estado</b>&quot;, seleccionar la opci&oacute;n
                                             &quot;<b>Cerrado</b>&quot;, una opci&oacute;n en el campo &quot;<b>Motivo de
                                                 estado</b>&quot;, agregar una nota y hacer clic en el &iacute;cono <img
-                                                width="18" height="18" src="Movilidad/smartit_palomita.png"> tanto de la ventana
+                                                width="18" height="18" src="Movilidad/smartit_palomita.png"> tanto de la
+                                            ventana
                                             de estado como de edici&oacute;n de la tarea.</li>
                                         <li ALIGN="justify">Una vez guardada la modificaci&oacute;n, aparecer&aacute; el
                                             mensaje de confirmaci&oacute;n con la orden de trabajo en estado
                                             &quot;<b>Cerrado</b>&quot;. Hacer clic en el &iacute;cono <img width="18"
-                                                height="18" src="Movilidad/smartit_izq.png"> para validar que la tarea cerrada no
+                                                height="18" src="Movilidad/smartit_izq.png"> para validar que la tarea
+                                            cerrada no
                                             se encuentra m&aacute;s en la ventana de &quot;<b>Mis tickets
                                                 asignados</b>&quot;.</li>
                                     </ol>
                                 </td>
-                                <td valign="middle"><video src="Movilidad/smartit_atendertarea_ios.mp4" width="600" height="400"
-                                        autoplay controls loop></video>
+                                <td valign="middle"><video src="Movilidad/smartit_atendertarea_ios.mp4" width="600"
+                                        height="400" autoplay controls loop></video>
                                 </td>
                             </tr>
                         </table>
                         <strong>Temas relacionados:</strong>
                         <ul>
-                            <li><a routerLink="/doc/Movilidad/SmartIt_InstalarConfigurar">Instalaci&oacute;n y Configuraci&oacute;n</a></li>
-                            <li><a routerLink="/doc/Movilidad/SmartIt_Navegar">Navegaci&oacute;n</a></li>
+                            <li><a routerLink="/doc/Movilidad/SmartIt_Movil_InstalarConfigurar">Instalaci&oacute;n y
+                                    Configuraci&oacute;n</a></li>
+                            <li><a routerLink="/doc/Movilidad/SmartIt_Movil_Navegar">Navegaci&oacute;n</a></li>
                         </ul>
-                    </header> 
+                    </header>
                 </div>
             </div>
         </ng-container>
 
         <!------------------------------------------- PAGINA: SMART IT INSTALAR Y CONFIGURAR ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'SmartIt_InstalarConfigurar'">
+        <ng-container *ngSwitchCase="'SmartIt_Movil_InstalarConfigurar'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
 
-                        <h1>BMC Smart-IT - Instalaci&oacute;n y Configuraci&oacute;n</h1> 
+
+                        <h1>BMC Smart-IT - Instalaci&oacute;n y Configuraci&oacute;n</h1>
 
                         <p>
                             BMC Smart-IT es una aplicaci&oacute;n gratuita que se puede descargar desde una plataforma
                             de distribuci&oacute;n digital de aplicaciones m&oacute;viles propia de Am&eacute;rica
-                            M&oacutevil.
+                            M&oacute;vil.
                         </p>
                         <table cellpadding="0" cellspacing="0" border="0" class="tabla">
                             <tr>
@@ -2106,8 +2072,9 @@
                                     <ol>
                                         <li>Desde el dispositivo m&oacute;vil o tableta, ingresar a la siguiente liga
                                             para descargar la aplicaci&oacute;n:
-                                            <strong><a href="https://smartit.oymcloud.americamovil.com/smartit/download/">
-                                                https://smartit.oymcloud.americamovil.com/smartit/download/</a></strong>
+                                            <strong><a
+                                                    href="https://smartit.oymcloud.americamovil.com/smartit/download/">
+                                                    https://smartit.oymcloud.americamovil.com/smartit/download/</a></strong>
                                             y presionar la opci&oacute;n adecuada de acuerdo al sistema operativo de su
                                             dispositivo.
                                         </li>
@@ -2134,8 +2101,8 @@
                                             a BMC Remedy.</li>
                                     </ol>
                                 </td>
-                                <td valign="middle"><video src="Movilidad/smartit_instalarconfigurar.mp4" width="600" height="400"
-                                        autoplay controls loop></video>
+                                <td valign="middle"><video src="Movilidad/smartit_instalarconfigurar.mp4" width="600"
+                                        height="400" autoplay controls loop></video>
                                 </td>
                             </tr>
                             <td valign="top">
@@ -2160,8 +2127,8 @@
                                     <li ALIGN="justify">Una vez instalada la aplicaci&oacute;n &quot;<b>BMC
                                             Smart-IT</b>&quot; de manera correcta, deber&aacute; iniciar sesi&oacute;n
                                         sin ning&uacute;n problema.</li>
-                            <td valign="middle"><video src="Movilidad/smartit_seguridadfuentes.mp4" width="600" height="400"
-                                    autoplay controls loop></video>
+                            <td valign="middle"><video src="Movilidad/smartit_seguridadfuentes.mp4" width="600"
+                                    height="400" autoplay controls loop></video>
                                 </ol>
                             </td>
                             <tr>
@@ -2180,8 +2147,8 @@
                                         <li ALING="justify">Buscar y Seleccionar <b>Smart IT</b>.</li>
                                         <li ALING="justify">Habilitar la opci&oacute; <b>Permitir la instalaci&oacute;
                                                 de apps</b>.</li>
-                                <td valign="middle"><video src="Movilidad/smartit_seguridadfuentes2.mp4" width="600" height="400"
-                                        autoplay controls loop></video>
+                                <td valign="middle"><video src="Movilidad/smartit_seguridadfuentes2.mp4" width="600"
+                                        height="400" autoplay controls loop></video>
                                     </ol>
                             </tr>
                             <tr>
@@ -2190,8 +2157,9 @@
                                     <ol>
                                         <li>Desde el dispositivo m&oacute;vil o tableta, ingresar a la siguiente liga
                                             para descargar la aplicaci&oacute;n:
-                                            <strong><a href="https://smartit.oymcloud.americamovil.com/smartit/download/">
-                                                https://smartit.oymcloud.americamovil.com/smartit/download/</a></strong>
+                                            <strong><a
+                                                    href="https://smartit.oymcloud.americamovil.com/smartit/download/">
+                                                    https://smartit.oymcloud.americamovil.com/smartit/download/</a></strong>
                                             y presionar la opci&oacute;n adecuada de acuerdo al sistema operativo de su
                                             dispositivo.
                                         </li>
@@ -2200,7 +2168,8 @@
                                         <li>El proceso de descarga e instalaci&oacuten se realizar&aacute; de forma
                                             autom&aacute;tica.</li>
                                         <li>Una vez instalada la aplicaci&oacute;n, presionar el &iacute;cono de BMC
-                                            Smart-IT. <img width="18" height="18" src="Movilidad/smartit_icono.png"></li>
+                                            Smart-IT. <img width="18" height="18" src="Movilidad/smartit_icono.png">
+                                        </li>
                                         <li>*Si aparece el mensaje de &quot;<b>Desarrollador empresarial no
                                                 confiable</b>&quot;, hacer clic en &quot;<b>Cancelar</b>&quot;. </li>
                                         <li>Hacer clic en &quot;<b>Configuraci&oacute;n</b>&quot; &rarr;
@@ -2211,7 +2180,8 @@
                                             texto &quot;<b>Confiar en "BMC Software, Inc.</b>&quot; y despu&eacute;s en
                                             &quot;<b>Confiar</b>&quot;.</li>
                                         <li>Presionar el &iacute;cono de BMC Smart-IT. <img width="18" height="18"
-                                                src="Movilidad/smartit_icono.png"> y despu&eacute;s en &quot;<b>Aceptar</b>&quot;
+                                                src="Movilidad/smartit_icono.png"> y despu&eacute;s en
+                                            &quot;<b>Aceptar</b>&quot;
                                         </li>
                                         <li>La primera vez que se ejecuta la aplicaci&oacute;n, es necesario llenar los
                                             siguientes campos: <br> &quot;<b>Host: </b>&quot;
@@ -2223,8 +2193,8 @@
                                             a &quot;<b>BMC Remedy</b>&quot;.</li>
                                     </ol>
                                 </td>
-                                <td valign="middle"><video src="Movilidad/smartit_instalarconfigurar_ios.mp4" width="600"
-                                        height="400" autoplay controls loop></video>
+                                <td valign="middle"><video src="Movilidad/smartit_instalarconfigurar_ios.mp4"
+                                        width="600" height="400" autoplay controls loop></video>
                                 </td>
                             </tr>
 
@@ -2235,7 +2205,8 @@
                                     BMC Smart-IT.</p>
                                 <ol>
                                     <li ALIGN="justify">Dar clic <a href="/PortalPSD/Movilidad/Certificados.p12"
-                                            download="/PortalPSD/Movilidad/Certificados.p12">aqu&iacute;</a> para poder descargar el
+                                            download="/PortalPSD/Movilidad/Certificados.p12">aqu&iacute;</a> para poder
+                                        descargar el
                                         certificado y poder instalarlo.</li>
                                     <li ALIGN="justify">Dirigirse a la opci&oacute;n de &quot;<b>Ajustes o
                                             Configuraci&oacute;</b>&quot; en su dispositvo m&oacute;vil.</li>
@@ -2253,8 +2224,8 @@
                                     <li ALIGN="justify">El certificado estar&aacute; instalado y la aplicaci&oacute;
                                         deber&aacute; iniciar sin problema.</li>
                                 </ol>
-                            <td valign="middle"><video src="Movilidad/InstalacionCertificadoIOS.MP4" width="600" height="400"
-                                    autoplay controls loop></video>
+                            <td valign="middle"><video src="Movilidad/InstalacionCertificadoIOS.MP4" width="600"
+                                    height="400" autoplay controls loop></video>
                             </td>
                             <tr>
 
@@ -2262,23 +2233,24 @@
                         </table>
                         <strong>Temas relacionados:</strong>
                         <ul>
-                            <li><a routerLink="/doc/Movilidad/SmartIt_Navegar">Navegaci&oacute;n</a></li>
-                            <li><a routerLink="/doc/Movilidad/SmartIt_AtenderTarea">Atenci&oacute;n de Tareas</a></li>
+                            <li><a routerLink="/doc/Movilidad/SmartIt_Movil_Navegar">Navegaci&oacute;n</a></li>
+                            <li><a routerLink="/doc/Movilidad/SmartIt_Movil_AtenderTarea">Atenci&oacute;n de Tareas</a>
+                            </li>
                         </ul>
-                    </header> 
+                    </header>
                 </div>
             </div>
         </ng-container>
 
         <!------------------------------------------- PAGINA: SMART IT NAVEGAR ------------------------------------------->
 
-        <ng-container *ngSwitchCase="'SmartIt_Navegar'">
+        <ng-container *ngSwitchCase="'SmartIt_Movil_Navegar'">
             <div id="summary" class="summary">
                 <div id="mainContent" class="mainContent">
                     <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
-                        
 
-                        <h1>BMC Smart-IT - Navegaci&oacute;n</h1> 
+
+                        <h1>BMC Smart-IT - Navegaci&oacute;n</h1>
 
                         <p>
                             BMC Smart-IT cuenta con diferentes Ventanas para diferentes usos, a continuaci&oacute;n se
@@ -2295,7 +2267,8 @@
                                             &uacute;ltimas acciones realizadas sobre los tickets a los que estamos
                                             relacionados.</li>
                                         <li ALIGN="justify">Hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_menu.png"> que se encuentra al costado izquierdo del texto
+                                                src="Movilidad/smartit_menu.png"> que se encuentra al costado izquierdo
+                                            del texto
                                             &quot;<b>Actualizaciones</b>&quot;, se desplegar&aacute; la lista de
                                             opciones de ventanas, seleccionar la opci&oacute;n
                                             &quot;<b>Consola</b>&quot;. El tipo de tickets visualizados depender&aacute;
@@ -2306,25 +2279,29 @@
                                                 asignados</b>&quot.</li>
                                         <li ALIGN="justify">Para filtrar a&uacute;n m&aacute;s la lista de resultados,
                                             hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_filtro.png"> que se encuentra en la esquina superior
+                                                src="Movilidad/smartit_filtro.png"> que se encuentra en la esquina
+                                            superior
                                             derecha, se desplegar&aacute; una lista de opciones, seleccionar la deseada
-                                            (para este ejemplo se han seleccionado las opciones &quot;<b>Estado de
+                                            para este ejemplo se han seleccionado las opciones &quot;<b>Estado de
                                                 SLA</b>&quot; &rarr; &quot;<b>Dentro de SLA</b>&quot;.</li>
                                         <li ALIGN="justify">Una vez seleccionada la opci&oacute;n deseada, hacer clic en
-                                            el &iacute;cono <img width="18" height="18" src="Movilidad/smartit_palomita.png"> para
+                                            el &iacute;cono <img width="18" height="18"
+                                                src="Movilidad/smartit_palomita.png"> para
                                             guardar las selecci&oacute;n realizada.</li>
                                         <li ALIGN="justify">La ventana &quot;<b>Consola</b>&quot; mostrar&aacute; el
                                             resultado del filtro generado, para quitar el filtro, seleccionar de nueva
                                             cuenta alguna de las opciones por defecto.</li>
                                         <li ALIGN="justify">Para cambiar el orden en que aparecen los tickets en la
                                             &quot;<b>Consola</b>&quot;, hacer clic en el &iacute;cono <img width="18"
-                                                height="18" src="Movilidad/smartit_orden.png">, seleccionar la opci&oacute;n
+                                                height="18" src="Movilidad/smartit_orden.png">, seleccionar la
+                                            opci&oacute;n
                                             deseada y hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_palomita.png"> para guardar el orden seleccionado.</li>
+                                                src="Movilidad/smartit_palomita.png"> para guardar el orden
+                                            seleccionado.</li>
                                     </ol>
                                 </td>
-                                <td valign="middle"><video src="Movilidad/smartit_navegar.mp4" width="600" height="400" autoplay
-                                        controls loop></video>
+                                <td valign="middle"><video src="Movilidad/smartit_navegar.mp4" width="600" height="400"
+                                        autoplay controls loop></video>
                                 </td>
                             <tr>
                                 <td valign="top">
@@ -2335,7 +2312,8 @@
                                             muestra una lista con las &uacute;ltimas acciones realizadas sobre los
                                             tickets a los que estamos relacionados.</li>
                                         <li ALIGN="justify">Hacer clic en el &iacute;cono <img width="18" height="18"
-                                                src="Movilidad/smartit_menu.png"> que se encuentra al costado izquierdo del texto
+                                                src="Movilidad/smartit_menu.png"> que se encuentra al costado izquierdo
+                                            del texto
                                             Actualizaciones, se desplegar&aacute; la lista de opciones de ventanas,
                                             seleccionar la opci&oacute;n &quot;<b>Consola</b>&quot;. El tipo de tickets
                                             visualizados depender&aacute; de los permisos que se tengan configurados en
@@ -2362,17 +2340,159 @@
                                             &quot;<b>Aplicar</b>&quot;.</li>
                                     </ol>
                                 </td>
-                                <td valign="middle"><video src="Movilidad/smartit_navegar_ios.mp4" width="600" height="400"
-                                        autoplay controls loop></video>
+                                <td valign="middle"><video src="Movilidad/smartit_navegar_ios.mp4" width="600"
+                                        height="400" autoplay controls loop></video>
                                 </td>
                             </tr>
                         </table>
                         <strong>Temas relacionados:</strong>
                         <ul>
-                            <li><a routerLink="/doc/Movilidad/SmartIt_InstalarConfigurar">Instalaci&oacute;n y Configuraci&oacute;n</a></li>
-                            <li><a routerLink="/doc/Movilidad/SmartIt_AtenderTarea">Atención de Tareas</a></li>
+                            <li><a routerLink="/doc/Movilidad/SmartIt_Movil_InstalarConfigurar">Instalaci&oacute;n y
+                                    Configuraci&oacute;n</a></li>
+                            <li><a routerLink="/doc/Movilidad/SmartIt_Movil_AtenderTarea">Atención de Tareas</a></li>
                         </ul>
-                    </header> 
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+        <!------------------------------------------- PAGINA: ALTA USUARIO DWP ------------------------------------------->
+
+        <ng-container *ngSwitchCase="'AltaUsuarioDWP'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    <header title="BMC ITSM - Remedy en la Nube - Manual del usuario">
+                        <h1>BMC ITSM - Digital Work Place - Alta de usuario</h1>
+                        <p></p>
+                        <table cellpadding="0" cellspacing="0" border="0" class="tabla">
+                            <p><strong>Instrucciones:</strong></p>
+                            <tr>
+                                <td valign="top">
+                                    <ul>Para solicitar el alta de un usuario, es necesario ingresar al portal de
+                                        <strong>DWP</strong> (Digital Work Place), utilizando las credenciales de acceso
+                                        de
+                                        Remedy.
+                                    </ul>
+                                    <ul>Al ingresar, el portal <b>DWP</b> nos solicitara aceptar Terminos y condiciones
+                                        de
+                                        uso de la plataforma, posteriormente se nos mostrara una pagina de inicio
+                                        desplegando las opciones de acceso rapido.</ul>
+                                    <ul>Para ingresar al servicio <b>Alta de Usuarios en DWP</b>, nos dirigiremos a la
+                                        barra
+                                        de navegacion superior, en la opcion <b>Catalog</b> y posteriormente,
+                                        desplegaremos
+                                        el menu: <b>Examinar categorías > Gestion de Accesos</b>. Esto nos llevara a una
+                                        pagina de resultados de busqueda, donde aparecera el servicio.</ul>
+                                </td>
+                                <td valign="top"><video src="Movilidad/AccesoServicioDWP.mp4" width="630"
+                                        style="margin: 5px;" autoplay controls loop></video></td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <ul>Al ingresar, se nos mostrara la siguiente pantalla, en donde se encuentra una
+                                        breve
+                                        descripcion del servicio a la izquierda y la seccion para solicitarlo del lado
+                                        derecho.</ul>
+                                    <ul>Para continuar con la solicitud, dirigirse al boton <b>✔ Pedir ahora</b></ul>
+                                </td>
+                                <td valign="top"><img src="Movilidad/AltaDWP_3.png" alt="ServiciosDWP" width="630"
+                                        style="margin: 5px;"></td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <ul>A continuación aparecera un formulario solicitando campos para el registro de un
+                                        nuevo usuario. Siendo unicamente los marcados en <b>(obligatorio)</b>, los que
+                                        deben
+                                        llenarse.</ul>
+                                </td>
+                                <td valign="top"><img src="Movilidad/PantallaServicioDWP.png" alt="ServiciosDWP"
+                                        width="630" style="margin: 5px;"></td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <ul style="margin-bottom: 3rem;">Para realizar el llenado de los datos, el primer
+                                        campo
+                                        requerido es <b>Numero de empleado</b>, ya que este definira el camino que el
+                                        proceso tomara.
+
+                                        <li style="margin-left:1rem;">Caso 1.
+                                            <ul>Si el numero de empleado que se ingreso ya cuenta con usuario en DWP,
+                                                automaticamente en el campo <b>Login</b> nos desplegara una lista con el
+                                                usuario asignado a ese numero de empleado.</ul>
+                                            <ul>De igual manera, un mensaje sugiriendo la posible contraseña para
+                                                acceder a
+                                                DWP o en su defecto, un enlace para realizar el reseteo de esta.</ul>
+                                            <ul>Por ultimo, de no encontrar otra coincidencia para ese usuario en el
+                                                campo
+                                                <b>Otras coincidenas</b>, el servicio no podra completarse.
+                                            </ul>
+                                        </li>
+                                        <li style="margin-left:1rem;">Caso 2.
+                                            <ul>Si el numero de empleado que se ingreso no cuenta con usuario en DWP, el
+                                                campo <b>Nombre Completo</b> desplegara una lista con el nombre del
+                                                empleado
+                                                de Remedy, ademas de autocompletar los demas campos bloqueados con la
+                                                informacion relacionada.</ul>
+                                            <ul>A continuacion se debe ingresar un correo electronico para asociar al
+                                                registro del usuario y la justificacion de por que se solicita el
+                                                servicio.
+                                            </ul>
+                                            <ul>finalmente, si todos los campos estan verificados, en la parte superior
+                                                aparecera una marca verde que indica que el registro esta listo para
+                                                hacer
+                                                enviado, ademas de que el boton <b>Enviar petición</b> se habilitara.
+                                                Bastara con presionarlo para completar el servicio</ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td valign="top"><video src="Movilidad/AltaUsuarioDWP.mp4" width="630"
+                                        style="margin: 5px;" autoplay controls loop></video></td>
+                            </tr>
+                        </table>
+                    </header>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'SmartIT'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    index Smart
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'SmartIT_Calendario'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+                    Calendario Smart
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'SmartIT_Consola'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+
+                    Consola Smart
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'SmartIT_CrearNuevo'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+
+                    Nueo Smart
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'SmartIT_Panel'">
+            <div id="summary" class="summary">
+                <div id="mainContent" class="mainContent">
+
+                    Panel Smart
                 </div>
             </div>
         </ng-container>
